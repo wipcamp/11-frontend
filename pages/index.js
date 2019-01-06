@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Headline from '../components/Core/Headline';
+import Headline,{Subtitle} from '../components/Core/Texts';
 import TextBox from '../components/Core/TextBox'
 
 export default class componentName extends Component {
@@ -7,6 +7,7 @@ export default class componentName extends Component {
     return (
       <div>
         <Headline>test 2</Headline>
+        <Subtitle>abc</Subtitle>
         <TextBox text = "Boo" />
       </div>
     )
