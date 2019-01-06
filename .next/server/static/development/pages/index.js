@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 var Headline = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "Headline",
   componentId: "sc-1riytd6-0"
-})(["font-size:", ";font-weight:bold;"], _config_fonts__WEBPACK_IMPORTED_MODULE_1__["default"].Headline);
+})(["font-size:", ";font-weight:bold;text-align:center;"], _config_fonts__WEBPACK_IMPORTED_MODULE_1__["default"].Headlines);
 /* harmony default export */ __webpack_exports__["default"] = (Headline);
 
 /***/ }),
@@ -223,7 +223,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 var fonts = {
-  Headlines: '48px',
+  Headlines: '40px',
   Subtitle: '24px',
   Title: '30px',
   TextBox: '15px'
