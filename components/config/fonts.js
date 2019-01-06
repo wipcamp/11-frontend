@@ -1,7 +1,7 @@
 import React from 'react'
 
 const fonts  = {
-    Header : '11px',
+    Headlines : '48px',
     Subtitle : '24px',
     Title: '30px',
 }
