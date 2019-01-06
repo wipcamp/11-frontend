@@ -186,7 +186,7 @@ function (_Document) {
           lineNumber: 18
         },
         __self: this
-      }, " WIP CAMP#11 "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", {
+      }, " WIP Camp #11 "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 19
