@@ -106,15 +106,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< HEAD
 /* harmony import */ var _config_fonts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../config/fonts */ "./config/fonts.js");
 /* harmony import */ var _config_color__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/color */ "./config/color.js");
 var _jsxFileName = "/Users/PzHacker/11-frontend/components/Core/TextBox.js";
-=======
-/* harmony import */ var _config_fonts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config/fonts */ "./components/config/fonts.js");
-/* harmony import */ var _config_color__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/color */ "./components/config/color.js");
-var _jsxFileName = "D:\\11 dev\\11-frontend\\components\\Core\\TextBox.js";
->>>>>>> 6ac0686a9c0956535235913c00a03fcc5e738559
 
 
 
@@ -169,13 +163,33 @@ var TextBox = function TextBox(props) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./components/Core/Texts.js":
 /*!**********************************!*\
   !*** ./components/Core/Texts.js ***!
   \**********************************/
 /*! exports provided: Subtitle, default */
-=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Subtitle", function() { return Subtitle; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config_fonts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/fonts */ "./config/fonts.js");
+
+
+var Headline = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
+  displayName: "Texts__Headline",
+  componentId: "sc-1nnut19-0"
+})(["font-size:", ";font-weight:bold;text-align:center;"], _config_fonts__WEBPACK_IMPORTED_MODULE_1__["default"].Headlines);
+var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
+  displayName: "Texts__Subtitle",
+  componentId: "sc-1nnut19-1"
+})(["font-size:", "  "], _config_fonts__WEBPACK_IMPORTED_MODULE_1__["default"].Subtitle);
+/* harmony default export */ __webpack_exports__["default"] = (Headline);
+
+/***/ }),
+
 /***/ "./components/Core/logo.js":
 /*!*********************************!*\
   !*** ./components/Core/logo.js ***!
@@ -190,7 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\11 dev\\11-frontend\\components\\Core\\logo.js";
+var _jsxFileName = "/Users/PzHacker/11-frontend/components/Core/logo.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -262,40 +276,15 @@ function (_Component) {
   !*** ./components/Home/index.js ***!
   \**********************************/
 /*! exports provided: default */
->>>>>>> 6ac0686a9c0956535235913c00a03fcc5e738559
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Subtitle", function() { return Subtitle; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _config_fonts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/fonts */ "./config/fonts.js");
-
-
-var Headline = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
-  displayName: "Texts__Headline",
-  componentId: "sc-1nnut19-0"
-})(["font-size:", ";font-weight:bold;text-align:center;"], _config_fonts__WEBPACK_IMPORTED_MODULE_1__["default"].Headlines);
-var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
-  displayName: "Texts__Subtitle",
-  componentId: "sc-1nnut19-1"
-})(["font-size:", "  "], _config_fonts__WEBPACK_IMPORTED_MODULE_1__["default"].Subtitle);
-/* harmony default export */ __webpack_exports__["default"] = (Headline);
-
-/***/ }),
-
-/***/ "./config/color.js":
-/*!*************************!*\
-  !*** ./config/color.js ***!
-  \*************************/
-=======
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return componentName; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Core_logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Core/logo */ "./components/Core/logo.js");
-var _jsxFileName = "D:\\11 dev\\11-frontend\\components\\Home\\index.js";
+var _jsxFileName = "/Users/PzHacker/11-frontend/components/Home/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -355,11 +344,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./components/config/color.js":
-/*!************************************!*\
-  !*** ./components/config/color.js ***!
-  \************************************/
->>>>>>> 6ac0686a9c0956535235913c00a03fcc5e738559
+/***/ "./config/color.js":
+/*!*************************!*\
+  !*** ./config/color.js ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -415,16 +403,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return componentName; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-<<<<<<< HEAD
 /* harmony import */ var _components_Core_Texts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Core/Texts */ "./components/Core/Texts.js");
-/* harmony import */ var _components_Core_TextBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Core/TextBox */ "./components/Core/TextBox.js");
-var _jsxFileName = "/Users/PzHacker/11-frontend/pages/index.js";
-=======
-/* harmony import */ var _components_Home_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Home/index */ "./components/Home/index.js");
-/* harmony import */ var _components_Core_Headline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Core/Headline */ "./components/Core/Headline.js");
+/* harmony import */ var _components_Home_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Home/index */ "./components/Home/index.js");
 /* harmony import */ var _components_Core_TextBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Core/TextBox */ "./components/Core/TextBox.js");
-var _jsxFileName = "D:\\11 dev\\11-frontend\\pages\\index.js";
->>>>>>> 6ac0686a9c0956535235913c00a03fcc5e738559
+var _jsxFileName = "/Users/PzHacker/11-frontend/pages/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -469,38 +451,29 @@ function (_Component) {
           lineNumber: 9
         },
         __self: this
-<<<<<<< HEAD
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Core_Texts__WEBPACK_IMPORTED_MODULE_1__["default"], {
-=======
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Home_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
->>>>>>> 6ac0686a9c0956535235913c00a03fcc5e738559
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Home_index__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 10
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Core_Headline__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Core_Texts__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
         },
         __self: this
-<<<<<<< HEAD
       }, "test 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Core_Texts__WEBPACK_IMPORTED_MODULE_1__["Subtitle"], {
-=======
-      }, "test 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Core_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        text: "Boo",
->>>>>>> 6ac0686a9c0956535235913c00a03fcc5e738559
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         },
         __self: this
-      }, "abc"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Core_TextBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, "abc"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Core_TextBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
         text: "Boo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 15
         },
         __self: this
       }));
