@@ -5,7 +5,7 @@ export default class componentName extends Component {
   render() {
     return (
       <div className="row justify-content-center">
-        <Logo img='../../static/img/instagram.png' className="col-6" />
+        <Logo contactImg="instagram.png" className="col-6" />
       </div>
     )
   }
