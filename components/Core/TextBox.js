@@ -1,21 +1,39 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import {TextBoxStyle} from './Texts'
-import {NextButton ,PreviousButton} from './MainButton'
+import Headline, {TextBoxStyle, Subtitle} from './Texts'
+import {NextButton , PreviousButton} from './MainButton'
 
 const BoxStyle = styled.div`
     background: papayawhip;
     text-align : center;
-    padding-top : 2em;
-    padding-bottom : 2em;
+    padding : 2em 5em;
     position: absolute;
     display:block;
     width:100%;
-    max-width: 700px;
+    height:400px;
 
-    @media(max-width:1024px){
-        max-width : 650px;
+    @media (min-width:320px) {
+        font-size: 0.9em;
+        max-width : 300px;
     }
+    @media (min-width:412px) {
+        font-size: 1em;
+        max-width : 300px;
+    }
+    @media (min-width:576px) {
+        font-size: 1.1em;
+        max-width : 550px;
+    }
+    @media (min-width:768px) {
+        font-size: 1.2em;
+    }
+    @media (min-width:1024px) {
+        font-size: 1.3em;
+        max-width : 800px;
+    }
+`
+
+const Font = styled.p`
 `
 const TextBox = (props) => (
     <div className = "container-fluid">
@@ -23,6 +41,8 @@ const TextBox = (props) => (
                 <BoxStyle>
                     <NextButton src = 'static/img/button.png'  />
                     <PreviousButton src = 'static/img/button.png'  />
+                    <Headline>What</Headline>
+                    <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
                     <TextBoxStyle>{props.text}</TextBoxStyle>
                 </BoxStyle>
             
