@@ -12,6 +12,7 @@ export const NextButton = styled.img`
     cursor:pointer;
     right: 0px;
     position: absolute;
+    margin-top:150px;
 `
 
 export const PreviousButton = styled.img`
@@ -19,6 +20,7 @@ export const PreviousButton = styled.img`
     cursor:pointer;
     left: 0px;
     position: absolute;
+    margin-top:150px;
 
 `
 export default NextButton 
