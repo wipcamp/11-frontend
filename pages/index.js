@@ -12,7 +12,7 @@ export default class componentName extends Component {
         
         <Headline>test 2</Headline>
         <Subtitle>abc</Subtitle>
-        <TextBox text = "Boo" />
+        <TextBox text = "Boo" /> 
       </div>
     )
   }
