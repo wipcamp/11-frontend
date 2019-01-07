@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
-import Logo from '../Core/logo'
+import styled from 'styled-components'
+
+const Logo = styled.img`
+width : 20em;
+height : 20em;
 
 
+
+
+`
 export default class componentName extends Component {
   render() {
     return (
-      <div>
-          <Logo/>
+      <div className = "text-center"> 
+        
+        <Logo src="static/img/LogoHome.svg" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี "  />
+
         
       </div>
     )
