@@ -11,8 +11,6 @@ export default class componentName extends Component {
         <Headline>test 2</Headline>
         <Subtitle>abc</Subtitle>
         <TextBox text = "Boo" /> 
-        <Background bgImageUrl='../static/img/fallbg.png'/>
-        <Contact  />
       </div>
     )
   }
