@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import TextBox from '../Core/TextBox';
-import Headline, { Subtitle } from '../Core/Texts';
+import Headline, { Subtitle , Paragraph} from '../Core/Texts';
 
 
 const Info = styled.div`
@@ -53,25 +53,6 @@ const Icon = styled.img`
   border: 4px solid transparent;
   }  
 `
-const P = styled.p`
-  margin-bottom:1rem;
-  @media (min-width:320px) {
-    font-size: 0.9em;
-  }
-  @media (min-width:412px) {
-    font-size: 1em;
-  }
-  @media (min-width:576px) {
-    font-size: 1.1em;
-  }
-  @media (min-width:768px) {
-    font-size: 1.2em;
-  }
-  @media (min-width:1024px) {
-    font-size: 1.3em;
-  }
-
-`
 const Mobile = styled.div`
   @media (max-width:720px) {
     text-align:center;
@@ -106,22 +87,22 @@ export default class index extends Component {
         </Head>
         <BoxStyle>
           <div className="col-12">
-            <P>
+            <Paragraph>
               &nbsp;&nbsp;&nbsp;&nbsp;ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริงณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
-            </P>
-            <P>
+            </Paragraph>
+            <Paragraph>
               &nbsp;&nbsp;&nbsp;&nbsp;WIP Camp ประกอบด้วยการเรียน และลงมือปฏิบัติจริงด้านวิชาการ ความสนุกสนานจากกิจกรรม รวมถึงมิตรภาพจากพี่ ๆ เพื่อน ๆ ในค่ายทุกคน
-            </P>
-            <P>
+            </Paragraph>
+            <Paragraph>
               &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
-            </P>
+            </Paragraph>
           </div>
             <Info className="row text-center">
                   {
                     IconInfo.map((info, i) => (
                       <Test key={i} className="col-6 col-md-3 ">
                         <Icon src={info.icon} alt={info.t} />
-                        <P>{info.text}</P>
+                        <Paragraph>{info.text}</Paragraph>
                       </Test>
                     ))
                   }
