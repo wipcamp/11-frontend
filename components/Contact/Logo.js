@@ -11,7 +11,6 @@ const Divhover = styled.div`
 
 const Logo = (props) =>(
 	<Divhover>
-
 		<img src={props.img} width="87px" height="87px" />
 	</Divhover>
 )
