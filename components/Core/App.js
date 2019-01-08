@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import What from '../What/index'
 import Who from '../Who/index'
-import Navbar from './Navbar'
+import Navbar from './NavBar';
 
 const Relative = styled.div`
   position:relative;
