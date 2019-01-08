@@ -79,8 +79,8 @@ export default class index extends Component {
 
     <div className="container">
       <div className="row">
-      <div className = "col-2"></div>
-        <div className="col-6 col-sm-8 col-md-8">
+      <div className = "col-1 col-md-1"></div>
+        <div className="col-6 col-sm-12 col-md-10">
         <Head>
           <Headline>What</Headline>
           <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
