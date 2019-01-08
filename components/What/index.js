@@ -75,7 +75,18 @@ const IconInfo = [
 const BoxStyle = styled.div`
     background: papayawhip;
     text-align : left;
-    padding : 2em 5em;
+
+    @media (min-width:320px) {
+      padding : 1.5em 1.2em;
+    }
+    
+    @media (min-width:576px) {
+      padding : 1em 2em;
+    }
+    
+    @media (min-width:1024px) {
+      padding : 2em 5em;
+    }
 `
 const Head = styled.div`
   text-align:center;
@@ -124,19 +135,17 @@ export default class index extends Component {
                       &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
                     </Paragraph>
                   </div>
-                  
-                    <Info className="row text-center">
-                          {
-                            IconInfo.map((info, i) => (
-                              <Test key={i} className="col-6 col-md-3 ">
-                                <Icon src={info.icon} alt={info.t} />
-                                <Paragraph>{info.text}</Paragraph>
-                              </Test>
-                            ))
-                          }
-                    </Info> 
+                  <Info className="row text-center">
+                    {
+                       IconInfo.map((info, i) => (
+                        <Test key={i} className="col-6 col-md-3 ">
+                         <Icon src={info.icon} alt={info.t} />
+                           <Paragraph>{info.text}</Paragraph>
+                        </Test>
+                      ))
+                    }
+                  </Info> 
                 </BoxStyle>
-                
                 </div>
               </Layout>
             </div>
