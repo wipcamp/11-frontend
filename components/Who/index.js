@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Box from './Box'
+import Box from './Textbox'
 
 export default class componentName extends Component {
   render() {
