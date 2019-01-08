@@ -66,7 +66,7 @@ const IconInfo = [
 
 const BoxStyle = styled.div`
     background: papayawhip;
-    text-align : center;
+    text-align : left;
     padding : 2em 5em;
 `
 const Head = styled.div`
@@ -79,7 +79,8 @@ export default class index extends Component {
 
     <div className="container">
       <div className="row">
-        <div className="col-12 col-sm-12 col-md-12">
+      <div className = "col-2"></div>
+        <div className="col-6 col-sm-8 col-md-8">
         <Head>
           <Headline>What</Headline>
           <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
@@ -96,6 +97,7 @@ export default class index extends Component {
               &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
             </Paragraph>
           </div>
+          
             <Info className="row text-center">
                   {
                     IconInfo.map((info, i) => (
@@ -107,6 +109,7 @@ export default class index extends Component {
                   }
             </Info> 
         </BoxStyle>
+        
         </div>
       </div>
     </div>
