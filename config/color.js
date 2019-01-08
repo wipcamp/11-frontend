@@ -8,6 +8,7 @@ const color  ={
     faqs:'#E2EADA',
     contact:'#EDF2E9',
     TextBox : '#89a96b',
+    menu : '#89a96b'
 }
 
 export const theme = {

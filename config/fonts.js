@@ -5,6 +5,7 @@ const fonts  = {
     Subtitle : '24px',
     Title: '30px',
     TextBox: '15px',
+    Menu: '15px',
 }
 
 export default fonts
