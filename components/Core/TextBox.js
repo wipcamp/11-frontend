@@ -33,8 +33,6 @@ const BoxStyle = styled.div`
     }
 `
 
-const Font = styled.p`
-`
 const TextBox = (props) => (
     <div className = "container-fluid">
         <div className = "row justify-content-center">
