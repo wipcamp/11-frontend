@@ -1,7 +1,5 @@
-import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, {TextBoxStyle, Subtitle} from './Texts'
-import {NextButton , PreviousButton} from './MainButton'
+import Headline, { TextBoxStyle, Subtitle } from './Texts'
 
 const BoxStyle = styled.div`
     background: papayawhip;
@@ -34,16 +32,15 @@ const BoxStyle = styled.div`
 `
 
 const TextBox = (props) => (
-    <div className = "container-fluid">
-        <div className = "row justify-content-center">
-                <BoxStyle>
-                    <Headline>{props.header}</Headline>
-                    <Subtitle>{props.subtitle}</Subtitle>
-                    <TextBoxStyle>{props.text}</TextBoxStyle>
-                </BoxStyle>
-            
-        </div>
+  <div className="container-fluid">
+    <div className="row justify-content-center">
+      <BoxStyle>
+        <Headline>{props.header}</Headline>
+        <Subtitle>{props.subtitle}</Subtitle>
+        <TextBoxStyle>{props.text}</TextBoxStyle>
+      </BoxStyle>
     </div>
+  </div>
 )
 
 export default TextBox

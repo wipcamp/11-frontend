@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link, Events, scrollSpy, scroller } from 'react-scroll';
+import React from 'react'
+import styled from 'styled-components'
+import { Link, Events, scrollSpy, scroller } from 'react-scroll'
 
 
 const NavSection = styled.nav`
@@ -26,7 +26,7 @@ const NavSection = styled.nav`
         clear: both;
         text-decoration: none
     }
-`;
+`
 
 const NavLink = styled(Link)`
   display: flex;
@@ -81,7 +81,7 @@ const NavLink = styled(Link)`
       color: black;
     }
   }
-`;
+`
 const SectionUl = styled.ul`
     margin: 0;
 `
@@ -96,7 +96,7 @@ const NavItems = styled.li`
 `
 
 const sections = [
-  { href: 'home', title: 'Home'},
+  { href: 'home', title: 'Home' },
   { href: 'what', title: 'What' },
   { href: 'who', title: 'Who' },
   { href: 'where', title: 'Where' },
@@ -104,50 +104,50 @@ const sections = [
   { href: 'faqs', title: 'FAQs' },
   { href: 'sponsor', title: 'Sponsors' },
   { href: 'contact', title: 'Contact' },
-  { href: 'game', title: 'Game' },
-];
+  { href: 'game', title: 'Game' }
+]
 
 class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       current: 'home',
       show: false
-    };
+    }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     Events.scrollEvent.register('end', (section) => {
       this.setState({
         current: section
-      });
-    });
+      })
+    })
 
-    scrollSpy.update();
+    scrollSpy.update()
   }
 
-  componentWillUnmount() {
-    Events.scrollEvent.remove('begin');
-    Events.scrollEvent.remove('end');
+  componentWillUnmount () {
+    Events.scrollEvent.remove('begin')
+    Events.scrollEvent.remove('end')
   }
 
-  toggleNavbar(to) {
+  toggleNavbar (to) {
     if (to === 'welcoming-section') {
-      this.setState({ show: false });
+      this.setState({ show: false })
     } else {
-      this.setState({ show: true });
+      this.setState({ show: true })
     }
     this.setState({
       current: to
-    });
+    })
   }
 
-  render() {
+  render () {
     return (
       <NavSection active={this.state.show}>
         <SectionUl>
           {
-            sections.map(e =>(
+            sections.map(e => (
               <NavItems key={e.href}>
                 <NavLink
                   activeClass="active"
@@ -159,7 +159,7 @@ class Navbar extends React.Component {
                   onSetActive={to => this.toggleNavbar(to)}
                 >
                   <div className="text">
-                    {e.title} 
+                    {e.title}
                   </div>
                 </NavLink>
               </NavItems>
@@ -167,8 +167,8 @@ class Navbar extends React.Component {
           }
         </SectionUl>
       </NavSection>
-    );
+    )
   }
 }
 
-export default Navbar;
+export default Navbar
