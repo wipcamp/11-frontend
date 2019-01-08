@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import TextBox from '../Core/TextBox';
 import Headline, { Subtitle , Paragraph} from '../Core/Texts';
 
 
