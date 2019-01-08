@@ -39,8 +39,8 @@ const TextBox = (props) => (
     <div className = "container-fluid">
         <div className = "row justify-content-center">
                 <BoxStyle>
-                    <Headline>What</Headline>
-                    <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
+                    <Headline>{props.header}</Headline>
+                    <Subtitle>{props.subtitle}</Subtitle>
                     <TextBoxStyle>{props.text}</TextBoxStyle>
                 </BoxStyle>
             
