@@ -10,6 +10,14 @@ const Test = styled.div`
   padding: 1px;
 
 `
+
+const Layout = styled.div`  
+  margin-top: 4.5%;
+  margin-bottom: 10%;
+  border: .2em solid transparent;
+  border-radius: 2em;
+  padding:2em;
+`
 const Icon = styled.img`
   width:7em;
   @media (min-width:320px) {
@@ -73,46 +81,66 @@ const Head = styled.div`
   text-align:center;
 
 `
+
+const Font = styled.p`
+  @media (min-width:320px) {
+    font-size: 0.9em;
+  }
+  @media (min-width:412px) {
+    font-size: 1em;
+  }
+  @media (min-width:576px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.2em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.3em;
+  }
+`
+
 export default class index extends Component {
   render() {
     return (
-
-    <div className="container">
-      <div className="row">
-      <div className = "col-1 col-md-1"></div>
-        <div className="col-6 col-sm-12 col-md-10">
-        <Head>
-          <Headline>What</Headline>
-          <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
-        </Head>
-        <BoxStyle>
-          <div className="col-12">
-            <Paragraph>
-              &nbsp;&nbsp;&nbsp;&nbsp;ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริงณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
-            </Paragraph>
-            <Paragraph>
-              &nbsp;&nbsp;&nbsp;&nbsp;WIP Camp ประกอบด้วยการเรียน และลงมือปฏิบัติจริงด้านวิชาการ ความสนุกสนานจากกิจกรรม รวมถึงมิตรภาพจากพี่ ๆ เพื่อน ๆ ในค่ายทุกคน
-            </Paragraph>
-            <Paragraph>
-              &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
-            </Paragraph>
-          </div>
-          
-            <Info className="row text-center">
-                  {
-                    IconInfo.map((info, i) => (
-                      <Test key={i} className="col-6 col-md-3 ">
-                        <Icon src={info.icon} alt={info.t} />
-                        <Paragraph>{info.text}</Paragraph>
-                      </Test>
-                    ))
-                  }
-            </Info> 
-        </BoxStyle>
-        
-        </div>
-      </div>
-    </div>
+      <div className="container px-3">
+        <div className="row">
+         <div className="col-12 col-sm-12 col-md-12 col-lg-1"></div>
+            <Layout className="col-12 col-sm-12 col-md-12 col-lg-10">
+              <div className="row">
+                <Head className="text-center col-12">
+                  <Headline>What</Headline>
+                  <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
+                </Head>
+                <BoxStyle>
+                  <div className="col-12">
+                    <Paragraph>
+                      &nbsp;&nbsp;&nbsp;&nbsp;ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริงณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
+                    </Paragraph>
+                    <Paragraph>
+                      &nbsp;&nbsp;&nbsp;&nbsp;WIP Camp ประกอบด้วยการเรียน และลงมือปฏิบัติจริงด้านวิชาการ ความสนุกสนานจากกิจกรรม รวมถึงมิตรภาพจากพี่ ๆ เพื่อน ๆ ในค่ายทุกคน
+                    </Paragraph>
+                    <Paragraph>
+                      &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
+                    </Paragraph>
+                  </div>
+                  
+                    <Info className="row text-center">
+                          {
+                            IconInfo.map((info, i) => (
+                              <Test key={i} className="col-6 col-md-3 ">
+                                <Icon src={info.icon} alt={info.t} />
+                                <Paragraph>{info.text}</Paragraph>
+                              </Test>
+                            ))
+                          }
+                    </Info> 
+                </BoxStyle>
+                
+                </div>
+              </Layout>
+            </div>
+          </div>   
     
     )
   }
