@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, { Subtitle, Paragraph } from '../Core/Texts'
+import Headline, { Subtitle, Paragraph , Small} from '../Core/Texts'
 
 const Layout = styled.div`  
   margin-top: 4.5%;
@@ -56,11 +56,11 @@ const IconInfo = [
 ]
 
 const BoxStyle = styled.div`
-    background: #002d40;
+    background: papayawhip;
     text-align : left;
 
     @media (min-width:320px) {
-      padding : 1.5em 1.2em;
+      padding : 1.5em 1em;
     }
     
     @media (min-width:576px) {
@@ -78,19 +78,19 @@ const Head = styled.div`
 
 const Font = styled.p`
   @media (min-width:320px) {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   @media (min-width:412px) {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   @media (min-width:576px) {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   @media (min-width:768px) {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   @media (min-width:1024px) {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 `
 
@@ -108,21 +108,24 @@ export default class index extends Component {
               <BoxStyle>
                 <div className="col-12">
                   <Paragraph>
+                    <Font>
                       &nbsp;&nbsp;&nbsp;&nbsp;ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริงณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
-                  </Paragraph>
-                  <Paragraph>
+                    </Font>
+                    <Font>
                       &nbsp;&nbsp;&nbsp;&nbsp;WIP Camp ประกอบด้วยการเรียน และลงมือปฏิบัติจริงด้านวิชาการ ความสนุกสนานจากกิจกรรม รวมถึงมิตรภาพจากพี่ ๆ เพื่อน ๆ ในค่ายทุกคน
-                  </Paragraph>
-                  <Paragraph>
+                    </Font>
+                    <Font>
                       &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
+                    </Font>
                   </Paragraph>
+                 
                 </div>
                 <div className="row text-center mt-2">
                   {
                     IconInfo.map((info, i) => (
                       <div key={i} className="col-6 col-md-3 p-1">
                         <Icon src={info.icon} alt={info.t} />
-                        <Paragraph>{info.text}</Paragraph>
+                        <Small>{info.text}</Small>
                       </div>
                     ))
                   }
