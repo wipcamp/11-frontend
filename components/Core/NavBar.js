@@ -3,28 +3,27 @@ import styled from 'styled-components'
 import { Link, Events, scrollSpy, scroller } from 'react-scroll'
 
 const NavSection = styled.nav`
-    position: fixed;
-    top: 50%;
-    transition: all .2s;
-    right: 40px;
-    margin: 0 !important;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    position: absolute;
+  position: fixed;
+  top: 50%;
+  transition: all .2s;
+  right: 40px;
+  margin: 0 !important;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 
-    ul li:first-child {
-        display: none;
-    }
+  ul li:first-child {
+    display: none;
+  }
   
-    @media(max-width: 768px) {
-        display: none;
-    }
+  @media(max-width: 768px) {
+   display: none;
+  }
 
-    &:after {
-        clear: both;
-        text-decoration: none
-    }
+  &:after {
+    clear: both;
+    text-decoration: none
+  }
 `
 
 const NavLink = styled(Link)`
@@ -82,16 +81,16 @@ const NavLink = styled(Link)`
   }
 `
 const SectionUl = styled.ul`
-    margin: 0;
+  margin: 0;
 `
 
 const NavItems = styled.li`
-    transition: all .15s ease;
-    opacity: 1;
-    display: block;
-    margin-bottom: 10px;
-    position: relative;
-    text-align: right;
+  transition: all .15s ease;
+  opacity: 1;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: right;
 `
 
 const sections = [
