@@ -2,14 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph } from '../Core/Texts'
 
-const Info = styled.div`
-  /* margin-top: 2%; */
-`
-const Test = styled.div`
-  /* padding: 1px; */
-
-`
-
 const Layout = styled.div`  
   margin-top: 4.5%;
   margin-bottom: 10%;
@@ -55,11 +47,7 @@ const Icon = styled.img`
   border: 4px solid transparent;
   }  
 `
-const Mobile = styled.div`
-  @media (max-width:720px) {
-    text-align:center;
-  }
-`
+
 const IconInfo = [
   { icon: '/static/img/icon-what/java (2).png', text: 'Java Programming', t: 'Java Programming' },
   { icon: '/static/img/icon-what/IT fun (1).png', text: 'IT Fundamentals', t: 'IT Fundamentals' },
@@ -129,16 +117,16 @@ export default class index extends Component {
                       &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
                   </Paragraph>
                 </div>
-                <Info className="row text-center mt-2">
+                <div className="row text-center mt-2">
                   {
                     IconInfo.map((info, i) => (
-                      <Test key={i} className="col-6 col-md-3 p-1">
+                      <div key={i} className="col-6 col-md-3 p-1">
                         <Icon src={info.icon} alt={info.t} />
                         <Paragraph>{info.text}</Paragraph>
-                      </Test>
+                      </div>
                     ))
                   }
-                </Info>
+                </div>
               </BoxStyle>
             </div>
           </Layout>
