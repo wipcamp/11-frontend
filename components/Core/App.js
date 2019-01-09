@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Home from '../Home'
 import What from '../What'
 import Navbar from './NavBar'
+import Who from '../Who'
 
 export default class App extends Component {
   render () {
@@ -11,6 +12,7 @@ export default class App extends Component {
         <Navbar />
         <Home />
         <What />
+        <Who />
       </div>
     )
   }
