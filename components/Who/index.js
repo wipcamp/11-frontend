@@ -3,21 +3,42 @@ import Box from './Textbox'
 import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
-
 const BoxStyle = styled.div`
   background: #d29ea4;
   text-align : left;
-
+  width: 85%;
+  
     @media (min-width:320px) {
       padding : 1.5em 1em;
+      width: 100%;
     }
     
     @media (min-width:576px) {
       padding : 1em 2em;
+      width : 100%;
+      
     }
     
     @media (min-width:1024px) {
       padding : 2em 5em;
+      width : 85%;
+    }
+`
+
+const TextBoxColor = styled.div`
+  background: #960018;
+  text-align : left;
+
+    @media (min-width:320px) {
+    padding : 1.5em 1em;
+    }
+  
+    @media (min-width:576px) {
+    padding : 1em 2em;
+    }
+  
+    @media (min-width:1024px) {
+    padding : 2em 5em;
     }
 `
 
@@ -56,36 +77,43 @@ const Layout = styled.div`
   border-radius: 2em;
   padding:2em;
 `
-
-
-
 export default class componentName extends Component {
   render() {
     return (
-      <div>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        <Head className="text-center col-12">
-          <Headline>Who</Headline>
-          <Subtitle>ค่ายนี้เหมาะสำหรับใคร?</Subtitle>
-        </Head>
-        <Layout>
-          <BoxStyle>
+      <div className="container">
+        {/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. */}
+        <div className="row">
+          <Head className="text-center col-12">
+            <Headline>Who</Headline>
+            <Subtitle>ค่ายนี้เหมาะสำหรับใคร?</Subtitle>
+          </Head>
+        </div>
+        <div className="row">
+          <div className="container">
             <div className="col-12">
-              <div className="col-4">
-                <Icon src="static/img/icon-who/computer.png" alt="computer" />
+              <BoxStyle className="container">
+                <TextBoxColor>
+                  <Icon src="static/img/icon-who/computer.png" alt="computer" />
+                </TextBoxColor>
                 <div className="my-5">
-                  <Icon src="static/img/icon-who/graduate.png" alt="การศึกษา" />
-                  <div className="my-5">
-                    <Icon src="static/img/icon-who/person.png" alt="เหมาะสำหรับ" />
-                    <div className="my-5">
-                      <Icon src="static/img/icon-who/moon.png" alt="ระยะเวลา" />
-                    </div>
-                  </div>
+                  <TextBoxColor>
+                    <Icon src="static/img/icon-who/graduate.png" alt="การศึกษา" />
+                  </TextBoxColor>
                 </div>
-              </div>
+                <div className="my-5">
+                  <TextBoxColor>
+                    <Icon src="static/img/icon-who/person.png" alt="เหมาะสำหรับ" />
+                  </TextBoxColor>
+                </div>
+                <div className="my-5">
+                  <TextBoxColor>
+                    <Icon src="static/img/icon-who/moon.png" alt="ระยะเวลา" />
+                  </TextBoxColor>
+                </div>
+              </BoxStyle>
             </div>
-          </BoxStyle>
-        </Layout>
+          </div>
+        </div>
       </div>
     )
   }
