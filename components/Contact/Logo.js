@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Divhover = styled.div`
-transform: scale(1);
-	transition: .3s ease-in-out;
+  transform: scale(1);
+  transition: .3s ease-in-out;
   &:hover img {
-	  transform: scale(1.3);
+    transform: scale(1.3);
   }
 `
 
