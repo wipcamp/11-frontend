@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
 const Map = styled.img`
   width:50%;
@@ -16,13 +17,21 @@ const Map = styled.img`
     margin-bottom: 0%; 
   }
 `
+const Head = styled.div`
+text-align : center;
+
+`
 export default class index extends Component {
   render () {
     return (
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <Map src = 'static/img/Map22.png' alt = "map" />
+            <Head className="text-center col-12">
+              <Headline>Where</Headline>
+              <Subtitle>ค่ายนี้จัดที่ไหน?</Subtitle>
+            </Head>
+            <Map src='static/img/Map22.png' alt="map" />
           </div>
         </div>
       </div>
