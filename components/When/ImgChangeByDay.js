@@ -9,25 +9,21 @@ const date3 = dayjs('2019-01-20')
 const date4 = dayjs('2019-01-31')
 // const date = (props) => (props.datetime)
 
-const Image = styled.img`
-    width : 10%;
-    height: 10%;
-`
 
 const ImgChangeDay = (props) => (
   <div>
-    <div>
-      <Image src={date1.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-    </div>
-    <div>
-      <Image src={date2.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-    </div>
-    <div>
-      <Image src={date3.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-    </div>
-    <div>
-      <Image src={date4.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-    </div>
+    <span>
+      <img src={date1.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
+    </span>
+    <span>
+      <img src={date2.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
+    </span>
+    <span>
+      <img src={date3.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
+    </span>
+    <span>
+      <img src={date4.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
+    </span>
   </div>
 )
 
