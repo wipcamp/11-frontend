@@ -1,35 +1,92 @@
 import React, { Component } from 'react'
 import Box from './Textbox'
 import styled from 'styled-components'
+import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
+
 
 const BoxStyle = styled.div`
-    background: papayawhip;
-    text-align : left;
-    padding : 2em 5em;
+  background: #d29ea4;
+  text-align : left;
+
+    @media (min-width:320px) {
+      padding : 1.5em 1em;
+    }
+    
+    @media (min-width:576px) {
+      padding : 1em 2em;
+    }
+    
+    @media (min-width:1024px) {
+      padding : 2em 5em;
+    }
 `
 
+const Icon = styled.img`
+width:7em;
+  @media (min-width:320px) {
+    width:4em;
+  }
+  @media (min-width:420px) {
+   
+    width:5em;
+  }
+  @media (min-width:576px) {
+    margin-top: 2%;
+    width:5em;
+  }
+  @media (min-width:768px) {
+    margin-top: 5%;
+    width:7em;
+  }
+  @media (min-width:1024px) {
+    margin-top: 5%;
+    padding: .2em;
+    width:7em;
+  }
+`
+
+const Head = styled.div`
+text-align : center;
+
+`
+const Layout = styled.div`  
+  margin-top: 4.5%;
+  margin-bottom: 10%;
+  border: .2em solid transparent;
+  border-radius: 2em;
+  padding:2em;
+`
+
+
+
 export default class componentName extends Component {
-  render () {
+  render() {
     return (
-      <Box>
+      <div>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        <BoxStyle>
-          <div className="row">
-            <div className="col-4">
-              <img src="static/img/icon-who/computer.png" alt="computer" height="100" width="100" />
-              <div className="my-5">
-                <img src="static/img/icon-who/graduate.png" alt="การศึกษา" height="100" width="100" />
+        <Head className="text-center col-12">
+          <Headline>Who</Headline>
+          <Subtitle>ค่ายนี้เหมาะสำหรับใคร?</Subtitle>
+        </Head>
+        <Layout>
+          <BoxStyle>
+            <div className="col-12">
+              <div className="col-4">
+                <Icon src="static/img/icon-who/computer.png" alt="computer" />
                 <div className="my-5">
-                  <img src="static/img/icon-who/person.png" alt="เหมาะสำหรับ" height="100" width="100" />
+                  <Icon src="static/img/icon-who/graduate.png" alt="การศึกษา" />
                   <div className="my-5">
-                    <img src="static/img/icon-who/moon.png" alt="ระยะเวลา" height="100" width="100" />
+                    <Icon src="static/img/icon-who/person.png" alt="เหมาะสำหรับ" />
+                    <div className="my-5">
+                      <Icon src="static/img/icon-who/moon.png" alt="ระยะเวลา" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </BoxStyle>
-      </Box>
+          </BoxStyle>
+        </Layout>
+      </div>
     )
   }
 }
