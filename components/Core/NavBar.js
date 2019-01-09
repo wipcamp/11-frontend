@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link, Events, scrollSpy, scroller } from 'react-scroll'
 
-
 const NavSection = styled.nav`
     position: fixed;
     top: 50%;

@@ -1,22 +1,17 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-import What from '../What/index'
-import Who from '../Who/index'
-import Navbar from './NavBar';
 
-const Relative = styled.div`
-  position:relative;
-`
+import Home from '../Home'
+import What from '../What'
+import Navbar from './NavBar'
+
 export default class App extends Component {
   render () {
     return (
       <div>
-        <Relative>
-          <Navbar />
-          <What />
-        </Relative>
+        <Navbar />
+        <Home />
+        <What />
       </div>
     )
   }
 }
-
