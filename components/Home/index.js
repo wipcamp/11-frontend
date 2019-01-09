@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Logo = styled.img`
   position: relative;
-  width: 60%;
+  width: 100%;
   margin-top: 0vh;
   filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   @media (min-width:801px) {
