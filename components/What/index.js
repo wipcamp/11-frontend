@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, { Subtitle, Paragraph , Small} from '../Core/Texts'
+import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
 const Layout = styled.div`  
   margin-top: 4.5%;
@@ -118,7 +118,7 @@ export default class index extends Component {
                       &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
                     </Font>
                   </Paragraph>
-                 
+
                 </div>
                 <div className="row text-center mt-2">
                   {

@@ -17,7 +17,7 @@ const Map = styled.img`
   }
 `
 export default class index extends Component {
-  render() {
+  render () {
     return (
       <div className="container">
         <div className="row justify-content-center">
