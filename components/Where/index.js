@@ -22,7 +22,7 @@ export default class index extends Component {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <Map src = 'static/img/Map22.png' alt = "map"/>
+            <Map src = 'static/img/Map22.png' alt = "map" />
           </div>
         </div>
       </div>

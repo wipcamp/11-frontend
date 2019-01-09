@@ -73,7 +73,6 @@ const BoxStyle = styled.div`
 `
 const Head = styled.div`
   text-align:center;
-
 `
 
 const Font = styled.p`
