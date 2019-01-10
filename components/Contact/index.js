@@ -5,7 +5,7 @@ import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 
 const BoxStyle = styled.div`
-    background: papayawhip;
+    background: rgba(196, 196, 196, 0.73);
     padding:0;
 `
 
@@ -40,7 +40,7 @@ export default class index extends Component {
           <FbBox className="p-4 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <Fbfeed />
           </FbBox>
-          <div class="w-auto"></div>
+          <div className="w-auto"></div>
           <div className="pl-auto pr-auto col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div className="row">
               <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">

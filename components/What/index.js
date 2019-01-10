@@ -56,7 +56,7 @@ const IconInfo = [
 ]
 
 const BoxStyle = styled.div`
-    background: papayawhip;
+    background: rgba(196, 196, 196, 0.73);
     text-align : left;
 
     @media (min-width:320px) {

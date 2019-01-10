@@ -22,7 +22,7 @@ text-align : center;
 
 `
 const BoxStyle = styled.div`
-    background: #304151;
+    background: rgba(196, 196, 196, 0.73);
    
 
     @media (min-width:320px) {
@@ -45,7 +45,7 @@ const Layout = styled.div`
   padding:2em;
 `
 export default class index extends Component {
-  render() {
+  render () {
     return (
       <div className="container">
         <div className="row justify-content-center">
