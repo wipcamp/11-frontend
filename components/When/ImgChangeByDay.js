@@ -5,86 +5,72 @@ import dayjs from 'dayjs'
 import TextBoxLong from './TextBoxLong'
 
 const datenow = dayjs().format()
-const date1 = dayjs('2019-01-08')
-const date2 = dayjs('2019-01-12')
-const date3 = dayjs('2019-01-20')
-const date4 = dayjs('2019-01-31')
+const date1 = dayjs('2019-01-07')
+const date2 = dayjs('2019-01-11')
+const date3 = dayjs('2019-01-14')
+const date4 = dayjs('2019-01-17')
 
 const BoxStyle = styled.div`
+<<<<<<< HEAD
+    padding : 0;
     background: papayawhip;
+=======
+    background: rgba(196, 196, 196, 0.73);
+>>>>>>> 432c2d9f79afcdec67eb58b1b886ec07b462f4bc
     text-align : center;
-
-    @media (min-width:320px) {
-      padding : 1.5em 1em;
-    }
-    
-    @media (min-width:576px) {
-      padding : 1em 2em;
-    }
-    
-    @media (min-width:1024px) {
-      padding : 2em 5em;
-    }
 `
-
 const Img = styled.img`
-  /* width : 38px;
-  height: 48px; */
-  /* @media (min-width:320px) {
-    width:90%;
-  }
-  @media (min-width:412px) {
-    width:50%;
-    margin-top : 6%;
-    margin-bottom: 0%; 
-  } */
-`
-const Font = styled.p`
-  @media (min-width:320px) {
-    font-size: 0.8em;
-  }
-  @media (min-width:412px) {
-    font-size: 0.9em;
-  }
-  @media (min-width:576px) {
-    font-size: 1em;
-  }
-  @media (min-width:768px) {
-    font-size: 1.1em;
-  }
-  @media (min-width:1024px) {
-    font-size: 1.2em;
-  }
+    width:7em;
+    @media (min-width:320px) {
+      width:4em;
+    }
+    @media (min-width:420px) {
+    
+      width:5em;
+    }
+    @media (min-width:576px) {
+      margin-top: 2%;
+      width:5em;
+    }
+    @media (min-width:768px) {
+      margin-top: 5%;
+      width:7em;
+    }
+    @media (min-width:1024px) {
+      margin-top: 5%;
+      width:7em;
+    }
 `
 
 const ImgChangeDay = () => (
-  <div className="container">
-    <div className="row">
-      <BoxStyle className="col">
-        <Img src={date1.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-        <Font>
-          <TextBoxLong text="กำหนดเปิดรับสมัคร" textday="8 มกราคม 2562 - 13 มกราคม 2562"/>
-        </Font>
-      </BoxStyle>
-      <BoxStyle className="col">
-        <Img src={date2.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-        <Font>
-          <TextBoxLong text="กำหนดปิดรับสมัคร" textday="13 มกราคม 2562"/>
-        </Font>
-      </BoxStyle>
-      <BoxStyle className="col">
-        <Img src={date3.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-        <Font>
-          <TextBoxLong text="วันประกาศผล" textday="21 มกราคม 2562"/>
-        </Font>
-      </BoxStyle>
-      <BoxStyle className="col">
-        <Img src={date4.isBefore(datenow) ? '../../static/img/wippo/mochi.png' : '../../static/img/wippo/sakura.png'} />
-        <Font>
-          <TextBoxLong text="วันเปิดค่าย" textday="1 กุมภาพันธ์"/>
-        </Font>
-      </BoxStyle>
-    </div>
+  <div className="row">
+    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <Img src={date1.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+      <span>
+        <TextBoxLong text="กำหนดเปิดรับสมัคร" textday="8 มกราคม 2562"/>
+      </span>
+    </BoxStyle>
+    <div className="w-auto"></div>
+    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <Img src={date2.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+      <span>
+        <TextBoxLong text="กำหนดปิดรับสมัคร" textday="11 มกราคม 2562"/>
+      </span>
+    </BoxStyle>
+    <div className="w-auto"></div>
+    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <Img src={date3.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+      <span>
+        <TextBoxLong text="วันประกาศผล" textday="14 มกราคม 2562"/>
+      </span>
+    </BoxStyle>
+    <div className="w-auto"></div>
+    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <Img src={date4.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+      <span>
+        <TextBoxLong text="วันเปิดค่าย" textday="17 มกราคม 2562"/>
+      </span>
+    </BoxStyle>
   </div>
 )
 

@@ -11,7 +11,11 @@
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+<<<<<<< HEAD
     "react-sanfona": "^1.4.0",
+=======
+    "react-facebook": "^6.0.15",
+>>>>>>> c7f22d61ce8682c84af5054f5a09bb5e1b055eee
     "react-scroll": "^1.7.10",
     "reactstrap": "^7.0.2",
     "styled-components": "^4.1.3"
