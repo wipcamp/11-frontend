@@ -10,7 +10,7 @@ const Head = styled.div`
 export default class componentName extends Component {
   render () {
     return (
-      <div className="container p-5">
+      <div className="container p-5" >
         <Head className="text-center col-12">
           <Headline>When</Headline>
           <Subtitle>ค่ายนี้จัดเมื่อไร?</Subtitle>
