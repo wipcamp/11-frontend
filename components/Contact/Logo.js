@@ -8,10 +8,33 @@ const Divhover = styled.div`
     transform: scale(1.3);
   }
 `
+const Img = styled.img`
+    width:5em;
+    @media (min-width:320px) {
+      width:3em;
+    }
+    @media (min-width:420px) {
+    
+      width:5em;
+    }
+    @media (min-width:576px) {
+      margin-top: 2%;
+      width:5em;
+    }
+    @media (min-width:768px) {
+      margin-top: 5%;
+      width:5em;
+    }
+    @media (min-width:1024px) {
+      margin-top: 5%;
+      padding: .2em;
+      width:5em;
+    }
+`
 
 const Logo = (props) => (
   <Divhover>
-    <img src={props.img} width="87px" height="87px" />
+    <Img src={props.img} />
   </Divhover>
 )
 
