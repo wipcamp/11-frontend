@@ -7,10 +7,6 @@ const Box = styled.div`
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 70px;
-  width: 745px;
-height: 46px;
-left: 348px;
-top: 314px;
 `
 
 
@@ -38,13 +34,13 @@ export default class index extends Component {
       <Box>
         <Accordion>
           {[0, 1, 2, 3, 4, 5].map(item => {
-            return (<div>
+            return (
               <AccordionItem title={`Q: ${this.state.question[item]} ?`} >
-
+              <div>
                 {`A: ${this.state.answer[item]}`}
+              </div>
 
               </AccordionItem>
-            </div>
             )
           })}
         </Accordion>
