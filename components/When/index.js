@@ -13,8 +13,8 @@ export default class componentName extends Component {
     return (
       <div>
         <Head className="text-center col-12">
-           <Headline>When</Headline>
-            <Subtitle>ค่ายนี้จัดเมื่อไร?</Subtitle>
+          <Headline>When</Headline>
+          <Subtitle>ค่ายนี้จัดเมื่อไร?</Subtitle>
         </Head>
         <ImgChangeByDay />
       </div>
