@@ -11,7 +11,6 @@ const date3 = dayjs('2019-01-14')
 const date4 = dayjs('2019-01-17')
 
 const BoxStyle = styled.div`
-    padding : 0;
     background: rgba(196, 196, 196, 0.73);
     text-align : center;
 `
