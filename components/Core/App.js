@@ -1,4 +1,4 @@
-import React ,{ Component } from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 
@@ -8,6 +8,7 @@ import Navbar from './NavBar'
 import Who from '../Who'
 import Where from '../Where'
 import When from '../When'
+import FAQs from '../FAQs'
 import Contact from '../Contact'
 import Loading from './Loading';
 
@@ -29,11 +30,11 @@ class App extends React.Component {
     // the setTimeout just simulates an async action, after which the component will render the content
     setTimeout(() => this.setState({ loading: false }), 1500);
   }
-  
-  render () {
+
+  render() {
     const { loading } = this.state;
-    
-    if(loading) { // if your component doesn't have to wait for an async action, remove this block 
+
+    if (loading) { // if your component doesn't have to wait for an async action, remove this block 
       return (
         <Loading />
       )
@@ -42,19 +43,22 @@ class App extends React.Component {
       <div>
         <Navbar />
         <Home />
-        <Section name = "what">
+        <Section name="what">
           <What />
         </Section>
-        <Section name = "who">
+        <Section name="who">
           <Who />
         </Section>
-        <Section name = "where" >
+        <Section name="where" >
           <Where />
         </Section>
-        <Section name = "when" >
+        <Section name="when" >
           <When />
         </Section>
-        <Section name = "contact" >
+        <Section name="FAQs" >
+          <FAQs />
+        </Section>
+        <Section name="contact" >
           <Contact />
         </Section>
       </div>
