@@ -7,6 +7,10 @@ const Box = styled.div`
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 70px;
+  width: 745px;
+height: 46px;
+left: 348px;
+top: 314px;
 `
 
 

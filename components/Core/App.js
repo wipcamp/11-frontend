@@ -8,9 +8,6 @@ import Navbar from './NavBar'
 import Who from '../Who'
 import Where from '../Where'
 import When from '../When'
-<<<<<<< HEAD
-import FAQs from '../FAQs'
-=======
 import Contact from '../Contact'
 import Loading from './Loading';
 
@@ -22,7 +19,6 @@ const Section = styled(Element)`
     padding: 50px 0;
   }
 `
->>>>>>> c7f22d61ce8682c84af5054f5a09bb5e1b055eee
 
 class App extends React.Component {
   state = {
@@ -46,13 +42,6 @@ class App extends React.Component {
       <div>
         <Navbar />
         <Home />
-<<<<<<< HEAD
-        <What />
-        <Who />
-        <Where />
-        <When />
-        <FAQs />
-=======
         <Section name = "what">
           <What />
         </Section>
@@ -68,7 +57,6 @@ class App extends React.Component {
         <Section name = "contact" >
           <Contact />
         </Section>
->>>>>>> c7f22d61ce8682c84af5054f5a09bb5e1b055eee
       </div>
     )
   }
