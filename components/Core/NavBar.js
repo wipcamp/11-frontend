@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link, Events, scrollSpy, scroller } from 'react-scroll'
+import Button from './Button';
 
 const NavSection = styled.nav`
   position: fixed;
@@ -160,10 +161,12 @@ class Navbar extends React.Component {
                     {e.title}
                   </div>
                 </NavLink>
+                
               </NavItems>
             ))
           }
         </SectionUl>
+        <Button name = "Game"/>
       </NavSection>
     )
   }
