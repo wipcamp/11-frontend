@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import styled from 'styled-components'
+import { Element } from 'react-scroll'
 
 import Home from '../Home'
 import What from '../What'
@@ -9,14 +10,12 @@ import Where from '../Where'
 import When from '../When'
 import Contact from '../Contact'
 
-import { Element } from 'react-scroll';
-
 const Section = styled(Element)`
-  padding: 20px 0px;
+  padding: 80px 0px;
   text-align: center;
 
   @media(max-width: 768px) {
-    padding: 25px 0;
+    padding: 50px 0;
   }
 `
 
