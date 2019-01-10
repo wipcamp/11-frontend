@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
 const BoxStyle = styled.div`
-  background: #d29ea4;
+  background: rgba(196, 196, 196, 0.73);
   text-align : left;
   width: 100%;
   
@@ -22,7 +22,7 @@ const BoxStyle = styled.div`
 `
 
 const TextBoxColor = styled.div`
-  background: #960018;
+  background: #DE5454;
   text-align : left;
 
     @media (min-width:320px) {
