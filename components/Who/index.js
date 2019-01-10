@@ -101,7 +101,7 @@ export default class componentName extends Component {
                   <Icon src="static/img/icon-who/person.png" alt="เหมาะสำหรับ" />
                 </TextBoxColor>
               </div>
-              <div className="my-5">
+              <div className="my-3">
                 <TextBoxColor>
                   <Icon src="static/img/icon-who/moon.png" alt="ระยะเวลา" />
                 </TextBoxColor>
