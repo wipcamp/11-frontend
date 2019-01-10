@@ -2,13 +2,34 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Accordion, AccordionItem } from 'react-sanfona'
 import { ParagraphBold, Paragraph } from '../Core/Texts'
+import Headline, { Subtitle, Paragragh, Small} from '../Core/Texts'
 
-const Box = styled.div`
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 70px;
+const Head = styled.div`
+text-align : center;
+
 `
+const BoxStyle = styled.div`
+    background: rgba(196, 196, 196, 0.73);
 
+    @media (min-width:320px) {
+      padding : 1.5em 1em;
+    }
+    
+    @media (min-width:576px) {
+      padding : 1em 2em;
+    }
+    
+    @media (min-width:1024px) {
+      padding : 2em 5em;
+    }
+`
+const Layout = styled.div`  
+  margin-top: 4.5%;
+  margin-bottom: 10%;
+  border: .2em solid transparent;
+  border-radius: 2em;
+  padding:2em;
+`
 
 
 export default class index extends Component {
@@ -31,7 +52,14 @@ export default class index extends Component {
 
   render() {
     return (
-      <Box>
+      <div className="container">
+        <div className="row justify-content-center">
+          <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
+            <Head className="text-center col-12">
+              <Headline>FAQs</Headline>
+              <Subtitle>คำถามที่พบบ่อย?</Subtitle>
+            </Head>
+            <BoxStyle>
         <Accordion>
           {[0, 1, 2, 3, 4, 5].map(item => {
             return (
@@ -39,12 +67,14 @@ export default class index extends Component {
               <div>
                 {`A: ${this.state.answer[item]}`}
               </div>
-
               </AccordionItem>
             )
           })}
         </Accordion>
-      </Box>
+        </BoxStyle>
+      </Layout>
+        </div>
+      </div>
     )
   }
 }
