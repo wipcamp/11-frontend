@@ -14,22 +14,21 @@ const Logo = styled.img`
   }
 `
 const LogoWip = styled.img`
-    position: relative;
-    z-index: 8;
-    width: 100%;
-    margin-top: 8vh;
-    animation-name: bcCCNc;
-    animation-duration: 2s;
-    @media (min-width:801px) {
+  position: relative;
+  z-index: 8;
+  width: 100%;
+  margin-top: 8vh;
+  animation-name: bcCCNc;
+  animation-duration: 2s;
+  @media (min-width:801px) {
     width: 50%;
   }
   @media (min-width:1024px) {
-    width: 55%;
+   width: 55%;
   }
-}
 `
 export default class componentName extends Component {
-  render() {
+  render () {
     return (
       <div className="text-center">
         <LogoWip src="static/img/logofinals.png" alt="WIP CAMP" />

@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
-
+import { Component } from 'react'
 import Home from '../Home'
 import What from '../What'
 import Navbar from './NavBar'
+import Who from '../Who'
+import Where from '../Where'
 import When from '../When'
 import FAQs from '../FAQs'
 
@@ -13,8 +14,10 @@ export default class App extends Component {
         <Navbar />
         <Home />
         <What />
+        <Who />
+        <Where />
+        <When />
         <FAQs />
-        {/* <When /> */}
       </div>
     )
   }
