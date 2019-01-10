@@ -45,7 +45,7 @@ const Layout = styled.div`
   padding:2em;
 `
 export default class index extends Component {
-  render () {
+  render() {
     return (
       <div className="container">
         <div className="row justify-content-center">
