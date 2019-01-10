@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React ,{ Component } from 'react'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
 
@@ -9,6 +9,7 @@ import Who from '../Who'
 import Where from '../Where'
 import When from '../When'
 import Contact from '../Contact'
+import Loading from './Loading';
 
 const Section = styled(Element)`
   padding: 80px 0px;
@@ -19,8 +20,24 @@ const Section = styled(Element)`
   }
 `
 
-export default class App extends Component {
+class App extends React.Component {
+  state = {
+    loading: true
+  };
+
+  componentDidMount() {
+    // the setTimeout just simulates an async action, after which the component will render the content
+    setTimeout(() => this.setState({ loading: false }), 1500);
+  }
+  
   render () {
+    const { loading } = this.state;
+    
+    if(loading) { // if your component doesn't have to wait for an async action, remove this block 
+      return (
+        <Loading />
+      )
+    }
     return (
       <div>
         <Navbar />
@@ -44,3 +61,5 @@ export default class App extends Component {
     )
   }
 }
+
+export default App
