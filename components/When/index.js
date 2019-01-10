@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ImgChangeByDay from './ImgChangeByDay'
 import Headline, { Subtitle } from '../Core/Texts'
 import styled from 'styled-components'
-// import Textbox from './TextBoxLong'
 const Head = styled.div`
   text-align : center;
 `
