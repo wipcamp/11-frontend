@@ -7,6 +7,7 @@ import Navbar from './NavBar'
 import Who from '../Who'
 import Where from '../Where'
 import When from '../When'
+import Contact from '../Contact'
 
 import { Element } from 'react-scroll';
 
@@ -36,6 +37,9 @@ export default class App extends Component {
         </Section>
         <Section name = "when" >
           <When />
+        </Section>
+        <Section name = "contact" >
+          <Contact />
         </Section>
       </div>
     )
