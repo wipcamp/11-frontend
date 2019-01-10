@@ -11,12 +11,8 @@ const date3 = dayjs('2019-01-14')
 const date4 = dayjs('2019-01-17')
 
 const BoxStyle = styled.div`
-<<<<<<< HEAD
     padding : 0;
-    background: papayawhip;
-=======
     background: rgba(196, 196, 196, 0.73);
->>>>>>> 432c2d9f79afcdec67eb58b1b886ec07b462f4bc
     text-align : center;
 `
 const Img = styled.img`
