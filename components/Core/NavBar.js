@@ -102,8 +102,7 @@ const sections = [
   { href: 'when', title: 'When' },
   { href: 'faqs', title: 'FAQs' },
   { href: 'sponsor', title: 'Sponsors' },
-  { href: 'contact', title: 'Contact' },
-  { href: 'game', title: 'Game' }
+  { href: 'contact', title: 'Contact' }
 ]
 
 class Navbar extends React.Component {
@@ -161,7 +160,6 @@ class Navbar extends React.Component {
                     {e.title}
                   </div>
                 </NavLink>
-                
               </NavItems>
             ))
           }
