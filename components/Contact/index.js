@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph } from '../Core/Texts'
-import { MTBox } from '../Core/ResponBox'
+import {WDBox ,MTBox} from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 
@@ -11,23 +11,8 @@ const BoxStyle = styled.div`
     padding:0;
 `
 
-const FbBox = styled.div`
+const FbBox = styled(WDBox)`
     width: 500px;
-    @media (min-width:320px) {
-      width:3em;
-    }
-    @media (min-width:420px) {
-      width:5em;
-    }
-    @media (min-width:576px) {
-      width:5em;
-    }
-    @media (min-width:768px) {
-      width:7em;
-    }
-    @media (min-width:1024px) {
-      width:7em;
-    }
 `
 
 const Div = styled(MTBox)`
@@ -44,7 +29,6 @@ const Img = styled.img`
       width:1em;
     }
     @media (min-width:420px) {
-    
       width:1em;
     }
     @media (min-width:576px) {
@@ -79,7 +63,6 @@ export default class index extends Component {
         <div className="row">
           <Head className="text-center col-12">
             <Headline>Contact</Headline>
-            {/* <Subtitle>ค่ายนี้เหมาะสำหรับใคร?</Subtitle> */}
           </Head>
         </div>
         <div className="container">

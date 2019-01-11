@@ -36,8 +36,7 @@ export const WDBox = styled.div`
     @media (min-width:320px) {
         width:4em;
     }
-    @media (min-width:420px) {
-    
+    @media (min-width:420px) {  
       width:5em;
     }
     @media (min-width:576px) {
