@@ -9,6 +9,21 @@ const QuestionText = styled.a`
     color: navy;
   }
 `
+
+const Faqicon = styled.span`
+  width: 1.5vw;
+  height: 1.5vw;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%; 
+  background-color: red;
+  z-index:10;
+  float:right;
+  &:hover{
+    background-color:blue;
+    color:white;
+  }
+`
 export default class Question extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
@@ -33,7 +48,9 @@ export default class Question extends Component {
             <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
               <div className="card-header">
                 Q : {this.state.question[props.number]}
+                <Faqicon></Faqicon>
               </div>
+              
             </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body">
