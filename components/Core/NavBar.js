@@ -35,6 +35,7 @@ const NavLink = styled(Link)`
   opacity: 0.6;
   transition: all .2s;
   cursor : pointer;
+  
 
   &:before {
     content: '';
@@ -44,6 +45,7 @@ const NavLink = styled(Link)`
     border: 1px solid black;
     border-radius: 50%;
     margin: 5px;
+    background-color: black;
   }
   
   .text {
@@ -70,9 +72,9 @@ const NavLink = styled(Link)`
 
   &.active {
     opacity: 1;
-    
     &:before {
       border: 1px solid black;
+      background-color: white;
     }
 
     .text {
