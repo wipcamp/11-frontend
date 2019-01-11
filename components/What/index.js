@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
+import Headline, { Subtitle, Paragraph, Small , Font} from '../Core/Texts'
 
 const Icon = styled.img`
   width:7em;
@@ -51,24 +51,6 @@ const BoxStyle = styled.div`
 `
 const Head = styled.div`
   text-align:center;
-`
-
-const Font = styled.p`
-  @media (min-width:320px) {
-    font-size: 0.8em;
-  }
-  @media (min-width:412px) {
-    font-size: 0.9em;
-  }
-  @media (min-width:576px) {
-    font-size: 1em;
-  }
-  @media (min-width:768px) {
-    font-size: 1.1em;
-  }
-  @media (min-width:1024px) {
-    font-size: 1.2em;
-  }
 `
 
 export default class index extends Component {
