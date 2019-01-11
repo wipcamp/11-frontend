@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { Paragraph } from '../Core/Texts'
 
-const Box = styled.span`
+const Box = styled.div`
     /* padding : 0.5em 2em; */
     width:100%;
     height:100%;

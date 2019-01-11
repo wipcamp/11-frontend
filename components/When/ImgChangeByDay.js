@@ -37,35 +37,50 @@ const Img = styled.img`
     }
 `
 
+const Font = styled.div`
+    @media (min-width:320px) {
+      margin-top:2em;
+    }
+`
+
 const ImgChangeDay = () => (
   <div className="container">
     <div className="row">
-      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-        <Img src={date1.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-        <span>
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
+          <Img src={date1.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        </div>
+        <div className="w-auto"></div>
+        <Font className="p-0 col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <TextBoxLong text="กำหนดเปิดรับสมัคร" textday="8 มกราคม 2562"/>
-        </span>
+        </Font>
       </BoxStyle>
       <div className="w-auto"></div>
-      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-        <Img src={date2.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-        <span>
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
+          <Img src={date2.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        </div>
+        <Font className="p-0 col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <TextBoxLong text="กำหนดปิดรับสมัคร" textday="11 มกราคม 2562"/>
-        </span>
+        </Font>
       </BoxStyle>
       <div className="w-auto"></div>
-      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-        <Img src={date3.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-        <span>
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
+          <Img src={date3.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        </div>
+        <Font className="p-0 col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <TextBoxLong text="วันประกาศผล" textday="14 มกราคม 2562"/>
-        </span>
+        </Font>
       </BoxStyle>
       <div className="w-auto"></div>
-      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-        <Img src={date4.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-        <span>
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
+          <Img src={date4.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        </div>
+        <Font className="p-0 col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <TextBoxLong text="วันเปิดค่าย" textday="17 มกราคม 2562"/>
-        </span>
+        </Font>
       </BoxStyle>
     </div>
   </div>
