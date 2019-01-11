@@ -5,12 +5,10 @@ import { ParagraphBold, Paragraph } from '../Core/Texts'
 import Headline, { Subtitle, Paragragh, Small} from '../Core/Texts'
 
 const Head = styled.div`
-text-align : center;
-
+  text-align : center;
 `
 const BoxStyle = styled.div`
     background: papayawhip;
-
     @media (min-width:320px) {
       padding : 1.5em 1em;
     }
@@ -46,8 +44,6 @@ export default class index extends Component {
       'น้องเอ๋ย น้องจะได้พักค้างแรมภายในหอพักของทางมหาวิทยาลัย ซึ่งจะมีพี่ ๆ คอยดูแลตลอด 24 ชั่วโมง รวมถึงพี่พยาบาลที่จะช่วยเหลือในกรณีน้อง ๆ ไม่สบาย และพร้อมจะปฐมพยาบาลเบื้องต้นให้น้อง ๆ ตลอดระยะเวลาค่าย น้อง ๆ สามารถบอกผู้ปกครองได้เลยว่าไม่ต้องกังวล',
       'น้องจะได้รู้ว่ากล่องดวงใจสำหรับตัวน้องคืออะไร น้องจะได้รับความรู้ด้านไอที จากพี่ ๆ หลักสูตรเทคโนโลยีสารสนเทศ คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรีครับ รวมถึงความสนุกสนานที่พี่ ๆ เตรียมไว้สำหรับน้อง ๆ ทุกคน อีกทั้งยังได้มิตรภาพจากเพื่อน ๆ และพี่ ๆ ภายในค่าย ที่สำคัญนะน้องเอ๋ย น้องจะได้รับประกาศนียบัตรจากทางค่าย เพื่อรับรองว่าน้องได้มาเข้าค่ายนี้',
       'ค่ายนี้มีค่าใช้จ่าย 450 บาท น้องเอ๋ย สามารถชำระได้ผ่านธนาคาร ติดตามได้ทางแฟนเพจนะน้องเอ๋ย']
-
-
   };
 
   render() {
@@ -63,10 +59,8 @@ export default class index extends Component {
         <Accordion>
           {[0, 1, 2, 3, 4, 5].map(item => {
             return (
-              <AccordionItem title={`Q: ${this.state.question[item]} ?`} >
-              <Paragragh>
+              <AccordionItem title={`Q: ${this.state.question[item]} ?`} >         
                 {`A: ${this.state.answer[item]}`}
-              </Paragragh>
               </AccordionItem>
             )
           })}
