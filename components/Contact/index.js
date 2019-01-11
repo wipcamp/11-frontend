@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph } from '../Core/Texts'
+import { MTBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 
@@ -29,44 +30,13 @@ const FbBox = styled.div`
     }
 `
 
-const Div = styled.div`
+const Div = styled(MTBox)`
     margin-top:5em;
-    @media (min-width:320px) {
-        margin-top:1.5em;
-    }
-    @media (min-width:420px) {
-        margin-top:1.5em;
-    }
-    @media (min-width:576px) {
-        margin-top:3em;
-    }
-    @media (min-width:768px) {
-        margin-top:3em;
-    }
-    @media (min-width:1024px) {
-        margin-top:5em;
-    }
 `
-const Div1 = styled.div`
+const Div1 = styled(MTBox)`
     text-align : center;
     margin-top:5em;
-    @media (min-width:320px) {
-        margin-top:1.5em;
-    }
-    @media (min-width:420px) {
-        margin-top:1.5em;
-    }
-    @media (min-width:576px) {
-        margin-top:3em;
-    }
-    @media (min-width:768px) {
-        margin-top:3em;
-    }
-    @media (min-width:1024px) {
-        margin-top:5em;
-    }
 `
-
 
 const Img = styled.img`
     width:3em;
