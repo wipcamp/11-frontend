@@ -11,6 +11,7 @@ import When from '../When'
 import FAQs from '../FAQs'
 import Contact from '../Contact'
 import Loading from './Loading';
+import RegisterButton from './Register';
 
 const Section = styled(Element)`
   padding: 80px 0px;
@@ -40,6 +41,7 @@ class App extends React.Component {
     }
     return (
       <div>
+        <RegisterButton />
         <Navbar />
         {this.state.count === 0 &&
           <Section name = "home">
