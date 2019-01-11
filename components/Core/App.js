@@ -41,7 +41,9 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
+        <Section name = "home">
         <Home />
+        </Section>
         <Section name = "what">
           <What />
         </Section>
