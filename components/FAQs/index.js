@@ -11,14 +11,17 @@ const QuestionText = styled.a`
 `
 
 const Faqicon = styled.span`
-  width: 1.5vw;
-  height: 1.5vw;
-  max-width: 50px;
-  max-height: 50px;
+  width: 3vw;
+  height: 3vw;
+  max-width: 20px;
+  max-height: 20px;
+  min-width: 15px;
+  min-height: 15px;
   border-radius: 50%; 
   background-color: red;
   z-index:10;
   float:right;
+  display:block;
   &:hover{
     background-color:blue;
     color:white;
@@ -46,14 +49,14 @@ export default class Question extends Component {
       <div className = "card">
         <div className="card">
             <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
-              <div className="card-header">
+              <div className="card-header px-4">
                 Q : {this.state.question[props.number]}
-                <Faqicon></Faqicon>
+                <Faqicon class = "icon"></Faqicon>
               </div>
               
             </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
-            <div className="card-body">
+            <div className="card-body px-4">
               A : {this.state.answer[props.number]}
             </div>
           </div>
