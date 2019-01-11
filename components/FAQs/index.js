@@ -24,12 +24,12 @@ export default class Question extends Component {
         <div className="card">
           <div className="card-header">
             <a className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
-              {this.state.question[props.number]}
+              Q : {this.state.question[props.number]}
             </a>
           </div>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body">
-              {this.state.answer[props.number]}
+              A : {this.state.answer[props.number]}
             </div>
           </div>
         </div>
