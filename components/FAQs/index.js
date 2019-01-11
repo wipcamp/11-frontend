@@ -30,13 +30,11 @@ export default class Question extends Component {
     const CollapseItem = (props) => (
       <div className = "card">
         <div className="card">
-          
             <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
-            <div className="card-header">
-              Q : {this.state.question[props.number]}
+              <div className="card-header">
+                Q : {this.state.question[props.number]}
               </div>
             </QuestionText>
-          
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body">
               A : {this.state.answer[props.number]}

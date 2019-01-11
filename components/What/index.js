@@ -2,13 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
-const Layout = styled.div`  
-  margin-top: 4.5%;
-  margin-bottom: 10%;
-  border: .2em solid transparent;
-  border-radius: 2em;
-  padding:2em;
-`
 const Icon = styled.img`
   width:7em;
   @media (min-width:320px) {
@@ -31,21 +24,6 @@ const Icon = styled.img`
     padding: .2em;
     width:7em;
   }
-  cursor:pointer;
-  &:hover{
-    background: transparent;
-    transform: scale(1.2);
-    border-radius: 0.5em;
-    border: 4px solid transparent;
-    
-  }
-  &:active{
-  background: transparent;
-  transform: scale(1.3);
-  border-radius: 1em;
-  border-radius: 0.5em;
-  border: 4px solid transparent;
-  }  
 `
 
 const IconInfo = [
@@ -96,16 +74,18 @@ const Font = styled.p`
 export default class index extends Component {
   render () {
     return (
-      <div className="container px-3">
+      <div className="container">
         <div className="row justify-content-center">
-          <Layout className="col-12 col-sm-12 col-md-12 col-lg-10">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row">
               <Head className="text-center col-12">
                 <Headline>What</Headline>
-                <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
               </Head>
               <BoxStyle>
                 <div className="col-12">
+                  <div className="row justify-content-center">
+                    <Subtitle className = "mb-4"><b>ค่ายนี้คืออะไร ?</b></Subtitle>
+                  </div>
                   <Paragraph>
                     <Font>
                       &nbsp;&nbsp;&nbsp;&nbsp;ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริงณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
@@ -131,7 +111,7 @@ export default class index extends Component {
                 </div>
               </BoxStyle>
             </div>
-          </Layout>
+          </div>
         </div>
       </div>
 
