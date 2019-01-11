@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
+const QuestionText = styled.a`
+  text-decoration: none;
+  color: navy;
 
+  &:hover{
+    color: navy;
+  }
+`
 export default class Question extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
@@ -22,11 +30,13 @@ export default class Question extends Component {
     const CollapseItem = (props) => (
       <div className = "card">
         <div className="card">
-          <div className="card-header">
-            <a className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
+          
+            <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
+            <div className="card-header">
               Q : {this.state.question[props.number]}
-            </a>
-          </div>
+              </div>
+            </QuestionText>
+          
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body">
               A : {this.state.answer[props.number]}
