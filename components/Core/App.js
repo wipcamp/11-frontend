@@ -14,7 +14,6 @@ import Loading from './Loading';
 
 const Section = styled(Element)`
   padding: 80px 0px;
-  text-align: center;
 
   @media(max-width: 768px) {
     padding: 50px 0;
