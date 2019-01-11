@@ -11,8 +11,9 @@ const BoxStyle = styled.div`
 `
 
 const FbBox = styled.div`
+    width: 500px;
     @media (min-width:320px) {
-      width:4em;
+      width:3em;
     }
     @media (min-width:420px) {
       width:5em;
@@ -74,10 +75,17 @@ const Head = styled.div`
 const DivCon = styled.div`
   display: inline-block;
 `
+
+const Font = styled.div`
+  display: inline-block;
+  @media (min-width:320px) {
+    font-size: 0.8em;
+  }
+`
 export default class index extends Component {
   render () {
     return (
-      <div className="container p-5">
+      <div className="container">
         <div className="row">
           <Head className="text-center col-12">
             <Headline>Contact</Headline>
@@ -111,7 +119,7 @@ export default class index extends Component {
                   <Img src="../../static/img/social/instagram.png" />
                 </DivCon>
                 <DivCon>
-                  &nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;
                 </DivCon>
                 <DivCon>
                   <Paragraph>02-107-3576</Paragraph>
@@ -123,11 +131,11 @@ export default class index extends Component {
                   <Img src="../../static/img/social/instagram.png" />
                 </DivCon>
                 <DivCon>
-                  &nbsp;&nbsp;&nbsp;
+                  &nbsp;
                 </DivCon>
-                <DivCon>
+                <Font>
                   <Paragraph>wippo@wipcamp.com</Paragraph>
-                </DivCon>
+                </Font>
               </Div>
             </Div>
           </BoxStyle>

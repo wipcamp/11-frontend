@@ -38,34 +38,36 @@ const Img = styled.img`
 `
 
 const ImgChangeDay = () => (
-  <div className="row">
-    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-      <Img src={date1.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-      <span>
-        <TextBoxLong text="กำหนดเปิดรับสมัคร" textday="8 มกราคม 2562"/>
-      </span>
-    </BoxStyle>
-    <div className="w-auto"></div>
-    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-      <Img src={date2.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-      <span>
-        <TextBoxLong text="กำหนดปิดรับสมัคร" textday="11 มกราคม 2562"/>
-      </span>
-    </BoxStyle>
-    <div className="w-auto"></div>
-    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-      <Img src={date3.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-      <span>
-        <TextBoxLong text="วันประกาศผล" textday="14 มกราคม 2562"/>
-      </span>
-    </BoxStyle>
-    <div className="w-auto"></div>
-    <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
-      <Img src={date4.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
-      <span>
-        <TextBoxLong text="วันเปิดค่าย" textday="17 มกราคม 2562"/>
-      </span>
-    </BoxStyle>
+  <div className="container">
+    <div className="row">
+      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <Img src={date1.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        <span>
+          <TextBoxLong text="กำหนดเปิดรับสมัคร" textday="8 มกราคม 2562"/>
+        </span>
+      </BoxStyle>
+      <div className="w-auto"></div>
+      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <Img src={date2.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        <span>
+          <TextBoxLong text="กำหนดปิดรับสมัคร" textday="11 มกราคม 2562"/>
+        </span>
+      </BoxStyle>
+      <div className="w-auto"></div>
+      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <Img src={date3.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        <span>
+          <TextBoxLong text="วันประกาศผล" textday="14 มกราคม 2562"/>
+        </span>
+      </BoxStyle>
+      <div className="w-auto"></div>
+      <BoxStyle className="mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+        <Img src={date4.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
+        <span>
+          <TextBoxLong text="วันเปิดค่าย" textday="17 มกราคม 2562"/>
+        </span>
+      </BoxStyle>
+    </div>
   </div>
 )
 
