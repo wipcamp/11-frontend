@@ -91,7 +91,7 @@ export default class index extends Component {
                 <Logo img="../../static/img/social/instagram.png" />
               </div>
             </div>
-            <div class="w-auto"></div>
+            <div className="w-auto"></div>
             <Div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div className="row justify-content-center">
                 <div className="pr-0 col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -102,7 +102,7 @@ export default class index extends Component {
                 </div>
               </div>
             </Div>
-            <div class="w-auto"></div>
+            <div className="w-auto"></div>
             <Div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div className="row justify-content-center">
                 <div className="pr-0 col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
