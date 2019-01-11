@@ -1,36 +1,7 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-import { Accordion, AccordionItem } from 'react-sanfona'
-import { ParagraphBold, Paragraph } from '../Core/Texts'
-import Headline, { Subtitle, Paragragh, Small} from '../Core/Texts'
-
-const Head = styled.div`
-  text-align : center;
-`
-const BoxStyle = styled.div`
-    background: papayawhip;
-    @media (min-width:320px) {
-      padding : 1.5em 1em;
-    }
-    
-    @media (min-width:576px) {
-      padding : 1em 2em;
-    }
-    
-    @media (min-width:1024px) {
-      padding : 2em 5em;
-    }
-`
-const Layout = styled.div`  
-  margin-top: 4.5%;
-  margin-bottom: 10%;
-  border: .2em solid transparent;
-  border-radius: 2em;
-  padding:2em;
-`
 
 
-export default class index extends Component {
+export default class Demo extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
       'ไม่มีความรู้เกี่ยวกับคอมพิวเตอร์มากนัก จะเข้าค่ายนี้ได้ หรือไม่',
@@ -46,31 +17,35 @@ export default class index extends Component {
       'ค่ายนี้มีค่าใช้จ่าย 450 บาท น้องเอ๋ย สามารถชำระได้ผ่านธนาคาร ติดตามได้ทางแฟนเพจนะน้องเอ๋ย']
   };
 
-  render() {
+  
+  render () {
+    const CollapseItem = (props) => (
+      <div className = "card">
+        <div className="card">
+          <div className="card-header">
+            <a className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
+              {this.state.question[props.number]}
+            </a>
+          </div>
+          <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
+            <div className="card-body">
+              {this.state.answer[props.number]}
+            </div>
+          </div>
+        </div>
+      </div>
+    )
     return (
       <div className="container">
-        <div className="row justify-content-center">
-          <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <Head className="text-center col-12">
-              <Headline>FAQs</Headline>
-              <Subtitle>คำถามที่พบบ่อย?</Subtitle>
-            </Head>
-            <BoxStyle>
-        <Accordion>
-          {[0, 1, 2, 3, 4, 5].map(item => {
-            return (
-              <AccordionItem title={`Q: ${this.state.question[item]} ?`} >         
-                {`A: ${this.state.answer[item]}`}
-              </AccordionItem>
-            )
-          })}
-        </Accordion>
-        </BoxStyle>
-      </Layout>
+        <div id="accordion">
+          <CollapseItem num = 'One' first = 'show' number = '0'/>
+          <CollapseItem num = 'Two' number = '1'/>
+          <CollapseItem num = 'Three' number = '2'/>
+          <CollapseItem num = 'Four' number = '3'/>
+          <CollapseItem num = 'Five' number = '4'/>
+          <CollapseItem num = 'Six' number = '5'/>
         </div>
       </div>
     )
   }
 }
-
-//expanded={item === 0}
