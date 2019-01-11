@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-export default class Demo extends Component {
+export default class Question extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
       'ไม่มีความรู้เกี่ยวกับคอมพิวเตอร์มากนัก จะเข้าค่ายนี้ได้ หรือไม่',
