@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ImgChangeByDay from './ImgChangeByDay'
 import Headline, { Subtitle } from '../Core/Texts'
 import styled from 'styled-components'
+
 const Head = styled.div`
   text-align : center;
 `
