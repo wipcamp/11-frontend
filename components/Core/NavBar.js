@@ -95,6 +95,7 @@ const NavItems = styled.li`
 `
 
 const sections = [
+  { href: '', title: '' },
   { href: 'home', title: 'Home' },
   { href: 'what', title: 'What' },
   { href: 'who', title: 'Who' },
@@ -106,31 +107,12 @@ const sections = [
 ]
 
 class Navbar extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
+  state = {
       current: 'home',
       show: false
-    }
   }
-
-  componentDidMount () {
-    Events.scrollEvent.register('end', (section) => {
-      this.setState({
-        current: section
-      })
-    })
-
-    scrollSpy.update()
-  }
-
-  componentWillUnmount () {
-    Events.scrollEvent.remove('begin')
-    Events.scrollEvent.remove('end')
-  }
-
   toggleNavbar (to) {
-    if (to === 'welcoming-section') {
+    if (to === 'home') {
       this.setState({ show: false })
     } else {
       this.setState({ show: true })
