@@ -31,21 +31,6 @@ const Icon = styled.img`
     padding: .2em;
     width:7em;
   }
-  cursor:pointer;
-  &:hover{
-    background: transparent;
-    transform: scale(1.2);
-    border-radius: 0.5em;
-    border: 4px solid transparent;
-    
-  }
-  &:active{
-  background: transparent;
-  transform: scale(1.3);
-  border-radius: 1em;
-  border-radius: 0.5em;
-  border: 4px solid transparent;
-  }  
 `
 
 const IconInfo = [
