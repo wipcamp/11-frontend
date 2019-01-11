@@ -51,7 +51,7 @@ export default class Question extends Component {
             <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
               <div className="card-header px-4">
                 Q : {this.state.question[props.number]}
-                <Faqicon class = "icon"></Faqicon>
+                <Faqicon></Faqicon>
               </div>
               
             </QuestionText>
