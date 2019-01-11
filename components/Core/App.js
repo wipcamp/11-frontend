@@ -23,18 +23,17 @@ const Section = styled(Element)`
 
 class App extends React.Component {
   state = {
-    loading: true
+    loading: false //true
   };
 
   componentDidMount() {
-    // the setTimeout just simulates an async action, after which the component will render the content
     setTimeout(() => this.setState({ loading: false }), 1500);
   }
 
   render() {
     const { loading } = this.state;
 
-    if (loading) { // if your component doesn't have to wait for an async action, remove this block 
+    if (loading) {
       return (
         <Loading />
       )
