@@ -74,7 +74,7 @@ const Layout = styled.div`
   padding:2em;
 `
 export default class componentName extends Component {
-  render () {
+  render() {
     return (
       <div className="container">
         {/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. */}
@@ -89,21 +89,41 @@ export default class componentName extends Component {
 
             <BoxStyle className="col-12 col-sm-12 col-md-12 col-lg-10 p-5">
               <TextBoxColor>
-                <Icon src="static/img/icon-who/computer.png" alt="computer" />
+                <div class="media">
+                  <Icon className = "md-5" src="static/img/icon-who/moon.png" alt="ระยะเวลา" />
+                  <div class="media-body">
+                    <Paragraph className="md-5 mt-5">น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน</Paragraph>
+                  </div>
+                </div>
               </TextBoxColor>
               <div className="my-5">
                 <TextBoxColor>
-                  <Icon src="static/img/icon-who/graduate.png" alt="การศึกษา" />
+                  <div class="media">
+                    <Icon className = "md-5" src="static/img/icon-who/graduate.png" alt="การศึกษา" />
+                    <div class="media-body">
+                      <Paragraph className="md-5 mt-5">น้อง ๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ</Paragraph>
+                    </div>
+                  </div>
                 </TextBoxColor>
               </div>
               <div className="my-5">
                 <TextBoxColor>
-                  <Icon src="static/img/icon-who/person.png" alt="เหมาะสำหรับ" />
+                  <div class="media">
+                    <Icon className = "md-5" src ="static/img/icon-who/person.png" alt="เหมาะสำหรับ" />
+                    <div class="media-body">
+                      <Paragraph className = "md-5 mt-5">น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง</Paragraph>
+                    </div>
+                  </div>
                 </TextBoxColor>
               </div>
               <div className="my-3">
                 <TextBoxColor>
-                  <Icon src="static/img/icon-who/moon.png" alt="ระยะเวลา" />
+                  <div class="media">
+                    <Icon className = "md-5" src="static/img/icon-who/computer.png" alt="computer" />
+                    <div class="media-body">
+                      <Paragraph className = "md-5 mt-5">น้อง ๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อ</Paragraph>
+                    </div>
+                  </div>
                 </TextBoxColor>
               </div>
             </BoxStyle>
