@@ -23,7 +23,8 @@ const Section = styled(Element)`
 
 class App extends React.Component {
   state = {
-    loading: false //true
+    loading: false, //true
+    count:0
   };
 
   componentDidMount() {
@@ -41,9 +42,11 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
-        <Section name = "home">
-          <Home />
-        </Section>
+        {this.state.count === 0 &&
+          <Section name = "home">
+            <Home />
+          </Section>
+        }
         <Section name = "what">
           <What />
         </Section>
