@@ -2,13 +2,16 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-  height: 5em;
-  width: 5em;
+  width: 11vw;
+  height: 11vw;
+  max-width: 100px;
+  max-height: 100px;
+  left: 3vw;
+  top: 3vh;
   border-radius: 50%; 
   background-color: red;
   position: fixed;
   z-index:10;
-  margin: 2em; 
   cursor: pointer;
 
   &:hover{
@@ -20,7 +23,7 @@ export default class Register extends Component {
   render() {
     return (
       <div>
-        <Button>Register</Button>
+        <Button>R</Button>
       </div>
     )
   }
