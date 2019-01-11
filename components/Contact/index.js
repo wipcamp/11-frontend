@@ -47,6 +47,26 @@ const Div = styled.div`
         margin-top:5em;
     }
 `
+const Div1 = styled.div`
+    text-align : center;
+    margin-top:5em;
+    @media (min-width:320px) {
+        margin-top:1.5em;
+    }
+    @media (min-width:420px) {
+        margin-top:1.5em;
+    }
+    @media (min-width:576px) {
+        margin-top:3em;
+    }
+    @media (min-width:768px) {
+        margin-top:3em;
+    }
+    @media (min-width:1024px) {
+        margin-top:5em;
+    }
+`
+
 
 const Img = styled.img`
     width:3em;
@@ -114,7 +134,7 @@ export default class index extends Component {
                 </div>
               </div>
               <div className="w-auto"></div>
-              <Div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <Div1 className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <DivCon>
                   <Img src="../../static/img/social/instagram.png" />
                 </DivCon>
@@ -124,9 +144,9 @@ export default class index extends Component {
                 <DivCon>
                   <Paragraph>02-107-3576</Paragraph>
                 </DivCon>
-              </Div>
+              </Div1>
               <div className="w-auto"></div>
-              <Div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <Div1 className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <DivCon>
                   <Img src="../../static/img/social/instagram.png" />
                 </DivCon>
@@ -136,7 +156,7 @@ export default class index extends Component {
                 <Font>
                   <Paragraph>wippo@wipcamp.com</Paragraph>
                 </Font>
-              </Div>
+              </Div1>
             </Div>
           </BoxStyle>
         </div>
