@@ -33,4 +33,23 @@ export const TextBoxStyle = styled.p`
   color : ${color.TextBox};
   
 `
+
+export const Font = styled.p`
+  @media (min-width:320px) {
+    font-size: 0.8em;
+  }
+  @media (min-width:412px) {
+    font-size: 0.9em;
+  }
+  @media (min-width:576px) {
+    font-size: 1em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.2em;
+  }
+`
+
 export default Headline
