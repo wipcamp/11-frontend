@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -19,12 +18,5 @@ const Button = styled.button`
     color:white;
   }
 `
-export default class Register extends Component {
-  render() {
-    return (
-      <div>
-        <Button>R</Button>
-      </div>
-    )
-  }
-}
+
+export default Button
