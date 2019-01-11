@@ -2,13 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
-const Layout = styled.div`  
-  margin-top: 4.5%;
-  margin-bottom: 10%;
-  border: .2em solid transparent;
-  border-radius: 2em;
-  padding:2em;
-`
+
 const Icon = styled.img`
   width:7em;
   @media (min-width:320px) {
@@ -81,9 +75,9 @@ const Font = styled.p`
 export default class index extends Component {
   render () {
     return (
-      <div className="container px-3">
+      <div className="container">
         <div className="row justify-content-center">
-          <Layout className="col-12 col-sm-12 col-md-12 col-lg-10">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row">
               <Head className="text-center col-12">
                 <Headline>What</Headline>
@@ -116,7 +110,7 @@ export default class index extends Component {
                 </div>
               </BoxStyle>
             </div>
-          </Layout>
+          </div>
         </div>
       </div>
 
