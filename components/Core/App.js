@@ -41,7 +41,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        <RegisterButton />
+        <RegisterButton>R</RegisterButton>
         <Navbar />
         {this.state.count === 0 &&
           <Section name = "home">
