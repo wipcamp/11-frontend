@@ -15,25 +15,25 @@ const BoxStyle = styled.div`
     text-align : center;
 `
 const Img = styled.img`
-    width:7em;
+    width:10em;
     @media (min-width:320px) {
-      width:4em;
+      width:5em;
     }
     @media (min-width:420px) {
     
-      width:5em;
+      width:7em;
     }
     @media (min-width:576px) {
       margin-top: 2%;
-      width:5em;
+      width:7em;
     }
     @media (min-width:768px) {
       margin-top: 5%;
-      width:7em;
+      width:10em;
     }
     @media (min-width:1024px) {
       margin-top: 5%;
-      width:7em;
+      width:10em;
     }
 `
 

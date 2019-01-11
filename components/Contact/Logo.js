@@ -27,7 +27,6 @@ const Img = styled.img`
     }
     @media (min-width:1024px) {
       margin-top: 5%;
-      padding: .2em;
       width:5em;
     }
 `
