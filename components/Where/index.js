@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, { Subtitle, Paragraph, Small , Font} from '../Core/Texts'
+import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 
 const Map = styled.img`
   width:50%;
