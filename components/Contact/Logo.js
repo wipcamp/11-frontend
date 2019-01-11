@@ -11,7 +11,7 @@ const Divhover = styled.div`
 const Img = styled.img`
     width:5em;
     @media (min-width:320px) {
-      width:3em;
+      width:2.5em;
     }
     @media (min-width:420px) {
     
