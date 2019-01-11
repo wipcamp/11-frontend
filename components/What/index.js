@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
-
 const Icon = styled.img`
   width:7em;
   @media (min-width:320px) {
@@ -81,10 +80,12 @@ export default class index extends Component {
             <div className="row">
               <Head className="text-center col-12">
                 <Headline>What</Headline>
-                <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
               </Head>
               <BoxStyle>
                 <div className="col-12">
+                  <div className="row justify-content-center">
+                    <Subtitle className = "mb-4"><b>ค่ายนี้คืออะไร ?</b></Subtitle>
+                  </div>
                   <Paragraph>
                     <Font>
                       &nbsp;&nbsp;&nbsp;&nbsp;ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริงณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน
