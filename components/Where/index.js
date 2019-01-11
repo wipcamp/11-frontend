@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
+import Headline, { Subtitle, Paragraph, Small , Font} from '../Core/Texts'
 
 const Map = styled.img`
   width:50%;
@@ -48,13 +48,16 @@ export default class index extends Component {
   render () {
     return (
       <div className="container">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center text-center">
           <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <Head className="text-center col-12">
+            <Head className="col-12">
               <Headline>Where</Headline>
               <Subtitle>ค่ายนี้จัดที่ไหน?</Subtitle>
             </Head>
             <BoxStyle>
+              <Small >
+                <Font>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยพระจอมเกล้าธนบุรี</Font>
+              </Small>
               <Map src='static/img/Map22.png' alt="map" />
             </BoxStyle>
           </Layout>
