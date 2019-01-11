@@ -59,7 +59,7 @@ class App extends React.Component {
         <Section name="when" >
           <When />
         </Section>
-        <Section name="FAQs" >
+        <Section name="faqs" >
           <FAQs />
         </Section>
         <Section name="contact" >
