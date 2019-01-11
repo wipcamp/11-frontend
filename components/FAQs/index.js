@@ -9,7 +9,7 @@ text-align : center;
 
 `
 const BoxStyle = styled.div`
-    background: rgba(196, 196, 196, 0.73);
+    background: papayawhip;
 
     @media (min-width:320px) {
       padding : 1.5em 1em;
@@ -64,9 +64,9 @@ export default class index extends Component {
           {[0, 1, 2, 3, 4, 5].map(item => {
             return (
               <AccordionItem title={`Q: ${this.state.question[item]} ?`} >
-              <div>
+              <Paragragh>
                 {`A: ${this.state.answer[item]}`}
-              </div>
+              </Paragragh>
               </AccordionItem>
             )
           })}
