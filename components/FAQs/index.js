@@ -10,7 +10,10 @@ const QuestionText = styled.a`
     color: navy;
   }
 `
-
+const BoxStyle = styled.div`
+    background: rgba(196, 196, 196, 0.73);
+    padding:5em;
+`
 const Faqicon = styled.span`
   width: 3vw;
   height: 3vw;
@@ -68,6 +71,7 @@ export default class Question extends Component {
       <div className="container">
       <Headline>FAQs</Headline>
       <Subtitle>คำถามที่พบบ่อย</Subtitle>
+      <BoxStyle>
         <div id="accordion">
           <CollapseItem num = 'One' first = 'show' number = '0'/>
           <CollapseItem num = 'Two' number = '1'/>
@@ -76,6 +80,7 @@ export default class Question extends Component {
           <CollapseItem num = 'Five' number = '4'/>
           <CollapseItem num = 'Six' number = '5'/>
         </div>
+        </BoxStyle>
       </div>
     )
   }
