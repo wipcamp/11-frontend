@@ -1,29 +1,11 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, { Subtitle, Paragraph, Small , Font} from '../Core/Texts'
 
-const Icon = styled.img`
+import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
+import { PDBox, IconBox } from '../Core/ResponBox'
+
+const Icon = styled(IconBox)`
   width:7em;
-  @media (min-width:320px) {
-    width:4em;
-  }
-  @media (min-width:420px) {
-    margin-top: 2%;
-    width:5em;
-  }
-  @media (min-width:576px) {
-    margin-top: 2%;
-    width:5em;
-  }
-  @media (min-width:768px) {
-    margin-top: 5%;
-    width:7em;
-  }
-  @media (min-width:1024px) {
-    margin-top: 5%;
-    padding: .2em;
-    width:7em;
-  }
 `
 
 const IconInfo = [
@@ -33,21 +15,9 @@ const IconInfo = [
   { icon: '/static/img/icon-what/web (2).png', text: 'HTML5&CSS3', t: 'HTML5&CSS3' }
 ]
 
-const BoxStyle = styled.div`
+const BoxStyle = styled(PDBox)`
     background: rgba(196, 196, 196, 0.73);
     text-align : left;
-
-    @media (min-width:320px) {
-      padding : 1.5em 1em;
-    }
-    
-    @media (min-width:576px) {
-      padding : 1em 2em;
-    }
-    
-    @media (min-width:1024px) {
-      padding : 2em 5em;
-    }
 `
 const Head = styled.div`
   text-align:center;
