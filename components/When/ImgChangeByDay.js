@@ -20,19 +20,15 @@ const Img = styled.img`
       width:5em;
     }
     @media (min-width:420px) {
-    
       width:7em;
     }
     @media (min-width:576px) {
-      margin-top: 2%;
       width:7em;
     }
     @media (min-width:768px) {
-      margin-top: 5%;
       width:10em;
     }
     @media (min-width:1024px) {
-      margin-top: 5%;
       width:10em;
     }
 `
