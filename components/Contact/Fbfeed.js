@@ -5,8 +5,6 @@ import { FacebookProvider, Page } from 'react-facebook'
 const Box = styled.div`
   width: 100%;
   height: 100%;
-  border : solid 21px white;
-  border-radius:20px;
 `
 
 export default class Example extends Component {
