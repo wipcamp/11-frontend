@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 
 const QuestionText = styled.a`
   text-decoration: none;
@@ -65,6 +66,8 @@ export default class Question extends Component {
     )
     return (
       <div className="container">
+      <Headline>FAQs</Headline>
+      <Subtitle>คำถามที่พบบ่อย</Subtitle>
         <div id="accordion">
           <CollapseItem num = 'One' first = 'show' number = '0'/>
           <CollapseItem num = 'Two' number = '1'/>
