@@ -80,7 +80,7 @@ export default class index extends Component {
               <Fbfeed />
             </FbBox>
             <div className="w-auto"></div>
-            <Div className="pl-1 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <Div className="pl-3 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <div className="row">
                 <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                   <Logo img="../../static/img/social/instagram.png" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
