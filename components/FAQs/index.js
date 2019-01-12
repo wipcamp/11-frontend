@@ -18,16 +18,25 @@ const Span = styled.span`
     color: #777;
     float: right;
     margin-left: 5px;
-}
-    
-    
+}   
 `
 const BoxStyle = styled.div`
     background: rgba(196, 196, 196, 0.73);
-    padding:5em;
+    @media (min-width:320px) {
+      padding : 1.5em 1em;
+    }
+    
+    @media (min-width:576px) {
+      padding : 1em 2em;
+    }
+    
+    @media (min-width:1024px) {
+      padding : 2em 5em;
+    }
 `
-
-
+const Head = styled.div`
+  text-align:center;
+`
 export default class Question extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
@@ -48,7 +57,7 @@ export default class Question extends Component {
   render () {
     const CollapseItem = (props) => (
       <div className = "card">
-        <div className="card" className="dropdown">
+        <div className="card" >
             <QuestionText className="card-link" data-toggle="collapse"  href={`#collapse${props.num}`}>
               <div className="card-header px-4" >
                 Q : {this.state.question[props.number]}<Span></Span>
@@ -63,9 +72,11 @@ export default class Question extends Component {
       </div>
     )
     return (
-       <div className="container">
-       <Headline>FAQs</Headline>
-       <Subtitle>คำถามที่พบบ่อย</Subtitle>
+      <div className="container">
+            <Head className="text-center">
+              <Headline>FAQs</Headline>
+              <Subtitle>คำถามที่พบบ่อย?</Subtitle>
+            </Head>
        <BoxStyle>
          <div id="accordion">
            <CollapseItem num = 'One' first = 'show' number = '0' />
@@ -76,7 +87,7 @@ export default class Question extends Component {
            <CollapseItem num = 'Six' number = '5'/>
          </div>
          </BoxStyle>
-       </div>
+         </div>
     )
   }
 }
