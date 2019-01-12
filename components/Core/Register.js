@@ -8,13 +8,13 @@ const Button = styled.button`
   left: 3vw;
   top: 3vh;
   border-radius: 50%; 
-  background-color: red;
+  background-color: #C63939;
   position: fixed;
   z-index:10;
   cursor: pointer;
 
   &:hover{
-    background-color:blue;
+    background-color:red;
     color:white;
   }
 `
