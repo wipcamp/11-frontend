@@ -14,23 +14,7 @@ const BoxStyle = styled.div`
     background: rgba(196, 196, 196, 0.73);
     padding:5em;
 `
-const Faqicon = styled.span`
-  width: 3vw;
-  height: 3vw;
-  max-width: 20px;
-  max-height: 20px;
-  min-width: 15px;
-  min-height: 15px;
-  border-radius: 50%; 
-  background-color: red;
-  z-index:10;
-  float:right;
-  display:block;
-  &:hover{
-    background-color:blue;
-    color:white;
-  }
-`
+
 export default class Question extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
@@ -55,7 +39,6 @@ export default class Question extends Component {
             <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
               <div className="card-header px-4">
                 Q : {this.state.question[props.number]}
-                <Faqicon></Faqicon>
               </div>
               
             </QuestionText>
