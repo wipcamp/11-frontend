@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+// Call styled(Name of const) ex styled(MTBox)` //Can Override in here `
+
 export const MTBox = styled.div`
     @media (min-width:320px) {
         margin-top:1.5em;
