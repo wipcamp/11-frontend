@@ -76,7 +76,7 @@ export default class index extends Component {
         </div>
         <div className="container">
           <BoxStyle className="row justify-content-center">
-            <FbBox className="pt-3 pb-3 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <FbBox className="pl-5 pt-4 pb-4 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <Fbfeed />
             </FbBox>
             <div className="w-auto"></div>
