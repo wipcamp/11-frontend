@@ -37,6 +37,27 @@ const BoxStyle = styled.div`
 const Head = styled.div`
   text-align:center;
 `
+const Wippo = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+width:10em;
+@media (min-width:320px) {
+  width:5em;
+}
+@media (min-width:420px) {
+  width:7em;
+}
+@media (min-width:576px) {
+  width:7em;
+}
+@media (min-width:768px) {
+  width:10em;
+}
+@media (min-width:1024px) {
+  width:10em;
+}
+`
 export default class Question extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
@@ -86,6 +107,7 @@ export default class Question extends Component {
            <CollapseItem num = 'Five' number = '4'/>
            <CollapseItem num = 'Six' number = '5'/>
          </div>
+         <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo"/>
          </BoxStyle>
          </div>
     )
