@@ -12,6 +12,7 @@ import FAQs from '../FAQs'
 import Contact from '../Contact'
 import Loading from './Loading';
 import RegisterButton from './Register';
+import Game from '../Game'
 
 const Section = styled(Element)`
   padding: 80px 0px;
@@ -65,6 +66,9 @@ class App extends React.Component {
         </Section>
         <Section name="contact" >
           <Contact />
+        </Section>
+        <Section name = "game">
+          <Game />
         </Section>
       </div>
     )
