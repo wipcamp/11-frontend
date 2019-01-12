@@ -15,12 +15,12 @@ import Loading from './Loading';
 import RegisterButton from './Register';
 import Game from '../Game'
 
+// const dateTest = dayjs('2019-01-08')
 const datenow = dayjs().format()
-const date0 = dayjs('2019-02-12')
-const dateStartResgis = dayjs('2019-01-07')
-const dateEndRegis = dayjs('2019-01-13')
-const dateStartAnnounced = dayjs('2019-01-14')
-const dateStartCamp = dayjs('2019-02-20')
+const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
+const dateEndRegis = dayjs('2019-01-13')  //After end register one day
+const dateStartAnnounced = dayjs('2019-01-14')  //Before announced one day
+const dateStartCamp = dayjs('2019-02-20') //Before start camp one day
 
 const Section = styled(Element)`
   padding: 80px 0px;
@@ -30,12 +30,24 @@ const Section = styled(Element)`
   }
 `
 
+const RegisVisible = styled.div`
+  visibility: ${porps => porps.visi || "visible"};
+`
+
+const RegisButton = (props) =>(
+  <RegisVisible visi={props.visi}>
+    <RegisterButton>{props.text}</RegisterButton>
+  </RegisVisible>
+)
+
 class App extends React.Component {
   state = {
     loading: false, //true
     count:0,
     text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
-    textcount:0
+    textcount:0,
+    visible: ["hidden", "visible"],
+    visiblecount:1
   };
 
   componentDidMount() {
@@ -53,17 +65,20 @@ class App extends React.Component {
         )
       }
     
-    if (dateStartResgis.isBefore(date0)&&dateEndRegis.isAfter(date0)){
+    if (dateStartResgis.isBefore(datenow)&&dateEndRegis.isAfter(datenow)){
       this.state.textcount = 1;
-    }else if (dateStartAnnounced.isBefore(date0) && dateStartCamp.isAfter(date0)) {
+      this.state.visiblecount = 1;
+    }else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
       this.state.textcount = 2;
+      this.state.visiblecount = 1;
     }else{
       this.state.textcount = 0;
+      this.state.visiblecount = 0;
     }
 
     return (
       <div>
-        <RegisterButton>{this.state.text[this.state.textcount]}</RegisterButton>
+        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} />
         <Navbar />
         {this.state.count === 0 &&
           <Section name = "home">
