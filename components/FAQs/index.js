@@ -9,11 +9,24 @@ const QuestionText = styled.a`
   &:hover{
     color: navy;
   }
+ 
+`
+const Span = styled.span`
+& :before{
+    content: '^'; 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+    
+    
 `
 const BoxStyle = styled.div`
     background: rgba(196, 196, 196, 0.73);
     padding:5em;
 `
+
 
 export default class Question extends Component {
   state = {
@@ -35,12 +48,11 @@ export default class Question extends Component {
   render () {
     const CollapseItem = (props) => (
       <div className = "card">
-        <div className="card">
-            <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${props.num}`}>
-              <div className="card-header px-4">
-                Q : {this.state.question[props.number]}
+        <div className="card" className="dropdown">
+            <QuestionText className="card-link" data-toggle="collapse"  href={`#collapse${props.num}`}>
+              <div className="card-header px-4" >
+                Q : {this.state.question[props.number]}<Span></Span>
               </div>
-              
             </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body px-4">
@@ -51,20 +63,20 @@ export default class Question extends Component {
       </div>
     )
     return (
-      <div className="container">
-      <Headline>FAQs</Headline>
-      <Subtitle>คำถามที่พบบ่อย</Subtitle>
-      <BoxStyle>
-        <div id="accordion">
-          <CollapseItem num = 'One' first = 'show' number = '0'/>
-          <CollapseItem num = 'Two' number = '1'/>
-          <CollapseItem num = 'Three' number = '2'/>
-          <CollapseItem num = 'Four' number = '3'/>
-          <CollapseItem num = 'Five' number = '4'/>
-          <CollapseItem num = 'Six' number = '5'/>
-        </div>
-        </BoxStyle>
-      </div>
+       <div className="container">
+       <Headline>FAQs</Headline>
+       <Subtitle>คำถามที่พบบ่อย</Subtitle>
+       <BoxStyle>
+         <div id="accordion">
+           <CollapseItem num = 'One' first = 'show' number = '0' />
+           <CollapseItem num = 'Two' number = '1'/>
+           <CollapseItem num = 'Three' number = '2'/>
+           <CollapseItem num = 'Four' number = '3'/>
+           <CollapseItem num = 'Five' number = '4'/>
+           <CollapseItem num = 'Six' number = '5'/>
+         </div>
+         </BoxStyle>
+       </div>
     )
   }
 }
