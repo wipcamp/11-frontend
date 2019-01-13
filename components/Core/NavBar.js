@@ -12,6 +12,7 @@ const NavSection = styled.nav`
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index:99;
 
   ul li:first-child {
     display: none;
