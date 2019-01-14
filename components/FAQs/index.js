@@ -13,7 +13,7 @@ const QuestionText = styled.a`
 `
 const Span = styled.span`
 & :before{
-    content: '^'; 
+    content: 'V'; 
     font-size: 13px;
     color: #777;
     float: right;
