@@ -15,6 +15,8 @@ import Loading from './Loading';
 import RegisterButton from './Register';
 import Game from '../Game'
 
+import {Font} from './Texts'
+
 // const dateTest = dayjs('2019-01-08')
 const datenow = dayjs().format()
 const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
@@ -79,7 +81,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} />
+        <Font><RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} /></Font>
         <Navbar />
         {this.state.count === 0 &&
           <Section name = "home">
