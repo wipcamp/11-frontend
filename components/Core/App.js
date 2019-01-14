@@ -15,8 +15,6 @@ import Loading from './Loading';
 import RegisterButton from './Register';
 import Game from '../Game'
 
-import {Font} from './Texts'
-
 // const dateTest = dayjs('2019-01-08')
 const datenow = dayjs().format()
 const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
@@ -31,9 +29,13 @@ const Section = styled(Element)`
     padding: 50px 0;
   }
 `
+const BGcolor = styled.div`
+background : #F8E9D6;
+
+`
 
 const RegisVisible = styled.div`
-  visibility: ${props => props.visi || "visible"};
+  visibility: ${porps => porps.visi || "visible"};
 `
 
 const RegisButton = (props) =>(
@@ -57,31 +59,30 @@ class App extends React.Component {
 
   }
   
+  
   render() {
     const { loading } = this.state;
     
     if (loading) {
       return (
         <Loading />
-      )
-    }
+        )
+      }
     
-    if (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow)){
+    if (dateStartResgis.isBefore(datenow)&&dateEndRegis.isAfter(datenow)){
       this.state.textcount = 1;
       this.state.visiblecount = 1;
-    }
-    else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)){
+    }else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
       this.state.textcount = 2;
       this.state.visiblecount = 1;
-    }
-    else{
+    }else{
       this.state.textcount = 0;
       this.state.visiblecount = 0;
     }
 
     return (
-      <div>
-        <Font><RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} /></Font>
+      <BGcolor>
+        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} />
         <Navbar />
         {this.state.count === 0 &&
           <Section name = "home">
@@ -109,7 +110,7 @@ class App extends React.Component {
         <Section name = "game">
           <Game />
         </Section>
-      </div>
+      </BGcolor>
     )
   }
 }
