@@ -24,7 +24,7 @@ text-align : center;
 
 `
 const BoxStyle = styled(PDBox)`
-    background: rgba(196, 196, 196, 0.73);
+    background: rgba(196, 196, 196, 0.2);
 `
 const Layout = styled.div`  
   margin-top: 4.5%;
