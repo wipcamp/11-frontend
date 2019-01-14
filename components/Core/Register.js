@@ -5,6 +5,8 @@ const Button = styled.button`
   height: 11vw;
   max-width: 100px;
   max-height: 100px;
+  min-width: 75px;
+  min-height: 75px;
   left: 3vw;
   top: 3vh;
   border-radius: 50%; 
@@ -17,6 +19,7 @@ const Button = styled.button`
     background-color:red;
     color:white;
   }
+
 `
 
 export default Button
