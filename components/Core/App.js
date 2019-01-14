@@ -31,7 +31,7 @@ const Section = styled(Element)`
 `
 
 const RegisVisible = styled.div`
-  visibility: ${porps => porps.visi || "visible"};
+  visibility: ${props => props.visi || "visible"};
 `
 
 const RegisButton = (props) =>(
@@ -55,23 +55,24 @@ class App extends React.Component {
 
   }
   
-  
   render() {
     const { loading } = this.state;
     
     if (loading) {
       return (
         <Loading />
-        )
-      }
+      )
+    }
     
-    if (dateStartResgis.isBefore(datenow)&&dateEndRegis.isAfter(datenow)){
+    if (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow)){
       this.state.textcount = 1;
       this.state.visiblecount = 1;
-    }else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
+    }
+    else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)){
       this.state.textcount = 2;
       this.state.visiblecount = 1;
-    }else{
+    }
+    else{
       this.state.textcount = 0;
       this.state.visiblecount = 0;
     }
