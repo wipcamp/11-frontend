@@ -7,7 +7,7 @@ import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 
 const BoxStyle = styled.div`
-    background: rgba(196, 196, 196, 0.73);
+    background: rgba(196, 196, 196, 0.4);
     padding:0;
 `
 

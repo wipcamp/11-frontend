@@ -16,7 +16,7 @@ const IconInfo = [
 ]
 
 const BoxStyle = styled(PDBox)`
-    background: rgba(196, 196, 196, 0.2);
+    background: rgba(196, 196, 196, 0.4);
 `
 const Head = styled.div`
   text-align:center;

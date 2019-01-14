@@ -21,7 +21,7 @@ const Span = styled.span`
 }   
 `
 const BoxStyle = styled.div`
-    background: rgba(196, 196, 196, 0.2);
+    background: rgba(196, 196, 196, 0.4);
     @media (min-width:320px) {
       padding : 1.5em 1em;
     }

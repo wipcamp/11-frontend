@@ -6,7 +6,7 @@ import { PDBox, IconBox } from '../Core/ResponBox'
 import Box from './Textbox'
 
 const BoxStyle = styled(PDBox)`
-  background: rgba(196, 196, 196, 0.2);
+  background: rgba(196, 196, 196, 0.4);
   text-align : left;
   width: 100%;
 `
