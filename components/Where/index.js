@@ -33,6 +33,27 @@ const Layout = styled.div`
   border-radius: 2em;
   padding:2em;
 `
+const Wippo = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+width:10em;
+@media (min-width:320px) {
+  width:5em;
+}
+@media (min-width:420px) {
+  width:7em;
+}
+@media (min-width:576px) {
+  width:7em;
+}
+@media (min-width:768px) {
+  width:10em;
+}
+@media (min-width:1024px) {
+  width:10em;
+}
+`
 export default class index extends Component {
   render () {
     return (
@@ -48,7 +69,8 @@ export default class index extends Component {
                 <Font>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยพระจอมเกล้าธนบุรี</Font>
               </Small>
               <Map src='static/img/Map22.png' alt="map" />
-            </BoxStyle>
+              </BoxStyle>
+              <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo"/>
           </Layout>
         </div>
       </div>

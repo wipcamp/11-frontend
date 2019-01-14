@@ -21,9 +21,29 @@ const BoxStyle = styled(PDBox)`
 const Head = styled.div`
   text-align:center;
 `
-
+const Wippo = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+width:10em;
+@media (min-width:320px) {
+  width:5em;
+}
+@media (min-width:420px) {
+  width:7em;
+}
+@media (min-width:576px) {
+  width:7em;
+}
+@media (min-width:768px) {
+  width:10em;
+}
+@media (min-width:1024px) {
+  width:10em;
+}
+`
 export default class index extends Component {
-  render () {
+  render() {
     return (
       <div className="container">
         <div className="row justify-content-center">
@@ -35,7 +55,7 @@ export default class index extends Component {
               <BoxStyle>
                 <div className="col-12">
                   <div className="row justify-content-center">
-                    <Subtitle className = "mb-4"><b>ค่ายนี้คืออะไร ?</b></Subtitle>
+                    <Subtitle className="mb-4"><b>ค่ายนี้คืออะไร ?</b></Subtitle>
                   </div>
                   <Paragraph>
                     <Font>
@@ -59,6 +79,7 @@ export default class index extends Component {
                       </div>
                     ))
                   }
+                  <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo" />
                 </div>
               </BoxStyle>
             </div>
