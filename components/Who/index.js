@@ -31,6 +31,14 @@ const Layout = styled.div`
   border-radius: 2em;
   padding:2em;
 `
+
+const IconInfo = [
+  { icon: '/static/img/icon-who/moon.png', text: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน' },
+  { icon: '/static/img/icon-who/graduate.png', text: 'น้อง ๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ' },
+  { icon: '/static/img/icon-who/person.png', text: 'น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง' },
+  { icon: '/static/img/icon-who/computer.png', text: 'น้อง ๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อ' }
+]
+
 export default class componentName extends Component {
   render () {
     return (
@@ -44,46 +52,19 @@ export default class componentName extends Component {
         </div>
         <div className="container">
           <div className="row justify-content-center">
-
             <BoxStyle className="col-12 col-sm-12 col-md-12 col-lg-10 p-5">
-              <TextBoxColor>
-                <div className="media">
-                  <Icon className = "md-5" src="static/img/icon-who/moon.png" alt="ระยะเวลา" />
-                  <div className="media-body">
-                    <Paragraph className="md-5 mt-5">น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน</Paragraph>
-                  </div>
+              {IconInfo.map((data, i) => (
+                <div className="my-5">
+                  <TextBoxColor>
+                    <div className="media" key={i}>
+                      <Icon src={data.icon} alt="" />
+                      <div className="media-body">
+                        <Paragraph>{data.text}</Paragraph>
+                      </div>
+                    </div>
+                  </TextBoxColor>
                 </div>
-              </TextBoxColor>
-              <div className="my-5">
-                <TextBoxColor>
-                  <div className="media">
-                    <Icon className = "md-5" src="static/img/icon-who/graduate.png" alt="การศึกษา" />
-                    <div className="media-body">
-                      <Paragraph className="md-5 mt-5">น้อง ๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ</Paragraph>
-                    </div>
-                  </div>
-                </TextBoxColor>
-              </div>
-              <div className="my-5">
-                <TextBoxColor>
-                  <div className="media">
-                    <Icon className = "md-5" src ="static/img/icon-who/person.png" alt="เหมาะสำหรับ" />
-                    <div className="media-body">
-                      <Paragraph className = "md-5 mt-5">น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง</Paragraph>
-                    </div>
-                  </div>
-                </TextBoxColor>
-              </div>
-              <div className="my-3">
-                <TextBoxColor>
-                  <div className="media">
-                    <Icon className = "md-5" src="static/img/icon-who/computer.png" alt="computer" />
-                    <div className="media-body">
-                      <Paragraph className = "md-5 mt-5">น้อง ๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อ</Paragraph>
-                    </div>
-                  </div>
-                </TextBoxColor>
-              </div>
+              ))}
             </BoxStyle>
           </div>
         </div>
