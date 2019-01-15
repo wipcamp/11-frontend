@@ -79,9 +79,9 @@ export default class index extends Component {
                       </div>
                     ))
                   }
-                  <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo" />
                 </div>
               </BoxStyle>
+              <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo" />
             </div>
           </div>
         </div>
