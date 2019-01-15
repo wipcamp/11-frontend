@@ -99,7 +99,7 @@ export default class Question extends Component {
 
         </Head>
         <BoxStyle>
-          <Subtitle className="row justify-content-center">คำถามที่พบบ่อย?</Subtitle>
+          <Subtitle className="row justify-content-center"><b>คำถามที่พบบ่อย?</b></Subtitle>
           <div id="accordion">
           
             <CollapseItem num='One' first='show' number='0' />
@@ -109,8 +109,8 @@ export default class Question extends Component {
             <CollapseItem num='Five' number='4' />
             <CollapseItem num='Six' number='5' />
           </div>
-          <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo" />
         </BoxStyle>
+        <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo" />
       </div>
     )
   }
