@@ -24,7 +24,7 @@ text-align : center;
 
 `
 const BoxStyle = styled(PDBox)`
-    background: rgba(196, 196, 196, 0.4);
+    background: rgba(196, 196, 196, 0.2);
 `
 const Layout = styled.div`  
   margin-top: 4.5%;
@@ -62,15 +62,15 @@ export default class index extends Component {
           <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
             <Head className="col-12">
               <Headline>Where</Headline>
-              <Subtitle>ค่ายนี้จัดที่ไหน?</Subtitle>
             </Head>
             <BoxStyle>
+              <Subtitle className="row justify-content-center mb-5"><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
               <Small >
-                <Font>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยพระจอมเกล้าธนบุรี</Font>
+                <Font>คณะเทคโนโลยีสารสนเทศ<br />มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font>
               </Small>
               <Map src='static/img/Map22.png' alt="map" />
               </BoxStyle>
-              <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo"/>
+              <Wippo className="center mb-10" src='static/img/wippo/PurplePotato.png' alt="wippo"/>
           </Layout>
         </div>
       </div>

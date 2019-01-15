@@ -37,12 +37,13 @@ export default class componentName extends Component {
         <div className="row">
           <Head className="text-center col-12">
             <Headline>Who</Headline>
-            <Subtitle>ค่ายนี้เหมาะสำหรับใคร?</Subtitle>
+            
           </Head>
         </div>
         <div className="container">
           <div className="row justify-content-center">
             <BoxStyle className="col-12 col-sm-12 col-md-12 col-lg-10 p-5">
+            <Subtitle className="row justify-content-center"><b>ค่ายนี้เหมาะสำหรับใคร?</b></Subtitle>
               {IconInfo.map((data, i) => (
                 <div className="my-5">
                   <TextBoxColor>

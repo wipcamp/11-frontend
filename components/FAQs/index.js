@@ -74,16 +74,16 @@ export default class Question extends Component {
       'ค่ายนี้มีค่าใช้จ่าย 450 บาท น้องเอ๋ย สามารถชำระได้ผ่านธนาคาร ติดตามได้ทางแฟนเพจนะน้องเอ๋ย']
   };
 
-  
-  render () {
+
+  render() {
     const CollapseItem = (props) => (
-      <div className = "card">
+      <div className="card">
         <div className="card" >
-            <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse"  href={`#collapse${props.num}`}>
-              <div className="card-header px-4" >
-                Q : {this.state.question[props.number]}<Span></Span>
-              </div>
-            </QuestionText>
+          <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse" href={`#collapse${props.num}`}>
+            <div className="card-header px-4" >
+              Q : {this.state.question[props.number]}<Span></Span>
+            </div>
+          </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body bg-light px-4">
               A : {this.state.answer[props.number]}
@@ -94,22 +94,24 @@ export default class Question extends Component {
     )
     return (
       <div className="container">
-            <Head className="text-center">
-              <Headline>FAQs</Headline>
-              <Subtitle>คำถามที่พบบ่อย?</Subtitle>
-            </Head>
-       <BoxStyle>
-         <div id="accordion">
-           <CollapseItem num = 'One' first = 'show' number = '0' />
-           <CollapseItem num = 'Two' number = '1'/>
-           <CollapseItem num = 'Three' number = '2'/>
-           <CollapseItem num = 'Four' number = '3'/>
-           <CollapseItem num = 'Five' number = '4'/>
-           <CollapseItem num = 'Six' number = '5'/>
-         </div>
-         <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo"/>
-         </BoxStyle>
-         </div>
+        <Head className="text-center">
+          <Headline>FAQs</Headline>
+
+        </Head>
+        <BoxStyle>
+          <Subtitle className="row justify-content-center">คำถามที่พบบ่อย?</Subtitle>
+          <div id="accordion">
+          
+            <CollapseItem num='One' first='show' number='0' />
+            <CollapseItem num='Two' number='1' />
+            <CollapseItem num='Three' number='2' />
+            <CollapseItem num='Four' number='3' />
+            <CollapseItem num='Five' number='4' />
+            <CollapseItem num='Six' number='5' />
+          </div>
+          <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo" />
+        </BoxStyle>
+      </div>
     )
   }
 }
