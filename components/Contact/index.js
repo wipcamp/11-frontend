@@ -13,14 +13,36 @@ const BoxStyle = styled.div`
 
 const FbBox = styled(WDBox)`
     width: 500px;
+    @media (min-width:768px) {
+      text-align:center;
+    }
 `
 
 const Div = styled(MTBox)`
     margin-top:5em;
 `
 const Div1 = styled(MTBox)`
-    text-align : center;
     margin-top:5em;
+    @media (min-width:320px) {
+      margin-left:4em;
+    }
+    @media (min-width:414px) {
+      margin-left:8em;
+    }
+    @media (min-width:576px) {
+      margin-left:10em;
+    }
+    @media (min-width:768px) {
+      margin-left:16em;
+    }
+    @media (min-width:1024px) {
+      margin-left:10em;
+    }
+`
+const Div2 = styled.div`
+    @media (min-width:768px) {
+      margin-left:2em;
+    }
 `
 
 const Img = styled.img`
@@ -68,22 +90,22 @@ const Wippo = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-width:10em;
-@media (min-width:320px) {
-  width:5em;
-}
-@media (min-width:420px) {
-  width:7em;
-}
-@media (min-width:576px) {
-  width:7em;
-}
-@media (min-width:768px) {
   width:10em;
-}
-@media (min-width:1024px) {
-  width:10em;
-}
+  @media (min-width:320px) {
+    width:5em;
+  }
+  @media (min-width:420px) {
+    width:7em;
+  }
+  @media (min-width:576px) {
+    width:7em;
+  }
+  @media (min-width:768px) {
+    width:10em;
+  }
+  @media (min-width:1024px) {
+    width:10em;
+  }
 `
 export default class index extends Component {
   render () {
@@ -96,25 +118,25 @@ export default class index extends Component {
         </div>
         <div className="container">
           <BoxStyle className="row justify-content-center">
-            <FbBox className="pl-5 pt-4 pb-4 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <FbBox className="pt-4 pb-4 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <Fbfeed />
             </FbBox>
             <div className="w-auto"></div>
-            <Div className="pl-3 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-              <div className="row">
-                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <Div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <Div2 className="row pr-4 pl-4">
+                <div className="pl-auto pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                   <Logo img="../../static/img/social/instagram.png" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
                 </div>
-                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                   <Logo img="../../static/img/social/instagram.png" link="https://twitter.com/WIPCamp" />
                 </div>
-                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                   <Logo img="../../static/img/social/instagram.png" link="https://www.instagram.com/wipcamp/" />
                 </div>
-                <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                   <Logo img="../../static/img/social/instagram.png" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
                 </div>
-              </div>
+              </Div2>
               <div className="w-auto"></div>
               <Div1 className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <DivCon>
