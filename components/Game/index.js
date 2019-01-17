@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
-import { PDBox } from '../Core/ResponBox';
+import { PDBox } from '../Core/ResponBox'
+import Background from '../Core/Background'
 
 const BoxStyle = styled(PDBox)`
     background:rgba(196, 196, 196, 0.4);
@@ -22,18 +23,20 @@ const Head = styled.div`
 export default class index extends Component {
   render () {
     return (
-      <div className="container">
-        <div className="row justify-content-center text-center">
-          <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <Head className="col-12">
-              <Headline>Game</Headline>
-              <Subtitle>สนุกนะเล่นสิ</Subtitle>
-            </Head>
-            <BoxStyle>
-            </BoxStyle>
-          </Layout>
+      <Background bgImageUrl = "static/img/game1.png">
+        <div className="container">
+          <div className="row justify-content-center text-center">
+            <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
+              <Head className="col-12">
+                <Headline>Game</Headline>
+                <Subtitle>สนุกนะเล่นสิ</Subtitle>
+              </Head>
+              <BoxStyle>
+              </BoxStyle>
+            </Layout>
+          </div>
         </div>
-      </div>
+      </Background>
     )
   }
 }
