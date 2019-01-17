@@ -24,7 +24,7 @@ const Head = styled.div`
 `
 
 export default class index extends Component {
-  render() {
+  render () {
     return (
       <div className="container">
         <div className="row justify-content-center">
@@ -62,10 +62,10 @@ export default class index extends Component {
                   }
                 </div>
               </BoxStyle>
-              <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
             </div>
           </div>
         </div>
+        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
       </div>
 
     )
