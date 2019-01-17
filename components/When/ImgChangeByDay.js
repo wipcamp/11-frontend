@@ -42,7 +42,9 @@ const Font = styled.div`
 const ImgChangeDay = () => (
   <div className="container">
     <div className="row">
-      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <div className="col-12 col-sm-6 col-lg-2 col-md-2 col-xl-1"></div>
+      <BoxStyle className="col-12 col-sm-6 col-lg-2 col-md-2 col-xl-1"></BoxStyle>
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-2 col-md-2 col-xl-2">
         <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <Img src={date1.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
         </div>
@@ -52,7 +54,7 @@ const ImgChangeDay = () => (
         </Font>
       </BoxStyle>
       <div className="w-auto"></div>
-      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-2 col-md-2 col-xl-2">
         <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <Img src={date2.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
         </div>
@@ -61,7 +63,7 @@ const ImgChangeDay = () => (
         </Font>
       </BoxStyle>
       <div className="w-auto"></div>
-      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-2 col-md-2 col-xl-2">
         <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <Img src={date3.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
         </div>
@@ -70,7 +72,7 @@ const ImgChangeDay = () => (
         </Font>
       </BoxStyle>
       <div className="w-auto"></div>
-      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-3 col-md-3 col-xl-3">
+      <BoxStyle className="row mr-auto ml-auto col-12 col-sm-6 col-lg-2 col-md-2 col-xl-2">
         <div className="col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12">
           <Img src={date4.isBefore(datenow) ? '../../static/img/wippo/original-1.png' : '../../static/img/wippo/original-2.png'} />
         </div>
@@ -78,6 +80,8 @@ const ImgChangeDay = () => (
           <TextBoxLong text="วันเปิดค่าย" textday="17 มกราคม 2562"/>
         </Font>
       </BoxStyle>
+      <BoxStyle className="col-12 col-sm-6 col-lg-2 col-md-2 col-xl-1"></BoxStyle>
+      <div className="col-12 col-sm-6 col-lg-2 col-md-2 col-xl-1"></div>
     </div>
   </div>
 )

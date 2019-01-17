@@ -12,10 +12,9 @@ const Button = styled.button`
   position: fixed;
   z-index:10;
   cursor: pointer;
-  
+  color:white;
   &:hover{
     background-color:red;
-    color:white;
   }
 
 `

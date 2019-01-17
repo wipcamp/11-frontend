@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Divhover = styled.div`
+  width:100%;
+  height: 100%;
   transform: scale(1);
   transition: .3s ease-in-out;
   &:hover img {
@@ -33,7 +35,7 @@ const Img = styled.img`
 
 const Logo = (props) => (
   <Divhover>
-    <a href={props.link} target="_blank"><Img src={props.img} /></a>
+    <a href={props.link} target="_blank"><Img src={props.img} width="64px" height="64px" /></a>
   </Divhover>
 )
 
