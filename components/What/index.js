@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox, IconBox } from '../Core/ResponBox'
+import Model from '../Core/Model'
 
 const Icon = styled(IconBox)`
   width:7em;
@@ -21,27 +22,7 @@ const BoxStyle = styled(PDBox)`
 const Head = styled.div`
   text-align:center;
 `
-const Wippo = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-width:10em;
-@media (min-width:320px) {
-  width:5em;
-}
-@media (min-width:420px) {
-  width:7em;
-}
-@media (min-width:576px) {
-  width:7em;
-}
-@media (min-width:768px) {
-  width:10em;
-}
-@media (min-width:1024px) {
-  width:10em;
-}
-`
+
 export default class index extends Component {
   render() {
     return (
@@ -81,7 +62,7 @@ export default class index extends Component {
                   }
                 </div>
               </BoxStyle>
-              <Wippo className="center" src='static/img/wippo/PurplePotato.png' alt="wippo" />
+              <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
             </div>
           </div>
         </div>
