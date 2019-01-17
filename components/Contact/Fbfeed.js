@@ -12,7 +12,7 @@ export default class Example extends Component {
     return (
       <Box>
         <FacebookProvider appId="1778641378908399">
-          <Page href="https://www.facebook.com/wipcamp/" width="500px" tabs="timeline" />
+          <Page href="https://www.facebook.com/wipcamp/" width="350" height="350" tabs="timeline" />
         </FacebookProvider>
       </Box>
     )
