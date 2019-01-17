@@ -16,8 +16,10 @@ const Logo = styled.img`
 const LogoWip = styled.img`
   position: relative;
   z-index: 8;
-  width: 100%;
-  margin-top: 8vh;
+  width: 995px;
+  height: 200px;
+  margin-top: -2em;
+  margin-right: 6em;
   animation-name: bcCCNc;
   animation-duration: 2s;
   @media (min-width:801px) {
