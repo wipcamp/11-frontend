@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 import { PDBox, IconBox } from '../Core/ResponBox'
+import Model from '../Core/Model'
 import Box from './Textbox'
 
 const BoxStyle = styled(PDBox)`
@@ -58,6 +59,7 @@ export default class componentName extends Component {
             </BoxStyle>
           </div>
         </div>
+        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
       </div>
     )
   }
