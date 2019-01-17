@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Background from '../Core/Background'
+import Model from '../Core/Model'
 
 const BoxStyle = styled(PDBox)`
     background:rgba(196, 196, 196, 0.4);
@@ -35,6 +36,7 @@ export default class index extends Component {
               </BoxStyle>
             </Layout>
           </div>
+          <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />        
         </div>
       </Background>
     )
