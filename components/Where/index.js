@@ -49,7 +49,7 @@ export default class index extends Component {
               <Small >
                 <Font>คณะเทคโนโลยีสารสนเทศ<br />มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font>
               </Small>
-              <Map src='static/img/Map22.png' alt="map" />
+              <a href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/Map22.png' alt="map" /></a>
             </BoxStyle>
             <Model className="center mb-10" wippo='static/img/wippo/PurplePotato.png' alt="wippo"/>
           </Layout>
