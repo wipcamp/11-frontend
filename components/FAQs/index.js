@@ -78,10 +78,10 @@ export default class Question extends Component {
       <div className="container">
         <Head className="text-center">
           <Headline>FAQs</Headline>
-
+          <Subtitle><b>คำถามที่พบบ่อย?</b></Subtitle>
         </Head>
         <BoxStyle>
-          <Subtitle className="row justify-content-center"><b>คำถามที่พบบ่อย?</b></Subtitle>
+          
           <div id="accordion">
           
             <CollapseItem num='One' first='show' number='0' />

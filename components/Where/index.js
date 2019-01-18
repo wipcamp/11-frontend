@@ -6,16 +6,16 @@ import { PDBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
 
 const Map = styled.img`
-  height: 35%;
+  width:50%;
   margin-top : 3%;
   margin-bottom: 5%; 
   justify-content: center;
   filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   @media (min-width:320px) {
-    width: 90%;
+    width:90%;
   }
   @media (min-width:412px) {
-    width:75%;
+    width:50%;
     margin-top : 6%;
     margin-bottom: 0%; 
   }
@@ -39,27 +39,20 @@ export default class index extends Component {
   render () {
     return (
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-            <div className="row">
-              <Head className="text-center col-12">
-                <Headline>Where</Headline>
-              </Head>
-              <BoxStyle>
-                <div className="col-12">
-                  <div className="row justify-content-center">
-                    <Subtitle className="mb-4"><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
-                  </div>
-                  <Paragraph>
-                    <Font className = "row justify-content-center m-1">คณะเทคโนโลยีสารสนเทศ</Font>
-                    <Font className = "row justify-content-center m-1">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font>
-                  </Paragraph>
-                  <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/Map22.png' alt="map" /></a>
-                </div>
-              </BoxStyle>
-            </div>
-            <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
-          </div>
+        <div className="row justify-content-center text-center">
+          <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
+            <Head className="col-12">
+              <Headline>Where</Headline>
+              <Subtitle><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
+            </Head>
+            <BoxStyle>
+              <Small >
+                <Font>คณะเทคโนโลยีสารสนเทศ<br />มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font>
+              </Small>
+              <a href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/Map22.png' alt="map" /></a>
+            </BoxStyle>
+            <Model className="center mb-10" wippo='static/img/wippo/PurplePotato.png' alt="wippo"/>
+          </Layout>
         </div>
       </div>
     )

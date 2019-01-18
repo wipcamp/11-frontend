@@ -9,33 +9,21 @@ import Box from './Textbox'
 const BoxStyle = styled(PDBox)`
   background: rgba(196, 196, 196, 0.4);
   text-align : left;
-  
- 
- 
+  width: 100%;
 `
 
 const TextBoxColor = styled(PDBox)`
   background: #DE5454;
   text-align : left;
-
-
 `
 
 const Icon = styled(IconBox)`
-    width : 7em;
+  width:7em;
 `
 
 const Head = styled.div`
   text-align : center;
 `
-const TextInBox = styled.div`
-  font-size :16px;
-  margin-top : 12%;
-  margin-left : 5%;
-
-
-`
-
 const IconInfo = [
   { icon: '/static/img/icon-who/moon.png', text: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน' },
   { icon: '/static/img/icon-who/graduate.png', text: 'น้อง ๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ' },
@@ -44,27 +32,28 @@ const IconInfo = [
 ]
 
 export default class componentName extends Component {
-  render() {
+  render () {
     return (
       <div className="container">
-
-        <Head className="text-center col-12">
-          <Headline>Who</Headline>
-        </Head>
+        <div className="row">
+          <Head className="text-center col-12">
+            <Headline>Who</Headline>
+            <Subtitle><b>ค่ายนี้เหมาะสำหรับใคร?</b></Subtitle>
+          </Head>
+        </div>
         <div className="container">
           <div className="row justify-content-center">
-            <BoxStyle className="col-12 col-sm-12 col-md-12 col-lg-125">
-              <Subtitle className="row justify-content-center"><b>ค่ายนี้เหมาะสำหรับใคร?</b></Subtitle>
+            <BoxStyle className="col-12 col-sm-12 col-md-12 col-lg-10 p-5">
               {IconInfo.map((data, i) => (
-                <div className="my-4 mx-5 ">
-                  {/* <TextBoxColor> */}
-                  <div className="media" key={i}>
-                    <Icon src={data.icon} alt="" />
-                    <div className="media-body">
-                      <TextInBox>{data.text}</TextInBox>
+                <div className="my-5">
+                  <TextBoxColor>
+                    <div className="media" key={i}>
+                      <Icon src={data.icon} alt="" />
+                      <div className="media-body">
+                        <Paragraph>{data.text}</Paragraph>
+                      </div>
                     </div>
-                  </div>
-                  {/* </TextBoxColor> */}
+                  </TextBoxColor>
                 </div>
               ))}
             </BoxStyle>

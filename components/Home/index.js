@@ -6,26 +6,22 @@ const Logo = styled.img`
   width: 100%;
   margin-top: 0vh;
   filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
-  @media (min-width:300px) {
-    width: 80%;
-  }
   @media (min-width:801px) {
     width: 50%;
   }
   @media (min-width:1024px) {
-   width: 55%;
+    width: 55%;
   }
 `
 const LogoWip = styled.img`
   position: relative;
   z-index: 8;
+  width: 995px;
+  height: 200px;
   margin-top: -2em;
   margin-right: 6em;
   animation-name: bcCCNc;
   animation-duration: 2s;
-  @media (min-width:300px) {
-    width: 100%;
-  }
   @media (min-width:801px) {
     width: 50%;
   }

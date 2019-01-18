@@ -23,7 +23,6 @@ export const MTBox = styled.div`
 export const PDBox = styled.div`
     @media (min-width:320px) {
       padding : 1.5em 1em;
-      margin : 0 0.5em ;
     }
     
     @media (min-width:576px) {
@@ -54,7 +53,7 @@ export const WDBox = styled.div`
 `
 export const IconBox = styled.img`
   @media (min-width:320px) {
-    width:3em;
+    width:4em;
   }
   @media (min-width:420px) {
     margin-top: 2%;
