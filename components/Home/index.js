@@ -26,17 +26,23 @@ const LogoWip = styled.img`
     width: 50%;
   }
   @media (min-width:1024px) {
-   width: 55%;
+   width: 40%;
   }
 `
 export default class componentName extends Component {
   render () {
     return (
       <Background bgImageUrl="static/img/home7.png">
-        <div className="text-center">
-          <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
-          <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
-          <Model className="center" wippo='static/img/wippo/original-1.png' alt="wippo" />
+        <div className="row text-center">
+          <div className="col-12">
+            <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
+          </div>
+          <div className="col-12">
+            <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
+          </div>
+          <div className="col-12">
+            <Model className="center" wippo='static/img/wippo/original-1.png' alt="wippo" />
+          </div>
         </div>
       </Background>
     )
