@@ -8,25 +8,25 @@ const Logo = styled.img`
   width: 100%;
   margin-top: 0vh;
   @media (min-width:300px) {
-    width: 80%;
+    width: 60%;
   }
   @media (min-width:801px) {
-    width: 50%;
+    width: 45%;
   }
   @media (min-width:1024px) {
-    width: 55%;
+    width: 40%;
   }
 `
 const LogoWip = styled.img`
   position: relative;
   z-index: 8;
-  width: 100%;
+  width: 90%;
   margin-top: 8vh;
   @media (min-width:801px) {
     width: 50%;
   }
   @media (min-width:1024px) {
-   width: 40%;
+   width: 60%;
   }
 `
 export default class componentName extends Component {
