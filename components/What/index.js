@@ -63,9 +63,9 @@ export default class index extends Component {
                 </div>
               </BoxStyle>
             </div>
+            <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
           </div>
         </div>
-        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
       </div>
 
     )
