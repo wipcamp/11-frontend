@@ -7,7 +7,6 @@ import { WDBox, MTBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 import TextBoxBackground from '../Core/TextBoxBackground'
-import Background from '../Core/Background'
 
 const BoxStyle = styled.div`
     background: rgba(196, 196, 196, 0.4);
@@ -23,7 +22,14 @@ const FbBox = styled(WDBox)`
 
 const Div = styled(MTBox)`
     margin-top:5em;
+    @media (min-width:768px) {
+      margin-left: -5em;
+    }
+    @media (min-width:1024px) {
+      margin-left: -5em;
+    }
 `
+
 const Div1 = styled(MTBox)`
     margin-top:5em;
     @media (min-width:320px) {
@@ -39,7 +45,8 @@ const Div1 = styled(MTBox)`
       margin-left:16em;
     }
     @media (min-width:1024px) {
-      margin-left:10em;
+      /* margin-top:rem; */
+      margin-left :10em;
     }
 `
 const Div2 = styled.div`
@@ -92,7 +99,6 @@ const TextA = styled.a`
 export default class index extends Component {
   render () {
     return (
-      <Background bgImageUrl = "static/img/contact.png">
       <div className="container">
         <div className="row">
           <Head className="text-center col-12">
@@ -110,23 +116,23 @@ export default class index extends Component {
               <Div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <Div2 className="row pr-4 pl-4">
                   <div className="pl-auto pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/instagram.png" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
+                    <Logo img="../../static/img/social/line (1).png" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
                   </div>
                   <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/instagram.png" link="https://twitter.com/WIPCamp" />
+                    <Logo img="../../static/img/social/twit.png" link="https://twitter.com/WIPCamp" />
                   </div>
                   <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/instagram.png" link="https://www.instagram.com/wipcamp/" />
+                    <Logo img="../../static/img/social/ig.png" link="https://www.instagram.com/wipcamp/" />
                   </div>
                   <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/instagram.png" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
+                    <Logo img="../../static/img/social/youtube_social_squircle_red.png" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
                   </div>
                 </Div2>
                 <div className="w-auto"></div>
                 <div className="row">
-                  <Div1 className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <Div1 className="mt-4 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <DivCon>
-                      <a href="tel://02-107-3576"><Img src="../../static/img/social/instagram.png" /></a>
+                      <a href="tel://02-107-3576"><Img src="../../static/img/social/phone.png" /></a>
                     </DivCon>
                     <DivCon>
                   &nbsp;&nbsp;
@@ -136,9 +142,9 @@ export default class index extends Component {
                     </DivCon>
                   </Div1>
                   <div className="w-auto"></div>
-                  <Div1 className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <Div1 className="mt-4 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <DivCon>
-                      <a href="mailto:wippo@wipcamp.com"><Img src="../../static/img/social/instagram.png" /></a>
+                      <a href="mailto:wippo@wipcamp.com"><Img src="../../static/img/social/email.png" /></a>
                     </DivCon>
                     <DivCon>
                   &nbsp;&nbsp;
@@ -155,7 +161,6 @@ export default class index extends Component {
           <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
         </div>
       </div>
-      </Background>
     )
   }
 }
