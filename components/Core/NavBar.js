@@ -5,14 +5,13 @@ import Button from './Button';
 
 const NavSection = styled.nav`
   position: fixed;
-  top: 50%;
   transition: all .2s;
   right: 40px;
   margin: 0 !important;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index:99;
+  display: ${(props) => props.display ? "" : "none"};
 
   ul li:first-child {
     display: none;
@@ -112,13 +111,16 @@ const sections = [
 class Navbar extends React.Component {
   state = {
       current: 'home',
-      show: false
+      show: false,
+      display: false,
   }
   toggleNavbar (to) {
     if (to === 'home') {
       this.setState({ show: false })
+      this.setState({ display: false })
     } else {
       this.setState({ show: true })
+      this.setState({ display: true})
     }
     this.setState({
       current: to
@@ -127,14 +129,14 @@ class Navbar extends React.Component {
 
   render () {
     return (
-      <NavSection active={this.state.show}>
+      <NavSection active={this.state.show} display = {this.state.display}>
         <SectionUl>
           {
-            sections.map(e => (
-              <NavItems key={e.href}>
+            sections.map(i => (
+              <NavItems key={i.href}>
                 <NavLink
                   activeClass="active"
-                  to={e.href}
+                  to={i.href}
                   spy
                   smooth
                   duration={500}
@@ -142,7 +144,7 @@ class Navbar extends React.Component {
                   onSetActive={to => this.toggleNavbar(to)}
                 >
                   <div className="text">
-                    {e.title}
+                    {i.title}
                   </div>
                 </NavLink>
               </NavItems>
