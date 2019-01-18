@@ -26,7 +26,7 @@ export default class componentName extends Component {
                 <Head className="text-center col-12">
                   <Headline>When</Headline>
                 </Head>
-                <BoxStyle>
+                <BoxStyle className="pr-1 pl-1">
                   <div className="col-12">
                     <div className="row justify-content-center">
                       <Subtitle className="mb-4"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
