@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const TextBoxBackground = styled.div`
@@ -25,5 +26,15 @@ const TextBoxBackground = styled.div`
         height: 100%;
     }
 `
+
+//   <div className="container">
+//     <div className="row justify-content-center">
+//       <div className="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
+//       <BgBox className="row col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+//        Inside
+//       </BgBox>
+//       <div className="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
+//     </div>
+//   </div>
 
 export default TextBoxBackground
