@@ -109,23 +109,23 @@ export default class index extends Component {
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
             <TextBoxBackground className="row col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
-              <FbBox className="pt-4 pb-4 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <FbBox className="pt-4 pb-4 mr-5 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <Fbfeed />
               </FbBox>
               <div className="w-auto"></div>
               <Div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <Div2 className="row pr-4 pl-4">
-                  <div className="pl-auto pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/line (1).png" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
-                  </div>
-                  <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/twit.png" link="https://twitter.com/WIPCamp" />
-                  </div>
-                  <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <Div2 className="row justify-content-start">
+                  <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                     <Logo img="../../static/img/social/ig.png" link="https://www.instagram.com/wipcamp/" />
                   </div>
-                  <div className="pl-4 pr-auto col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                  <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <Logo img="../../static/img/social/twit.png" link="https://twitter.com/WIPCamp" />
+                  </div>
+                  <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                     <Logo img="../../static/img/social/youtube_social_squircle_red.png" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
+                  </div>
+                  <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <Logo img="../../static/img/social/line (1).png" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
                   </div>
                 </Div2>
                 <div className="w-auto"></div>
