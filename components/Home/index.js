@@ -29,6 +29,18 @@ const LogoWip = styled.img`
    width: 60%;
   }
 `
+
+const Wippo = styled.div`
+  position : absolute;
+  height : 30vh;
+  bottom : 0vh;
+  transform: translate(-50%, 0%);
+  left: 50vw;
+  @media (min-width: 970px) {
+    height : auto;
+    width: 100vw;
+  }
+`
 export default class componentName extends Component {
   render () {
     return (
@@ -40,9 +52,9 @@ export default class componentName extends Component {
           <div className="col-12">
             <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
           </div>
-          <div className="col-12">
+          <Wippo>
             <Model className="center" wippo='static/img/wippo/original-1.png' alt="wippo" />
-          </div>
+          </Wippo>
         </div>
       </Background>
     )
