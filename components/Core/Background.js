@@ -1,16 +1,11 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const Div = styled.div`
-    background-image:url(${props => props.bgimg});
-    height:1000px;
-    background-repeat:no-repeat;
+const Background = styled.div`
+  background-image:url(${props => props.bgImageUrl});
+  min-height: 100vh;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
-
-const Background = (props) => (
-    <Div bgimg={props.bg}>
-
-    </Div>
-)
-
 export default Background

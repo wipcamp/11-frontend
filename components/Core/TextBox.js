@@ -1,29 +1,46 @@
-import React, { Component } from 'react'
 import styled from 'styled-components'
-import fonts from '../../config/fonts'
-import colors from '../../config/color'
+import Headline, { TextBoxStyle, Subtitle } from './Texts'
 
 const BoxStyle = styled.div`
     background: papayawhip;
     text-align : center;
-    padding-top : 2em;
-    padding-bottom : 2em;
-`
-const TextStyle = styled.p`
-    font-size : ${fonts.TextBox};
-    color : ${colors.TextBox};
+    padding : 2em 5em;
+    position: absolute;
+    display:block;
+    width:100%;
+    height:400px;
 
+    @media (min-width:320px) {
+        font-size: 0.9em;
+        max-width : 300px;
+    }
+    @media (min-width:412px) {
+        font-size: 1em;
+        max-width : 300px;
+    }
+    @media (min-width:576px) {
+        font-size: 1.1em;
+        max-width : 550px;
+    }
+    @media (min-width:768px) {
+        font-size: 1.2em;
+    }
+    @media (min-width:1024px) {
+        font-size: 1.3em;
+        max-width : 800px;
+    }
 `
+
 const TextBox = (props) => (
-    <div className = "container-fluid">
-        <div className = "row justify-content-center">
-            <div className = "col-md-8 col-md-offset-4">
-                <BoxStyle>
-                    <TextStyle>{props.text}</TextStyle>
-                </BoxStyle>
-            </div>
-        </div>
+  <div className="container-fluid">
+    <div className="row justify-content-center">
+      <BoxStyle>
+        <Headline>{props.header}</Headline>
+        <Subtitle>{props.subtitle}</Subtitle>
+        <TextBoxStyle>{props.text}</TextBoxStyle>
+      </BoxStyle>
     </div>
+  </div>
 )
 
 export default TextBox
