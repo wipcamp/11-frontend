@@ -81,9 +81,7 @@ export default class Question extends Component {
           <Subtitle><b>คำถามที่พบบ่อย?</b></Subtitle>
         </Head>
         <BoxStyle>
-          
           <div id="accordion">
-          
             <CollapseItem num='One' first='show' number='0' />
             <CollapseItem num='Two' number='1' />
             <CollapseItem num='Three' number='2' />
