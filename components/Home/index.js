@@ -45,7 +45,7 @@ export default class componentName extends Component {
   render () {
     return (
       <Background bgImageUrl="static/img/home7.png">
-        <div className="row text-center">
+        <div className="row text-center pt-1">
           <div className="col-12">
             <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
           </div>
