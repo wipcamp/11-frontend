@@ -55,7 +55,7 @@ export default class index extends Component {
                     IconInfo.map((info, i) => (
                       <div key={i} className="col-3 col-md-3 p-1">
                         <Icon src={info.icon} alt={info.t} />
-                        <Small>{info.text}</Small>
+                        <Small><Font>{info.text}</Font></Small>
                       </div>
                     ))
                   }
