@@ -27,8 +27,12 @@ export default class componentName extends Component {
                   <Headline>When</Headline>
                 </Head>
                 <BoxStyle>
-                  <Subtitle>ค่ายนี้จัดเมื่อไหร่ ?</Subtitle>
-                  <ImgChangeByDay />
+                  <div className="col-12">
+                    <div className="row justify-content-center">
+                      <Subtitle className="mb-4"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
+                    </div>
+                    <ImgChangeByDay />
+                  </div>
                 </BoxStyle>
               </div>
               <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
