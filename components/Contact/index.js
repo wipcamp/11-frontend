@@ -7,6 +7,7 @@ import { WDBox, MTBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 import TextBoxBackground from '../Core/TextBoxBackground'
+import Background from '../Core/Background'
 
 const BoxStyle = styled.div`
     background: rgba(196, 196, 196, 0.4);
@@ -91,6 +92,7 @@ const TextA = styled.a`
 export default class index extends Component {
   render () {
     return (
+      <Background bgImageUrl = "static/img/contact.png">
       <div className="container">
         <div className="row">
           <Head className="text-center col-12">
@@ -153,6 +155,7 @@ export default class index extends Component {
           <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
         </div>
       </div>
+      </Background>
     )
   }
 }

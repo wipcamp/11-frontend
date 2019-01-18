@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import ImgChangeByDay from './ImgChangeByDay'
 import Model from '../Core/Model'
+import Background from '../Core/Background'
 import Headline, { Subtitle } from '../Core/Texts'
 
 const Head = styled.div`
@@ -12,7 +13,8 @@ const Head = styled.div`
 export default class componentName extends Component {
   render () {
     return (
-      <div className="container" >
+      <Background bgImageUrl = "static/img/when.png">
+      <div className="container">
         <Head className="text-center col-12">
           <Headline>When</Headline>
           <Subtitle>ค่ายนี้จัดเมื่อไร?</Subtitle>
@@ -20,6 +22,7 @@ export default class componentName extends Component {
         <ImgChangeByDay />
         <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />        
       </div>
+      </Background>
     )
   }
 }
