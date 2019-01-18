@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Background from '../Core/Background'
+import Model from '../Core/Model'
 
 const Logo = styled.img`
   position: relative;
   width: 100%;
   margin-top: 0vh;
-  filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   @media (min-width:801px) {
     width: 50%;
   }
@@ -29,13 +29,14 @@ const LogoWip = styled.img`
   }
 `
 export default class componentName extends Component {
-  render () {
+  render() {
     return (
-      <Background bgImageUrl = "static/img/game1.png">
-      <div className="text-center">
-        <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
-        <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
-      </div>
+      <Background bgImageUrl="static/img/home7.png">
+        <div className="text-center">
+          <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
+          <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
+          <Model className="center" wippo='static/img/wippo/original-1.png' alt="wippo" /> 
+        </div>
       </Background>
     )
   }
