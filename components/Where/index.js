@@ -43,9 +43,9 @@ export default class index extends Component {
           <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
             <Head className="col-12">
               <Headline>Where</Headline>
+              <Subtitle><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
             </Head>
             <BoxStyle>
-              <Subtitle className="row justify-content-center mb-5"><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
               <Small >
                 <Font>คณะเทคโนโลยีสารสนเทศ<br />มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font>
               </Small>

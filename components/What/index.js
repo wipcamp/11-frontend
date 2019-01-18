@@ -32,11 +32,12 @@ export default class index extends Component {
             <div className="row">
               <Head className="text-center col-12">
                 <Headline>What</Headline>
+                <Subtitle><b>ค่ายนี้คืออะไร ?</b></Subtitle>
               </Head>
               <BoxStyle>
                 <div className="col-12">
                   <div className="row justify-content-center">
-                    <Subtitle className="mb-4"><b>ค่ายนี้คืออะไร ?</b></Subtitle>
+                    
                   </div>
                   <Paragraph>
                     <Font>
