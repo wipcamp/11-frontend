@@ -7,39 +7,39 @@ const Divhover = styled.div`
   /* transform: scale(1);
   transition: .3s ease-in-out; */
   &:hover img {
-    animation-duration: 2s;
-    animation-name: hinge;
+    animation-duration: 1s;
+    animation-name: headShake;
   }
-  @keyframes hinge {
+  @keyframes headShake {
   0% {
-    transform-origin: top left;
-    animation-timing-function: ease-in-out;
+    transform: translateX(0);
   }
 
-  20%,
-  60% {
-    transform: rotate3d(0, 0, 1, 80deg);
-    transform-origin: top left;
-    animation-timing-function: ease-in-out;
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
   }
 
-  40%,
-  80% {
-    transform: rotate3d(0, 0, 1, 60deg);
-    transform-origin: top left;
-    animation-timing-function: ease-in-out;
-    opacity: 1;
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
   }
 
-  to {
-    transform: translate3d(700px, 700px, 0);
-    opacity: 0;
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
   }
 }
 `
 const Img = styled.img`
-    width:5em;
-    @media (min-width:320px) {
+    height: 64px;
+    width:64px;
+    /* @media (min-width:320px) {
       width:2.5em;
     }
     @media (min-width:420px) {
@@ -57,7 +57,7 @@ const Img = styled.img`
     @media (min-width:1024px) {
       margin-top: 5%;
       width:5em;
-    }
+    } */
 `
 
 const Logo = (props) => (
