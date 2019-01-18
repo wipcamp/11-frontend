@@ -23,7 +23,7 @@ const dateStartAnnounced = dayjs('2019-01-14')  //Before announced one day
 const dateStartCamp = dayjs('2019-02-20') //Before start camp one day
 
 const Section = styled(Element)`
-  padding: 80px 0px;
+  padding: 0px;
 
   @media(max-width: 768px) {
     padding: 50px 0;
