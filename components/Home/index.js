@@ -20,9 +20,6 @@ const LogoWip = styled.img`
   position: relative;
   z-index: 8;
   margin-top: -2em;
-  margin-right: 6em;
-  animation-name: bcCCNc;
-  animation-duration: 2s;
   @media (min-width:300px) {
     width: 100%;
   }
