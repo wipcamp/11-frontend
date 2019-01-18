@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 import Model from '../Core/Model';
+import { PDBox } from '../Core/ResponBox'
 
 const QuestionText = styled.a`
   text-decoration: none;
@@ -22,20 +23,10 @@ const Span = styled.span`
     margin-left: 5px;
 }   
 `
-const BoxStyle = styled.div`
-    background: rgba(196, 196, 196, 0.4);
-    @media (min-width:320px) {
-      padding : 1.5em 1em;
-    }
-    
-    @media (min-width:576px) {
-      padding : 1em 2em;
-    }
-    
-    @media (min-width:1024px) {
-      padding : 2em 5em;
-    }
+const BoxStyle = styled(PDBox)`
+    background: rgba(196, 196, 196, 0.2);
 `
+
 const Head = styled.div`
   text-align:center;
 `
@@ -76,21 +67,31 @@ export default class Question extends Component {
     )
     return (
       <div className="container">
-        <Head className="text-center">
-          <Headline>FAQs</Headline>
-          <Subtitle><b>คำถามที่พบบ่อย?</b></Subtitle>
-        </Head>
-        <BoxStyle>
-          <div id="accordion">
-            <CollapseItem num='One' first='show' number='0' />
-            <CollapseItem num='Two' number='1' />
-            <CollapseItem num='Three' number='2' />
-            <CollapseItem num='Four' number='3' />
-            <CollapseItem num='Five' number='4' />
-            <CollapseItem num='Six' number='5' />
-          </div>
-        </BoxStyle>
-        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+        <div className="row justify-content-center">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-10">
+            <div className="row">
+            <Head className="text-center col-12">
+                <Headline>FAQs</Headline>
+              </Head>
+              <BoxStyle>
+              <div className="col-12">
+                  <div className="row justify-content-center">
+                    <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
+                  </div>  
+                    <div id="accordion">
+                      <CollapseItem num='One' first='show' number='0' />
+                      <CollapseItem num='Two' number='1' />
+                      <CollapseItem num='Three' number='2' />
+                      <CollapseItem num='Four' number='3' />
+                      <CollapseItem num='Five' number='4' />
+                      <CollapseItem num='Six' number='5' />
+                    </div>
+                </div>
+              </BoxStyle>
+              </div>
+            <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+           </div>
+        </div>
       </div>
     )
   }
