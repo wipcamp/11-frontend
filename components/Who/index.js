@@ -58,8 +58,8 @@ export default class componentName extends Component {
               ))}
             </BoxStyle>
           </div>
+          <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
         </div>
-        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
       </div>
     )
   }
