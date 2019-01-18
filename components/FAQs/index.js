@@ -73,7 +73,7 @@ export default class Question extends Component {
             <Head className="text-center col-12">
                 <Headline>FAQs</Headline>
               </Head>
-              <BoxStyle>
+              <BoxStyle className ="pb-5">
               <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
