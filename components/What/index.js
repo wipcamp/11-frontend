@@ -7,6 +7,27 @@ import Model from '../Core/Model'
 
 const Icon = styled(IconBox)`
   width:7em;
+  
+  @media (min-width:320px) {
+    width:3em;
+  }
+  @media (min-width:420px) {
+    margin-top: 2%;
+    width:5em;
+  }
+  @media (min-width:576px) {
+    margin-top: 2%;
+    width:5em;
+  }
+  @media (min-width:768px) {
+    margin-top: 5%;
+    width:7em;
+  }
+  @media (min-width:1024px) {
+    margin-top: 5%;
+    padding: .2em;
+    width:7em;
+  }
 `
 
 const IconInfo = [
