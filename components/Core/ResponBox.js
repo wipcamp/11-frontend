@@ -54,7 +54,7 @@ export const WDBox = styled.div`
 `
 export const IconBox = styled.img`
   @media (min-width:320px) {
-    width:4em;
+    width:3em;
   }
   @media (min-width:420px) {
     margin-top: 2%;
