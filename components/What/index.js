@@ -49,12 +49,11 @@ export default class index extends Component {
                       &nbsp;&nbsp;&nbsp;&nbsp;กว่าทศวรรษที่ WIP Camp ขอเป็นก้าวเล็ก ๆ ในการช่วยเหลือน้อง ๆ ให้ค้นพบกล่องดวงใจที่ทุกคนตามหา และเดินตามเส้นทางความฝันที่น้อง ๆ หวังไว้ !!
                     </Font>
                   </Paragraph>
-
                 </div>
                 <div className="row text-center mt-2">
                   {
                     IconInfo.map((info, i) => (
-                      <div key={i} className="col-6 col-md-3 p-1">
+                      <div key={i} className="col-3 col-md-3 p-1">
                         <Icon src={info.icon} alt={info.t} />
                         <Small>{info.text}</Small>
                       </div>
