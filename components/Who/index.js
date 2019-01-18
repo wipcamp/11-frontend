@@ -15,14 +15,58 @@ const BoxStyle = styled(PDBox)`
 const TextBoxColor = styled(PDBox)`
   background: #DE5454;
   text-align : left;
+  @media (min-width:320px) {
+      padding : 1.5em 1em;
+      margin : 0 0.5em ;
+    }
+    
+    @media (min-width:576px) {
+      padding : 1em 2em;
+    }
+    @media (min-width:768px) {
+      padding : 0em 2em;
+      margin : 2em 5em ;
+
+    }
+    @media (min-width:1024px) {
+      padding : 0em 1em;
+      margin : 2em 3em ;
+    }
+
 `
 
 const Icon = styled(IconBox)`
   width:7em;
+  margin-bottom: 5%;
 `
 
 const Head = styled.div`
   text-align : center;
+`
+const TextInBox = styled.div`
+  
+  @media (min-width:320px) {
+      font-size : 0.8em;
+      margin-top:4%;
+      margin-left : 4%;
+    }
+    
+    @media (min-width:576px) {
+      font-size : 1em;
+      margin-top:8%;
+      margin-left : 4%;
+    }
+    @media (min-width:768px) {
+      font-size : 1.1em;
+      margin-top:15%;
+      margin-left : 4%;
+    }
+
+    
+    @media (min-width:1024px) {
+      font-size:16px;
+      margin-top : 15%;
+    }
 `
 const IconInfo = [
   { icon: '/static/img/icon-who/moon.png', text: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน' },
@@ -38,19 +82,19 @@ export default class componentName extends Component {
         <div className="row">
           <Head className="text-center col-12">
             <Headline>Who</Headline>
-            <Subtitle><b>ค่ายนี้เหมาะสำหรับใคร?</b></Subtitle>
           </Head>
         </div>
         <div className="container">
           <div className="row justify-content-center">
-            <BoxStyle className="col-12 col-sm-12 col-md-12 col-lg-10 p-5">
+            <BoxStyle className="col-12 col-sm-12 col-md-12 col-lg-10">
+              <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
               {IconInfo.map((data, i) => (
-                <div className="my-5">
+                <div className="my-4 mx-1">
                   <TextBoxColor>
                     <div className="media" key={i}>
                       <Icon src={data.icon} alt="" />
                       <div className="media-body">
-                        <Paragraph>{data.text}</Paragraph>
+                        <TextInBox>{data.text}</TextInBox>
                       </div>
                     </div>
                   </TextBoxColor>
