@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Background from '../Core/Background'
 
 const Logo = styled.img`
   position: relative;
@@ -16,10 +17,8 @@ const Logo = styled.img`
 const LogoWip = styled.img`
   position: relative;
   z-index: 8;
-  width: 995px;
-  height: 200px;
-  margin-top: -2em;
-  margin-right: 6em;
+  width: 100%;
+  margin-top: 8vh;
   animation-name: bcCCNc;
   animation-duration: 2s;
   @media (min-width:801px) {
@@ -32,10 +31,12 @@ const LogoWip = styled.img`
 export default class componentName extends Component {
   render () {
     return (
+      <Background bgImageUrl = "static/img/game1.png">
       <div className="text-center">
-        <LogoWip src="static/img/logofinals.png" alt="WIP CAMP" />
+        <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
         <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
       </div>
+      </Background>
     )
   }
 }
