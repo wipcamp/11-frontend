@@ -14,14 +14,14 @@ export default class componentName extends Component {
   render () {
     return (
       <Background bgImageUrl = "static/img/when.png">
-      <div className="container">
-        <Head className="text-center col-12">
-          <Headline>When</Headline>
-          <Subtitle>ค่ายนี้จัดเมื่อไร?</Subtitle>
-        </Head>
-        <ImgChangeByDay />
-        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />        
-      </div>
+        <div className="container">
+          <Head className="text-center col-12">
+            <Headline>When</Headline>
+            <Subtitle>ค่ายนี้จัดเมื่อไร?</Subtitle>
+          </Head>
+          <ImgChangeByDay />
+          <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+        </div>
       </Background>
     )
   }
