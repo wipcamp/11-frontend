@@ -5,7 +5,7 @@ import color from '../../config/color'
 const Headline = styled.p`
   font-size: ${font.Headline};
   font-weight : bold;
-  
+  text-align : center;
 `
 export const Subtitle = styled.p`
   font-size : ${font.Subtitle};

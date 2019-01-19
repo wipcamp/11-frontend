@@ -21,9 +21,6 @@ const Icon = styled(IconBox)`
   margin-bottom: 5%;
 `
 
-const Head = styled.div`
-  text-align : center;
-`
 const TextPosition = styled.div`  
   transform: translate(0, 50%);
 `
@@ -39,9 +36,9 @@ export default class componentName extends Component {
     return (
       <div className="container">
         <div className="row">
-          <Head className="text-center col-12">
+          <div className="text-center col-12">
             <Headline>Who</Headline>
-          </Head>
+          </div>
         </div>
         <div className="container">
           <div className="row justify-content-center">

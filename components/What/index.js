@@ -19,9 +19,6 @@ const IconInfo = [
 const BoxStyle = styled(PDBox)`
     background: rgba(196, 196, 196, 0.4);
 `
-const Head = styled.div`
-  text-align:center;
-`
 
 const WhatText = [
   'ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริง ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน',
@@ -36,9 +33,9 @@ export default class index extends Component {
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row">
-              <Head className="text-center col-12">
+              <div className="text-center col-12">
                 <Headline>What</Headline>
-              </Head>
+              </div>
               <BoxStyle>
                 <div className="col-12">
                   <div className="row justify-content-center">

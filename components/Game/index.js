@@ -18,9 +18,6 @@ const Layout = styled.div`
   padding:2em;
 `
 
-const Head = styled.div`
-  text-align : center;
-`
 export default class index extends Component {
   render () {
     return (
@@ -28,10 +25,10 @@ export default class index extends Component {
         <div className="container">
           <div className="row justify-content-center text-center">
             <Layout className="col-12 col-sm-12 col-md-12 col-lg-12">
-              <Head className="col-12">
+              <div className="col-12">
                 <Headline>Game</Headline>
                 <Subtitle>สนุกนะเล่นสิ</Subtitle>
-              </Head>
+              </div>
               <BoxStyle>
               </BoxStyle>
             </Layout>

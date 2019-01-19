@@ -33,10 +33,6 @@ const BoxStyle = styled(PDBox)`
     background: rgba(196, 196, 196, 0.2);
 `
 
-const Head = styled.div`
-  text-align:center;
-`
-
 export default class Question extends Component {
   state = {
     question: ['อยากเป็นส่วนหนึ่งของค่ายนี้มาก ๆ ต้องทำอย่างไร',
@@ -76,9 +72,9 @@ export default class Question extends Component {
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row">
-            <Head className="text-center col-12">
+            <div className="text-center col-12">
                 <Headline>FAQs</Headline>
-            </Head>
+            </div>
             <div className="col-12">
               <BoxStyle className ="pb-5">
               <div className="col-12">
