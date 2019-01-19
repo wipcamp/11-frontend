@@ -50,6 +50,7 @@ const NavLink = styled(Link)`
     width: 100px;
     justify-content: flex-end;
     font-size: 14px;
+    top:10%;
   }
 
   &:hover {
@@ -61,6 +62,7 @@ const NavLink = styled(Link)`
     .text {
       opacity: 1;
       color: black;
+      ju
     }
   }
 
@@ -75,7 +77,6 @@ const NavLink = styled(Link)`
       display: flex;
       position: absolute;
       right: -5px;
-      width: 100px;
       justify-content: flex-end;
       font-size: 14px;
     }
