@@ -3,14 +3,15 @@ import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph } from '../Core/Texts'
 import Model from '../Core/Model'
-import { WDBox, MTBox } from '../Core/ResponBox'
+import { WDBox, MTBox, PDBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 import TextBoxBackground from '../Core/TextBoxBackground'
 
-const BoxStyle = styled.div`
-    background: rgba(196, 196, 196, 0.4);
-    padding:0;
+const BoxStyle = styled(PDBox)`
+  background: rgba(196, 196, 196, 0.4);
+  text-align : left;
+  width: 100%;
 `
 
 const FbBox = styled(WDBox)`
@@ -50,6 +51,9 @@ const Div1 = styled(MTBox)`
     }
 `
 const Div2 = styled.div`
+ @media (min-width:320px) {
+   margin-right:2em;   
+ }
     @media (min-width:768px) {
       margin-left:2em;
     }
@@ -96,6 +100,7 @@ const TextA = styled.a`
     color:black;
   }
 `
+
 export default class index extends Component {
   render () {
     return (
@@ -108,11 +113,11 @@ export default class index extends Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
-            <TextBoxBackground className="row col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+            <BoxStyle className="row col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+              <Subtitle className = "text-center col-12"><b>ติดต่อเรา</b></Subtitle>
               <FbBox className="pt-4 pb-4 mr-5 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <Fbfeed />
               </FbBox>
-              <div className="w-auto"></div>
               <Div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <Div2 className="row justify-content-start">
                   <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
@@ -128,7 +133,6 @@ export default class index extends Component {
                     <Logo img="../../static/img/social/line@.svg" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
                   </div>
                 </Div2>
-                <div className="w-auto"></div>
                 <div className="row">
                   <Div1 className="mt-4 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <DivCon>
@@ -141,7 +145,6 @@ export default class index extends Component {
                       <Paragraph><TextA href="tel://02-107-3576">02-107-3576</TextA></Paragraph>
                     </DivCon>
                   </Div1>
-                  <div className="w-auto"></div>
                   <Div1 className="mt-4 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <DivCon>
                       <a href="mailto:wippo@wipcamp.com"><Img src="../../static/img/social/mail.svg" /></a>
@@ -155,7 +158,7 @@ export default class index extends Component {
                   </Div1>
                 </div>
               </Div>
-            </TextBoxBackground>
+            </BoxStyle>
             <div className="col-12 col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
           </div>
           <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
