@@ -20,10 +20,7 @@ const Map = styled.img`
     margin-bottom: 0%; 
   }
 `
-const Head = styled.div`
-text-align : center;
 
-`
 const BoxStyle = styled(PDBox)`
     background: rgba(196, 196, 196, 0.2);
 `
@@ -34,7 +31,10 @@ const Layout = styled.div`
   border-radius: 2em;
   padding:2em;
 `
-
+const WhereText = [
+  'คณะเทคโนโลยีสารสนเทศ',
+  'มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี',
+]
 export default class index extends Component {
   render () {
     return (
@@ -42,18 +42,19 @@ export default class index extends Component {
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row">
-              <Head className="text-center col-12">
+              <div className="text-center col-12">
                 <Headline>Where</Headline>
-              </Head>
+              </div>
               <BoxStyle>
                 <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
                   </div>
-                  <Paragraph>
-                    <Font className = "row justify-content-center m-1">คณะเทคโนโลยีสารสนเทศ</Font>
-                    <Font className = "row justify-content-center m-1">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font>
-                  </Paragraph>
+                  <Small>
+                    {WhereText.map((info,i) => (
+                      <Font className = "row justify-content-center m-1">{info}</Font>
+                    ))}
+                  </Small>
                   <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/Map22.png' alt="map" /></a>
                 </div>
               </BoxStyle>
