@@ -8,18 +8,20 @@ import { PDBox } from '../Core/ResponBox'
 const QuestionText = styled.a`
   text-decoration: none;
   color: navy;
-
+  background-color: burlywood;
+   padding:1rem 19rem 1rem 1.5rem;
   &:hover{
-    color: navy;
+    
+    background-color: white;
+
   }
+ 
  
 `
 const Span = styled.span`
 & :before{
-    content: 'V'; 
+    content: '\\2585'; 
     font-size: 13px;
-    color: #777;
-    float: right;
     margin-left: 5px;
 }   
 `
@@ -30,6 +32,7 @@ const BoxStyle = styled(PDBox)`
 const Head = styled.div`
   text-align:center;
 `
+
 
 export default class Question extends Component {
   state = {
@@ -51,10 +54,10 @@ export default class Question extends Component {
   render() {
     const CollapseItem = (props) => (
       <div className="card">
-        <div className="card" >
-          <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse" href={`#collapse${props.num}`}>
-            <div className="card-header px-4" >
-              Q : {this.state.question[props.number]}<Span></Span>
+        <div className="card " >
+          <QuestionText className="card-link " data-toggle="collapse" href={`#collapse${props.num}`}>
+            <div className="">
+              Q : {this.state.question[props.number]}
             </div>
           </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
@@ -79,7 +82,7 @@ export default class Question extends Component {
                     <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
                   </div>  
                     <div id="accordion">
-                      <CollapseItem num='One' first='show' number='0' />
+                      <CollapseItem num='One'  number='0' />
                       <CollapseItem num='Two' number='1' />
                       <CollapseItem num='Three' number='2' />
                       <CollapseItem num='Four' number='3' />
