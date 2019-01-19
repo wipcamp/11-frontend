@@ -12,10 +12,6 @@ const NavSection = styled.nav`
   transform: translateY(-50%);
   z-index:99;
   display: ${(props) => props.display ? "" : "none"};
-
-  ul li:first-child {
-    display: none;
-  }
   
   @media(max-width: 768px) {
    display: none;
@@ -35,17 +31,15 @@ const NavLink = styled(Link)`
   opacity: 0.6;
   transition: all .2s;
   cursor : pointer;
-  
 
   &:before {
     content: '';
     height: 10px;
     width: 10px;
     display: flex;
-    border: 1px solid black;
-    border-radius: 50%;
+    border: 1px solid #C63939;
     margin: 5px;
-    background-color: black;
+    background-color: #C63939;
   }
   
   .text {
@@ -61,7 +55,7 @@ const NavLink = styled(Link)`
   &:hover {
     opacity: 1;
     &:before {
-      border: 1px solid black;
+      border: 1px solid white;
     }
 
     .text {
@@ -73,13 +67,14 @@ const NavLink = styled(Link)`
   &.active {
     opacity: 1;
     &:before {
-      border: 1px solid black;
-      background-color: white;
+      
     }
 
     .text {
       opacity: 1;
       color: black;
+      float:right;
+      position:absolute;
     }
   }
 `
@@ -97,7 +92,6 @@ const NavItems = styled.li`
 `
 
 const sections = [
-  { href: '', title: '' },
   { href: 'home', title: 'Home' },
   { href: 'what', title: 'What' },
   { href: 'who', title: 'Who' },
