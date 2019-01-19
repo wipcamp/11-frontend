@@ -33,7 +33,7 @@ const Layout = styled.div`
 `
 const WhereText = [
   'คณะเทคโนโลยีสารสนเทศ',
-  'มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี',
+  'มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี'
 ]
 export default class index extends Component {
   render () {
@@ -41,17 +41,15 @@ export default class index extends Component {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-            <div className="row">
-              <div className="text-center col-12">
-                <Headline>Where</Headline>
-              </div>
+            <div className="row justify-content-center">
+              <Headline>Where</Headline>
               <BoxStyle>
                 <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
                   </div>
                   <Small>
-                    {WhereText.map((info,i) => (
+                    {WhereText.map((info, i) => (
                       <Font className = "row justify-content-center m-1">{info}</Font>
                     ))}
                   </Small>
