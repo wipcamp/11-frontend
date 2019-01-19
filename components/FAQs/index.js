@@ -7,17 +7,17 @@ import { PDBox } from '../Core/ResponBox'
 
 const QuestionText = styled.a`
   text-decoration: none;
+  text-align: left;
   color: navy;
   background-color: burlywood;
-   padding:1rem 19rem 1rem 1.5rem;
+   padding:0.5rem 19rem 0.5rem 1.45rem;
   &:hover{
     
     background-color: white;
 
   }
- 
- 
 `
+
 const Span = styled.span`
 & :before{
     content: '\\2585'; 
@@ -56,15 +56,15 @@ export default class Question extends Component {
       <div className="card">
         <div className="card " >
           <QuestionText className="card-link " data-toggle="collapse" href={`#collapse${props.num}`}>
-            <div className="">
+            <div>
               Q : {this.state.question[props.number]}
             </div>
           </QuestionText>
-          <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
+          <Answer id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body bg-light px-4">
               A : {this.state.answer[props.number]}
             </div>
-          </div>
+          </Answer>
         </div>
       </div>
     )
