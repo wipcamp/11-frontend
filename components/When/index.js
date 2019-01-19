@@ -7,10 +7,6 @@ import Background from '../Core/Background'
 import Headline, { Subtitle } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 
-const Head = styled.div`
-  text-align : center;
-`
-
 const BoxStyle = styled(PDBox)`
     background: rgba(196, 196, 196, 0.4);
 `
@@ -22,10 +18,8 @@ export default class componentName extends Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-              <div className="row">
-                <Head className="text-center col-12">
-                  <Headline>When</Headline>
-                </Head>
+              <div className="row justify-content-center">
+                <Headline>When</Headline>
                 <BoxStyle className="pr-1 pl-1">
                   <div className="col-12">
                     <div className="row justify-content-center">
