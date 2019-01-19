@@ -21,18 +21,17 @@ export const MTBox = styled.div`
 `
 
 export const PDBox = styled.div`
-    @media (min-width:320px) {
-      padding : 1.5em 1em;
-      margin : 0 0.5em ;
-    }
-    
-    @media (min-width:576px) {
-      padding : 1em 2em;
-    }
-    
-    @media (min-width:1024px) {
-      padding : 2em 5em;
-    }
+  background: rgba(196, 196, 196, 0.4);
+  @media (min-width:320px) {
+    padding : 1.5em 1em;
+    margin : 0 0.5em ;
+  }
+   @media (min-width:576px) {
+    padding : 1em 2em;
+  }
+  @media (min-width:1024px) {
+    padding : 2em 5em;
+  }
 `
 
 export const WDBox = styled.div`
