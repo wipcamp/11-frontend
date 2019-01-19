@@ -116,23 +116,23 @@ export default class index extends Component {
               <Div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <Div2 className="row justify-content-start">
                   <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/ig.png" link="https://www.instagram.com/wipcamp/" />
+                    <Logo img="../../static/img/social/instagram.svg" link="https://www.instagram.com/wipcamp/" />
                   </div>
                   <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/twit.png" link="https://twitter.com/WIPCamp" />
+                    <Logo img="../../static/img/social/twitter.svg" link="https://twitter.com/WIPCamp" />
                   </div>
                   <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/youtube_social_squircle_red.png" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
+                    <Logo img="../../static/img/social/youtube.svg" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
                   </div>
                   <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <Logo img="../../static/img/social/line (1).png" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
+                    <Logo img="../../static/img/social/line@.svg" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
                   </div>
                 </Div2>
                 <div className="w-auto"></div>
                 <div className="row">
                   <Div1 className="mt-4 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <DivCon>
-                      <a href="tel://02-107-3576"><Img src="../../static/img/social/phone.png" /></a>
+                      <a href="tel://02-107-3576"><Img src="../../static/img/social/phone.svg" /></a>
                     </DivCon>
                     <DivCon>
                   &nbsp;&nbsp;
@@ -144,7 +144,7 @@ export default class index extends Component {
                   <div className="w-auto"></div>
                   <Div1 className="mt-4 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <DivCon>
-                      <a href="mailto:wippo@wipcamp.com"><Img src="../../static/img/social/email.png" /></a>
+                      <a href="mailto:wippo@wipcamp.com"><Img src="../../static/img/social/mail.svg" /></a>
                     </DivCon>
                     <DivCon>
                   &nbsp;&nbsp;
