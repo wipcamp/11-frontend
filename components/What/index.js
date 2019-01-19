@@ -16,10 +16,6 @@ const IconInfo = [
   { icon: '/static/img/icon-what/web (2).png', text: 'HTML5&CSS3', t: 'HTML5&CSS3' }
 ]
 
-const BoxStyle = styled(PDBox)`
-    background: rgba(196, 196, 196, 0.4);
-`
-
 const WhatText = [
   'ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp) คือ ค่ายสำหรับน้อง ๆ ผู้มีความสนใจด้านไอที หรือผู้ต้องการค้นหาตนเอง โดยน้อง ๆ จะได้มีโอกาสสัมผัสชีวิตของการเป็นนักไอทีอย่างแท้จริง ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เป็นระยะเวลา 5 วัน 4 คืน',
   'WIP Camp ประกอบด้วยการเรียน และลงมือปฏิบัติจริงด้านวิชาการ ความสนุกสนานจากกิจกรรม รวมถึงมิตรภาพจากพี่ ๆ เพื่อน ๆ ในค่ายทุกคน',
@@ -36,7 +32,7 @@ export default class index extends Component {
               <div className="text-center col-12">
                 <Headline>What</Headline>
               </div>
-              <BoxStyle>
+              <PDBox>
                 <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>ค่ายนี้คืออะไร ?</b></Subtitle>
@@ -60,7 +56,7 @@ export default class index extends Component {
                     ))
                   }
                 </div>
-              </BoxStyle>
+              </PDBox>
             </div>
             <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
           </div>
