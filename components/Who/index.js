@@ -30,32 +30,34 @@ export default class componentName extends Component {
     return (
       <div className="container">
         <div className="row justify-content-center">
-          <Headline>Who</Headline>
-        </div>
-        <div className="row justify-content-center">
-          <PDBox className="col-12 col-sm-12 col-md-12 col-lg-10">
-            <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
-            {IconInfo.map((data, i) => (
-              <div className="my-2 mx-1">
-                <TextBoxColor>
-                  <div className="row" key={i}>
-                    <div className ="col-3">
-                      <Icon src={data.icon} />
-                    </div>
-                    <div className="col-9">
-                      <TextPosition>
-                        <Paragraph>
-                          <Font>{data.text}</Font>
-                        </Paragraph>
-                      </TextPosition>
-                    </div>
+          <div className="col-12 col-sm-12 col-md-12 col-lg-10">
+            <div className="row justify-content-center">
+              <Headline>Who</Headline>
+              <PDBox>
+                <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
+                {IconInfo.map((data, i) => (
+                  <div className="my-2 mx-1">
+                    <TextBoxColor>
+                      <div className="row" key={i}>
+                        <div className ="col-3">
+                          <Icon src={data.icon} />
+                        </div>
+                        <div className="col-9">
+                          <TextPosition>
+                            <Paragraph>
+                              <Font>{data.text}</Font>
+                            </Paragraph>
+                          </TextPosition>
+                        </div>
+                      </div>
+                    </TextBoxColor>
                   </div>
-                </TextBoxColor>
-              </div>
-            ))}
-          </PDBox>
+                ))}
+              </PDBox>
+            </div>
+            <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+          </div>
         </div>
-        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
       </div>
     )
   }
