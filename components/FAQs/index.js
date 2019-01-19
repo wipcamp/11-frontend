@@ -7,25 +7,18 @@ import { PDBox } from '../Core/ResponBox'
 
 const QuestionText = styled.a`
   text-decoration: none;
-  text-align: left;
   color: navy;
-  background-color: burlywood;
-   padding:0.5rem 19rem 0.5rem 1.45rem;
   &:hover{
-    
-    background-color: white;
-
+    color: navy;
   }
-`
-const Answer = styled.a`
-text-decoration: none;
-text-align: left;
-background-color: white;
+ 
 `
 const Span = styled.span`
 & :before{
-    content: '\\2585'; 
+    content: 'V'; 
     font-size: 13px;
+    color: #777;
+    float: right;
     margin-left: 5px;
 }   
 `
@@ -36,7 +29,6 @@ const BoxStyle = styled(PDBox)`
 const Head = styled.div`
   text-align:center;
 `
-
 
 export default class Question extends Component {
   state = {
@@ -58,17 +50,17 @@ export default class Question extends Component {
   render() {
     const CollapseItem = (props) => (
       <div className="card">
-        <div className="card " >
-          <QuestionText className="card-link " data-toggle="collapse" href={`#collapse${props.num}`}>
-            <div>
-              Q : {this.state.question[props.number]}
+        <div className="card" >
+          <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse" href={`#collapse${props.num}`}>
+            <div className="card-header px-4" >
+              Q : {this.state.question[props.number]}<Span></Span>
             </div>
           </QuestionText>
-          <Answer id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
+          <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
             <div className="card-body bg-light px-4">
               A : {this.state.answer[props.number]}
             </div>
-          </Answer>
+          </div>
         </div>
       </div>
     )
@@ -79,14 +71,15 @@ export default class Question extends Component {
             <div className="row">
             <Head className="text-center col-12">
                 <Headline>FAQs</Headline>
-              </Head>
+            </Head>
+            <div className="col-12">
               <BoxStyle className ="pb-5">
               <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
                   </div>  
                     <div id="accordion">
-                      <CollapseItem num='One'  number='0' />
+                      <CollapseItem num='One' number='0' />
                       <CollapseItem num='Two' number='1' />
                       <CollapseItem num='Three' number='2' />
                       <CollapseItem num='Four' number='3' />
@@ -95,8 +88,9 @@ export default class Question extends Component {
                     </div>
                 </div>
               </BoxStyle>
+              <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
               </div>
-            <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+            </div>
            </div>
         </div>
       </div>
