@@ -44,17 +44,20 @@ const Wippo = styled.div`
 export default class componentName extends Component {
   render () {
     return (
+
       <Background bgImageUrl="static/img/home7.png">
-        <div className="row text-center pt-1">
-          <div className="col-12">
-            <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
+        <div className ="container">
+          <div className="row text-center pt-1">
+            <div className="col-12">
+              <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
+            </div>
+            <div className="col-12">
+              <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
+            </div>
+            <Wippo>
+              <Model className="center" wippo='static/img/wippo/original-1.png' alt="wippo" />
+            </Wippo>
           </div>
-          <div className="col-12">
-            <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
-          </div>
-          <Wippo>
-            <Model className="center" wippo='static/img/wippo/original-1.png' alt="wippo" />
-          </Wippo>
         </div>
       </Background>
     )
