@@ -6,7 +6,7 @@ import Button from './Button';
 const NavSection = styled.nav`
   position: fixed;
   transition: all .2s;
-  right: 40px;
+  right: 50px;
   margin: 0 !important;
   top: 50%;
   transform: translateY(-50%);
@@ -34,8 +34,8 @@ const NavLink = styled(Link)`
 
   &:before {
     content: '';
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 7.5px;
     display: flex;
     border: 1px solid #C63939;
     margin: 5px;
@@ -67,14 +67,17 @@ const NavLink = styled(Link)`
   &.active {
     opacity: 1;
     &:before {
-      
+      opacity:0;
     }
 
     .text {
       opacity: 1;
-      color: black;
-      float:right;
-      position:absolute;
+      display: flex;
+      position: absolute;
+      right: -5px;
+      width: 100px;
+      justify-content: flex-end;
+      font-size: 14px;
     }
   }
 `
