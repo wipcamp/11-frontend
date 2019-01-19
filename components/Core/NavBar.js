@@ -62,7 +62,6 @@ const NavLink = styled(Link)`
     .text {
       opacity: 1;
       color: black;
-      ju
     }
   }
 
@@ -79,6 +78,7 @@ const NavLink = styled(Link)`
       right: -5px;
       justify-content: flex-end;
       font-size: 14px;
+      font-weight:bold;
     }
   }
 `
