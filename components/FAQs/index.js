@@ -5,22 +5,29 @@ import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
 import Model from '../Core/Model';
 import { PDBox } from '../Core/ResponBox'
 
-const QuestionText = styled.a`
+const QuestionText = styled.div`
+  cursor: pointer;
   text-decoration: none;
-  color: navy;
+  color: black;
+  background-color: #CF6565!important;
   &:hover{
-    color: navy;
+
   }
- 
 `
+
+const AnswerText = styled.div`
+  background-color: #D18484!important;
+  color: white;
+`
+
 const Span = styled.span`
-& :before{
-    content: 'V'; 
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
-}   
+  &:before{
+      content: 'V'; 
+      font-size: 13px;
+      color: #777;
+      float: right;
+      margin-left: 5px;
+  } 
 `
 const BoxStyle = styled(PDBox)`
     background: rgba(196, 196, 196, 0.2);
@@ -53,13 +60,13 @@ export default class Question extends Component {
         <div className="card" >
           <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
-              Q : {this.state.question[props.number]}<Span></Span>
+              Q : {this.state.question[props.number]} 
             </div>
           </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
-            <div className="card-body bg-light px-4">
-              A : {this.state.answer[props.number]}
-            </div>
+            <AnswerText className="card-body bg-light px-4">
+              A : {this.state.answer[props.number]} 
+            </AnswerText>
           </div>
         </div>
       </div>
