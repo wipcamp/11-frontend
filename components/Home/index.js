@@ -44,7 +44,6 @@ const Wippo = styled.div`
 export default class componentName extends Component {
   render () {
     return (
-
       <Background bgImageUrl="static/img/home7.png">
         <div className ="container">
           <div className="row text-center pt-1">
