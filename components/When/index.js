@@ -7,10 +7,6 @@ import Background from '../Core/Background'
 import Headline, { Subtitle } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 
-const BoxStyle = styled(PDBox)`
-    background: rgba(196, 196, 196, 0.4);
-`
-
 export default class componentName extends Component {
   render () {
     return (
@@ -20,14 +16,14 @@ export default class componentName extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row justify-content-center">
                 <Headline>When</Headline>
-                <BoxStyle className="pr-1 pl-1">
+                <PDBox className="pr-1 pl-1">
                   <div className="col-12">
                     <div className="row justify-content-center">
                       <Subtitle className="mb-4"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
                     </div>
                     <ImgChangeByDay />
                   </div>
-                </BoxStyle>
+                </PDBox>
               </div>
               <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
             </div>
