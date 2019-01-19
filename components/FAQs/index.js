@@ -17,7 +17,11 @@ const QuestionText = styled.a`
 
   }
 `
-
+const Answer = styled.a`
+text-decoration: none;
+text-align: left;
+background-color: white;
+`
 const Span = styled.span`
 & :before{
     content: '\\2585'; 
