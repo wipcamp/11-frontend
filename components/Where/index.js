@@ -21,9 +21,6 @@ const Map = styled.img`
   }
 `
 
-const BoxStyle = styled(PDBox)`
-    background: rgba(196, 196, 196, 0.2);
-`
 const Layout = styled.div`  
   margin-top: 4.5%;
   margin-bottom: 10%;
@@ -43,7 +40,7 @@ export default class index extends Component {
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row justify-content-center">
               <Headline>Where</Headline>
-              <BoxStyle>
+              <PDBox>
                 <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
@@ -55,7 +52,7 @@ export default class index extends Component {
                   </Small>
                   <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/Map22.png' alt="map" /></a>
                 </div>
-              </BoxStyle>
+              </PDBox>
             </div>
             <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
           </div>
