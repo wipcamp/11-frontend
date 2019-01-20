@@ -13,6 +13,7 @@ const NavSection = styled.nav`
   transform: translateY(-50%);
   z-index:99;
   display: ${(props) => props.display ? "" : "none"};
+  /* transition : display 1s  !important; */
   
   @media(max-width: 768px) {
    display: none;
@@ -32,20 +33,6 @@ const NavLink = styled(Link)`
   opacity: 0.6;
   transition: all .2s;
   cursor : pointer;
-
-  animation-name: fadeInUp;
-  animation-duration:2s;
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translate3d(0, 100%, 0);
-    }
-
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  }
 
   &:before {
     content: '';
@@ -109,10 +96,38 @@ const NavItems = styled.li`
   text-align: right;
 `
 
-const Animation = styled.div`
-  
+const AnimationNavbar = styled.div`
+  animation-name: ${(props) => props.display ? "fadeOutight" : "fadeInRight"};
+  animation-duration:.5s;
+  @keyframes fadeInRight {
+    from {
+      /* display:none; */
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
 
+    to {
+      /* display:block; */
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeOutRight {
+    from {
+      /* display:block; */
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+
+    to {
+      /* display:none; */
+      opacity: 0;
+      transform: translate3d(150%, 0, 0);
+    }
+  }
 `
+  
 
 const sections = [
   { href: 'home', title: 'Home' },
@@ -130,13 +145,15 @@ class Navbar extends React.Component {
       current: 'home',
       show: false,
       display: false,
+      animation: 'fadeInRight'
   }
   toggleNavbar (to) {
     if (to === 'home') {
       this.setState({ show: false })
       this.setState({ display: false })
+      this.setState({ animation: 'fadeOutRight'})
     } else {
-      this.setState({})
+      this.setState({ animationcount: 'fadeInRight'})
       this.setState({ show: true })
       this.setState({ display: true})
     }
@@ -147,12 +164,14 @@ class Navbar extends React.Component {
 
   render () {
     return (
-      <NavSection active={this.state.show} display = {this.state.display}>
-        <SectionUl>
+      <NavSection active={this.state.show} display={this.state.display} >
+        <AnimationNavbar>
+        <SectionUl >
           {
             sections.map(i => (
               <NavItems key={i.href}>
                 <NavLink
+                  display={this.state.display}
                   activeClass="active"
                   to={i.href}
                   spy
@@ -170,6 +189,7 @@ class Navbar extends React.Component {
           }
         </SectionUl>
         <Button name = "Game"/>
+        </AnimationNavbar>
       </NavSection>
     )
   }
