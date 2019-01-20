@@ -56,7 +56,7 @@ const MiddleOfTheRight = styled.div`
 const RightContent = () => (
   <div className="col-12 col-sm-12 col-lg-6 text-center">
     <MiddleOfTheRight>
-      <div className="row justify-content-center">
+      <div className="row justify-content-center pl-2 pr-4">
         <div className="col-3 col-lg-3">
           <Logo img="../../static/img/social/instagram.svg" link="https://www.instagram.com/wipcamp/" />
         </div>
@@ -107,9 +107,9 @@ export default class index extends Component {
           <div className="col-12 col-sm-12 col-md-12 col-lg-12">
             <div className="row justify-content-center">
               <Headline>Contact</Headline>
-            </div><PDBox>
+            </div>
+            <PDBox1>
               <div className="row justify-content-center">
-
                 <Subtitle className = "text-center col-12"><b>ติดต่อเรา</b></Subtitle>
                 <div className="row justify-content-center">
                   <div className="col-12 col-sm-12 col-lg-6 text-center mb-3">
@@ -117,8 +117,8 @@ export default class index extends Component {
                   </div>
                   <RightContent />
                 </div>
-
-              </div></PDBox>
+              </div>
+            </PDBox1>
             <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
           </div>
         </div>
