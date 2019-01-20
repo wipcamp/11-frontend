@@ -7,7 +7,7 @@ import Model from '../Core/Model'
 import Box from './Textbox'
 
 const TextBoxColor = styled(PDBox)`
-  background: #DE5454;
+  background: #172D38;
 `
 
 const Icon = styled(IconBox)`
@@ -17,6 +17,24 @@ const Icon = styled(IconBox)`
 
 const TextPosition = styled.div`  
   transform: translate(0, 50%);
+`
+export const Font1 = styled.p`
+color : #fff;
+  @media (min-width:320px) {
+    font-size: 0.8em;
+  }
+  @media (min-width:412px) {
+    font-size: 0.9em;
+  }
+  @media (min-width:576px) {
+    font-size: 1em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.2em;
+  }
 `
 const IconInfo = [
   { icon: '/static/img/icon-who/moon.png', text: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน' },
@@ -45,7 +63,7 @@ export default class componentName extends Component {
                         <div className="col-9">
                           <TextPosition>
                             <Paragraph>
-                              <Font>{data.text}</Font>
+                              <Font1>{data.text}</Font1>
                             </Paragraph>
                           </TextPosition>
                         </div>
