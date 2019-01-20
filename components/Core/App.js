@@ -106,11 +106,11 @@ class App extends React.Component {
         <Section name="faqs" >
           <FAQs />
         </Section>
-        <Section name="contact" >
-          <Contact />
-        </Section>
         <Section name="sponsor">
           <Sponsor/>
+        </Section>
+        <Section name="contact" >
+          <Contact />
         </Section>
         <Section name = "game">
           <Game />
