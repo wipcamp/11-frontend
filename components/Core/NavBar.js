@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { Link, Events, scrollSpy, scroller } from 'react-scroll'
 import Button from './Button';
 
@@ -19,7 +20,7 @@ const NavSection = styled.nav`
 
   &:after {
     clear: both;
-    text-decoration: none
+    text-decoration: none;
   }
 `
 
@@ -31,6 +32,20 @@ const NavLink = styled(Link)`
   opacity: 0.6;
   transition: all .2s;
   cursor : pointer;
+
+  animation-name: fadeInUp;
+  animation-duration:2s;
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 
   &:before {
     content: '';
@@ -58,7 +73,6 @@ const NavLink = styled(Link)`
     &:before {
       border: 1px solid white;
     }
-
     .text {
       opacity: 1;
       color: black;
@@ -95,6 +109,11 @@ const NavItems = styled.li`
   text-align: right;
 `
 
+const Animation = styled.div`
+  
+
+`
+
 const sections = [
   { href: 'home', title: 'Home' },
   { href: 'what', title: 'What' },
@@ -117,6 +136,7 @@ class Navbar extends React.Component {
       this.setState({ show: false })
       this.setState({ display: false })
     } else {
+      this.setState({})
       this.setState({ show: true })
       this.setState({ display: true})
     }
