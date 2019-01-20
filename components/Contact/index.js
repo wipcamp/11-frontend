@@ -1,36 +1,24 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Headline, { Subtitle, Paragraph } from '../Core/Texts'
+import Headline, { Subtitle, Paragraph, Font} from '../Core/Texts'
 import Model from '../Core/Model'
 import { WDBox, MTBox, PDBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 
 const Img = styled.img`
+  width:2em;
+  @media (min-width:992px) {
     width:3em;
-    @media (min-width:320px) {
-      width:1em;
-    }
-    @media (min-width:420px) {
-      width:1em;
-    }
-    @media (min-width:576px) {
-      width:3em;
-    }
-    @media (min-width:768px) {
-      width:3em;
-    }
-    @media (min-width:1024px) {
-      width:3em;
-    }
+  }
 `
 
-const DivCon = styled.div`
+const DivCon = styled(Font)`
   display: inline-block;
 `
 
-const Font = styled.div`
+const Fonts = styled.div`
   display: inline-block;
   @media (min-width:320px) {
     font-size: 0.8em;
@@ -50,13 +38,13 @@ const PDBox1 = styled(PDBox)`
 `
 const MiddleOfTheRight = styled.div`
   @media (min-width:992px){
-    transform: translate(0, 50%);
+    transform: translate(0, 25%);
   }
 `
 const RightContent = () => (
   <div className="col-12 col-sm-12 col-lg-6 text-center">
     <MiddleOfTheRight>
-      <div className="row justify-content-center pl-2 pr-4">
+      <div className="row mr-1 ml-1">
         <div className="col-3 col-lg-3">
           <Logo img="../../static/img/social/instagram.svg" link="https://www.instagram.com/wipcamp/" />
         </div>
@@ -83,17 +71,17 @@ const RightContent = () => (
             </Paragraph>
           </DivCon>
         </div>
-        <div className="mt-4 mb-4 col-12">
+        <div className="mb-4 col-12">
           <DivCon>
             <a href="mailto:wippo@wipcamp.com">
-              <Img Img className = "mr-1" src="../../static/img/social/mail.svg" />
+              <Img className = "mr-1" src="../../static/img/social/mail.svg" />
             </a>
           </DivCon>
-          <Font>
+          <Fonts>
             <Paragraph>
               <TextA href="mailto:wippo@wipcamp.com">wippo@wipcamp.com</TextA>
             </Paragraph>
-          </Font>
+          </Fonts>
         </div>
       </div>
     </MiddleOfTheRight>
