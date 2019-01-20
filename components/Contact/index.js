@@ -71,7 +71,7 @@ const RightContent = () => (
             </Paragraph>
           </DivCon>
         </div>
-        <div className="mt-4 mb-4 col-12">
+        <div className="mb-4 col-12">
           <DivCon>
             <a href="mailto:wippo@wipcamp.com">
               <Img className = "mr-1" src="../../static/img/social/mail.svg" />
