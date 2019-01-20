@@ -54,16 +54,16 @@ export default class componentName extends Component {
               <PDBox>
                 <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
                 {IconInfo.map((data, i) => (
-                  <div className="my-2 mx-1">
+                  <div className="my-2 mx-1" key={i}>
                     <TextBoxColor>
-                      <div className="row" key={i}>
-                        <div className ="col-3">
-                          <Icon src={data.icon} />
+                      <div className="row">
+                        <div className ="col-3" >
+                          <Icon key={i} src={data.icon} />
                         </div>
                         <div className="col-9">
                           <TextPosition>
                             <Paragraph>
-                              <Font1>{data.text}</Font1>
+                              <Font1 key={i}>{data.text}</Font1>
                             </Paragraph>
                           </TextPosition>
                         </div>
