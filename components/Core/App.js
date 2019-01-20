@@ -61,7 +61,11 @@ class App extends React.Component {
 
   }
   
-  
+  async componentWillMount() {
+    console.log("%c We Are 11 Developer. ",'background:pink; color:#000; display:block; font-size:3em; font-family:Sarabun;')
+    console.log('If you interest our code :) Join WIP Camp #11.')
+  }
+
   render() {
     const { loading } = this.state;
     
