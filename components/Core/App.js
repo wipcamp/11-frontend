@@ -16,7 +16,7 @@ import RegisterButton from './Register';
 import Game from '../Game'
 import Sponsor from '../Sponsor'
 
-// const dateTest = dayjs('2019-01-08')
+// const datenow = dayjs('2019-01-15')
 const datenow = dayjs().format()
 const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
 const dateEndRegis = dayjs('2019-01-13')  //After end register one day
@@ -42,7 +42,7 @@ const RegisVisible = styled.div`
 
 const RegisButton = (props) =>(
   <RegisVisible visi={props.visi}>
-    <RegisterButton>{props.text}</RegisterButton>
+    <RegisterButton className="text-center">{props.text}</RegisterButton>
   </RegisVisible>
 )
 
