@@ -74,7 +74,7 @@ const Img = styled.img`
 
 const Logo = (props) => (
   <Divhover>
-    <a href={props.link} target="_blank"><Img src={props.img} width="64px" height="64px" /></a>
+    <a href={props.link} target="_blank"><Img src={props.img} width="80px" height="80px" /></a>
   </Divhover>
 )
 
