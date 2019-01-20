@@ -2,14 +2,23 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { FacebookProvider, Page } from 'react-facebook'
 
+const Size = styled.div`
+  @media (min-width:320px) {
+    width:100%;
+  }
+  @media (min-width:768px) {
+    min-width:300px;
+    width:100%;
+  }
+`
 export default class Example extends Component {
   render () {
     return (
-      <div>
+      <Size>
         <FacebookProvider appId="1778641378908399">
-          <Page href="https://www.facebook.com/wipcamp/" width="350" height="350" tabs="timeline" />
+          <Page href="https://www.facebook.com/wipcamp/" height = "400"tabs="timeline" />
         </FacebookProvider>
-      </div>
+      </Size>
     )
   }
 }
