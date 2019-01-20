@@ -29,9 +29,6 @@ const Span = styled.span`
       margin-left: 5px;
   } 
 `
-const BoxStyle = styled(PDBox)`
-    background: rgba(196, 196, 196, 0.2);
-`
 
 export default class Question extends Component {
   state = {
@@ -76,7 +73,7 @@ export default class Question extends Component {
                 <Headline>FAQs</Headline>
             </div>
             <div className="col-12">
-              <BoxStyle className ="pb-5">
+              <PDBox className ="pb-5">
               <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
@@ -90,7 +87,7 @@ export default class Question extends Component {
                       <CollapseItem num='Six' number='5' />
                     </div>
                 </div>
-              </BoxStyle>
+              </PDBox>
               <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
               </div>
             </div>
