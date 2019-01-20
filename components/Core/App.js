@@ -14,6 +14,7 @@ import Contact from '../Contact'
 import Loading from './Loading';
 import RegisterButton from './Register';
 import Game from '../Game'
+import Sponsor from '../Sponsor'
 
 // const dateTest = dayjs('2019-01-08')
 const datenow = dayjs().format()
@@ -107,6 +108,9 @@ class App extends React.Component {
         </Section>
         <Section name="contact" >
           <Contact />
+        </Section>
+        <Section name="sponsor">
+          <Sponsor/>
         </Section>
         <Section name = "game">
           <Game />
