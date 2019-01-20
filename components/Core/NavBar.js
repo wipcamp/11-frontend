@@ -100,16 +100,14 @@ const NavItems = styled.li`
 const AnimationNavbar = styled.div`
   animation-name: ${(props) => props.display ? "fadeInRight" : "fadeOutRight"  };
   animation-duration:.5s;
-  
+  animation-fill-mode: forwards;
   @keyframes fadeInRight {
     from {
-      /* display:none; */
       opacity: 0;
       transform: translate3d(100%, 0, 0);
     }
 
     to {
-      /* display:block; */
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
@@ -122,9 +120,8 @@ const AnimationNavbar = styled.div`
     }
 
     to {
-      opacity: 0;
       transform: translate3d(100%, 0, 0);
-      visibility:hidden;
+      opacity: 0;
     }
   }
 `
