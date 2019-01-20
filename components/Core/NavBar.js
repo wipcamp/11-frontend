@@ -12,7 +12,8 @@ const NavSection = styled.nav`
   top: 50%;
   transform: translateY(-50%);
   z-index:99;
-  display: ${(props) => props.display ? "" : "none"};
+  visibility:${(props) => props.display ? "visible" : "hidden"} ;
+  /* display: ${(props) => props.display ? "" : "none"}; */
   /* transition : display 1s  !important; */
   
   @media(max-width: 768px) {
@@ -97,8 +98,9 @@ const NavItems = styled.li`
 `
 
 const AnimationNavbar = styled.div`
-  animation-name: ${(props) => props.display ? "fadeOutight" : "fadeInRight"};
+  animation-name: ${(props) => props.display ? "fadeInRight" : "fadeOutRight"  };
   animation-duration:.5s;
+  
   @keyframes fadeInRight {
     from {
       /* display:none; */
@@ -114,16 +116,15 @@ const AnimationNavbar = styled.div`
   }
 
   @keyframes fadeOutRight {
-    from {
-      /* display:block; */
+    from {      
       transform: translate3d(0, 0, 0);
       opacity: 1;
     }
 
     to {
-      /* display:none; */
       opacity: 0;
-      transform: translate3d(150%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility:hidden;
     }
   }
 `
@@ -144,16 +145,14 @@ class Navbar extends React.Component {
   state = {
       current: 'home',
       show: false,
-      display: false,
-      animation: 'fadeInRight'
+      display: false
   }
   toggleNavbar (to) {
     if (to === 'home') {
       this.setState({ show: false })
       this.setState({ display: false })
-      this.setState({ animation: 'fadeOutRight'})
-    } else {
-      this.setState({ animationcount: 'fadeInRight'})
+    }
+    else {
       this.setState({ show: true })
       this.setState({ display: true})
     }
@@ -165,7 +164,7 @@ class Navbar extends React.Component {
   render () {
     return (
       <NavSection active={this.state.show} display={this.state.display} >
-        <AnimationNavbar>
+        <AnimationNavbar display={this.state.display}>
         <SectionUl >
           {
             sections.map(i => (
