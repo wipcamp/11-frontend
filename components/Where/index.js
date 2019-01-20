@@ -40,7 +40,7 @@ export default class index extends Component {
                   </div>
                   <Small>
                     {WhereText.map((info, i) => (
-                      <Font className = "row justify-content-center m-1">{info}</Font>
+                      <Font key = {i} className = "row justify-content-center m-1">{info}</Font>
                     ))}
                   </Small>
                   <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/mapWithWippo.png' alt="map" /></a>
