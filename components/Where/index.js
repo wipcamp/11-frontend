@@ -21,13 +21,6 @@ const Map = styled.img`
   }
 `
 
-const Layout = styled.div`  
-  margin-top: 4.5%;
-  margin-bottom: 10%;
-  border: .2em solid transparent;
-  border-radius: 2em;
-  padding:2em;
-`
 const WhereText = [
   'คณะเทคโนโลยีสารสนเทศ',
   'มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี'
