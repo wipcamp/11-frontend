@@ -39,7 +39,7 @@ export default class index extends Component {
                   </div>
                   <Paragraph>
                     { WhatText.map((info, i) => (
-                      <Font>
+                      <Font key = {i}>
                         &nbsp;&nbsp;&nbsp;&nbsp;{info}
                       </Font>
                     ))
