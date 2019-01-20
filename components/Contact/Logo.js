@@ -4,6 +4,21 @@ import styled from 'styled-components'
 const Divhover = styled.div`
   /* transform: scale(1);
   transition: .3s ease-in-out; */
+   /* @media (min-width:320px) {
+      margin-left:.5em;
+    }
+   @media (min-width:420px) {
+      margin-left:1.25em;
+    }
+    @media (min-width:576px) {
+      margin-left:2.25em;
+    }
+    @media (min-width:768px) {
+      margin-left:2em;
+    }*/
+    /* @media (min-width:1024px) {
+      margin-left:4em;
+    } */
   &:hover img {
     animation-duration: 1s;
     animation-name: headShake;
@@ -35,32 +50,31 @@ const Divhover = styled.div`
 }
 `
 const Img = styled.img`
-    height: 64px;
-    width:64px;
-    /* @media (min-width:320px) {
-      width:2.5em;
+    @media (min-width:320px) {
+      width:50px;
+      height:50px;
     }
     @media (min-width:420px) {
-    
-      width:5em;
+      width:70px;
+      height:70px;
     }
     @media (min-width:576px) {
-      margin-top: 2%;
-      width:5em;
+      width:70px;
+      height:70px;
     }
     @media (min-width:768px) {
-      margin-top: 5%;
-      width:5em;
+      width:80px;
+      height:80px;
     }
     @media (min-width:1024px) {
-      margin-top: 5%;
-      width:5em;
-    } */
+      width:80px;
+      height:80px;
+    }
 `
 
 const Logo = (props) => (
   <Divhover>
-    <a href={props.link} target="_blank"><Img src={props.img} /></a>
+    <a href={props.link} target="_blank"><Img src={props.img} width="64px" height="64px" /></a>
   </Divhover>
 )
 
