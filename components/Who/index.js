@@ -16,7 +16,11 @@ const Icon = styled(IconBox)`
 `
 
 const TextPosition = styled.div`  
-  transform: translate(0, 50%);
+  margin-left:1em;
+    transform: translate(0, 10%);
+  @media (min-width:768px){
+    transform: translate(0, 50%);
+  }
 `
 export const Font1 = styled.p`
 color : #fff;
