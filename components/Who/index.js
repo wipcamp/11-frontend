@@ -11,51 +11,44 @@ const TextBoxColor = styled.div`
   background: #172D38;
    
   @media (min-width:320px) {
-    padding : 1em 1em;
-    margin : 0 0em ;
+    padding : 0.35em 0.35em;
+    margin : 1em 0em ;
+   
   }
   @media (min-width:412px) {
-    padding : 1.5em 1em;
-    margin : 0 0.5em ;
+    padding : 1em 1em;
+    margin : 1 0em ;
   }
    @media (min-width:576px) {
     padding : 1em 2em;
   }
   @media (min-width:768px) {
-    padding : 1.5em 1em;
+    padding : 1em 1em;
     margin : 0 0.5em ;
   }
   @media (min-width:1024px) {
-    padding : 1em 1em;
+    padding : 0em 1em;
+   
   }
 `
 
-
 const Icon1 = styled.img`
-  width:7em;
-  margin-bottom: 5%;
+  
   @media (min-width:320px) {
-    width:4em;
+    width: 45px;
+    height: 45px;
   }
-  @media (min-width:420px) {
-    margin-top: 2%;
-    width:5em;
+  @media (min-width:412px) {
+    width: 65px;
+    height: 65px;
   }
-  @media (min-width:576px) {
-    margin-top: 2%;
-    width:5em;
-  }
-  @media (min-width:768px) {
-    margin-top: 5%;
-    width:7em;
-  }
+
   @media (min-width:1024px) {
     width: 70px;
     height: 70px;
-    left: 345px;
-    top: 323px;
+  
   }
-    `
+ `
 
 const TextPosition = styled.div`  
   margin-left:1em;
@@ -67,25 +60,30 @@ const TextPosition = styled.div`
 export const Font1 = styled.p`
 color : #fff;
   @media (min-width:320px) {
-    font-style: normal;
-    
-    line-height: normal;
+    margin-left : 8px;
+    margin-top : 2px;
     font-size: 12px;
   }
   @media (min-width:412px) {
-    font-size: 0.9em;
+    font-size: 14px;
+    margin-left : 20px;
+    margin-top : 10px;
   }
   @media (min-width:576px) {
-    font-size: 1em;
+    font-size: 15px;
+    margin-left : 20px;
+    margin-top : 5px;
   }
   @media (min-width:768px) {
-    font-size: 1.1em;
+    font-size: 15px;
+    margin-left : -25px;
+    margin-top : 10px;
+   
   }
   @media (min-width:1024px) {
     font-style: normal;
-  
     font-size: 16px;
-    margin-left : -28px;
+    margin-left : -25px;
     margin-top : 13px;
    
   }
