@@ -18,6 +18,10 @@ const DivCon = styled(Font)`
   display: inline-block;
 `
 
+const Div3 = styled.div`
+  margin-left:-2em;
+`
+
 const Fonts = styled.div`
   display: inline-block;
   @media (min-width:320px) {
@@ -59,7 +63,7 @@ const RightContent = () => (
         </div>
       </div>
       <div className="row">
-        <div className="mt-4 col-12">
+        <Div3 className="mt-4 mb-3 col-12">
           <DivCon>
             <a href="tel://02-107-3576">
               <Img className = "mr-1" src="../../static/img/social/phone.svg" />
@@ -70,7 +74,7 @@ const RightContent = () => (
               <TextA href="tel://02-107-3576">02-107-3576</TextA>
             </Paragraph>
           </DivCon>
-        </div>
+        </Div3>
         <div className="mb-4 col-12">
           <DivCon>
             <a href="mailto:wippo@wipcamp.com">
@@ -100,7 +104,7 @@ export default class index extends Component {
               <div className="row justify-content-center">
                 <Subtitle className = "text-center col-12"><b>ติดต่อเรา</b></Subtitle>
                 <div className="row justify-content-center">
-                  <div className="col-12 col-sm-12 col-lg-6 text-center mb-3">
+                  <div className="p-2 col-12 col-sm-12 col-lg-6 text-center mb-3">
                     <Fbfeed/>
                   </div>
                   <RightContent />
