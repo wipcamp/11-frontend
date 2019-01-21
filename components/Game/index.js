@@ -9,7 +9,7 @@ import Model from '../Core/Model'
 export default class index extends Component {
   render () {
     return (
-      <Background bgImageUrl = "static/img/game1.png">
+      <Background bgImageUrl = "static/img/game.png">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
