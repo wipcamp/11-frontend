@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox, IconBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
+import Background from '../Core/Background'
 import Box from './Textbox'
 
 const TextBoxColor = styled(PDBox)`
@@ -50,37 +51,39 @@ const IconInfo = [
 export default class componentName extends Component {
   render () {
     return (
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-            <div className="row justify-content-center">
-              <Headline>Who</Headline>
-              <PDBox>
-                <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
-                {IconInfo.map((data, i) => (
-                  <div className="my-2 mx-1" key={i}>
-                    <TextBoxColor>
-                      <div className="row">
-                        <div className ="col-3" >
-                          <Icon key={i} src={data.icon} />
+      <Background bgImageUrl = "static/img/who.png">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-10">
+              <div className="row justify-content-center">
+                <Headline>Who</Headline>
+                <PDBox>
+                  <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
+                  {IconInfo.map((data, i) => (
+                    <div className="my-2 mx-1" key={i}>
+                      <TextBoxColor>
+                        <div className="row">
+                          <div className ="col-3" >
+                            <Icon key={i} src={data.icon} />
+                          </div>
+                          <div className="col-9">
+                            <TextPosition>
+                              <Paragraph>
+                                <Font1 key={i}>{data.text}</Font1>
+                              </Paragraph>
+                            </TextPosition>
+                          </div>
                         </div>
-                        <div className="col-9">
-                          <TextPosition>
-                            <Paragraph>
-                              <Font1 key={i}>{data.text}</Font1>
-                            </Paragraph>
-                          </TextPosition>
-                        </div>
-                      </div>
-                    </TextBoxColor>
-                  </div>
-                ))}
-              </PDBox>
+                      </TextBoxColor>
+                    </div>
+                  ))}
+                </PDBox>
+              </div>
+              <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
             </div>
-            <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
           </div>
         </div>
-      </div>
+      </Background>
     )
   }
 }
