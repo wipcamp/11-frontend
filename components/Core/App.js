@@ -24,10 +24,10 @@ const dateStartAnnounced = dayjs('2019-01-14')  //Before announced one day
 const dateStartCamp = dayjs('2019-02-20') //Before start camp one day
 
 const Section = styled(Element)`
-  padding: 0px;
+  padding: 30px 0;
 
   @media(max-width: 768px) {
-    padding: 50px 0;
+    padding: 20px 0;
   }
 `
 const BGcolor = styled.div`
