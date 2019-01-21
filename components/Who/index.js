@@ -83,7 +83,7 @@ color : #fff;
   }
   @media (min-width:1024px) {
     font-style: normal;
-    line-height: normal;
+  
     font-size: 16px;
     margin-left : -28px;
     margin-top : 13px;
@@ -104,8 +104,8 @@ export default class componentName extends Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
+              <Headline>Who</Headline>
               <div className="row justify-content-center">
-                <Headline>Who</Headline>
                 <PDBox>
                   <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
                   {IconInfo.map((data, i) => (
