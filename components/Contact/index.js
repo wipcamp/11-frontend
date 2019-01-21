@@ -45,6 +45,18 @@ const MiddleOfTheRight = styled.div`
     transform: translate(0, 25%);
   }
 `
+const DivFb = styled.div`
+    @media (min-width:320px) {
+      
+    }
+    @media (min-width:576px) {
+      text-align:center;
+    }
+    @media (min-width:768px) {
+      text-align:center;
+    };
+`
+
 const RightContent = () => (
   <div className="col-12 col-sm-12 col-lg-6 text-center">
     <MiddleOfTheRight>
@@ -104,7 +116,7 @@ export default class index extends Component {
               <div className="row justify-content-center">
                 <Subtitle className = "text-center col-12"><b>ติดต่อเรา</b></Subtitle>
                 <div className="row justify-content-center">
-                  <div className="p-2 col-12 col-sm-12 col-lg-6 text-center mb-3">
+                  <div className="p-4 col-12 col-sm-12 col-lg-6 mb-3">
                     <Fbfeed/>
                   </div>
                   <RightContent />
