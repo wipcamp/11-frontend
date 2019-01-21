@@ -24,7 +24,6 @@ const dateStartAnnounced = dayjs('2019-01-14')  //Before announced one day
 const dateStartCamp = dayjs('2019-02-20') //Before start camp one day
 
 const Section = styled(Element)`
-  margin: 30px 0;
 
   @media(max-width: 768px) {
     margin: 20px 0;
