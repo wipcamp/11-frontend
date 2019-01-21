@@ -2,23 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Divhover = styled.div`
-  /* transform: scale(1);
-  transition: .3s ease-in-out; */
-   /* @media (min-width:320px) {
-      margin-left:.5em;
-    }
-   @media (min-width:420px) {
-      margin-left:1.25em;
-    }
-    @media (min-width:576px) {
-      margin-left:2.25em;
-    }
-    @media (min-width:768px) {
-      margin-left:2em;
-    }*/
-    /* @media (min-width:1024px) {
-      margin-left:4em;
-    } */
+
   &:hover img {
     animation-duration: 1s;
     animation-name: headShake;
@@ -73,9 +57,11 @@ const Img = styled.img`
 `
 
 const Logo = (props) => (
-  <Divhover>
-    <a href={props.link} target="_blank"><Img src={props.img} width="80px" height="80px" /></a>
-  </Divhover>
+  <div className="col-3 col-lg-3">
+    <Divhover>
+      <a href={props.link} target="_blank"><Img src={props.img} width="80px" height="80px" /></a>
+    </Divhover>
+  </div>
 )
 
 export default Logo
