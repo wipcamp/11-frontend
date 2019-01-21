@@ -7,14 +7,55 @@ import Model from '../Core/Model'
 import Background from '../Core/Background'
 import Box from './Textbox'
 
-const TextBoxColor = styled(PDBox)`
+const TextBoxColor = styled.div`
   background: #172D38;
+   
+  @media (min-width:320px) {
+    padding : 1em 1em;
+    margin : 0 0em ;
+  }
+  @media (min-width:412px) {
+    padding : 1.5em 1em;
+    margin : 0 0.5em ;
+  }
+   @media (min-width:576px) {
+    padding : 1em 2em;
+  }
+  @media (min-width:768px) {
+    padding : 1.5em 1em;
+    margin : 0 0.5em ;
+  }
+  @media (min-width:1024px) {
+    padding : 1em 1em;
+  }
 `
 
-const Icon = styled(IconBox)`
+
+const Icon1 = styled.img`
   width:7em;
   margin-bottom: 5%;
-`
+  @media (min-width:320px) {
+    width:4em;
+  }
+  @media (min-width:420px) {
+    margin-top: 2%;
+    width:5em;
+  }
+  @media (min-width:576px) {
+    margin-top: 2%;
+    width:5em;
+  }
+  @media (min-width:768px) {
+    margin-top: 5%;
+    width:7em;
+  }
+  @media (min-width:1024px) {
+    width: 70px;
+    height: 70px;
+    left: 345px;
+    top: 323px;
+  }
+    `
 
 const TextPosition = styled.div`  
   margin-left:1em;
@@ -26,7 +67,10 @@ const TextPosition = styled.div`
 export const Font1 = styled.p`
 color : #fff;
   @media (min-width:320px) {
-    font-size: 0.8em;
+    font-style: normal;
+    
+    line-height: normal;
+    font-size: 12px;
   }
   @media (min-width:412px) {
     font-size: 0.9em;
@@ -38,7 +82,12 @@ color : #fff;
     font-size: 1.1em;
   }
   @media (min-width:1024px) {
-    font-size: 1.2em;
+    font-style: normal;
+    line-height: normal;
+    font-size: 16px;
+    margin-left : -28px;
+    margin-top : 13px;
+   
   }
 `
 const IconInfo = [
@@ -63,10 +112,10 @@ export default class componentName extends Component {
                     <div className="my-2 mx-1" key={i}>
                       <TextBoxColor>
                         <div className="row">
-                          <div className ="col-3" >
-                            <Icon key={i} src={data.icon} />
+                          <div className ="col-2" >
+                            <Icon1 key={i} src={data.icon} />
                           </div>
-                          <div className="col-9">
+                          <div className="col-10 pl-0">
                             <TextPosition>
                               <Paragraph>
                                 <Font1 key={i}>{data.text}</Font1>
