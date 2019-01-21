@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
-import Model from '../Core/Model';
+import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
+import Background from '../Core/Background'
 
 const QuestionText = styled.div`
   cursor: pointer;
@@ -65,6 +66,7 @@ export default class Question extends Component {
       </div>
     )
     return (
+    <Background bgImageUrl = "static/img/faq.png">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
@@ -78,22 +80,23 @@ export default class Question extends Component {
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
                   </div>  
-                    <div id="accordion">
-                      <CollapseItem num='One' number='0' />
-                      <CollapseItem num='Two' number='1' />
-                      <CollapseItem num='Three' number='2' />
-                      <CollapseItem num='Four' number='3' />
-                      <CollapseItem num='Five' number='4' />
-                      <CollapseItem num='Six' number='5' />
-                    </div>
+                  <div id="accordion">
+                    <CollapseItem num='One' number='0' />
+                    <CollapseItem num='Two' number='1' />
+                    <CollapseItem num='Three' number='2' />
+                    <CollapseItem num='Four' number='3' />
+                    <CollapseItem num='Five' number='4' />
+                    <CollapseItem num='Six' number='5' />
+                   </div>
                 </div>
               </PDBox>
-              <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+                <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+                </div>
               </div>
             </div>
-           </div>
+          </div>
         </div>
-      </div>
+      </Background>
     )
   }
 }
