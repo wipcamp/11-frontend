@@ -101,7 +101,7 @@ export default class componentName extends Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-              <Headline>Who</Headline>
+              <h1><Headline>Who</Headline></h1>
               <div className="row justify-content-center">
                 <PDBox>
                   <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
