@@ -5,7 +5,6 @@ import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox, IconBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
 import Background from '../Core/Background'
-import Box from './Textbox'
 
 const TextBoxColor = styled.div`
   background: #172D38;
