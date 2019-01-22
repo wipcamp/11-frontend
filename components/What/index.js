@@ -32,7 +32,7 @@ export default class index extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row">
                 <div className="text-center col-12">
-                  <Headline>What</Headline>
+                  <h1><Headline>What</Headline></h1>
                 </div>
                 <PDBox>
                   <div className="col-12">
