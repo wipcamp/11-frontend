@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
  }
  h1{
   font-family: 'Knewave', cursive;
+  text-transform: uppercase;
  }
 `
 
