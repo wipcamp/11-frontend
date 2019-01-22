@@ -68,7 +68,7 @@ export default class index extends Component {
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-12">
             <div className="row justify-content-center">
-              <Headline>Contact</Headline>
+              <h1><Headline>Contact</Headline></h1>
             </div>
             <PDBox1>
               <div className="row justify-content-center">

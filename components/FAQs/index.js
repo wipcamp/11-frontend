@@ -71,12 +71,12 @@ export default class Question extends Component {
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row">
-            <div className="text-center col-12">
-                <Headline>FAQs</Headline>
-            </div>
+              <div className="text-center col-12">
+                  <h1><Headline>FAQs</Headline></h1>
+              </div>
             <div className="col-12">
               <PDBox className ="pb-5">
-              <div className="col-12">
+                <div className="col-12">
                   <div className="row justify-content-center">
                     <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
                   </div>  
