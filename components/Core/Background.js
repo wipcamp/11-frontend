@@ -8,5 +8,9 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  padding-top:2em;
+  @media(min-width:769px) {
+    padding-top:4em;
+  }
 `
 export default Background
