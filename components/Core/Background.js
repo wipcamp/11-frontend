@@ -5,7 +5,6 @@ const Background = styled.div`
   min-height: 100vh;
   background-repeat:no-repeat;
   background-position: center center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding-top:2em;
