@@ -7,7 +7,7 @@ import Button from './Button';
 const NavSection = styled.nav`
   position: fixed;
   transition: all .2s;
-  right: 50px;
+  right: 2rem;
   margin: 0 !important;
   top: 50%;
   transform: translateY(-50%);
@@ -19,16 +19,27 @@ const NavSection = styled.nav`
   @media(max-width: 768px) {
    display: none;
   }
+  @media(max-width: 878px) {
+    right: 0.5rem;
+  }
+  @media(max-width: 1024px) {
+    right: 0.5rem;
+  }
 
   &:after {
     clear: both;
     text-decoration: none;
   }
 `
-
+const BG = styled.div`
+  background-image : url('static/img/paper.png') ;
+  background-size: cover;
+  min-width:95px;
+  background-position:right;
+  justify-content: center;
+`
 const NavLink = styled(Link)`
   display: flex;
-  justify-content: center;
   color: black;
   margin: 20px 0;
   opacity: 0.6;
@@ -62,7 +73,7 @@ const NavLink = styled(Link)`
       border: 1px solid white;
     }
     .text {
-      opacity: 1;
+      opacity: 0  ;
       color: black;
     }
   }
@@ -77,7 +88,6 @@ const NavLink = styled(Link)`
       opacity: 1;
       display: flex;
       position: absolute;
-      right: -5px;
       justify-content: flex-end;
       font-size: 14px;
       font-weight:bold;
@@ -162,7 +172,8 @@ class Navbar extends React.Component {
     return (
       <NavSection active={this.state.show} display={this.state.display} >
         <AnimationNavbar display={this.state.display}>
-        <SectionUl >
+        <BG>
+        <SectionUl className = "pt-2">
           {
             sections.map(i => (
               <NavItems key={i.href}>
@@ -185,6 +196,7 @@ class Navbar extends React.Component {
           }
         </SectionUl>
         <Button name = "Game"/>
+        </BG>
         </AnimationNavbar>
       </NavSection>
     )
