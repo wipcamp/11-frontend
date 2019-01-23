@@ -138,7 +138,7 @@ const AnimationNavbar = styled.div`
   
 
 const sections = [
-  { href: 'home', title: 'Home' },
+  { href: 'home', title: '' },
   { href: 'what', title: 'What' },
   { href: 'who', title: 'Who' },
   { href: 'where', title: 'Where' },
