@@ -144,7 +144,7 @@ const sections = [
   { href: 'where', title: 'Where' },
   { href: 'when', title: 'When' },
   { href: 'faqs', title: 'FAQs' },
-  { href: 'sponsor', title: 'Sponsors' },
+  { href: 'sponsor', title: 'Sponsor' },
   { href: 'contact', title: 'Contact' }
 ]
 
