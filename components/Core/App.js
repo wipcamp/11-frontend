@@ -16,6 +16,8 @@ import RegisterButton from './Register';
 import Game from '../Game'
 import Sponsor from '../Sponsor'
 
+import {Font} from './Texts'
+
 // const datenow = dayjs('2019-01-15')
 const datenow = dayjs().format()
 const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
@@ -35,10 +37,31 @@ background : #F8E9D6;
 const RegisVisible = styled.div`
   visibility: ${porps => porps.visi || "visible"};
 `
+const ReText = styled.div`
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 
+
+  @media (min-width:320px) {
+    font-size: 0.8em;
+  }
+  @media (min-width:768px) {
+    font-size: 0.9em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1em;
+  }
+
+`
 const RegisButton = (props) =>(
   <RegisVisible visi={props.visi}>
-    <RegisterButton className="text-center">{props.text}</RegisterButton>
+    <RegisterButton>
+      <ReText>{props.text}</ReText>
+    </RegisterButton>
   </RegisVisible>
 )
 
@@ -84,7 +107,7 @@ class App extends React.Component {
 
     return (
       <BGcolor>
-        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} />
+        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
         <Navbar />
         {this.state.count === 0 &&
           <Section name = "home">
