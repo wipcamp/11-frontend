@@ -76,10 +76,7 @@ export default class Question extends Component {
               </div>
             <div className="col-12">
               <PDBox className ="pb-5">
-                <div className="col-12">
-                  <div className="row justify-content-center">
-                    <Subtitle className="mb-4"><b>คำถามที่พบบ่อย</b></Subtitle>
-                  </div>  
+                <div className="col-12"> 
                   <div id="accordion">
                     <CollapseItem num='One' number='0' />
                     <CollapseItem num='Two' number='1' />

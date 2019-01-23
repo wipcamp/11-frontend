@@ -98,7 +98,6 @@ export default class componentName extends Component {
               <h1><Headline>Who</Headline></h1>
               <div className="row justify-content-center">
                 <PDBox>
-                  <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
                   {IconInfo.map((data, i) => (
                     <div className="my-2 mx-1" key={i}>
                       <TextBoxColor>

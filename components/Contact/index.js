@@ -72,28 +72,25 @@ export default class index extends Component {
             </div>
             <PDBox1>
               <div className="row justify-content-center">
-                <Subtitle className = "text-center col-12"><b>ติดต่อเรา</b></Subtitle>
-                <div className="row justify-content-center">
-                  <div className="col-12 col-sm-12 col-lg-6 mb-3">
-                    <Fbfeed/>
-                  </div>
-                  <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
-                    <div className="row mr-1 ml-1">
-                      <Logo img="../../static/img/social/instagram.svg" link="https://www.instagram.com/wipcamp/" />
-                      <Logo img="../../static/img/social/twitter.svg" link="https://twitter.com/WIPCamp" />
-                      <Logo img="../../static/img/social/youtube.svg" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
-                      <Logo img="../../static/img/social/line@.svg" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
-                    </div>
-                    <div className="row">
-                      <Div3 className="mt-4 mb-3 col-12">
-                        <ContactBot href="tel://02-107-3576" src="../../static/img/social/phone.svg" text= "02-107-3576" />
-                      </Div3>
-                      <div className="mb-4 col-12">
-                        <ContactBot href="mailto:wippo@wipcamp.com" src="../../static/img/social/mail.svg" text = "wippo@wipcamp.com" />
-                      </div>
-                    </div>
-                  </MiddleOfTheRight>
+                <div className="col-12 col-sm-12 col-lg-6 mb-3">
+                  <Fbfeed/>
                 </div>
+                <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
+                  <div className="row mr-1 ml-1">
+                    <Logo img="../../static/img/social/instagram.svg" link="https://www.instagram.com/wipcamp/" />
+                    <Logo img="../../static/img/social/twitter.svg" link="https://twitter.com/WIPCamp" />
+                    <Logo img="../../static/img/social/youtube.svg" link="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" />
+                    <Logo img="../../static/img/social/line@.svg" link="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" />
+                  </div>
+                  <div className="row">
+                    <Div3 className="mt-4 mb-3 col-12">
+                      <ContactBot href="tel://02-107-3576" src="../../static/img/social/phone.svg" text= "02-107-3576" />
+                    </Div3>
+                    <div className="mb-4 col-12">
+                      <ContactBot href="mailto:wippo@wipcamp.com" src="../../static/img/social/mail.svg" text = "wippo@wipcamp.com" />
+                    </div>
+                  </div>
+                </MiddleOfTheRight>
               </div>
             </PDBox1>
             <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />

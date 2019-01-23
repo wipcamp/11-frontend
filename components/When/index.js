@@ -18,9 +18,6 @@ export default class componentName extends Component {
                 <h1><Headline>When</Headline></h1>
                 <PDBox className="pr-1 pl-1">
                   <div className="col-12">
-                    <div className="row justify-content-center">
-                      <Subtitle className="mb-4"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
-                    </div>
                     <ImgChangeByDay />
                   </div>
                 </PDBox>

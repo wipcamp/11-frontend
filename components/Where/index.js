@@ -37,9 +37,6 @@ export default class index extends Component {
                 <h1><Headline>Where</Headline></h1>
                 <PDBox>
                   <div className="col-12">
-                    <div className="row justify-content-center">
-                      <Subtitle className="mb-4"><b>ค่ายนี้จัดที่ไหน?</b></Subtitle>
-                    </div>
                     <Small>
                       {WhereText.map((info, i) => (
                         <Font key = {i} className = "row justify-content-center m-1">{info}</Font>
