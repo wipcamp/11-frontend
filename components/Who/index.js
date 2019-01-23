@@ -8,11 +8,10 @@ import Background from '../Core/Background'
 
 const TextBoxColor = styled.div`
   background: #172D38;
-   
+
   @media (min-width:320px) {
     padding : 0.35em 0.35em;
     margin : 1em 0em ;
-   
   }
   @media (min-width:412px) {
     padding : 1em 1em;
@@ -27,12 +26,10 @@ const TextBoxColor = styled.div`
   }
   @media (min-width:1024px) {
     padding : 0em 1em;
-   
   }
 `
 
 const Icon1 = styled.img`
-  
   @media (min-width:320px) {
     width: 45px;
     height: 45px;
@@ -45,13 +42,12 @@ const Icon1 = styled.img`
   @media (min-width:1024px) {
     width: 70px;
     height: 70px;
-  
   }
  `
 
 const TextPosition = styled.div`  
   margin-left:1em;
-    transform: translate(0, 10%);
+  transform: translate(0, 10%);
   @media (min-width:768px){
     transform: translate(0, 50%);
   }
@@ -77,14 +73,12 @@ color : #fff;
     font-size: 15px;
     margin-left : -25px;
     margin-top : 10px;
-   
   }
   @media (min-width:1024px) {
     font-style: normal;
     font-size: 16px;
     margin-left : -25px;
     margin-top : 13px;
-   
   }
 `
 const IconInfo = [
