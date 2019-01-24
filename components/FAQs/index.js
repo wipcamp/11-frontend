@@ -23,7 +23,7 @@ const AnswerText = styled.div`
 
 const Span = styled.span`
   &:before{
-      content: 'V'; 
+      content: '\\2228'; 
       font-size: 13px;
       color: #777;
       float: right;
@@ -54,7 +54,7 @@ export default class Question extends Component {
         <div className="card" >
           <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
-              Q : {this.state.question[props.number]} 
+              Q : {this.state.question[props.number]} <Span />
             </div>
           </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
