@@ -93,7 +93,7 @@ export default class index extends Component {
                 </MiddleOfTheRight>
               </div>
             </PDBox1>
-            <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+            <Model className="center" wippo='static/img/wippo/original7.png' alt="wippo" />
           </div>
         </div>
       </div>
