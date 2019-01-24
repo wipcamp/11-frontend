@@ -75,7 +75,7 @@ export default class Question extends Component {
                   <h1><Headline>FAQs</Headline></h1>
               </div>
             <div className="col-12">
-              <PDBox className ="pb-5">
+              <div className ="pb-5">
                 <div className="col-12"> 
                   <div id="accordion">
                     <CollapseItem num='One' number='0' />
@@ -86,7 +86,7 @@ export default class Question extends Component {
                     <CollapseItem num='Six' number='5' />
                    </div>
                 </div>
-              </PDBox>
+              </div>
                 <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
                 </div>
               </div>
