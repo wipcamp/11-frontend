@@ -4,7 +4,7 @@ const Model = styled.div`
     content:url(${props => props.wippo});
     display: block;
     z-index:10;
-    margin-top: -3em;
+    margin-top: -10em;
     margin-left: auto;
     margin-right: auto;
     width: 10em;
@@ -22,7 +22,7 @@ const Model = styled.div`
         width: 10em;
     }
     @media(min-width: 1024px) {
-        width: 10em;
+        width: 18em;
     }
 `
 

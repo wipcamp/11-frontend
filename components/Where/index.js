@@ -44,7 +44,7 @@ export default class index extends Component {
                     <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/map.jpg' alt="map" /></a>
                   </div>
               </div>
-              <Model className="center" wippo='static/img/wippo/original4.png' alt="wippo" />
+              <Model className="center" wippo='static/img/wippo/wippoWhere.png' alt="wippo" />
             </div>
           </div>
         </div>

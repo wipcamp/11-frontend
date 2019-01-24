@@ -118,7 +118,7 @@ export default class componentName extends Component {
                   ))}
                 </PDBox>
               </div>
-              <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
+              <Model className="center" wippo='static/img/wippo/wippoWho.png' alt="wippo" />
             </div>
           </div>
         </div>
