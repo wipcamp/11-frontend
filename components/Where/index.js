@@ -35,7 +35,6 @@ export default class index extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row justify-content-center">
                 <h1><Headline>Where</Headline></h1>
-                <PDBox>
                   <div className="col-12">
                     <Small>
                       {WhereText.map((info, i) => (
@@ -44,7 +43,6 @@ export default class index extends Component {
                     </Small>
                     <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/mapWithWippo.png' alt="map" /></a>
                   </div>
-                </PDBox>
               </div>
               <Model className="center" wippo='static/img/wippo/original4.png' alt="wippo" />
             </div>
