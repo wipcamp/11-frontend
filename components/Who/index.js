@@ -5,15 +5,13 @@ import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox, IconBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
 import Background from '../Core/Background'
-import Box from './Textbox'
 
 const TextBoxColor = styled.div`
   background: #172D38;
-   
+
   @media (min-width:320px) {
     padding : 0.35em 0.35em;
     margin : 1em 0em ;
-   
   }
   @media (min-width:412px) {
     padding : 1em 1em;
@@ -28,12 +26,10 @@ const TextBoxColor = styled.div`
   }
   @media (min-width:1024px) {
     padding : 0em 1em;
-   
   }
 `
 
 const Icon1 = styled.img`
-  
   @media (min-width:320px) {
     width: 45px;
     height: 45px;
@@ -46,13 +42,12 @@ const Icon1 = styled.img`
   @media (min-width:1024px) {
     width: 70px;
     height: 70px;
-  
   }
  `
 
 const TextPosition = styled.div`  
   margin-left:1em;
-    transform: translate(0, 10%);
+  transform: translate(0, 10%);
   @media (min-width:768px){
     transform: translate(0, 50%);
   }
@@ -78,14 +73,12 @@ color : #fff;
     font-size: 15px;
     margin-left : -25px;
     margin-top : 10px;
-   
   }
   @media (min-width:1024px) {
     font-style: normal;
     font-size: 16px;
     margin-left : -25px;
     margin-top : 13px;
-   
   }
 `
 const IconInfo = [
@@ -102,10 +95,9 @@ export default class componentName extends Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-              <Headline>Who</Headline>
+              <h1><Headline>Who</Headline></h1>
               <div className="row justify-content-center">
                 <PDBox>
-                  <Subtitle className = "text-center col-12"><b>ค่ายนี้จัดเมื่อไหร่ ?</b></Subtitle>
                   {IconInfo.map((data, i) => (
                     <div className="my-2 mx-1" key={i}>
                       <TextBoxColor>

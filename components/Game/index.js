@@ -14,7 +14,7 @@ export default class index extends Component {
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row justify-content-center">
-                <Headline>Game</Headline>
+                <h1><Headline>Game</Headline></h1>
               </div>
               <div className="row justify-content-center">
                 <PDBox>

@@ -32,13 +32,10 @@ export default class index extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row">
                 <div className="text-center col-12">
-                  <Headline>What</Headline>
+                  <h1><Headline>What</Headline></h1>
                 </div>
                 <PDBox>
                   <div className="col-12">
-                    <div className="row justify-content-center">
-                      <Subtitle className="mb-4"><b>ค่ายนี้คืออะไร ?</b></Subtitle>
-                    </div>
                     <Paragraph>
                       { WhatText.map((info, i) => (
                         <Font key = {i}>

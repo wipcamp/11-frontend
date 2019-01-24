@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
           <meta name="description" content="WIP Camp #11 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที อย่างเต็มตัว ตลอดทั้ง ค่าย น้องๆจะได้รับ ความรู้ ความสนุกสนาน จากพี่ๆ ไอที บางมด แล้วเจอกันนะครับ"/>
           <meta name="keywords" content="wipcamp,itcamp,ค่ายไอที,ค่ายคอม"/>
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet" />
           <style>{`body { margin: 0 } /* custom! */`}</style>
           <link rel="shortcut icon" href="/static/img/favicon/favicon.ico" type="image/x-icon"/>
