@@ -52,4 +52,34 @@ export const Font = styled.div`
   }
 `
 
+export const FontWho = styled.p`
+color : #fff;
+  @media (min-width:320px) {
+    margin-left : 8px;
+    margin-top : 2px;
+    font-size: 12px;
+  }
+  @media (min-width:412px) {
+    font-size: 14px;
+    margin-left : 20px;
+    margin-top : 10px;
+  }
+  @media (min-width:576px) {
+    font-size: 15px;
+    margin-left : 20px;
+    margin-top : 5px;
+  }
+  @media (min-width:768px) {
+    font-size: 15px;
+    margin-left : -25px;
+    margin-top : 10px;
+  }
+  @media (min-width:1024px) {
+    font-style: normal;
+    font-size: 16px;
+    margin-left : -25px;
+    margin-top : 13px;
+  }
+`
+
 export default Headline
