@@ -73,3 +73,40 @@ export const IconBox = styled.img`
     width:7em;
   }
 `
+export const TextBoxWho = styled.div`
+  background: #172D38;
+
+  @media (min-width:320px) {
+    padding : 0.35em 0.35em;
+    margin : 1em 0em ;
+  }
+  @media (min-width:412px) {
+    padding : 1em 1em;
+    margin : 1 0em ;
+  }
+   @media (min-width:576px) {
+    padding : 1em 2em;
+  }
+  @media (min-width:768px) {
+    padding : 1em 1em;
+    margin : 0 0.5em ;
+  }
+  @media (min-width:1024px) {
+    padding : 0em 1em;
+  }
+`
+export const IconWho = styled.img`
+  @media (min-width:320px) {
+    width: 45px;
+    height: 45px;
+  }
+  @media (min-width:412px) {
+    width: 65px;
+    height: 65px;
+  }
+
+  @media (min-width:1024px) {
+    width: 70px;
+    height: 70px;
+  }
+ `
