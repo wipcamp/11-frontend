@@ -8,6 +8,7 @@ const Model = styled.div`
     margin-left: auto;
     margin-right: auto;
     width: 10em;
+    text-align: center !important;
 
     @media(min-width: 320px) {
         width: 5em;
