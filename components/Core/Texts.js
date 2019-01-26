@@ -35,6 +35,8 @@ export const TextBoxStyle = styled.div`
 `
 
 export const Font = styled.div`
+color : #3A1E12;
+
   @media (min-width:320px) {
     font-size: 0.8em;
   }
@@ -53,7 +55,8 @@ export const Font = styled.div`
 `
 
 export const FontWho = styled.p`
-color : #fff;
+color : #3A1E12;
+
   @media (min-width:320px) {
     margin-left : 8px;
     margin-top : 2px;

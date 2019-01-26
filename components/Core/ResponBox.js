@@ -21,7 +21,9 @@ export const MTBox = styled.div`
 `
 
 export const PDBox = styled.div`
-  background: rgba(196, 196, 196, 0.73);
+background: rgba(248, 233, 214, 0.73);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   @media (min-width:320px) {
     padding : 1.5em 1em;
     margin : 2em 0.5em ;
