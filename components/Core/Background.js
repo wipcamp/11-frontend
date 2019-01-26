@@ -8,8 +8,13 @@ const Background = styled.div`
   background-attachment: fixed;
   background-size: cover;
   padding-top:2em;
-  @media(min-width:769px) {
+
+  @media(min-width:320px) {
     padding-top:4em;
+    background-size: 160%;
+    background-position-y: 100%;
+    
   }
+ 
 `
 export default Background
