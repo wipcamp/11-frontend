@@ -76,7 +76,9 @@ export const IconBox = styled.img`
   }
 `
 export const TextBoxWho = styled.div`
-background: #CDB4A2;
+  background: #CDB4A2;
+  border-radius: 10px;
+
   @media (min-width:320px) {
     padding : 0.35em 0.35em;
     margin : 1em 0em ;
