@@ -29,6 +29,8 @@ const Img = styled.img`
 `
 
 const Font = styled.div`
+color : #3A1E12;
+
     @media (min-width:320px) {
       margin-top:2em;
     }
