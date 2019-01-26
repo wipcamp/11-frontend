@@ -74,23 +74,23 @@ export default class Question extends Component {
               <div className="text-center col-12">
                   <h1><Headline>FAQs</Headline></h1>
               </div>
-            <div className="col-12">
-              <div className ="pb-5">
-                <div className="col-12"> 
-                  <div id="accordion">
-                    <CollapseItem num='One' number='0' />
-                    <CollapseItem num='Two' number='1' />
-                    <CollapseItem num='Three' number='2' />
-                    <CollapseItem num='Four' number='3' />
-                    <CollapseItem num='Five' number='4' />
-                    <CollapseItem num='Six' number='5' />
-                   </div>
+              <div className="col-12">
+                <div className ="pb-5">
+                  <div className="col-12"> 
+                    <div id="accordion">
+                      <CollapseItem num='One' number='0' />
+                      <CollapseItem num='Two' number='1' />
+                      <CollapseItem num='Three' number='2' />
+                      <CollapseItem num='Four' number='3' />
+                      <CollapseItem num='Five' number='4' />
+                      <CollapseItem num='Six' number='5' />
+                    </div>
+                  </div>
                 </div>
               </div>
-                <Model wippo='wippoFAQs.png' alt="wippo" />
-                </div>
               </div>
             </div>
+                <Model wippo='wippoFAQs.png' alt="wippo" />
           </div>
         </div>
       </Background>

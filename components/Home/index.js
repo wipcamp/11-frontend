@@ -32,13 +32,10 @@ const LogoWip = styled.img`
 
 const Wippo = styled.div`
   position : absolute;
-  height : 30vh;
   bottom : 0vh;
   transform: translate(-50%, 0%);
   left: 50vw;
   @media (min-width: 970px) {
-    height : auto;
-    width: 100vw;
   }
 `
 export default class componentName extends Component {
@@ -53,10 +50,10 @@ export default class componentName extends Component {
             <div className="col-12">
               <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
             </div>
-            <Wippo>
-              <Model wippo='wippoHome.png' alt="wippo" />
-            </Wippo>
           </div>
+          <Wippo>
+            <Model wippo='wippoHome.png' alt="wippo" />
+          </Wippo>
         </div>
       </Background>
     )

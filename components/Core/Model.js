@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 const Model = styled.div`
     content:url('../../static/img/wippo/${props => props.wippo}');
-    display: block;
     z-index:10;
     margin-left: auto;
     margin-right: auto;
     width: 10em;
+    height:100%;
 
     @media(min-width: 320px) {
         margin-top: -5em;

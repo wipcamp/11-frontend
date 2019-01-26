@@ -20,6 +20,7 @@ const Map = styled.img`
     margin-top : 6%;
     margin-bottom: 0%; 
   }
+  z-index:9;
 `
 
 const WhereText = [
@@ -35,16 +36,16 @@ export default class index extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row justify-content-center">
                 <h1><Headline>Where</Headline></h1>
-                  <div className="col-12">
-                    <Small>
-                      {WhereText.map((info, i) => (
-                        <Font key = {i} className = "row justify-content-center m-1">{info}</Font>
-                      ))}
-                    </Small>
-                    <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/map.jpg' alt="map" /></a>
-                  </div>
+                <div className="col-12">
+                  <Small>
+                    {WhereText.map((info, i) => (
+                      <Font key = {i} className = "row justify-content-center m-1">{info}</Font>
+                    ))}
+                  </Small>
+                  <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/map.jpg' alt="map" /></a>
+                </div>
+                <Model wippo='wippoWhere.png' alt="wippo" />
               </div>
-              <Model wippo='wippoWhere.png' alt="wippo" />
             </div>
           </div>
         </div>

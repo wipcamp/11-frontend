@@ -22,8 +22,8 @@ export default class componentName extends Component {
                   </div>
                 </PDBox>
               </div>
-              <Model wippo='wippoWhen.png' alt="wippo" />
             </div>
+            <Model wippo='wippoWhen.png' alt="wippo" />
           </div>
         </div>
       </Background>
