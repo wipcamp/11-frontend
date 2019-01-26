@@ -90,7 +90,7 @@ export default class Question extends Component {
               </div>
               </div>
             </div>
-                <Model wippo='wippoFAQs.png' alt="wippo" />
+            <Model wippo='wippoFAQs.png' alt="wippo" />
           </div>
         </div>
       </Background>
