@@ -10,22 +10,21 @@ const QuestionText = styled.div`
   cursor: pointer;
   text-decoration: none;
   color: black;
-  background-color: #CF6565!important;
+  background-color: #E0D6C2!important;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   &:hover{
 
   }
 `
 
 const AnswerText = styled.div`
-  background-color: #D18484!important;
-  color: white;
+  background-color: #CDB4A2!important;
 `
 
 const Span = styled.span`
   &:before{
       content: '\\2228'; 
       font-size: 13px;
-      color: #777;
       float: right;
       margin-left: 5px;
   } 
@@ -52,7 +51,7 @@ export default class Question extends Component {
     const CollapseItem = (props) => (
       <div className="card">
         <div className="card" >
-          <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse" href={`#collapse${props.num}`}>
+          <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
               Q : {this.state.question[props.number]} <Span />
             </div>
