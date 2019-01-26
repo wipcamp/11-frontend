@@ -34,6 +34,7 @@ const Divhover = styled.div`
 }
 `
 const Img = styled.img`
+    content: url('../../static/img/social/${(props) => props.imgUrl}');
     @media (min-width:320px) {
       width:50px;
       height:50px;
@@ -57,11 +58,9 @@ const Img = styled.img`
 `
 
 const Logo = (props) => (
-  <div className="col-3 col-lg-3">
-    <Divhover>
-      <a href={props.link} target="_blank"><Img src={props.img} width="80px" height="80px" /></a>
-    </Divhover>
-  </div>
+  <Divhover>
+    <a href={props.link} target="_blank"><Img imgUrl={props.imgUrl} width="80px" height="80px" /></a>
+  </Divhover>
 )
 
 export default Logo
