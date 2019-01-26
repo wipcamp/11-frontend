@@ -44,8 +44,8 @@ export default class index extends Component {
                 <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
                   <div className="row mr-1 ml-1">
                     {
-                      LogoInfo.map((data) => (
-                        <div className="col-3 col-lg-3">
+                      LogoInfo.map((data, i) => (
+                        <div className="col-3 col-lg-3" key = {i}>
                           <Logo imgUrl={data.imgUrl} link={data.link} />
                         </div>
                       ))
@@ -53,9 +53,11 @@ export default class index extends Component {
                   </div>
                   <div className="row">
                     {
-                      BoxInfo.map((data) => (
-                        <div className={data.className}>
-                          <ContactBox href={data.href} imgUrl={data.imgUrl} text = {data.text} />
+                      BoxInfo.map((data, i) => (
+                        <div key = {i}>
+                          <div className={data.className}>
+                            <ContactBox href={data.href} imgUrl={data.imgUrl} text = {data.text} />
+                          </div>
                         </div>
                       ))
                     }

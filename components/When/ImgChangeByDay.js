@@ -65,9 +65,9 @@ const BoxInfo = [
 const ImgChangeDay = () => (
   <div className="row justify-content-center">
     {
-      BoxInfo.map((data) => (
-        <div className="pl-lg-5 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3">
-          <div className="row">
+      BoxInfo.map((data ,i) => (
+        <div className="pl-lg-5 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3" key = {i}>
+          <div className="row" key = {i}>
             <div className="p-0 col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12 text-center">
               <Img src={data.src}/>
             </div>
