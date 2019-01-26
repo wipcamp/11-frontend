@@ -54,7 +54,7 @@ export default class componentName extends Component {
               <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
             </div>
             <Wippo>
-              <Model className="center" wippo='static/img/wippo/wippoHome.png' alt="wippo" />
+              <Model wippo='wippoHome.png' alt="wippo" />
             </Wippo>
           </div>
         </div>

@@ -50,7 +50,7 @@ export default class componentName extends Component {
                   ))}
                 </PDBox>
               </div>
-              <Model className="center" wippo='static/img/wippo/wippoWho.png' alt="wippo" />
+              <Model wippo='wippoWho.png' alt="wippo" />
             </div>
           </div>
         </div>

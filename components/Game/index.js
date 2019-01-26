@@ -25,7 +25,7 @@ export default class index extends Component {
                   </div>
                 </PDBox>
               </div>
-              <Model className="center" wippo='static/img/wippo/wippoGame.png' alt="wippo" />
+              <Model wippo='wippoGame.png' alt="wippo" />
             </div>
           </div>
         </div>
