@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Model = styled.div`
-    content:url(${props => props.wippo});
+    content:url('../../static/img/wippo/${props => props.wippo}');
     display: block;
     z-index:10;
     margin-top: -10em;
