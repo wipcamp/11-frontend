@@ -14,10 +14,10 @@ export default class componentName extends Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
+              <h1><Headline>When</Headline></h1>
               <div className="row justify-content-center">
-                <h1><Headline>When</Headline></h1>
                 <PDBox className="pr-1 pl-1">
-                  <div className="col-12">
+                  <div className="ml-lg-5 col-12 col-lg-10">
                     <ImgChangeByDay />
                   </div>
                 </PDBox>
