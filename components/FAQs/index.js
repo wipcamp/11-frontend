@@ -10,14 +10,16 @@ const QuestionText = styled.div`
   cursor: pointer;
   text-decoration: none;
   color: black;
-  background-color: #CF6565!important;
+  background-color: #E0D6C2!important;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   &:hover{
 
   }
 `
 
 const AnswerText = styled.div`
-  background-color: #D18484!important;
+  background-color:  #CDB4A2!important;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: white;
 `
 
