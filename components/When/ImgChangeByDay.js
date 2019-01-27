@@ -29,8 +29,6 @@ const Img = styled.img`
 `
 
 const Font = styled.div`
-color : #3A1E12;
-
     @media (min-width:320px) {
       margin-top:2em;
     }
@@ -70,10 +68,10 @@ const ImgChangeDay = () => (
       BoxInfo.map((data ,i) => (
         <div className="pl-lg-5 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3" key = {i}>
           <div className="row" key = {i}>
-            <div className="p-0 col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12 text-center">
+            <div className="col-4 col-sm-5 col-lg-12 col-md-12 col-xl-12 text-center">
               <Img src={data.src}/>
             </div>
-            <Font className="ml-lg-3 pb-4 p-0 col-6 col-sm-6 col-lg-12 col-md-12 col-xl-12 text-center">
+            <Font className="ml-lg-3 pb-4 col-8 col-sm-7 col-lg-12 col-md-12 col-xl-12 text-center">
               <TextBoxLong text={data.text} textday={data.textday} />
             </Font>
           </div>
