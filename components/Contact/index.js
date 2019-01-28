@@ -54,10 +54,8 @@ export default class index extends Component {
                   <div className="row">
                     {
                       BoxInfo.map((data, i) => (
-                        <div key = {i}>
-                          <div className={data.className}>
-                            <ContactBox href={data.href} imgUrl={data.imgUrl} text = {data.text} />
-                          </div>
+                        <div key={i} className={data.className}>
+                          <ContactBox href={data.href} imgUrl={data.imgUrl} text = {data.text} />
                         </div>
                       ))
                     }
