@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline from '../Core/Texts'
 import Model from '../Core/Model'
+import Change from '../Core/Change'
 import { PDBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
@@ -66,7 +67,9 @@ export default class index extends Component {
               </div>
             </PDBox1>
           </div>
+          <Change>
           <Model wippo='wippoContact.png' alt="wippo" />
+          </Change>
         </div>
       </div>
     )
