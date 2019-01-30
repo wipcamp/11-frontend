@@ -10,21 +10,27 @@ const date3 = dayjs('2019-01-14')
 const date4 = dayjs('2019-01-17')
 
 const Img = styled.img`
-    width:10em;
+    width:172px;
+    height: 244px;
     @media (min-width:320px) {
       width:5em;
+      height:7em;
     }
     @media (min-width:420px) {
       width:7em;
+      height:10em;
     }
     @media (min-width:576px) {
       width:7em;
+      height:10em;
     }
     @media (min-width:768px) {
-      width:10em;
+      width:8em;
+      height:12em;
     }
     @media (min-width:1024px) {
-      width:10em;
+      width:8em;
+      height:12em;
     }
 `
 
@@ -66,7 +72,7 @@ const ImgChangeDay = () => (
   <div className="row justify-content-center">
     {
       BoxInfo.map((data ,i) => (
-        <div className="pl-lg-5 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3" key = {i}>
+        <div className="pt-2 pt-lg-0 pl-lg-5 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3" key = {i}>
           <div className="row" key = {i}>
             <div className="col-4 col-sm-5 col-lg-12 col-md-12 col-xl-12 text-center">
               <Img src={data.src}/>
