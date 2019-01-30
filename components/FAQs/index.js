@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
+import Headline, { Subtitle, FontFAQs } from '../Core/Texts'
 import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
 import Background from '../Core/Background'
@@ -24,7 +24,6 @@ const AnswerText = styled.div`
 const Span = styled.span`
   &:before{
       content: '\\2228'; 
-      font-size: 13px;
       float: right;
       margin-left: 5px;
   } 
@@ -49,7 +48,7 @@ export default class Question extends Component {
 
   render() {
     const CollapseItem = (props) => (
-        <div>
+        <FontFAQs>
           <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
               Q : {this.state.question[props.number]} ? <Span/>
@@ -60,7 +59,7 @@ export default class Question extends Component {
               A : {this.state.answer[props.number]} 
             </AnswerText>
           </div>
-        </div>
+        </FontFAQs>
     )
     return (
     <Background bgImageUrl = "static/img/faq.png">
