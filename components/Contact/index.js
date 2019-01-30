@@ -23,8 +23,8 @@ const LogoInfo = [
 ]
 
 const BoxInfo = [
-  { className: 'mt-4 mb-3 col-12', href: 'tel://02-107-3576', imgUrl: 'phone.svg', text: '02-107-3576' },
-  { className: 'ml-4 mb-4 col-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'mail.svg', text: 'wippo@wipcamp.com' }
+  { className: 'mt-4 mb-3 col-6 col-lg-12 ', href: 'tel://02-107-3576', imgUrl: 'phone.svg', text: '02-107-3576' },
+  { className: 'p-0 ml-lg-4 mt-4 mt-lg-2 mb-3 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'mail.svg', text: 'wippo@wipcamp.com' }
 ]
 
 export default class index extends Component {
