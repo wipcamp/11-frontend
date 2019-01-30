@@ -84,5 +84,13 @@ color : #3A1E12;
     margin-top : 13px;
   }
 `
+export const FontFAQs = styled.div`
+  @media (min-width:320px){
+    font-size: 12px;
+  }
+  @media (min-width:1024px){
+    font-size: 16px;
+  }
+`
 
 export default Headline
