@@ -52,7 +52,7 @@ export default class Question extends Component {
         <div>
           <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
-              Q : {this.state.question[props.number]} ?
+              Q : {this.state.question[props.number]} ? <Span/>
             </div>
           </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
@@ -68,8 +68,9 @@ export default class Question extends Component {
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
             <div className="row">
-              <div className="text-center col-12">
+              <div className="text-center col-12 mb-4">
                   <h1><Headline>FAQs</Headline></h1>
+                  <b><Subtitle>คำถามที่พบบ่อย?</Subtitle></b>
               </div>
               <div className="col-12">
                 <div className ="pb-4">
