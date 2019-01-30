@@ -49,8 +49,7 @@ export default class Question extends Component {
 
   render() {
     const CollapseItem = (props) => (
-      <div className="card">
-        <div className="card" >
+        <div>
           <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
               Q : {this.state.question[props.number]} ?
@@ -62,7 +61,6 @@ export default class Question extends Component {
             </AnswerText>
           </div>
         </div>
-      </div>
     )
     return (
     <Background bgImageUrl = "static/img/faq.png">
