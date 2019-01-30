@@ -53,7 +53,7 @@ export default class Question extends Component {
         <div className="card" >
           <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
-              Q : {this.state.question[props.number]} <Span />
+              Q : {this.state.question[props.number]} ?
             </div>
           </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
