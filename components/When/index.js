@@ -7,6 +7,43 @@ import Background from '../Core/Background'
 import Headline, { Subtitle } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 
+const NModel = styled(Model)`
+   @media(min-width: 320px) {
+        margin-top: -4em;
+    }
+    @media(min-width: 420px) {
+        margin-top: -5em;
+    }
+    @media(min-width: 576px) {
+        margin-top: -5em;
+    }
+    @media(min-width: 768px) {
+        margin-top: -6em;
+    }
+    @media(min-width: 1024px) {
+        margin-top: -9em;
+    }
+`
+
+const NPDBox = styled(PDBox)`
+    @media(min-width: 320px) {
+      padding-left:2em;
+      padding-right:2em;
+    }
+    @media(min-width: 420px) {
+      padding-left:3em;
+      padding-right:3em;
+    }
+    @media(min-width: 576px) {
+      padding-left:4em;
+      padding-right:4em;
+    }
+    @media(min-width: 768px) {
+      padding-left:0;
+      padding-right:0;
+    }
+`
+
 export default class componentName extends Component {
   render () {
     return (
@@ -19,14 +56,14 @@ export default class componentName extends Component {
                 <div className="text-center">
                   <Subtitle>ค่ายจัดเมื่อไหร่ ?</Subtitle>
                 </div>
-                <PDBox className="pr-1 pl-1">
-                  <div className="ml-lg-5 col-12 col-lg-10">
+                <NPDBox className="pt-2 pb-5 pr-md-5 pr-lg-0 pl-md-5 pl-lg-0">
+                  <div className="ml-lg-4 mr-lg-4 col-12 col-lg-10">
                     <ImgChangeByDay />
                   </div>
-                </PDBox>
+                </NPDBox>
               </div>
             </div>
-            <Model wippo='wippoWhen.png' alt="wippo" />
+            <NModel wippo='wippoWhen.png' alt="wippo" />
           </div>
         </div>
       </Background>

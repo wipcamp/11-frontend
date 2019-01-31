@@ -10,8 +10,7 @@ const date3 = dayjs('2019-01-14')
 const date4 = dayjs('2019-01-17')
 
 const Img = styled.img`
-    width:172px;
-    height: 244px;
+    content:url('../../static/img/when/${(props) => props.src}');
     @media (min-width:320px) {
       width:5em;
       height:7em;
@@ -25,59 +24,82 @@ const Img = styled.img`
       height:10em;
     }
     @media (min-width:768px) {
-      width:8em;
-      height:12em;
+      width:100px;
+      height:150px;
     }
     @media (min-width:1024px) {
-      width:8em;
-      height:12em;
+      width:125px;
+      height: 188px;
+    }
+`
+const ImgDiv = styled.div`
+  @media (min-width:1024px) {
+      margin-top:0em;
+      margin-left:1.5em;
     }
 `
 
 const Font = styled.div`
     @media (min-width:320px) {
       margin-top:2em;
+      padding-left:0.25rem;
+      padding-right:0.25rem;
     }
     @media (min-width:420px) {
       margin-top:4em;
+      padding-left:1.5rem;
+      padding-right:1.5rem;
+    }
+    @media (min-width:576px) {
+      margin-top:4em;
+      padding-left:2rem;
+      padding-right:2rem;
     }
     @media (min-width:768px) {
       margin-top:0em;
+      padding-left:0.02em;
+      padding-right:0.02em;
+    }
+    @media (min-width:1024px) {
+      margin-top:0em;
+      margin-left:1.5em;
+      padding-left:0;
+      padding-right:0;
     }
 `
 
 const BoxInfo = [
   {
-    src: date1.isBefore(datenow) ? '../../static/img/wippo/wippoWhat.png' : '../../static/img/wippo/original-2.png',
-    text: 'กำหนดเปิดรับสมัคร',
+    src: date1.isBefore(datenow) ? 'wippoWhat.png' : 'original-2.png',
+    text: 'เปิดรับสมัคร',
     textday: '8 มกราคม 2562'
   },
   {
-    src: date2.isBefore(datenow) ? '../../static/img/wippo/wippoWho.png' : '../../static/img/wippo/original-2.png',
-    text: 'วันประกาศผล',
+    src: date2.isBefore(datenow) ? 'wippoWho.png' : 'original-2.png',
+    text: 'ประกาศผล',
     textday: '11 มกราคม 2562'
   },
   {
-    src: date3.isBefore(datenow) ? '../../static/img/wippo/wippoWhere.png' : '../../static/img/wippo/original-2.png',
-    text: 'กำหนดปิดรับสมัคร',
+    src: date3.isBefore(datenow) ? 'wippoWhere.png' : 'original-2.png',
+    text: 'ปิดรับสมัคร',
     textday: '14 มกราคม 2562'
   },
   {
-    src: date4.isBefore(datenow) ? '../../static/img/wippo/wippoGame.png' : '../../static/img/wippo/original-2.png',
-    text: 'วันเปิดค่าย',
-    textday: '17 มกราคม 2562'
+    src: date4.isBefore(datenow) ? 'wippoGame.png' : 'original-2.png',
+    text: 'เปิดค่าย',
+    textday: '17 พฤษภาคม 2562 ถึง 18 พฤษภาคม 2562'
   }
 ]
-const ImgChangeDay = () => (
+const ImgChangeDay = (props) => (
   <div className="row justify-content-center">
     {
-      BoxInfo.map((data ,i) => (
-        <div className="pt-2 pt-lg-0 pl-lg-5 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3" key = {i}>
-          <div className="row" key = {i}>
-            <div className="col-4 col-sm-5 col-lg-12 col-md-12 col-xl-12 text-center">
+      BoxInfo.map((data, i) => (
+        <div className="pt-2 pt-lg-4 pl-lg-4 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3" key = {i}>
+          <div className="row">
+            <ImgDiv className="pl-0 pr-0 col-4 col-sm-5 col-lg-12 col-md-12 col-xl-12  text-center">
               <Img src={data.src}/>
-            </div>
-            <Font className="ml-lg-3 pb-4 col-8 col-sm-7 col-lg-12 col-md-12 col-xl-12 text-center">
+            </ImgDiv>
+            <Font className="col-8 col-sm-7 col-lg-12 col-md-12 col-xl-12 text-center">
               <TextBoxLong text={data.text} textday={data.textday} />
             </Font>
           </div>
