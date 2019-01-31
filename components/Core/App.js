@@ -50,7 +50,7 @@ const ReText = styled.div`
     font-size: 0.8em;
   }
   @media (min-width:768px) {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   @media (min-width:1024px) {
     font-size: 1em;
