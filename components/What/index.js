@@ -7,14 +7,14 @@ import Model from '../Core/Model'
 import Background from '../Core/Background'
 
 const Icon = styled(IconBox)`
-  width:7em;
+  width:5em;
 `
 
 const IconInfo = [
   { icon: '/static/img/icon-what/w11.png', text: 'Java Programming', t: 'Java Programming' },
+  { icon: '/static/img/icon-what/w14.png', text: 'HTML5&CSS3', t: 'HTML5&CSS3' },
   { icon: '/static/img/icon-what/w12.png', text: 'IT Fundamentals', t: 'IT Fundamentals' },
-  { icon: '/static/img/icon-what/w13.png', text: 'Network', t: 'Network' },
-  { icon: '/static/img/icon-what/w14.png', text: 'HTML5&CSS3', t: 'HTML5&CSS3' }
+  { icon: '/static/img/icon-what/w13.png', text: 'Network', t: 'Network' }
 ]
 
 const WhatText = [
