@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline, { Paragraph, FontWho } from '../Core/Texts'
-import { PDBox, TextBoxWho, IconWho  } from '../Core/ResponBox'
+import Headline, { Paragraph, Subtitle , FontWho } from '../Core/Texts'
+import { PDBox, TextBoxWho, IconWho } from '../Core/ResponBox'
 import Model from '../Core/Model'
 import Background from '../Core/Background'
 
@@ -30,6 +30,9 @@ export default class componentName extends Component {
               <h1><Headline>Who</Headline></h1>
               <div className="row justify-content-center">
                 <PDBox>
+                  <div className="text-center">
+                    <Subtitle>ค่ายนี้เหมาะกับใคร ?</Subtitle>
+                  </div>
                   {IconInfo.map((data, i) => (
                     <div className="my-2 mx-1" key={i}>
                       <TextBoxWho>

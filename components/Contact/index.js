@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline from '../Core/Texts'
+import Headline , {Subtitle} from '../Core/Texts'
 import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
 import Logo from './Logo'
@@ -38,6 +38,9 @@ export default class index extends Component {
             </div>
             <PDBox1>
               <div className="row justify-content-center">
+                <div className="text-center">
+                  <Subtitle>ติดต่อเรา</Subtitle>
+                </div>
                 <div className="col-12 col-sm-12 col-lg-6 mb-3">
                   <Fbfeed/>
                 </div>

@@ -36,6 +36,9 @@ export default class index extends Component {
                 </div>
                 <PDBox>
                   <div className="col-12">
+                    <div className="text-center">
+                      <Subtitle>ค่ายนี้คืออะไร ?</Subtitle>
+                    </div>
                     <Paragraph>
                       { WhatText.map((info, i) => (
                         <Font key = {i}>

@@ -9,7 +9,9 @@ const Headline = styled.div`
 `
 export const Subtitle = styled.div`
   font-size : ${font.Subtitle};
-  
+  font-weight:bold;
+  margin-bottom:0.5em;
+  color: #3A1E12;
 `
 
 export const ParagraphBold = styled.div`
