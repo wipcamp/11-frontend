@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const Background = styled.div`
   background-image:url(${props => props.bgImageUrl});
+  background-repeat:no-repeat;
   
   @media(min-width:320px) {
     padding-top:1.5em;
@@ -10,7 +11,6 @@ const Background = styled.div`
   }
   @media(min-width:1024px) {
     min-height: 100vh;
-    background-repeat:no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
