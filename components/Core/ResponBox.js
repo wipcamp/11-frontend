@@ -95,7 +95,8 @@ export const TextBoxWho = styled.div`
     margin : 0 0.5em ;
   }
   @media (min-width:1024px) {
-    padding : 0em 1em;
+    padding : 0.5em 0.5em;
+    margin : 1em 0.5em ;
   }
 `
 export const IconWho = styled.img`
@@ -111,5 +112,7 @@ export const IconWho = styled.img`
   @media (min-width:1024px) {
     width: 70px;
     height: 70px;
+   
+    
   }
  `
