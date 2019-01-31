@@ -9,23 +9,18 @@ const Model = styled.div`
     height:100%;
 
     @media(min-width: 320px) {
-        margin-top: -5em;
         width: 5em;
     }
     @media(min-width: 420px) {
-        margin-top: -6em;
         width: 7em;
     }
     @media(min-width: 576px) {
-        margin-top: -6em;
         width: 7em;
     }
     @media(min-width: 768px) {
-        margin-top: -7em;
         width: 10em;
     }
     @media(min-width: 1024px) {
-        margin-top: -10em;
         width: 18em;
     }
 `
