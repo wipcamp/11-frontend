@@ -161,7 +161,7 @@ class Navbar extends React.Component {
     }
     else {
       this.setState({ show: true })
-      this.setState({ display: true})
+      this.setState({ display: true })
     }
     this.setState({
       current: to
@@ -170,7 +170,7 @@ class Navbar extends React.Component {
 
   render () {
     return (
-      <NavSection active={this.state.show} display={this.state.display} >
+      <NavSection active={this.state.show} display= {this.state.display}>
         <AnimationNavbar display={this.state.display}>
         <BG>
         <SectionUl className = "pt-2">
