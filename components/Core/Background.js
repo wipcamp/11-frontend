@@ -10,7 +10,7 @@ const Background = styled.div`
   padding-top:2em;
   
     @media(min-width:320px) {
-    padding-top:4em;
+    padding-top:1.5em;
     background-size: 160%;
     background-position-y: 100%;
     
