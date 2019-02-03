@@ -7,6 +7,7 @@ const Box = styled.div`
     /* padding : 0.5em 2em; */
     width:100%;
     height:100%;
+    z-index: 15;
 `
 
 const TextBoxLong = (props) => (
