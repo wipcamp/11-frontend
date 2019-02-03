@@ -26,7 +26,6 @@ export default class index extends Component {
   render () {
     return (
       <Bg>
-        <Moutain src='/static/img/sponsor.png' />
         <Wippo wippo='wippoSponsor.png' />
         <div className="container">
           <div className="row justify-content-center">
