@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import Headline, { Paragraph, Subtitle , FontWho } from '../Core/Texts'
 import { PDBox, TextBoxWho, IconWho } from '../Core/ResponBox'
 import Model from '../Core/Model'
-import Background from '../Core/Background'
 import Bg from '../Core/Bg'
+import Background from './background'
 import Wippo from '../Core/Wippo'
 
 const TextPosition = styled.div`  
@@ -27,6 +27,7 @@ export default class componentName extends Component {
     return (
       <Bg>
         <Wippo wippo='wippoWho.png' />
+        <Background />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
