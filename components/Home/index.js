@@ -16,14 +16,18 @@ const Logo = styled.img`
     width: 45%;
   }
   @media (min-width:1024px) {
-    width: 40%;
+    width: 30%;
   }
 `
 const LogoWip = styled.img`
   position: relative;
   z-index: 8;
   width: 90%;
-  margin-top: 8vh;
+  margin-top: 0vh;
+  @media (min-width:320px) {
+    width: 100%;
+    margin-top: 15vh;
+  }
   @media (min-width:801px) {
     width: 50%;
   }
