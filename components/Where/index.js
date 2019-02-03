@@ -4,19 +4,19 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
-import Background from '../Core/Background'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
+import Background from './background'
 
 const Map = styled.img`
   height: 35%;
   justify-content: center;
   filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   @media (min-width:320px) {
-    width:60%;
+    width:80%;
   }
   @media (min-width:412px) {
-    width:50%;
+    width:70%;
   }
   z-index:9;
 `
@@ -30,6 +30,7 @@ export default class index extends Component {
     return (
       <Bg>
         <Wippo wippo='wippoWhere.png' />
+        <Background />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
