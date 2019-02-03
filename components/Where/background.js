@@ -54,14 +54,16 @@ const Pinky = styled.img`
 const CloudyLeft = styled.img`
     position : absolute;
     z-index:0;
-    top:10vh;
+    bottom: 75vh;
     left : 0vw;
+    width:20%;
 `
 const CloudyRight = styled.img`
     position : absolute;
-    z-index:-1;
-    top:15vh;
+    z-index:0;
+    bottom: 50vh;
     right: 0vw;
+    width:30%;
 `
 export default class background extends Component {
   render () {
