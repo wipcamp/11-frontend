@@ -10,17 +10,13 @@ import Wippo from '../Core/Wippo'
 
 const Map = styled.img`
   height: 35%;
-  margin-top : 3%;
-  margin-bottom: 5%; 
   justify-content: center;
   filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   @media (min-width:320px) {
-    width:90%;
+    width:60%;
   }
   @media (min-width:412px) {
-    width:75%;
-    margin-top : 6%;
-    margin-bottom: 0%; 
+    width:50%;
   }
   z-index:9;
 `
@@ -49,7 +45,7 @@ export default class index extends Component {
                     ))}
                   </Small>
                   <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/map.png' alt="map" /></a>
-                </div>
+                </div>  
               </div>
             </div>
           </div>
