@@ -11,7 +11,7 @@ const NavSection = styled.nav`
   margin: 0 !important;
   top: 50%;
   transform: translateY(-50%);
-  z-index:99;
+  z-index:1000;
   visibility:${(props) => props.display ? "visible" : "hidden"} ;
   /* display: ${(props) => props.display ? "" : "none"}; */
   /* transition : display 1s  !important; */
