@@ -5,6 +5,8 @@ import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
 import Background from '../Core/Background'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
 const Map = styled.img`
   height: 35%;
@@ -30,7 +32,8 @@ const WhereText = [
 export default class index extends Component {
   render () {
     return (
-      <Background bgImageUrl = "static/img/where.png">
+      <Bg>
+        <Wippo wippo='wippoWhere.png' />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
@@ -47,12 +50,11 @@ export default class index extends Component {
                   </Small>
                   <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/map.png' alt="map" /></a>
                 </div>
-                <Model wippo='wippoWhere.png' alt="wippo" />
               </div>
             </div>
           </div>
         </div>
-      </Background>
+      </Bg>
     )
   }
 }

@@ -6,6 +6,8 @@ import Model from '../Core/Model'
 import Background from '../Core/Background'
 import Headline, { Subtitle } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
 const NModel = styled(Model)`
    @media(min-width: 320px) {
@@ -47,7 +49,8 @@ const NPDBox = styled(PDBox)`
 export default class componentName extends Component {
   render () {
     return (
-      <Background bgImageUrl = "static/img/when.png">
+      <Bg>
+        <Wippo wippo='wippoWhen.png' />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
@@ -63,10 +66,9 @@ export default class componentName extends Component {
                 </NPDBox>
               </div>
             </div>
-            <NModel wippo='wippoWhen.png' alt="wippo" />
           </div>
         </div>
-      </Background>
+      </Bg>
     )
   }
 }

@@ -5,11 +5,14 @@ import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Background from '../Core/Background'
 import Model from '../Core/Model'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
 export default class index extends Component {
   render () {
     return (
-      <Background bgImageUrl = "static/img/game.png">
+      <Bg>
+        <Wippo wippo='wippoFAQs.png' />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
@@ -26,10 +29,9 @@ export default class index extends Component {
                 </PDBox>
               </div>
             </div>
-            <Model wippo='wippoGame.png' alt="wippo" />
           </div>
         </div>
-      </Background>
+      </Bg>
     )
   }
 }

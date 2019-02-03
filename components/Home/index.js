@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Background from '../Core/Background'
 import Model from '../Core/Model'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
 const Logo = styled.img`
   position: relative;
@@ -30,18 +32,11 @@ const LogoWip = styled.img`
   }
 `
 
-const Wippo = styled.div`
-  position : absolute;
-  bottom : 0vh;
-  transform: translate(-50%, 0%);
-  left: 50vw;
-  @media (min-width: 970px) {
-  }
-`
 export default class componentName extends Component {
   render () {
     return (
-      <Background bgImageUrl="static/img/home.png">
+      <Bg>
+        <Wippo wippo='wippoFAQs.png' />
         <div className ="container">
           <div className="row text-center pt-1">
             <div className="col-12">
@@ -51,11 +46,8 @@ export default class componentName extends Component {
               <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
             </div>
           </div>
-          <Wippo>
-            <Model wippo='wippoHome.png' alt="wippo" />
-          </Wippo>
         </div>
-      </Background>
+      </Bg>
     )
   }
 }

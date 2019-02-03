@@ -6,6 +6,8 @@ import { PDBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
 import ContactBox from './ContactBox'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
 const PDBox1 = styled(PDBox)`
   background-color : unset;
@@ -30,46 +32,48 @@ const BoxInfo = [
 export default class index extends Component {
   render () {
     return (
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <div className="row justify-content-center">
-              <h1><Headline>Contact</Headline></h1>
-            </div>
-            <PDBox1>
-              <div className="text-center">
-                <Subtitle>ติดต่อเรา</Subtitle>
-              </div>
+      <Bg>
+        <Wippo wippo='wippoContact.png' />
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 col-sm-12 col-md-12 col-lg-12">
               <div className="row justify-content-center">
-                <div className="col-12 col-sm-12 col-lg-6 mb-3">
-                  <Fbfeed/>
-                </div>
-                <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
-                  <div className="row mr-1 ml-1">
-                    {
-                      LogoInfo.map((data, i) => (
-                        <div className="col-3 col-lg-3" key = {i}>
-                          <Logo imgUrl={data.imgUrl} link={data.link} />
-                        </div>
-                      ))
-                    }
-                  </div>
-                  <div className="row">
-                    {
-                      BoxInfo.map((data, i) => (
-                        <div key={i} className={data.className}>
-                          <ContactBox href={data.href} imgUrl={data.imgUrl} text = {data.text} />
-                        </div>
-                      ))
-                    }
-                  </div>
-                </MiddleOfTheRight>
+                <h1><Headline>Contact</Headline></h1>
               </div>
-            </PDBox1>
+              <PDBox1>
+                <div className="text-center">
+                  <Subtitle>ติดต่อเรา</Subtitle>
+                </div>
+                <div className="row justify-content-center">
+                  <div className="col-12 col-sm-12 col-lg-6 mb-3">
+                    <Fbfeed/>
+                  </div>
+                  <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
+                    <div className="row mr-1 ml-1">
+                      {
+                        LogoInfo.map((data, i) => (
+                          <div className="col-3 col-lg-3" key = {i}>
+                            <Logo imgUrl={data.imgUrl} link={data.link} />
+                          </div>
+                        ))
+                      }
+                    </div>
+                    <div className="row">
+                      {
+                        BoxInfo.map((data, i) => (
+                          <div key={i} className={data.className}>
+                            <ContactBox href={data.href} imgUrl={data.imgUrl} text = {data.text} />
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </MiddleOfTheRight>
+                </div>
+              </PDBox1>
+            </div>
           </div>
-          <Model wippo='wippoContact.png' alt="wippo" />
         </div>
-      </div>
+      </Bg>
     )
   }
 }

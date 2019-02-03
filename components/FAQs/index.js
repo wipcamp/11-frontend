@@ -5,6 +5,8 @@ import Headline, { Subtitle, FontFAQs } from '../Core/Texts'
 import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
 import Background from '../Core/Background'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
 const QuestionText = styled.div`
   cursor: pointer;
@@ -62,7 +64,8 @@ export default class Question extends Component {
         </FontFAQs>
     )
     return (
-    <Background bgImageUrl = "static/img/faq.png">
+    <Bg>
+      <Wippo wippo='wippoFAQs.png' />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
@@ -83,14 +86,13 @@ export default class Question extends Component {
                       <CollapseItem num='Six' number='5' />
                     </div>
                   </div>
-                  <Model wippo='wippoFAQs.png' alt="wippo" />
                 </div>
               </div>
               </div>
             </div>
           </div>
         </div>
-      </Background>
+      </Bg>
     )
   }
 }
