@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle, FontFAQs } from '../Core/Texts'
 import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
-import Background from '../Core/Background'
+import Background from './background'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
 
@@ -65,6 +65,7 @@ export default class Question extends Component {
     )
     return (
     <Bg>
+      <Background />
       <Wippo wippo='wippoFAQs.png' />
       <div className="container">
         <div className="row justify-content-center">
