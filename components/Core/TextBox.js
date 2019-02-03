@@ -31,6 +31,7 @@ const BoxStyle = styled.div`
     }
 `
 
+
 const TextBox = (props) => (
   <div className="container-fluid">
     <div className="row justify-content-center">

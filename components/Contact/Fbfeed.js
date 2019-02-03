@@ -2,19 +2,28 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { FacebookProvider, Page } from 'react-facebook'
 
-const Box = styled.div`
-  width: 100%;
-  height: 100%;
+const Size = styled.div`
+  @media (min-width:320px) {
+    padding: 1.5rem !important;
+    width:100%;
+  }
+  @media (min-width:576px) {
+    text-align: center !important;
+  }
+  @media (min-width:768px) {
+    min-width:300px;
+    width:100%;
+  }
 `
 
 export default class Example extends Component {
   render () {
     return (
-      <Box>
+      <Size>
         <FacebookProvider appId="1778641378908399">
-          <Page href="https://www.facebook.com/wipcamp/" width="350" height="350" tabs="timeline" />
+          <Page href="https://www.facebook.com/wipcamp/" height="400px"tabs="timeline" />
         </FacebookProvider>
-      </Box>
+      </Size>
     )
   }
 }

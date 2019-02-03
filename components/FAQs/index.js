@@ -1,43 +1,34 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Headline, { Subtitle, Paragraph, Small } from '../Core/Texts'
-import Model from '../Core/Model';
+import Headline, { Subtitle, FontFAQs } from '../Core/Texts'
+import Model from '../Core/Model'
+import { PDBox } from '../Core/ResponBox'
+import Background from '../Core/Background'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
-const QuestionText = styled.a`
+const QuestionText = styled.div`
+  cursor: pointer;
   text-decoration: none;
-  color: navy;
-
+  color: black;
+  background-color: #E0D6C2!important;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   &:hover{
-    color: navy;
+
   }
- 
 `
+
+const AnswerText = styled.div`
+  background-color: #CDB4A2!important;
+`
+
 const Span = styled.span`
-& :before{
-    content: 'V'; 
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
-}   
-`
-const BoxStyle = styled.div`
-    background: rgba(196, 196, 196, 0.4);
-    @media (min-width:320px) {
-      padding : 1.5em 1em;
-    }
-    
-    @media (min-width:576px) {
-      padding : 1em 2em;
-    }
-    
-    @media (min-width:1024px) {
-      padding : 2em 5em;
-    }
-`
-const Head = styled.div`
-  text-align:center;
+  &:before{
+      content: '\\2228'; 
+      float: right;
+      margin-left: 5px;
+  } 
 `
 
 export default class Question extends Component {
@@ -59,41 +50,49 @@ export default class Question extends Component {
 
   render() {
     const CollapseItem = (props) => (
-      <div className="card">
-        <div className="card" >
-          <QuestionText className="card-link bg-secondary text-white " data-toggle="collapse" href={`#collapse${props.num}`}>
+        <FontFAQs>
+          <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${props.num}`}>
             <div className="card-header px-4" >
-              Q : {this.state.question[props.number]}<Span></Span>
+              Q : {this.state.question[props.number]} ? <Span/>
             </div>
           </QuestionText>
           <div id={`collapse${props.num}`} className={`collapse ${props.first}`} data-parent="#accordion">
-            <div className="card-body bg-light px-4">
-              A : {this.state.answer[props.number]}
+            <AnswerText className="card-body bg-light px-4">
+              A : {this.state.answer[props.number]} 
+            </AnswerText>
+          </div>
+        </FontFAQs>
+    )
+    return (
+    <Bg>
+      <Wippo wippo='wippoFAQs.png' />
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-10">
+            <div className="row">
+              <div className="text-center col-12 mb-4">
+                  <h1><Headline>FAQs</Headline></h1>
+                  <b><Subtitle>คำถามที่พบบ่อย?</Subtitle></b>
+              </div>
+              <div className="col-12">
+                <div className ="pb-4">
+                  <div className="col-12"> 
+                    <div id="accordion">
+                      <CollapseItem num='One' number='0' />
+                      <CollapseItem num='Two' number='1' />
+                      <CollapseItem num='Three' number='2' />
+                      <CollapseItem num='Four' number='3' />
+                      <CollapseItem num='Five' number='4' />
+                      <CollapseItem num='Six' number='5' />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    )
-    return (
-      <div className="container">
-        <Head className="text-center">
-          <Headline>FAQs</Headline>
-          <Subtitle><b>คำถามที่พบบ่อย?</b></Subtitle>
-        </Head>
-        <BoxStyle>
-          
-          <div id="accordion">
-          
-            <CollapseItem num='One' first='show' number='0' />
-            <CollapseItem num='Two' number='1' />
-            <CollapseItem num='Three' number='2' />
-            <CollapseItem num='Four' number='3' />
-            <CollapseItem num='Five' number='4' />
-            <CollapseItem num='Six' number='5' />
-          </div>
-        </BoxStyle>
-        <Model className="center" wippo='static/img/wippo/PurplePotato.png' alt="wippo" />
-      </div>
+      </Bg>
     )
   }
 }

@@ -14,8 +14,11 @@ import Contact from '../Contact'
 import Loading from './Loading';
 import RegisterButton from './Register';
 import Game from '../Game'
+import Sponsor from '../Sponsor'
 
-// const dateTest = dayjs('2019-01-08')
+import {Font} from './Texts'
+
+// const datenow = dayjs('2019-01-15')
 const datenow = dayjs().format()
 const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
 const dateEndRegis = dayjs('2019-01-13')  //After end register one day
@@ -23,13 +26,10 @@ const dateStartAnnounced = dayjs('2019-01-14')  //Before announced one day
 const dateStartCamp = dayjs('2019-02-20') //Before start camp one day
 
 const Section = styled(Element)`
-  padding: 0px;
-
-  @media(max-width: 768px) {
-    padding: 50px 0;
-  }
+  
 `
 const BGcolor = styled.div`
+overflow-x:hidden;
 background : #F8E9D6;
 
 `
@@ -37,10 +37,31 @@ background : #F8E9D6;
 const RegisVisible = styled.div`
   visibility: ${porps => porps.visi || "visible"};
 `
+const ReText = styled.div`
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 
+
+  @media (min-width:320px) {
+    font-size: 0.8em;
+  }
+  @media (min-width:768px) {
+    font-size: 0.85em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1em;
+  }
+
+`
 const RegisButton = (props) =>(
   <RegisVisible visi={props.visi}>
-    <RegisterButton>{props.text}</RegisterButton>
+    <RegisterButton>
+      <ReText>{props.text}</ReText>
+    </RegisterButton>
   </RegisVisible>
 )
 
@@ -59,7 +80,11 @@ class App extends React.Component {
 
   }
   
-  
+  async componentWillMount() {
+    console.log("%c We Are 11 Developer. ",'background:pink; color:#000; display:block; font-size:3em; font-family:Sarabun;')
+    console.log('If you interest our code :) Join WIP Camp #11.')
+  }
+
   render() {
     const { loading } = this.state;
     
@@ -82,7 +107,7 @@ class App extends React.Component {
 
     return (
       <BGcolor>
-        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} />
+        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
         <Navbar />
         {this.state.count === 0 &&
           <Section name = "home">
@@ -103,6 +128,9 @@ class App extends React.Component {
         </Section>
         <Section name="faqs" >
           <FAQs />
+        </Section>
+        <Section name="sponsor">
+          <Sponsor/>
         </Section>
         <Section name="contact" >
           <Contact />

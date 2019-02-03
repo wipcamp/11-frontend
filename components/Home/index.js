@@ -2,42 +2,52 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Background from '../Core/Background'
 import Model from '../Core/Model'
+import Bg from '../Core/Bg'
+import Wippo from '../Core/Wippo'
 
 const Logo = styled.img`
   position: relative;
   width: 100%;
   margin-top: 0vh;
+  @media (min-width:300px) {
+    width: 60%;
+  }
   @media (min-width:801px) {
-    width: 50%;
+    width: 45%;
   }
   @media (min-width:1024px) {
-    width: 55%;
+    width: 40%;
   }
 `
 const LogoWip = styled.img`
   position: relative;
   z-index: 8;
-  width: 100%;
+  width: 90%;
   margin-top: 8vh;
-  animation-name: bcCCNc;
-  animation-duration: 2s;
   @media (min-width:801px) {
     width: 50%;
   }
   @media (min-width:1024px) {
-   width: 55%;
+   width: 60%;
   }
 `
+
 export default class componentName extends Component {
-  render() {
+  render () {
     return (
-      <Background bgImageUrl="static/img/home7.png">
-        <div className="text-center">
-          <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
-          <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
-          <Model className="center" wippo='static/img/wippo/original-1.png' alt="wippo" /> 
+      <Bg>
+        <Wippo wippo='wippoFAQs.png' />
+        <div className ="container">
+          <div className="row text-center pt-1">
+            <div className="col-12">
+              <LogoWip src="static/img/Logo.png" alt="WIP CAMP" />
+            </div>
+            <div className="col-12">
+              <Logo src="static/img/LogoCana.png" alt=" WIP Camp #11 ,คณะเทคโนโลยีสารสนเทศ , มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี " />
+            </div>
+          </div>
         </div>
-      </Background>
+      </Bg>
     )
   }
 }
