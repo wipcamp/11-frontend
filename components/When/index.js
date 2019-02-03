@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import ImgChangeByDay from './ImgChangeByDay'
 import Model from '../Core/Model'
-import Background from '../Core/Background'
+import Background from './background'
 import Headline, { Subtitle } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Bg from '../Core/Bg'
@@ -46,28 +46,35 @@ const NPDBox = styled(PDBox)`
     }
 `
 
+const Section = styled.div`
+  z-index: 20;
+`
+
 export default class componentName extends Component {
   render () {
     return (
       <Bg>
+        <Background />
         <Wippo wippo='wippoWhen.png' />
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-              <h1><Headline>When</Headline></h1>
-              <div className="row justify-content-center">
-                <div className="text-center">
-                  <Subtitle>ค่ายจัดเมื่อไหร่ ?</Subtitle>
-                </div>
-                <NPDBox className="pt-2 pb-5 pr-md-5 pr-lg-0 pl-md-5 pl-lg-0">
-                  <div className="ml-lg-4 mr-lg-4 col-12 col-lg-10">
-                    <ImgChangeByDay />
+        <Section>
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-12 col-sm-12 col-md-12 col-lg-10">
+                <h1><Headline>When</Headline></h1>
+                <div className="row justify-content-center">
+                  <div className="text-center">
+                    <Subtitle>ค่ายจัดเมื่อไหร่ ?</Subtitle>
                   </div>
-                </NPDBox>
+                  <NPDBox className="pt-2 pb-5 pr-md-5 pr-lg-0 pl-md-5 pl-lg-0">
+                    <div className="ml-lg-4 mr-lg-4 col-12 col-lg-10">
+                      <ImgChangeByDay />
+                    </div>
+                  </NPDBox>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </Section>
       </Bg>
     )
   }
