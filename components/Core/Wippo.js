@@ -4,8 +4,8 @@ const Wippo = styled.img`
   content:url('../../static/img/wippo/${props => props.wippo}');
   position: absolute;
   z-index: 10;
-  bottom: 0vh;
-  height: 25em;
+  bottom: -5vh;
+  height: 20em;
   margin-left: auto;
   margin-right: auto;
   left: 0;
