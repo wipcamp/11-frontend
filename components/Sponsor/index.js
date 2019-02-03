@@ -12,10 +12,14 @@ const Moutain = styled.img`
   position: absolute;
   z-index: 0;
   bottom: 0vh;
-  min-height: 100vh;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+  width: 100%;
+
+  @media(min-width:320px) {
+    width:150%;
+  }
+  @media(min-width:1024px) {
+    width: 100%;
+  }
 `
 
 export default class index extends Component {
