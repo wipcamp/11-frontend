@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox, IconBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
-import Background from '../Core/Background'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
+import Background from '../What/background'
 
 const Icon = styled(IconBox)`
   width:5em;
@@ -30,7 +30,8 @@ export default class index extends Component {
     return (
       <Bg>
         <Wippo wippo='wippoWhat.png' />
-        <div className="container">
+        <Background />
+         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row">
