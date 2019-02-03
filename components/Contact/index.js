@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline, { Subtitle } from '../Core/Texts'
-import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
 import Logo from './Logo'
 import Fbfeed from './Fbfeed'
@@ -18,14 +17,14 @@ const MiddleOfTheRight = styled.div`
   }
 `
 const LogoInfo = [
-  { imgUrl: 'instagram.svg', link: 'https://www.instagram.com/wipcamp/' },
-  { imgUrl: 'twitter.svg', link: 'https://twitter.com/WIPCamp' },
-  { imgUrl: 'youtube.svg', link: 'https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA' },
-  { imgUrl: 'line@.svg', link: 'http://line.naver.jp/ti/p/Z_Qg6KlFnU#~' }
+  { imgUrl: 'ig.png', link: 'https://www.instagram.com/wipcamp/' },
+  { imgUrl: 'Twitter.png', link: 'https://twitter.com/WIPCamp' },
+  { imgUrl: 'youtube.png', link: 'https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA' },
+  { imgUrl: 'lineAdd.png', link: 'http://line.naver.jp/ti/p/Z_Qg6KlFnU#~' }
 ]
 
 const BoxInfo = [
-  { className: 'mt-4 mb-3 col-6 col-lg-12 ', href: 'tel://02-107-3576', imgUrl: 'phone.svg', text: '02-107-3576' },
+  { className: 'p-0 mt-4 mb-3 col-6 col-lg-12 ', href: 'tel://02-107-3576', imgUrl: 'phone.svg', text: '02-107-3576' },
   { className: 'p-0 ml-lg-4 mt-4 mt-lg-2 mb-3 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'mail.svg', text: 'wippo@wipcamp.com' }
 ]
 
