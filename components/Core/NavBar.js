@@ -195,7 +195,9 @@ class Navbar extends React.Component {
             ))
           }
         </SectionUl>
-        <Button name = "Game"/>
+        <div className = "text-center">
+          <Button src = '/static/img/console.png' name = "Game" className = "pb-2"/>
+        </div>
         </BG>
         </AnimationNavbar>
       </NavSection>
