@@ -45,7 +45,7 @@ export default class index extends Component {
                       <Font key = {i} className = "row justify-content-center m-1">{info}</Font>
                     ))}
                   </Small>
-                  <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/map.jpg' alt="map" /></a>
+                  <a className = "row justify-content-center" href="https://goo.gl/j6GJ21" target="_blank" ><Map src='static/img/map.png' alt="map" /></a>
                 </div>
                 <Model wippo='wippoWhere.png' alt="wippo" />
               </div>
