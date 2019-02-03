@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Background from '../Core/Background'
+import Background from './background'
 import Model from '../Core/Model'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
@@ -36,7 +36,8 @@ export default class componentName extends Component {
   render () {
     return (
       <Bg>
-        <Wippo wippo='wippoFAQs.png' />
+        <Wippo wippo='wippoHome.png' />
+        <Background />
         <div className ="container">
           <div className="row text-center pt-1">
             <div className="col-12">
