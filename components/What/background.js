@@ -46,7 +46,8 @@ const Layer2 = styled.img`
     width:120%;
   }
   @media (min-width:1024px) {
-    width:105%;
+    width:100%;
+    bottom:-20vh;
   }
 `
 const Rock = styled.img`
@@ -75,23 +76,22 @@ const Rock = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
-    bottom: 22vh;
+    bottom: 10vh;
   }
 `
 const Road = styled.img`
   position: absolute;
   z-index: 0;
-  bottom: 20vh;
+  bottom: 0vh;
   left: 50%;
-  transform: translate(-55%,0%);
+  transform: translate(-60%,0%);
   width:100%;
 
   @media (min-width:320px) {
     width:20%;
+    bottom:20vh;
   }
-  @media (min-width:412px) {
-    width:20%;
-  }
+
   @media (min-width:576px) {
     width:20%;
   }
@@ -111,20 +111,25 @@ const Sakura1 = styled.img`
   width:100%;
 
   @media (min-width:320px) {
-    width:20%;
+    width:150%;
+    bottom : 19vh;
+
   }
   @media (min-width:412px) {
-    width:20%;
+    width:150%;
+    bottom :22vh;
   }
   @media (min-width:576px) {
-    width:20%;
+    width:150%;
+    bottom:28vh;
   }
   @media (min-width:768px) {
-    width:20%;
+    width:150%;
+    bottom:33vh;
   }
   @media (min-width:1024px) {
-    bottom : 45vh;
-    width:100%;
+    bottom : 10vh;
+    width:150%;
   }
 `
 const Tree = styled.img`
@@ -136,20 +141,24 @@ const Tree = styled.img`
   width:100%;
 
   @media (min-width:320px) {
-    width:20%;
+    width:240%;
+    bottom:20vh;
   }
   @media (min-width:412px) {
-    width:20%;
+    width:210%;
+    bottom:25vh;
   }
   @media (min-width:576px) {
-    width:20%;
+    width:180%;
+    bottom:33vh;
   }
   @media (min-width:768px) {
-    width:20%;
+    width:120%;
+    bottom:40vh;
   }
   @media (min-width:1024px) {
-    bottom : 50vh;
-    width:100%;
+    bottom : 25vh;
+    width:110%;
   }
 `
 const Sakura2 = styled.img`
@@ -161,20 +170,24 @@ const Sakura2 = styled.img`
   width:100%;
 
   @media (min-width:320px) {
-    width:20%;
+    width:200%;
+    bottom:25vh;
   }
   @media (min-width:412px) {
-    width:20%;
+    width:180%;
+    bottom:30vh;
   }
   @media (min-width:576px) {
-    width:20%;
+    width:160%;
+    bottom:38vh;
   }
   @media (min-width:768px) {
-    width:20%;
+    width:140%;
+    bottom:42vh;
   }
   @media (min-width:1024px) {
-    bottom : 50vh;
-    width:100%;
+    bottom : 30vh;
+    width:110%;
   }
 `
 
@@ -187,13 +200,10 @@ export default class componentName extends Component {
         <Sakura2 src = 'static/img/background-what/SakuraFront.png'/>
         <Tree src = 'static/img/background-what/TreeFront.png'/>
         <Tree src = 'static/img/background-what/TreeBack.png'/>
-        <Sakura2 src = 'static/img/background-what/SakuraFront.png'/>
         <Layer2 src = 'static/img/background-what/floor.png'/>
-       
         <Rock src = 'static/img/background-what/rock.png'/>
         <Road src = 'static/img/background-what/road.png'/>
-        
-
+        <Sakura2 src = 'static/img/background-what/SakuraFront.png'/>
         <Layer1 src = 'static/img/background-what/Bridge.png'/>
         
       </div>
