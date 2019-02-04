@@ -10,7 +10,7 @@ const Logo = styled.img`
   width: 100%;
   margin-top: 0vh;
   @media (min-width:300px) {
-    width: 60%;
+    width: 80%;
   }
   @media (min-width:801px) {
     width: 45%;
