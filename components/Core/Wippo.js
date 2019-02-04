@@ -5,11 +5,20 @@ const Wippo = styled.img`
   position: absolute;
   z-index: 10;
   bottom: -5vh;
-  height: 20em;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+
+  @media (min-width:320px) {
+    height: 35vh;
+  }
+   @media (min-width:576px) {
+    height: 40vh;
+  }
+  @media (min-width:1024px) {
+    height: 40vh;
+  }
 `
 
 export default Wippo
