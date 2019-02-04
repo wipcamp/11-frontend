@@ -30,9 +30,11 @@ const LogoWip = styled.img`
   }
   @media (min-width:801px) {
     width: 50%;
+    margin-top: 10vh;
   }
   @media (min-width:1024px) {
    width: 60%;
+   margin-top: 5vh;
   }
 `
 
