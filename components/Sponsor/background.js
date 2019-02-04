@@ -3,18 +3,40 @@ import styled from 'styled-components'
 
 const Layer1 = styled.img`
   position: absolute;
-  z-index: 1;
-  bottom: -7.5vh;
+  z-index: 0;
+  bottom: 0vh;
   left: 50%;
   transform: translate(-50%,0%);
-  width:175%;
+  width:100%;
 `
+const Flower = styled.img`
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%,0%);
 
+  @media (min-width:412px) {
+    top: 0vh;
+    width:180%;
+  }
+  @media (min-width:576px) {
+    width:150%;
+  }
+  @media (min-width:768px) {
+    top: -5vh;
+    width:140%;
+  }
+  @media (min-width:1024px) {
+    top: -7.5vh;
+    width:100%;
+  }
+`
 const Top = styled.img`
   position: absolute;
   z-index: 0;
-  top: 5vh;
-  width: 100%;
+  top: 12vh;
+  width: 220%;
   left: 50%;
   transform: translate(-50%,0%);
 
@@ -32,7 +54,7 @@ const Top = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
-    top: 5vh;
+    top: 0vh;
   }
 `
 
@@ -40,7 +62,7 @@ const BGTop = styled.img`
   position: absolute;
   z-index: 0;
   top: 0vh;
-  width: 100%;
+  width: 200%;
   left: 50%;
   transform: translate(-50%,0%);
 
@@ -140,52 +162,35 @@ const RightTree = styled.img`
 
 const Mount = styled.img`
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   bottom: 10vh;
   left: 50%;
   transform: translate(-50%,0%);
-  width:100%;
 
   @media (min-width:320px) {
-    width:150%;
+    height:80vh;
   }
   @media (min-width:412px) {
-    width:140%;
+    height:50vh;
   }
   @media (min-width:576px) {
-    width:130%;
+    height:50vh;
   }
   @media (min-width:768px) {
-    width:120%;
+    height:40vh;
   }
   @media (min-width:1024px) {
-    width:100%;
+    height:80vh;
   }
-`
-const LeftCloudy = styled.img`
-    position : absolute;
-    z-index:0;
-    bottom: 0vh;
-    left : 0vw;
-    width:20%;
-`
-const RightCloudy = styled.img`
-    position : absolute;
-    z-index:-2;
-    bottom: 0vh;
-    right: 0vw;
-    width:30%;
 `
 
 export default class background extends Component {
   render () {
     return (
       <div className = "text-align-center">
-        <Layer1 src = '/static/img/background-sponsor/floor.png' />
-        <BGTop src = '/static/img/background-sponsor/header_background.png' />
-        <Top src = '/static/img/background-sponsor/header.png' />
-        <BGTop src = '/static/img/background-sponsor/sakura.png' />
+        <Layer1 src = '/static/img/background-sponsor/d1.png' />
         <Mount src = '/static/img/background-sponsor/door.png' />
+        <BGTop src = '/static/img/background-sponsor/header_background.png' />
       </div>
     )
   }
