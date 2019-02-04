@@ -150,11 +150,11 @@ const Tree = styled.img`
   }
   @media (min-width:576px) {
     width:180%;
-    bottom:33vh;
+    bottom:30vh;
   }
   @media (min-width:768px) {
     width:120%;
-    bottom:40vh;
+    bottom:37vh;
   }
   @media (min-width:1024px) {
     bottom : 25vh;
@@ -179,14 +179,14 @@ const Sakura2 = styled.img`
   }
   @media (min-width:576px) {
     width:160%;
-    bottom:38vh;
+    bottom:35vh;
   }
   @media (min-width:768px) {
     width:140%;
-    bottom:42vh;
+    bottom:40vh;
   }
   @media (min-width:1024px) {
-    bottom : 30vh;
+    bottom : 35vh;
     width:110%;
   }
 `
