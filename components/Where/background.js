@@ -47,7 +47,7 @@ const Pinky = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
-    bottom: 20vh;
+    bottom: 10vh;
   }
 `
 
