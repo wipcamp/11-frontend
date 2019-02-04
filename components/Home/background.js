@@ -139,8 +139,8 @@ const LeftCloudy = styled.img`
 `
 const RightCloudy = styled.img`
     position : absolute;
-    z-index:0;
-    bottom: 50vh;
+    z-index:-2;
+    bottom: 80vh;
     right: 0vw;
     width:30%;
 `
