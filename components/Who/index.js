@@ -38,7 +38,7 @@ export default class componentName extends Component {
                     <Subtitle>ค่ายนี้เหมาะกับใคร ?</Subtitle>
                   </div>
                   {IconInfo.map((data, i) => (
-                    <div className="my-2 mx-1" key={i}>
+                    <div className="my-2 mx-3" key={i}>
                       <TextBoxWho>
                         <div className="row">
                           <div className ="col-2" >

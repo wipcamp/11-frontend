@@ -32,7 +32,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding : 1em 2em;
   }
   @media (min-width:1024px) {
-    padding : 2em 5em;
+    padding : 0.5em 5em 2em;
   }
 `
 
@@ -81,22 +81,22 @@ export const TextBoxWho = styled.div`
 
   @media (min-width:320px) {
     padding : 0.35em 0.35em;
-    margin : 1em 0em ;
+    margin : 0.3em 0em ;
   }
   @media (min-width:412px) {
     padding : 1em 1em;
-    margin : 1 0em ;
+    margin : 0.4 0em ;
   }
    @media (min-width:576px) {
     padding : 1em 2em;
   }
   @media (min-width:768px) {
     padding : 1em 1em;
-    margin : 0 0.5em ;
+    margin : 0.5 0.5em ;
   }
   @media (min-width:1024px) {
-    padding : 0.5em 0.5em;
-    margin : 1em 0.5em ;
+    padding : 0.5em;
+    margin : 0.3em 0.5em ;
   }
 `
 export const IconWho = styled.img`
