@@ -104,7 +104,6 @@ const NavItems = styled.li`
   display: block;
   margin-bottom: 10px;
   position: relative;
-  text-align: right;
 `
 
 const AnimationNavbar = styled.div`
@@ -196,7 +195,20 @@ class Navbar extends React.Component {
           }
         </SectionUl>
         <div className = "text-center">
-          <Button src = '/static/img/console.png' name = "Game" className = "pb-2"/>
+          <NavItems>
+            <Link className = "text-center"
+                  display="none"
+                  activeClass="active"
+                  to="game"
+                  spy
+                  smooth
+                  duration={500}
+                  offset={0}
+                  onSetActive={to => this.toggleNavbar(to)}
+            >
+              <Button src = '/static/img/console.png'  className = "pb-2"/>
+            </Link>
+          </NavItems>
         </div>
         </BG>
         </AnimationNavbar>
