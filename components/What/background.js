@@ -72,7 +72,7 @@ const Rock = styled.img`
   }
   @media (min-width:768px) {
     width:120%;
-    bottom:20vh;
+    bottom:13vh;
   }
   @media (min-width:1024px) {
     width:100%;
@@ -117,7 +117,7 @@ const Sakura1 = styled.img`
   }
   @media (min-width:412px) {
     width:150%;
-    bottom :22vh;
+    bottom :21vh;
   }
   @media (min-width:576px) {
     width:150%;
@@ -125,7 +125,7 @@ const Sakura1 = styled.img`
   }
   @media (min-width:768px) {
     width:150%;
-    bottom:33vh;
+    bottom:20vh;
   }
   @media (min-width:1024px) {
     bottom : 13vh;
@@ -146,7 +146,7 @@ const Tree = styled.img`
   }
   @media (min-width:412px) {
     width:210%;
-    bottom:25vh;
+    bottom:23vh;
   }
   @media (min-width:576px) {
     width:180%;
@@ -154,7 +154,7 @@ const Tree = styled.img`
   }
   @media (min-width:768px) {
     width:120%;
-    bottom:37vh;
+    bottom:27vh;
   }
   @media (min-width:1024px) {
     bottom : 22vh;
@@ -175,7 +175,7 @@ const Sakura2 = styled.img`
   }
   @media (min-width:412px) {
     width:180%;
-    bottom:30vh;
+    bottom:28vh;
   }
   @media (min-width:576px) {
     width:160%;
@@ -183,7 +183,7 @@ const Sakura2 = styled.img`
   }
   @media (min-width:768px) {
     width:140%;
-    bottom:40vh;
+    bottom:30vh;
   }
   @media (min-width:1024px) {
     bottom : 25vh;
