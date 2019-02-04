@@ -47,7 +47,7 @@ const Layer2 = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
-    bottom:-20vh;
+    bottom:0vh;
   }
 `
 const Rock = styled.img`
@@ -128,7 +128,7 @@ const Sakura1 = styled.img`
     bottom:33vh;
   }
   @media (min-width:1024px) {
-    bottom : 10vh;
+    bottom : 13vh;
     width:150%;
   }
 `
@@ -157,7 +157,7 @@ const Tree = styled.img`
     bottom:37vh;
   }
   @media (min-width:1024px) {
-    bottom : 25vh;
+    bottom : 22vh;
     width:110%;
   }
 `
@@ -186,7 +186,7 @@ const Sakura2 = styled.img`
     bottom:40vh;
   }
   @media (min-width:1024px) {
-    bottom : 35vh;
+    bottom : 25vh;
     width:110%;
   }
 `
