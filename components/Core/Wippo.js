@@ -17,7 +17,7 @@ const Wippo = styled.img`
     height: 40vh;
   }
   @media (min-width:1024px) {
-    height: 40vh;
+    height: 50vh;
   }
 `
 
