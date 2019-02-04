@@ -1,37 +1,44 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-// import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
-// import { PDBox } from '../Core/ResponBox'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
+import Background from './background'
 
-const Background = styled.img`
-  position: absolute;
-  z-index: 0;
-  bottom: 0vh;
-  width: 100%;
-
-  @media(min-width:320px) {
-    width:150%;
+const Img = styled.img`
+   @media(min-width:320px) {
+    width:309px;
+    height: 164px;
   }
   @media(min-width:1024px) {
-    width: 100%;
+    width:650px;
+    height:345px;
   }
 `
+const Div = styled.div`
+  z-index:9;
+  transform: translate(0%,30%);
+  @media(min-width:320px) {
+    margin-top:8em;
+  }
+  @media(min-width:1024px) {
+    margin-top:5em;
+  }
+`
+
 export default class index extends Component {
   render () {
     return (
       <Bg>
-        {/* <Background src='../../static/img/' /> */}
+        <Background />
         <Wippo wippo='wippoGame.png' />
         <div className="container">
           <div className="row">
-            <div className="col-12 d-flex justify-content-center align-items-center">
+            <Div className="pt-5 col-12 d-flex justify-content-center align-items-center text-center">
               <a href="http://game.wip.camp" target="_blank">
-                <img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' width="100%" height="100%" />
+                <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
               </a>
-            </div>
+            </Div>
           </div>
         </div>
       </Bg>
