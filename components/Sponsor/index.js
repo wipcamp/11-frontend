@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
-import Background from '../Core/Background'
+import Background from './background'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
 
@@ -27,11 +27,12 @@ export default class index extends Component {
     return (
       <Bg>
         <Wippo wippo='wippoSponsor.png' />
+        <Background />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row justify-content-center">
-                <h1><Headline>Sponsor</Headline></h1>
+                <h1><Headline className = "m-5">Sponsor</Headline></h1>
               </div>
               <div className="row justify-content-center">
                 <PDBox>
