@@ -10,7 +10,6 @@ import Wippo from '../Core/Wippo'
 import Background from './background';
 
 const PDBox1 = styled(PDBox)`
-  background-color : unset;
 `
 const MiddleOfTheRight = styled.div`
   @media (min-width:992px){
