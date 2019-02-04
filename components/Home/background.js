@@ -105,13 +105,6 @@ const RightTree = styled.img`
   right: 0vw;
   width:30%;
 `
-const CloudyRight = styled.img`
-  position : absolute;
-  z-index:0;
-  bottom: 50vh;
-  right: 0vw;
-  width:30%;
-`
 
 const Mount = styled.img`
   position: absolute;
@@ -137,6 +130,20 @@ const Mount = styled.img`
     width:100%;
   }
 `
+const LeftCloudy = styled.img`
+    position : absolute;
+    z-index:0;
+    bottom: 75vh;
+    left : 0vw;
+    width:20%;
+`
+const RightCloudy = styled.img`
+    position : absolute;
+    z-index:0;
+    bottom: 50vh;
+    right: 0vw;
+    width:30%;
+`
 
 export default class background extends Component {
   render () {
@@ -148,6 +155,8 @@ export default class background extends Component {
         <LeftTree src = '/static/img/background-home/MainHome_LeftTree.png' />
         <RightTree src = '/static/img/background-home/MainHome_RightTree.png' />
         <Mount src = '/static/img/background-home/MainHome_Mountains.png' />
+        <RightCloudy src = '/static/img/background-FAQs/Cloud.png' />
+        <LeftCloudy src = '/static/img/background-when/MainWhen_RightCloudFull.png' />
       </div>
     )
   }
