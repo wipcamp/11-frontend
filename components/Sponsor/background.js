@@ -160,7 +160,7 @@ const RightTree = styled.img`
   width:30%;
 `
 
-const Mount = styled.img`
+const Door = styled.img`
   position: absolute;
   z-index: 2;
   bottom: 10vh;
@@ -180,7 +180,7 @@ const Mount = styled.img`
     height:40vh;
   }
   @media (min-width:1024px) {
-    height:80vh;
+    height:60vh;
   }
 `
 
@@ -189,7 +189,7 @@ export default class background extends Component {
     return (
       <div className = "text-align-center">
         <Layer1 src = '/static/img/background-sponsor/d1.png' />
-        <Mount src = '/static/img/background-sponsor/door.png' />
+        <Door src = '/static/img/background-sponsor/door.png' />
         <BGTop src = '/static/img/background-sponsor/header_background.png' />
       </div>
     )
