@@ -7,6 +7,7 @@ import Fbfeed from './Fbfeed'
 import ContactBox from './ContactBox'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
+import Background from './background';
 
 const PDBox1 = styled(PDBox)`
   background-color : unset;
@@ -33,6 +34,7 @@ export default class index extends Component {
     return (
       <Bg>
         <Wippo wippo='wippoContact.png' />
+        <Background />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
