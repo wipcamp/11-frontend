@@ -31,7 +31,7 @@ export default class index extends Component {
       <Bg>
         <Wippo wippo='wippoWhat.png' />
         <Background />
-         <div className="container">
+        <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row">
@@ -52,7 +52,7 @@ export default class index extends Component {
                       }
                     </Paragraph>
                   </div>
-                  <div className="row text-center mt-2">
+                  <div className="row text-center mt-2 ml-1 mr-1">
                     {
                       IconInfo.map((info, i) => (
                         <div key={i} className="col-3 col-md-3 p-1">
