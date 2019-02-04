@@ -30,6 +30,7 @@ const Section = styled(Element)`
 `
 const BGcolor = styled.div`
 overflow-x:hidden;
+overflow-y:hidden;
 background : #F8E9D6;
 
 `
