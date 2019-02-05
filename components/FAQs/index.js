@@ -6,7 +6,7 @@ import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
 import Background from './background'
 import Bg from '../Core/Bg'
-import Wippo from '../Core/Wippo'
+import WippoFAQ from '../Core/Wippo'
 
 const QuestionText = styled.div`
   cursor: pointer;
@@ -66,7 +66,7 @@ export default class Question extends Component {
     return (
     <Bg>
       <Background />
-      <Wippo wippo='wippoFAQs.png' />
+      <WippoFAQ wippo='wippoFAQs.png' />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-10">
