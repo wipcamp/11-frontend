@@ -54,6 +54,27 @@ const Top = styled.img`
     top: 0vh;
   }
 `
+const Sakura = styled.img`
+  position: absolute;
+  z-index: 0;
+  top: 0vh;
+  width: 220%;
+  left: 50%;
+  transform: translate(-50%,0%);
+
+  @media (min-width:412px) {
+    width:180%;
+  }
+  @media (min-width:576px) {
+    width:150%;
+  }
+  @media (min-width:768px) {
+    width:140%;
+  }
+  @media (min-width:1024px) {
+    width:100%;
+  }
+`
 
 const BGTop = styled.img`
   position: absolute;
@@ -67,94 +88,117 @@ const BGTop = styled.img`
     height:20vh;
   }
   @media (min-width:576px) {
-    height:20vh;
+    height:23vh;
   }
   @media (min-width:768px) {
-    height:20vh;
+    height:25vh;
   }
   @media (min-width:1024px) {
-    height:20vh;
+    height:27vh;
   }
 `
-const LeftBuildy = styled.img`
+
+export const SponHeadBox = styled.div`
+  background-image:url('/static/img/background-sponsor/header_forward.png');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+`
+
+export const SponTab = styled.div`
+  background-image:url('/static/img/background-sponsor/header_forward1.png');
+  background-size:cover;
+  background-position: center center;
+
+  @media (min-width:320px) {
+    margin: 0.5em 0em 0em;
+  }
+  @media (min-width:412px) {
+    
+  }
+  @media (min-width:576px) {
+    margin: 1em 1em 0em;
+  }
+  @media (min-width:768px) {
+    margin: 1.5em 2em 0em;
+  }
+  @media (min-width:912px) {
+    margin: 2em 2em 0em;
+  }
+  @media (min-width:1024px) {
+    margin: 3em 2em 0em;
+  }
+  @media(min-width:1366px){
+    margin: 3em 2em 0em;
+  }
+`
+
+const LeftSword = styled.img`
   position: absolute;
   z-index: 0;
   bottom: 0vh;
-  left: 0vh;
-  width:35%;
+  left: 5vh;
+  width:30%;
   
   @media (min-width:320px) {
-    left:-20vh;
-    bottom: 10vh;
-    width:65%;
+    left:8vh;
+    bottom: 2vh;
+    width:30%;
   }
   @media (min-width:412px) {
-    left:-30vh;
-    bottom: 10vh;
-    width:80%;
+    left:8vh;
+    bottom: 4vh;
+    width:27%;
   }
   @media (min-width:576px) {
-    left:-20vh;
-    bottom: 20vh;
-    width:60%;
+    left:12vh;
+    bottom: 2vh;
+    width:25%;
   }
   @media (min-width:768px) {
-    left:-5vh;
-    bottom: 20vh;
-    width:40%;
+    left:15vh;
+    bottom: 2vh;
+    width:22%;
   }
   @media (min-width:1024px) {
-    bottom: 0vh;
-    width:35%;
+    left:20vh;
+    bottom: 2vh;
+    width:20%;
   }
 
 `
-const RightBuildy = styled.img`
+const RightSword = styled.img`
   position: absolute;
   z-index: 0;
   bottom: 0vh;
-  right: 0vh;
-  width:35%;
-
+  right: 5vh;
+  width:30%;
+  
   @media (min-width:320px) {
-    right:-20vh;
-    bottom: 10vh;
-    width:65%;
+    right:8vh;
+    bottom: 2vh;
+    width:30%;
   }
   @media (min-width:412px) {
-    right:-30vh;
-    bottom: 10vh;
-    width:80%;
+    right:8vh;
+    bottom: 4vh;
+    width:27%;
   }
   @media (min-width:576px) {
-    right:-20vh;
-    bottom: 20vh;
-    width:60%;
+    right:12vh;
+    bottom: 2vh;
+    width:25%;
   }
   @media (min-width:768px) {
-    right:-5vh;
-    bottom: 20vh;
-    width:40%;
+    right:15vh;
+    bottom: 2vh;
+    width:22%;
   }
   @media (min-width:1024px) {
-    bottom: 27vh;
-    width:35%;
+    right:20vh;
+    bottom: 2vh;
+    width:20%;
   }
-`
-
-const LeftTree = styled.img`
-  position : absolute;
-  z-index:2;
-  bottom: 0vh;
-  left : 0vw;
-  width:25%;
-`
-const RightTree = styled.img`
-  position : absolute;
-  z-index:2;
-  bottom: 0vh;
-  right: 0vw;
-  width:30%;
 `
 
 const LeftDoor = styled.img`
@@ -227,12 +271,6 @@ const RightDoor = styled.img`
   }
 `
 
-export const SponHeadBox = styled.div`
-  background-image:url('/static/img/background-sponsor/header_forward.png');
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-size: cover;
-`
 export default class background extends Component {
   render () {
     return (
@@ -241,6 +279,9 @@ export default class background extends Component {
         <LeftDoor src = '/static/img/background-sponsor/door_left.png' />
         <RightDoor src = '/static/img/background-sponsor/door_right.png' />
         <BGTop src = '/static/img/background-sponsor/header_background.png' />
+        <Sakura src = '/static/img/background-sponsor/sakura.png' />
+        <LeftSword src = '/static/img/background-sponsor/sword_left.png' />
+        <RightSword src = '/static/img/background-sponsor/sword_right.png' />
       </div>
     )
   }
