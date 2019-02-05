@@ -29,7 +29,7 @@ const LogoWip = styled.img`
     margin-top: 15vh;
   }
   @media (min-width:801px) {
-    width: 50%;
+    width: 80%;
     margin-top: 10vh;
   }
   @media (min-width:1024px) {
