@@ -6,6 +6,22 @@ const Headline = styled.div`
   font-size: ${font.Headline};
   font-weight : bold;
   text-align : center;
+
+  @media (min-width:320px) {
+    font-size: 37px;
+  }
+  @media (min-width:412px) {
+    font-size: 40px;
+  }
+  @media (min-width:576px) {
+    font-size: 42px;
+  }
+  @media (min-width:768px) {
+    font-size: 45px;
+  }
+  @media (min-width:1024px) {
+    font-size: ${font.Headline};
+  }
 `
 export const Subtitle = styled.div`
   font-size : ${font.Subtitle};
