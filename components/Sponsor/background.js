@@ -7,31 +7,28 @@ const Layer1 = styled.img`
   bottom: 0vh;
   left: 50%;
   transform: translate(-50%,0%);
+  height:15vh;
   width:100%;
-`
-const Flower = styled.img`
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  left: 50%;
-  transform: translate(-50%,0%);
 
   @media (min-width:412px) {
-    top: 0vh;
-    width:180%;
-  }
-  @media (min-width:576px) {
+    height:20vh;
     width:150%;
   }
-  @media (min-width:768px) {
-    top: -5vh;
+  @media (min-width:576px) {
+    height:20vh;
     width:140%;
   }
+  @media (min-width:768px) {
+    height:15vh;
+    width:130%;
+  }
   @media (min-width:1024px) {
-    top: -7.5vh;
+    height:15vh;
     width:100%;
   }
+
 `
+
 const Top = styled.img`
   position: absolute;
   z-index: 0;
@@ -67,16 +64,16 @@ const BGTop = styled.img`
   transform: translate(-50%,0%);
 
   @media (min-width:412px) {
-    width:180%;
+    height:20vh;
   }
   @media (min-width:576px) {
-    width:150%;
+    height:20vh;
   }
   @media (min-width:768px) {
-    width:140%;
+    height:20vh;
   }
   @media (min-width:1024px) {
-    width:100%;
+    height:20vh;
   }
 `
 const LeftBuildy = styled.img`
@@ -160,36 +157,89 @@ const RightTree = styled.img`
   width:30%;
 `
 
-const Door = styled.img`
+const LeftDoor = styled.img`
   position: absolute;
-  z-index: 2;
-  bottom: 10vh;
-  left: 50%;
-  transform: translate(-50%,0%);
-
+  z-index: -10;
+  bottom: 9vh;
+  left: 0vh;
+  
   @media (min-width:320px) {
+    bottom:10vh;
+    left: -30vh;
     height:80vh;
   }
   @media (min-width:412px) {
-    height:50vh;
+    bottom:19vh;
+    left: -25vh;
+    height:70vh;
   }
   @media (min-width:576px) {
-    height:50vh;
+
   }
   @media (min-width:768px) {
-    height:40vh;
+    bottom:14vh;
+    left: -20vh;
+  }
+  @media (min-width:912px) {
+    left:-10vh;
   }
   @media (min-width:1024px) {
-    height:60vh;
+    left:-5vh;
+  }
+  @media(min-width:1366px){
+    left:0vh;
+    height:70vh;
   }
 `
 
+const RightDoor = styled.img`
+  position: absolute;
+  z-index: -10;
+  bottom: 9vh;
+  right: 0vh;
+
+  @media (min-width:320px) {
+    bottom:10vh;
+    right: -30vh;
+    height:80vh;
+  }
+  @media (min-width:412px) {
+    bottom:19vh;
+    right: -25vh;
+    height:70vh;
+  }
+  @media (min-width:576px) {
+
+  }
+  @media (min-width:768px) {
+    bottom:14vh;
+    right: -20vh;
+  }
+  @media (min-width:912px) {
+    right:-10vh;
+  }
+  @media (min-width:1024px) {
+    right:-5vh;
+  }
+  @media(min-width:1366px){
+    right:0vh;
+    height:70vh;
+  }
+`
+
+export const SponHeadBox = styled.div`
+  background-image:url('/static/img/background-sponsor/header_forward.png');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+`
 export default class background extends Component {
   render () {
     return (
       <div className = "text-align-center">
-        <Layer1 src = '/static/img/background-sponsor/d1.png' />
-        <Door src = '/static/img/background-sponsor/door.png' />
+        <Layer1 src = '/static/img/background-sponsor/floor.png' />
+        <LeftDoor src = '/static/img/background-sponsor/door_left.png' />
+        <RightDoor src = '/static/img/background-sponsor/door_right.png' />
         <BGTop src = '/static/img/background-sponsor/header_background.png' />
       </div>
     )

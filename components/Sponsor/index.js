@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
-import Background from './background'
+import Background, { SponHeadBox } from './background'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
 
@@ -32,7 +32,7 @@ export default class index extends Component {
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <div className="row justify-content-center">
-                <h1><Headline>Sponsor</Headline></h1>
+                <SponHeadBox><h1><Headline className = "px-5 py-1">Sponsor</Headline></h1></SponHeadBox>
               </div>
               <div className="row justify-content-center">
                 <PDBox>
