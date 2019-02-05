@@ -94,6 +94,9 @@ const BGTop = styled.img`
     height:25vh;
   }
   @media (min-width:1024px) {
+    height:23vh;
+  }
+  @media (min-width:1366px){
     height:27vh;
   }
 `
