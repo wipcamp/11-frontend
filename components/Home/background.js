@@ -96,14 +96,54 @@ const LeftTree = styled.img`
   z-index:2;
   bottom: 0vh;
   left : 0vw;
-  width:25%;
+  width:30%;
+
+  @media (min-width:320px) {
+    width:50%;
+  }
+  @media (min-width:412px) {
+    width:50%;
+    left : -10vw;
+  }
+  @media (min-width:576px) {
+    width:40%;
+    left : -7vw;
+  }
+  @media (min-width:768px) {
+    width:35%;
+    left : -2vw;
+  }
+  @media (min-width:1024px) {
+    width:30%;
+    left: 0vw;
+  }
 `
 const RightTree = styled.img`
   position : absolute;
   z-index:2;
   bottom: 0vh;
   right: 0vw;
-  width:30%;
+  width:25%;
+
+  @media (min-width:320px) {
+    width:40%;
+  }
+  @media (min-width:412px) {
+    width:40%;
+    right: -7vw;
+  }
+  @media (min-width:576px) {
+    width:35%;
+    right: -4vw;
+  }
+  @media (min-width:768px) {
+    width:30%;
+    right: -2vw;
+  }
+  @media (min-width:1024px) {
+    width:25%;
+    right: 0vw;
+  }
 `
 
 const Mount = styled.img`
@@ -140,7 +180,7 @@ const LeftCloudy = styled.img`
 const RightCloudy = styled.img`
     position : absolute;
     z-index:-2;
-    bottom: 80vh;
+    bottom: 70vh;
     right: 0vw;
     width:30%;
 `
