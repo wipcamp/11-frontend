@@ -49,6 +49,16 @@ const Div = styled.div`
 `
 
 export default class index extends Component {
+  // handleClickRed = () => {
+  //   console.log('red')
+  //   this.setState({
+  //     color: "red"
+  //   })
+  // }
+  handleClickIcon = () => {
+    alert('coming soon')
+  }
+  
   render () {
     return (
       <Bg>
@@ -56,10 +66,10 @@ export default class index extends Component {
         <Wippo wippo='wippoGame.png' />
         <div className="container">
           <div className="row">
-            <Div className="col-12 d-flex justify-content-center align-items-center text-center">
-              <a href="http://game.wip.camp" target="_blank">
-                <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
-              </a>
+            <Div className="col-12 d-flex justify-content-center align-items-center text-center" onClick={() => this.handleClickIcon()}>
+              {/* <a href="http://game.wip.camp" target="_blank"> */}
+              <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
+              {/* </a> */}
             </Div>
           </div>
         </div>
