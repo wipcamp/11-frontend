@@ -13,24 +13,24 @@ const date4 = dayjs('2019-01-17')
 const Img = styled.img`
     content:url('../../static/img/when/${(props) => props.src}');
     @media (min-width:320px) {
-      width:50%;
-      height:65px;
+      width:35px;
+      height:56px;
     }
     @media (min-width:420px) {
-      width:40%;
-      height:60px;
+      width:45px;
+      height:65px;
     }
     @media (min-width:576px) {
-      width:30%;
-      height:70px;
+      width:55px;
+      height:85px;
     }
     @media (min-width:768px) {
-      width:50%;
-      height:110px;
+      width:80px;
+      height:120px;
     }
     @media (min-width:1024px) {
-      width:50%;
-      height: 120px;
+      width:110px;
+      height: 165px;
     }
 `
 const ImgDiv = styled.div`
