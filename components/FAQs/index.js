@@ -6,7 +6,7 @@ import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
 import Background from './background'
 import Bg from '../Core/Bg'
-import WippoFAQ from '../Core/Wippo'
+import WippoFAQ from '../Core/WippoFAQ'
 
 const QuestionText = styled.div`
   cursor: pointer;
