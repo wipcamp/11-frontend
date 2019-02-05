@@ -12,6 +12,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-facebook": "^6.0.15",
+    "react-page-scroller": "^1.4.3",
     "react-scroll": "^1.7.10",
     "reactstrap": "^7.0.2",
     "styled-components": "^4.1.3"

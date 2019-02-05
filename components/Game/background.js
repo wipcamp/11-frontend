@@ -10,11 +10,10 @@ const Floor = styled.img`
     width:100%;
     bottom: 34vh;
   }
-  @media (min-width:412px) {
-  }
-  @media (min-width:576px) {
-  }
   @media (min-width:768px) {
+    bottom:0;
+    left: 0;
+    width:120%;
   }
   @media (min-width:1024px) {
     bottom:0;
@@ -33,18 +32,22 @@ const SakuraBack = styled.img`
       width:200%;
     }
     @media (min-width:412px) {
-      top:30%;
-      width:100%;
+      top:35vh;
+      right:0;
+      left:10vw;
+      width:120%;
     }
     @media (min-width:576px) {
+      top:15vh;
+      width:120%;
     }
     @media (min-width:768px) {
-    }
-    @media (min-width:1024px) {
       right:0;
       left:0;
-      top:10vh;
-      width:120%;
+      top:20vh;
+    }
+    @media (min-width:1024px) {
+      top:5vh;
     }
 `
 
@@ -56,13 +59,11 @@ const SakuraLeft = styled.img`
       z-index:-3;
       bottom: 5vh;
     }
-    @media (min-width:412px) {
-      z-index:-3;
-      bottom: 5%;
-    }
-    @media (min-width:576px) {
-    }
     @media (min-width:768px) {
+      margin-bottom:-2em;
+      bottom: 0vh;
+      left: -15vw;
+      z-index: 2;
     }
     @media (min-width:1024px) {
       margin-bottom:-2em;
@@ -70,7 +71,6 @@ const SakuraLeft = styled.img`
       left: -15vw;
       z-index: 2;
     }
-
 `
 const SakuraRight = styled.img`
   position : absolute;
@@ -80,18 +80,15 @@ const SakuraRight = styled.img`
       z-index:-3;
       bottom: 1vh;
     }
-    @media (min-width:412px) {
-      z-index:-3;
-      bottom: 1vh;
-    }
-    @media (min-width:576px) {
-    }
     @media (min-width:768px) {
-    }
-    @media (min-width:1024px) {
+      z-index: 2;
       bottom: 0vh;
       right: -15vw;
+    }
+    @media (min-width:1024px) {
       z-index: 2;
+      bottom: 0vh;
+      right: -15vw;
     }
 `
 
@@ -107,70 +104,84 @@ const Stairs = styled.img`
       left: -62vw;
       bottom: 1vh;
     }
-    @media (min-width:412px) {
-    }
-    @media (min-width:576px) {
-    }
     @media (min-width:768px) {
+      left:13vw;
+      bottom:5vh;
+      width:70%;
     }
     @media (min-width:1024px) {
-      left:10%;
-      bottom:5%;
-      width:70%;
+      left:10vw;
+      bottom:5vh;
     }
 `
 
 const RockRight = styled.img`
     position:absolute;
     z-index:1;
+    right:0;
+    bottom: 0;
     height: 50%;
     transform: translate(0%,0%);
     @media (min-width:320px) {
       z-index:-2;
       bottom: 5vh;
     }
-    @media (min-width:412px) {
-      z-index:-2;
-    }
-    @media (min-width:576px) {
-    }
     @media (min-width:768px) {
+      bottom: 0;
+      z-index:1;
+      height: 40%;
     }
     @media (min-width:1024px) {
-      bottom: 0;
-      right: 0;
-      z-index:1;
       height: 50%;
+    }
+    @media (min-height:1000px) {
+      width:40%;
+      height:auto;
+      bottom: 5vh;
+    }
+    @media (min-height:1300px) {
+      width:40%;
+      height:auto;
+      bottom: 5vh;
     }
 `
 
 const RockLeft = styled.img`
     position:absolute;
     z-index: 1;
+    left: 0;  
+    bottom: 0;    
     height: 50%;
     transform: translate(0%,0%);
     @media (min-width:320px) {
       z-index:-2;
       bottom: 5%;
     }
-    @media (min-width:412px) {
-      z-index:-2;
-    }
-    @media (min-width:576px) {
-    }
     @media (min-width:768px) {
+      bottom: 0;
+      z-index:1;
+      height: 40%;
     }
     @media (min-width:1024px) {
-      bottom: 0;
-      left: 0;      
-      z-index:1;
       height: 50%;
+    }
+    @media (min-height:1000px) {
+      width:40%;
+      height:auto;
+      bottom: 5vh;
+    }
+    @media (min-height:1300px) {
+      width:40%;
+      height:auto;
+      bottom: 5vh;
     }
 `
 
 const Red =styled.img`
     position:absolute;
     z-index:1;
+    top: 0;
+    left:50%;
     transform: translate(36.5%,30%);
     @media (min-width:320px) {
       top: 22vh;
@@ -178,21 +189,29 @@ const Red =styled.img`
       width:40%;
     }
     @media (min-width:412px) {
+      top:22vh;
     }
     @media (min-width:576px) {
+      top: 10vh;
+      left:15.5vw;
+      width:35%;
     }
     @media (min-width:768px) {
+      top:12vh;
+      left:32vw;
+      width:20%;
     }
     @media (min-width:1024px) {
       top:0vh;
-      left:52vh;
-      width:20%;
+      left:30.5vw;
     }
 `
 
 const Dojo = styled.img`
     position:absolute;
     z-index:1;
+    top: 0;
+    left:50%;
     transform: translate(30%,50%);
     @media (min-width:320px) {
       top: 33.5vh;
@@ -200,15 +219,20 @@ const Dojo = styled.img`
       width:20%;
     }
     @media (min-width:412px) {
+      top: 33.5vh;
     }
     @media (min-width:576px) {
+      top: 28vh;
+      left:30vw;
     }
     @media (min-width:768px) {
+      top: 28vh;
+      left:41.5vw;
+      width: 10%;
     }
     @media (min-width:1024px) {
-      top: 20vh;
+      top: 15vh;
       left:40vw;
-      width: 10%;
     }
 `
 export default class background extends Component {

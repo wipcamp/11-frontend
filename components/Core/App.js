@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import dayjs from 'dayjs'
 import { Element } from 'react-scroll'
+import ReactPageScroller from "react-page-scroller";
+import {Pager} from "react-bootstrap";
 
 import Home from '../Home'
 import What from '../What'
@@ -73,7 +75,9 @@ class App extends React.Component {
     text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
     textcount:0,
     visible: ["hidden", "visible"],
-    visiblecount:1
+    visiblecount:1,
+    currentPage : 1,
+    _pageScroller: null
   };
 
   componentDidMount() {
@@ -85,6 +89,27 @@ class App extends React.Component {
     console.log("%c We Are 11 Developer. ",'background:pink; color:#000; display:block; font-size:3em; font-family:Sarabun;')
     console.log('If you interest our code :) Join WIP Camp #11.')
   }
+
+  goToPage = (eventKey) => {
+    this._pageScroller.goToPage(eventKey);
+};
+
+  pageOnChange = (number) => {
+      this.setState({currentPage: number});
+  };
+
+  getPagesNumbers = () => {
+
+      const pageNumbers = [];
+
+      for (let i = 1; i <= 9; i++) {
+          pageNumbers.push(
+              <Pager.Item key={i} eventKey={i - 1} onSelect={this.goToPage}>{i}</Pager.Item>
+          )
+      }
+
+      return [...pageNumbers];
+  };
 
   render() {
     const { loading } = this.state;
@@ -110,6 +135,7 @@ class App extends React.Component {
       <BGcolor>
         <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
         <Navbar />
+        <ReactPageScroller ref={c => this.reactPageScroller = c}>
         {this.state.count === 0 &&
           <Section name = "home">
             <Home />
@@ -139,6 +165,7 @@ class App extends React.Component {
         <Section name = "game">
           <Game />
         </Section>
+          </ReactPageScroller>
       </BGcolor>
     )
   }
