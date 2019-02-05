@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import dayjs from 'dayjs'
-import TextBoxLong from './TextBoxLong'
+
+import { FontFAQs } from '../Core/Texts'
 
 const datenow = dayjs().format()
 const date1 = dayjs('2019-01-07')
@@ -12,24 +13,24 @@ const date4 = dayjs('2019-01-17')
 const Img = styled.img`
     content:url('../../static/img/when/${(props) => props.src}');
     @media (min-width:320px) {
-      width:50%;
-      height:65px;
+      width:35px;
+      height:56px;
     }
     @media (min-width:420px) {
-      width:40%;
-      height:60px;
+      width:45px;
+      height:65px;
     }
     @media (min-width:576px) {
-      width:30%;
-      height:70px;
+      width:55px;
+      height:85px;
     }
     @media (min-width:768px) {
-      width:50%;
-      height:110px;
+      width:80px;
+      height:120px;
     }
     @media (min-width:1024px) {
-      width:50%;
-      height: 120px;
+      width:110px;
+      height: 165px;
     }
 `
 const ImgDiv = styled.div`
@@ -88,7 +89,7 @@ const BoxInfo = [
   {
     src: date4.isBefore(datenow) ? 'wippoGame.png' : 'original-2.png',
     text: 'เปิดค่าย',
-    textday: '17 พฤษภาคม 2562 ถึง <br /> 18 พฤษภาคม 2562'
+    textday: '17 พฤษภาคม 2562 <br /> ถึง  18 พฤษภาคม 2562'
   }
 ]
 
@@ -102,7 +103,8 @@ const ImgChangeDay = (props) => (
               <Img src={data.src}/>
             </ImgDiv>
             <Font className="col-8 col-sm-7 col-lg-12 col-md-12 col-xl-12 text-center">
-              <TextBoxLong text={data.text} textday={data.textday} dangerouslySetInnerHTML={{ __html: data.textday }} />
+              <FontFAQs><div dangerouslySetInnerHTML={{ __html: data.text }} /></FontFAQs>
+              <FontFAQs><div dangerouslySetInnerHTML={{ __html: data.textday }} /></FontFAQs>
             </Font>
           </div>
         </div>

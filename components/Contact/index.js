@@ -10,6 +10,10 @@ import Wippo from '../Core/Wippo'
 import Background from './background';
 
 const PDBox1 = styled(PDBox)`
+  @media (min-width:320px){
+    padding-right:20px;
+    margin-bottom:10em;
+  }
 `
 const MiddleOfTheRight = styled.div`
   @media (min-width:992px){
@@ -45,7 +49,7 @@ export default class index extends Component {
                   <Subtitle>ติดต่อเรา</Subtitle>
                 </div>
                 <div className="row justify-content-center">
-                  <div className="col-12 col-sm-12 col-lg-6 mb-3">
+                  <div className="pr-0 col-12 col-sm-12 col-lg-6 mb-3">
                     <Fbfeed/>
                   </div>
                   <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
