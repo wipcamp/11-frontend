@@ -10,6 +10,10 @@ import Wippo from '../Core/Wippo'
 import Background from './background';
 
 const PDBox1 = styled(PDBox)`
+  @media (min-width:320px){
+    padding-right:20px;
+    margin-bottom:10em;
+  }
 `
 const MiddleOfTheRight = styled.div`
   @media (min-width:992px){
