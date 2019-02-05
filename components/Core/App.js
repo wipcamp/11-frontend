@@ -87,6 +87,25 @@ class App extends React.Component {
     console.log('If you interest our code :) Join WIP Camp #11.')
   }
 
+  componentDidMount = () => {
+    if (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow)) {
+      this.setState({
+        textcount: 1,
+        visiblecount: 1
+      })
+    } else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
+      this.setState({
+        textcount: 2,
+        visiblecount: 1
+      })
+    } else {
+      this.setState({
+        textcount: 0,
+        visiblecount: 0
+      })
+    }
+  }
+
   render() {
     const { loading } = this.state;
     
@@ -95,17 +114,6 @@ class App extends React.Component {
         <Loading />
         )
       }
-    
-    if (dateStartResgis.isBefore(datenow)&&dateEndRegis.isAfter(datenow)){
-      this.state.textcount = 1;
-      this.state.visiblecount = 1;
-    }else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
-      this.state.textcount = 2;
-      this.state.visiblecount = 1;
-    }else{
-      this.state.textcount = 0;
-      this.state.visiblecount = 0;
-    }
 
     return (
       <BGcolor>
