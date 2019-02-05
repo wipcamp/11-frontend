@@ -76,40 +76,16 @@ class App extends React.Component {
     textcount:0,
     visible: ["hidden", "visible"],
     visiblecount:1,
-    currentPage : 1,
-    _pageScroller: null
   };
 
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 1500);
-
   }
   
   async componentWillMount() {
     console.log("%c We Are 11 Developer. ",'background:pink; color:#000; display:block; font-size:3em; font-family:Sarabun;')
     console.log('If you interest our code :) Join WIP Camp #11.')
   }
-
-  goToPage = (eventKey) => {
-    this._pageScroller.goToPage(eventKey);
-};
-
-  pageOnChange = (number) => {
-      this.setState({currentPage: number});
-  };
-
-  getPagesNumbers = () => {
-
-      const pageNumbers = [];
-
-      for (let i = 1; i <= 9; i++) {
-          pageNumbers.push(
-              <Pager.Item key={i} eventKey={i - 1} onSelect={this.goToPage}>{i}</Pager.Item>
-          )
-      }
-
-      return [...pageNumbers];
-  };
 
   render() {
     const { loading } = this.state;
@@ -135,37 +111,37 @@ class App extends React.Component {
       <BGcolor>
         <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
         <Navbar />
-        <ReactPageScroller ref={c => this.reactPageScroller = c}>
-        {this.state.count === 0 &&
-          <Section name = "home">
-            <Home />
+        <ReactPageScroller>
+          {this.state.count === 0 &&
+            <Section name = "home">
+              <Home />
+            </Section>
+          }
+          <Section name = "what">
+            <What />
           </Section>
-        }
-        <Section name = "what">
-          <What />
-        </Section>
-        <Section name="who">
-          <Who />
-        </Section>
-        <Section name="where" >
-          <Where />
-        </Section>
-        <Section name="when" >
-          <When />
-        </Section>
-        <Section name="faqs" >
-          <FAQs />
-        </Section>
-        <Section name="sponsor">
-          <Sponsor/>
-        </Section>
-        <Section name="contact" >
-          <Contact />
-        </Section>
-        <Section name = "game">
-          <Game />
-        </Section>
-          </ReactPageScroller>
+          <Section name="who">
+            <Who />
+          </Section>
+          <Section name="where" >
+            <Where />
+          </Section>
+          <Section name="when" >
+            <When />
+          </Section>
+          <Section name="faqs" >
+            <FAQs />
+          </Section>
+          <Section name="sponsor">
+            <Sponsor/>
+          </Section>
+          <Section name="contact" >
+            <Contact />
+          </Section>
+          <Section name = "game">
+            <Game />
+          </Section>
+        </ReactPageScroller>
       </BGcolor>
     )
   }
