@@ -20,6 +20,21 @@ const Floor = styled.img`
     left: 0;
     width:100%;
   }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    left:0;
+    bottom: 0;
+    height:75%;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+    left:0;
+    bottom: 0;
+    height:85%;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    left:0;
+    bottom: 0;
+    height:70%;
+  }
 `
 
 const SakuraBack = styled.img`
@@ -48,6 +63,12 @@ const SakuraBack = styled.img`
     }
     @media (min-width:1024px) {
       top:5vh;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      top:25vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      top:28vh;
     }
 `
 
@@ -205,6 +226,13 @@ const Red =styled.img`
       top:0vh;
       left:30.5vw;
     }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      top: 26vh;
+      left:33vw;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      top:25vh;
+    }
 `
 
 const Dojo = styled.img`
@@ -233,6 +261,29 @@ const Dojo = styled.img`
     @media (min-width:1024px) {
       top: 15vh;
       left:40vw;
+    }
+    /* iPad  */
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+      top: 15vh;
+      left:40vw;
+    }
+    
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      top: 33vh;
+      left:42vw;
+    }
+    /* iPad Pro  */
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape)  {
+      top: 33vh;
+      left:42vw;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+      top:28vh;
+      left:42vw;
+    }
+    /* iPhone X XR XS XSMax */
+    @media only screen and (min-width : 375px) and (min-height : 810px) { 
+      top:35.5vh;
     }
 `
 export default class background extends Component {
