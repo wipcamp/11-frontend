@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
 import { PDBox } from '../Core/ResponBox'
 import Model from '../Core/Model'
-import Background from '../Core/Background'
+import Background, { SponHeadBox, SponTab } from './background'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
 
@@ -26,14 +26,16 @@ export default class index extends Component {
   render () {
     return (
       <Bg>
-        <Moutain src='/static/img/sponsor.png' />
         <Wippo wippo='wippoSponsor.png' />
+        <Background />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-              <div className="row justify-content-center">
-                <h1><Headline>Sponsor</Headline></h1>
-              </div>
+              <SponTab className="row justify-content-center">
+                <SponHeadBox className = "row justify-content-center">
+                  <h1 className = "px-5 py-2"><Headline>Sponsors</Headline></h1>
+                </SponHeadBox>
+              </SponTab>
               <div className="row justify-content-center">
                 <PDBox>
                   <div className="col-12">

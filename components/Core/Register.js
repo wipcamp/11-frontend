@@ -10,7 +10,7 @@ const Button = styled.div`
   background-image: url('static/img/sun.png');
   background-size: cover;
   position: fixed;
-  z-index:10;
+  z-index:2000;
   cursor: pointer;
   color:white;
   transition: transform .2s;

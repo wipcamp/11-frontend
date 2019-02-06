@@ -47,18 +47,18 @@ const Pinky = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
-    bottom: 20vh;
+    bottom: 10vh;
   }
 `
 
-const CloudyLeft = styled.img`
+const LeftCloudy = styled.img`
     position : absolute;
     z-index:0;
     bottom: 75vh;
     left : 0vw;
     width:20%;
 `
-const CloudyRight = styled.img`
+const RightCloudy = styled.img`
     position : absolute;
     z-index:0;
     bottom: 50vh;
@@ -72,8 +72,8 @@ export default class background extends Component {
         <Layer1 src = '/static/img/background-where/MainWhere_WallAndBuildings.png' />
         <Layer1 src = '/static/img/background-where/MainWhere_Front.png' />
         <Pinky src = '/static/img/background-where/MainWhere_PinkMountains.png' />
-        <CloudyLeft src = '/static/img/background-where/MainWhere_FullLeftCloud.png' />
-        <CloudyRight src = '/static/img/background-where/MainWhere_FullRightCloud.png' />
+        <LeftCloudy src = '/static/img/background-where/MainWhere_FullLeftCloud.png' />
+        <RightCloudy src = '/static/img/background-where/MainWhere_FullRightCloud.png' />
       </div>
     )
   }

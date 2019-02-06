@@ -7,9 +7,13 @@ import Fbfeed from './Fbfeed'
 import ContactBox from './ContactBox'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
+import Background from './background';
 
 const PDBox1 = styled(PDBox)`
-  background-color : unset;
+  @media (min-width:320px){
+    padding-right:20px;
+    margin-bottom:10em;
+  }
 `
 const MiddleOfTheRight = styled.div`
   @media (min-width:992px){
@@ -24,8 +28,8 @@ const LogoInfo = [
 ]
 
 const BoxInfo = [
-  { className: 'p-0 mt-4 mb-3 col-6 col-lg-12 ', href: 'tel://02-107-3576', imgUrl: 'phone.svg', text: '02-107-3576' },
-  { className: 'p-0 ml-lg-4 mt-4 mt-lg-2 mb-3 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'mail.svg', text: 'wippo@wipcamp.com' }
+  { className: 'p-0 mt-4 mb-3 col-6 col-lg-12 ', href: 'tel://02-107-3576', imgUrl: 'phone-call.png', text: '02-107-3576' },
+  { className: 'p-0 ml-lg-4 mt-4 mt-lg-2 mb-3 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'email.png', text: 'wippo@wipcamp.com' }
 ]
 
 export default class index extends Component {
@@ -33,6 +37,7 @@ export default class index extends Component {
     return (
       <Bg>
         <Wippo wippo='wippoContact.png' />
+        <Background />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -44,7 +49,7 @@ export default class index extends Component {
                   <Subtitle>ติดต่อเรา</Subtitle>
                 </div>
                 <div className="row justify-content-center">
-                  <div className="col-12 col-sm-12 col-lg-6 mb-3">
+                  <div className="pr-0 col-12 col-sm-12 col-lg-6 mb-3">
                     <Fbfeed/>
                   </div>
                   <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">

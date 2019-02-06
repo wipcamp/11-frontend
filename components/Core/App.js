@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import dayjs from 'dayjs'
 import { Element } from 'react-scroll'
+import ReactPageScroller from "react-page-scroller";
+import {Pager} from "react-bootstrap";
 
 import Home from '../Home'
 import What from '../What'
@@ -30,6 +32,7 @@ const Section = styled(Element)`
 `
 const BGcolor = styled.div`
 overflow-x:hidden;
+overflow-y:hidden;
 background : #F8E9D6;
 
 `
@@ -72,17 +75,35 @@ class App extends React.Component {
     text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
     textcount:0,
     visible: ["hidden", "visible"],
-    visiblecount:1
+    visiblecount:1,
   };
 
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 1500);
-
   }
   
   async componentWillMount() {
     console.log("%c We Are 11 Developer. ",'background:pink; color:#000; display:block; font-size:3em; font-family:Sarabun;')
     console.log('If you interest our code :) Join WIP Camp #11.')
+  }
+
+  componentDidMount = () => {
+    if (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow)) {
+      this.setState({
+        textcount: 1,
+        visiblecount: 1
+      })
+    } else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
+      this.setState({
+        textcount: 2,
+        visiblecount: 1
+      })
+    } else {
+      this.setState({
+        textcount: 0,
+        visiblecount: 0
+      })
+    }
   }
 
   render() {
@@ -93,51 +114,42 @@ class App extends React.Component {
         <Loading />
         )
       }
-    
-    if (dateStartResgis.isBefore(datenow)&&dateEndRegis.isAfter(datenow)){
-      this.state.textcount = 1;
-      this.state.visiblecount = 1;
-    }else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
-      this.state.textcount = 2;
-      this.state.visiblecount = 1;
-    }else{
-      this.state.textcount = 0;
-      this.state.visiblecount = 0;
-    }
 
     return (
       <BGcolor>
         <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
         <Navbar />
-        {this.state.count === 0 &&
-          <Section name = "home">
-            <Home />
+        <ReactPageScroller>
+          {this.state.count === 0 &&
+            <Section name = "home">
+              <Home />
+            </Section>
+          }
+          <Section name = "what">
+            <What />
           </Section>
-        }
-        <Section name = "what">
-          <What />
-        </Section>
-        <Section name="who">
-          <Who />
-        </Section>
-        <Section name="where" >
-          <Where />
-        </Section>
-        <Section name="when" >
-          <When />
-        </Section>
-        <Section name="faqs" >
-          <FAQs />
-        </Section>
-        <Section name="sponsor">
-          <Sponsor/>
-        </Section>
-        <Section name="contact" >
-          <Contact />
-        </Section>
-        <Section name = "game">
-          <Game />
-        </Section>
+          <Section name="who">
+            <Who />
+          </Section>
+          <Section name="where" >
+            <Where />
+          </Section>
+          <Section name="when" >
+            <When />
+          </Section>
+          <Section name="faqs" >
+            <FAQs />
+          </Section>
+          <Section name="sponsor">
+            <Sponsor/>
+          </Section>
+          <Section name="contact" >
+            <Contact />
+          </Section>
+          <Section name = "game">
+            <Game />
+          </Section>
+        </ReactPageScroller>
       </BGcolor>
     )
   }

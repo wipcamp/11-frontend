@@ -11,6 +11,7 @@ import Background from './background'
 const Map = styled.img`
   height: 35%;
   justify-content: center;
+  cursor: pointer;
   filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   @media (min-width:320px) {
     width:80%;
@@ -19,6 +20,9 @@ const Map = styled.img`
     width:70%;
   }
   z-index:9;
+
+  &:hover{
+  }
 `
 
 const WhereText = [

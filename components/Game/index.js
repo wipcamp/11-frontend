@@ -1,34 +1,76 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Headline, { Subtitle, Paragraph, Small, Font } from '../Core/Texts'
-import { PDBox } from '../Core/ResponBox'
-import Background from '../Core/Background'
-import Model from '../Core/Model'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
+import Background from './background'
+
+const Img = styled.img`
+   @media(min-width:320px) {
+    width:309px;
+    height: auto;
+  }
+  @media (min-width:410px) {
+    width:360px;
+    height: auto;
+  }
+  @media (min-width:576px) {
+    width:390px;
+    height: auto;
+  }
+  @media (min-width:768px) {
+    width: 420px;
+    height: auto;
+  }
+  @media(min-width:1024px) {
+    width:500px;
+    height:auto;
+  }
+`
+const Div = styled.div`
+  top:50%;
+  z-index:9;
+  transform: translate(0%,30%);
+  @media(min-width:320px) {
+    top: 35vh;
+  }
+  @media (min-width:410px) {
+    top: 35vh;
+  }
+  @media (min-width:576px) {
+    top: 25vh;
+  }
+  @media (min-width:768px) {
+    top: 20vh;
+  }
+  @media(min-width:1024px) {
+    top: 10vh;
+  }
+`
 
 export default class index extends Component {
+  // handleClickRed = () => {
+  //   console.log('red')
+  //   this.setState({
+  //     color: "red"
+  //   })
+  // }
+  handleClickIcon = () => {
+    alert('coming soon')
+  }
+  
   render () {
     return (
       <Bg>
-        <Wippo wippo='wippoFAQs.png' />
+        <Background />
+        <Wippo wippo='wippoGame.png' />
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-10">
-              <div className="row justify-content-center">
-                <h1><Headline>Game</Headline></h1>
-              </div>
-              <div className="row justify-content-center">
-                <PDBox>
-                  <div className="col-12">
-                    <div className="row justify-content-center">
-                      <Subtitle className="mb-4"><b>มาเล่นกันเถอะ</b></Subtitle>
-                    </div>
-                  </div>
-                </PDBox>
-              </div>
-            </div>
+          <div className="row">
+            <Div className="col-12 d-flex justify-content-center align-items-center text-center" onClick={() => this.handleClickIcon()}>
+              {/* <a href="http://game.wip.camp" target="_blank"> */}
+              <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
+              {/* </a> */}
+            </Div>
           </div>
         </div>
       </Bg>

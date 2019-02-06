@@ -6,6 +6,7 @@ const Bg = styled.div`
   background-position: center center;
   background-attachment: fixed;
   position: relative;
+  z-index:100;
 
   @media(min-width:320px) {
     padding-top:1.5em;
