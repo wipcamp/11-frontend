@@ -19,6 +19,7 @@ import Game from '../Game'
 import Sponsor from '../Sponsor'
 
 import {Font} from './Texts'
+import SideBar from './SideBar';
 
 // const datenow = dayjs('2019-01-15')
 const datenow = dayjs().format()
@@ -110,8 +111,15 @@ class App extends React.Component {
     return (
       <BGcolor>
         <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
-        <Navbar />
-        <ReactPageScroller>
+        <SideBar />
+      </BGcolor>
+    )
+  }
+}
+
+export default App
+
+/*<ReactPageScroller>
           {this.state.count === 0 &&
             <Section name = "home">
               <Home />
@@ -142,9 +150,4 @@ class App extends React.Component {
             <Game />
           </Section>
         </ReactPageScroller>
-      </BGcolor>
-    )
-  }
-}
-
-export default App
+        */
