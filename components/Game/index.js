@@ -46,15 +46,16 @@ const Div = styled.div`
   @media(min-width:1024px) {
     top: 10vh;
   }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    top: 35vh;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    top:30vh;
+  }
 `
 
 export default class index extends Component {
-  // handleClickRed = () => {
-  //   console.log('red')
-  //   this.setState({
-  //     color: "red"
-  //   })
-  // }
+  
   handleClickIcon = () => {
     alert('coming soon')
   }

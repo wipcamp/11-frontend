@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-const Wippo = styled.img`
+const WippoFAQ = styled.img`
   content:url('../../static/img/wippo/${props => props.wippo}');
   position: absolute;
-  z-index: 10;
   bottom: -5vh;
   margin-left: auto;
   margin-right: auto;
@@ -20,4 +19,4 @@ const Wippo = styled.img`
     height: 50vh;
   }
 `
-export default Wippo
+export default WippoFAQ

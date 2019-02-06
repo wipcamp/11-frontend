@@ -4,7 +4,8 @@ import dayjs from 'dayjs'
 
 import { FontFAQs } from '../Core/Texts'
 
-const datenow = dayjs().format()
+// const datenow = dayjs().format()
+const datenow = dayjs('2019-01-07')
 const date1 = dayjs('2019-01-07')
 const date2 = dayjs('2019-01-11')
 const date3 = dayjs('2019-01-14')
@@ -72,22 +73,22 @@ const Font = styled.div`
 
 const BoxInfo = [
   {
-    src: date1.isBefore(datenow) ? 'wippoWhat.png' : 'original-2.png',
+    src: date1.isBefore(datenow) ? 'wippoWhat.png' : '11.png',
     text: 'เปิดรับสมัคร',
     textday: '8 มกราคม 2562'
   },
   {
-    src: date2.isBefore(datenow) ? 'wippoWho.png' : 'original-2.png',
+    src: date2.isBefore(datenow) ? 'wippoWho.png' : '12.png',
     text: 'ประกาศผล',
     textday: '11 มกราคม 2562'
   },
   {
-    src: date3.isBefore(datenow) ? 'wippoWhere.png' : 'original-2.png',
+    src: date3.isBefore(datenow) ? 'wippoWhere.png' : '13.png',
     text: 'ปิดรับสมัคร',
     textday: '14 มกราคม 2562'
   },
   {
-    src: date4.isBefore(datenow) ? 'wippoGame.png' : 'original-2.png',
+    src: date4.isBefore(datenow) ? 'wippoGame.png' : '14.png',
     text: 'เปิดค่าย',
     textday: '17 พฤษภาคม 2562 <br /> ถึง  18 พฤษภาคม 2562'
   }
