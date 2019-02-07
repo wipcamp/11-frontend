@@ -169,7 +169,7 @@ class Navbar extends React.Component {
   render () {
     return (
       <NavSection active={this.state.show} display= {this.state.display}>
-        <AnimationNavbar display={this.state.display}>
+        
         <BG>
         <SectionUl className = "pt-2">
           {
@@ -210,7 +210,6 @@ class Navbar extends React.Component {
           </NavItems>
         </div>
         </BG>
-        </AnimationNavbar>
       </NavSection>
     )
   }
