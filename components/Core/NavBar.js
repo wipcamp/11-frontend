@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link, Events, scrollSpy, scroller } from 'react-scroll'
 import Button from './Button';
 
-const NavSection = styled.nav`
+export const NavSection = styled.nav`
   position: fixed;
   transition: all .2s;
   right: 2rem;
@@ -83,7 +83,6 @@ const NavLink = styled(Link)`
     &:before {
       opacity:0;
     }
-
     .text {
       opacity: 1;
       display: flex;
@@ -170,7 +169,7 @@ class Navbar extends React.Component {
   render () {
     return (
       <NavSection active={this.state.show} display= {this.state.display}>
-        <AnimationNavbar display={this.state.display}>
+        
         <BG>
         <SectionUl className = "pt-2">
           {
@@ -211,7 +210,6 @@ class Navbar extends React.Component {
           </NavItems>
         </div>
         </BG>
-        </AnimationNavbar>
       </NavSection>
     )
   }
