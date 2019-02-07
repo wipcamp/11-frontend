@@ -16,6 +16,9 @@ const Img = styled.img`
 
 const ImgDiv = styled.div`
   display: inline-block;
+  @media (min-width:320px) {
+    margin-left:1em;
+  }
 `
 
 const TextA = styled.a`

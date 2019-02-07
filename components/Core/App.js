@@ -19,6 +19,7 @@ import Game from '../Game'
 import Sponsor from '../Sponsor'
 
 import {Font} from './Texts'
+import SideBar from './SideBar';
 
 // const datenow = dayjs('2019-01-15')
 const datenow = dayjs().format()
@@ -87,6 +88,25 @@ class App extends React.Component {
     console.log('If you interest our code :) Join WIP Camp #11.')
   }
 
+  componentDidMount = () => {
+    if (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow)) {
+      this.setState({
+        textcount: 1,
+        visiblecount: 1
+      })
+    } else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
+      this.setState({
+        textcount: 2,
+        visiblecount: 1
+      })
+    } else {
+      this.setState({
+        textcount: 0,
+        visiblecount: 0
+      })
+    }
+  }
+
   render() {
     const { loading } = this.state;
     
@@ -95,23 +115,19 @@ class App extends React.Component {
         <Loading />
         )
       }
-    
-    if (dateStartResgis.isBefore(datenow)&&dateEndRegis.isAfter(datenow)){
-      this.state.textcount = 1;
-      this.state.visiblecount = 1;
-    }else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
-      this.state.textcount = 2;
-      this.state.visiblecount = 1;
-    }else{
-      this.state.textcount = 0;
-      this.state.visiblecount = 0;
-    }
 
     return (
       <BGcolor>
         <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
-        <Navbar />
-        <ReactPageScroller>
+        <SideBar />
+      </BGcolor>
+    )
+  }
+}
+
+export default App
+
+/*<ReactPageScroller>
           {this.state.count === 0 &&
             <Section name = "home">
               <Home />
@@ -142,9 +158,4 @@ class App extends React.Component {
             <Game />
           </Section>
         </ReactPageScroller>
-      </BGcolor>
-    )
-  }
-}
-
-export default App
+        */

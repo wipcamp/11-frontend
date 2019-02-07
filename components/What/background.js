@@ -23,7 +23,9 @@ const Layer1 = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
+    height:40vh;
   }
+  
 `
 const Layer2 = styled.img`
   position: absolute;
@@ -47,8 +49,10 @@ const Layer2 = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
+    height:30vh;
     
   }
+  
 `
 const RockLeft = styled.img`
   position: absolute;
@@ -75,6 +79,7 @@ const RockLeft = styled.img`
     width:33%;
     bottom: 6vh;
   }
+
 `
 const RockRight = styled.img`
   position: absolute;
@@ -149,8 +154,20 @@ const Tree = styled.img`
     bottom:25vh;
   }
   @media (min-width:1024px) {
-    bottom : 20vh;
+    bottom : 30vh;
     width:100%;
+    }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    bottom: 25vh;
+    width:100%;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+    bottom: 25vh;
+    width:100%;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+    bottom: 0;
+    width:70%;
   }
 `
 export default class componentName extends Component {
@@ -160,10 +177,8 @@ export default class componentName extends Component {
         <Road src = 'static/img/background-what/road.png'/>
         <Tree src = 'static/img/background-what/sakuratreeEdited3.png'/>
         <Layer2 src = 'static/img/background-what/floor.png'/>
-        
         <RockLeft src = 'static/img/background-what/newRockLeft.png'/>
         <RockRight src = 'static/img/background-what/newRockRight.png'/>
-        
         <Layer1 src = 'static/img/background-what/Bridge.png'/>
         
       </div>
