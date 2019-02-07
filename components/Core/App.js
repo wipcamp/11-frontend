@@ -71,24 +71,21 @@ const RegisButton = (props) =>(
 
 class App extends React.Component {
   state = {
-    loading: false, //true
+    loading: true, //true
     count:0,
     text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
     textcount:0,
     visible: ["hidden", "visible"],
     visiblecount:1,
   };
-
-  componentDidMount() {
-    setTimeout(() => this.setState({ loading: false }), 1500);
-  }
-  
   async componentWillMount() {
     console.log("%c We Are 11 Developer. ",'background:pink; color:#000; display:block; font-size:3em; font-family:Sarabun;')
     console.log('If you interest our code :) Join WIP Camp #11.')
   }
 
   componentDidMount = () => {
+    setTimeout(() => this.setState({ loading: false }), 1500);
+
     if (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow)) {
       this.setState({
         textcount: 1,
@@ -127,7 +124,11 @@ class App extends React.Component {
 
 export default App
 
-/*<ReactPageScroller>
+
+/*
+
+
+<ReactPageScroller>
           {this.state.count === 0 &&
             <Section name = "home">
               <Home />
