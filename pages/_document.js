@@ -35,6 +35,11 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
           <meta name="description" content="WIP Camp #11 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที อย่างเต็มตัว ตลอดทั้ง ค่าย น้องๆจะได้รับ ความรู้ ความสนุกสนาน จากพี่ๆ ไอที บางมด แล้วเจอกันนะครับ"/>
           <meta name="keywords" content="wipcamp,itcamp,ค่ายไอที,ค่ายคอม"/>
+          <meta property="og:title" content="WIP Camp #11 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที " />
+          <meta property="og:type" content="company" />
+          <meta property="og:url" content="https://wip.camp/" />
+          <meta property="og:image" content="../static/img/home.png" />
+          <meta property="og:site_name" content="WIP Camp #11 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
           <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet" />
