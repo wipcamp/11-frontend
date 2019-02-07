@@ -23,6 +23,7 @@ const Layer1 = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
+    height:40vh;
   }
   
 `
