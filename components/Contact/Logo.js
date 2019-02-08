@@ -1,13 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-const Divhover = styled.div`
-
-  &:hover img {
-    animation-duration: 1s;
-    animation-name: headShake;
-  }
-  @keyframes headShake {
+const headShake = keyframes` 
   0% {
     transform: translateX(0);
   }
@@ -31,7 +25,12 @@ const Divhover = styled.div`
   50% {
     transform: translateX(0);
   }
-}
+`
+
+const Divhover = styled.div`
+  &:hover img {
+    animation: ${headShake} 1s;
+  }
 `
 const Img = styled.img`
     content: url('../../static/img/social/${(props) => props.imgUrl}');
