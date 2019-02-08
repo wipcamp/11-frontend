@@ -63,9 +63,9 @@ export default class index extends Component {
                     <div className="row mr-1 ml-1 mt-2">
                       {
                         LogoInfo.map((data, i) => (
-                          <Div className="pl-0 pr-0 col-3 col-lg-3" key = {i}>
+                          <div className="pl-0 pr-0 col-3 col-lg-3" key = {i}>
                             <Logo imgUrl={data.imgUrl} link={data.link} />
-                          </Div>
+                          </div>
                         ))
                       }
                     </div>
