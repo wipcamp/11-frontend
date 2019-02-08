@@ -13,16 +13,18 @@ const Map = styled.img`
   justify-content: center;
   cursor: pointer;
   filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
-  @media (min-width:320px) {
-    width:80%;
-  }
-  @media (min-width:412px) {
-    width:70%;
-  }
-  z-index:9;
 
   &:hover{
+    content: url('../../static/img/map_hover.png');
+
   }
+  @media (min-width:320px) {
+    width:60%;
+  }
+  @media (min-width:412px) {
+    width:50%;
+  }
+  z-index:9;
 `
 
 const WhereText = [
