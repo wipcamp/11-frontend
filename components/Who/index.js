@@ -10,15 +10,33 @@ import Wippo from '../Core/Wippo'
 const TextPosition = styled.div`  
   margin-left:1em;
   transform: translate(0, 10%);
+  @media (min-width:414px){
+    transform: translate(5%, 10%);
+  }
+  @media (min-width:576px){
+    transform: translate(5%, 10%);
+    margin-left:5px;
+  }
+
   @media (min-width:768px){
     transform: translate(0, 50%);
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+    transform: translate(0, 20%);
+    margin-left:0.5em;
+    
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+    transform: translate(0, 10%);
+    margin-left:0em;
+   
   }
 `
 
 const IconInfo = [
   { icon: '/static/img/icon-who/bed.png', text: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน' },
   { icon: '/static/img/icon-who/graduate.png', text: 'น้อง ๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ' },
-  { icon: '/static/img/icon-who/person.png', text: 'น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง' },
+  { icon: '/static/img/icon-who/person.png', text: 'น้อง ๆที่ได้รับอนุญาตจากผู้ปกครองโดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง' },
   { icon: '/static/img/icon-who/computer.png', text: 'น้อง ๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อ' }
 ]
 
