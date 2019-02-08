@@ -40,6 +40,9 @@ const Img = styled.img`
 `
 const ImgDiv = styled.div`
   margin-top:0.25em;
+  @media (min-width:320px) {
+      margin-top:0.5em;
+    }
   @media (min-width:1024px) {
       margin-top:0em;
       margin-left:1.5em;
