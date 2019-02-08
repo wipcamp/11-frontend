@@ -47,7 +47,7 @@ const BG = styled.div`
   padding-top:1.5em;
 `
 
-const NavLink = styled.p`
+const NavLink = styled.div`
   display: flex;
   color: black;
   margin: 20px 0;
@@ -246,9 +246,7 @@ export default class SideBar extends React.Component {
             <NavSection> 
               <BG>   
                 <SectionUl>
-                  <NavItems>
-                    {pagesNumbers}
-                  </NavItems>
+                  {pagesNumbers}
                 </SectionUl>
                 <div className = "text-center">
                   <NavItems key={9} eventKey={8} onSelect={this.goToPage}> 
