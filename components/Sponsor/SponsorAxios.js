@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+const SponsorStyle = styled.img`
+  height:50px;
+`
 
 export default class SponsorAxios extends Component {
   state = {
     person: [],
   }
   
-  componentDidMount () {
-    axios.get('https://sponsor.service.freezer.in.th/api/sponsors?fbclid=IwAR1t3LEA5T2QqoMlNutgKQR9cqGHkQzHWpHiidOH8kPFLAjTpbH2l5_jRo0')
+  componentDidMount  = async () => {
+    await axios.get('https://sponsor.service.freezer.in.th/api/sponsors?fbclid=IwAR1t3LEA5T2QqoMlNutgKQR9cqGHkQzHWpHiidOH8kPFLAjTpbH2l5_jRo0')
       .then((response) => {
         this.successShow(response);
         this.getPicture(response);
@@ -36,13 +41,12 @@ export default class SponsorAxios extends Component {
   render () {
     const pictures = this.getPicture();
     return (
-      <div>
-        <img src = {JSON.stringify(this.state.person[0])} />
-        <img src = {pictures[0]} />
-        <img src = {pictures[1]} />
-        <img src = {pictures[2]} />
-        <img src = {pictures[3]} />
-        <img src = {pictures[4]} />
+      <div className = "row">
+        <SponsorStyle src = {pictures[0]} />
+        <SponsorStyle src = {pictures[1]} />
+        <SponsorStyle src = {pictures[2]} />
+        <SponsorStyle src = {pictures[3]} />
+        <SponsorStyle src = {pictures[4]} />
       </div>
     )
   }
