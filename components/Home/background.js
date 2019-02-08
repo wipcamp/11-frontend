@@ -33,14 +33,14 @@ const LeftBuildy = styled.img`
   width:35%;
   
   @media (min-width:320px) {
-    left:-20vh;
+    transform: translate(-20%,-10%);
     bottom: 10vh;
     width:65%;
   }
   @media (min-width:412px) {
-    left:-30vh;
+    transform: translate(-20%,-10%);
     bottom: 10vh;
-    width:80%;
+    width:60%;
   }
   @media (min-width:576px) {
     left:-20vh;
@@ -48,14 +48,21 @@ const LeftBuildy = styled.img`
     width:60%;
   }
   @media (min-width:768px) {
-    left:-5vh;
+    transform: translate(60%,10%);
     bottom: 20vh;
     width:40%;
   }
   @media (min-width:1024px) {
+    transform: translate(40%,-20%);
     bottom: 27vh;
     width:35%;
   }
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
+    transform: translate(10%,10%);
+    bottom: 0;
+    width:70%;
+  }
+ 
 
 `
 const RightBuildy = styled.img`
@@ -66,14 +73,14 @@ const RightBuildy = styled.img`
   width:35%;
 
   @media (min-width:320px) {
-    right:-20vh;
+    transform: translate(20%,-10%);
     bottom: 10vh;
     width:65%;
   }
   @media (min-width:412px) {
-    right:-30vh;
+    transform: translate(20%,-10%);
     bottom: 10vh;
-    width:80%;
+    width:60%;
   }
   @media (min-width:576px) {
     right:-20vh;
@@ -81,14 +88,16 @@ const RightBuildy = styled.img`
     width:60%;
   }
   @media (min-width:768px) {
-    right:-5vh;
+    transform: translate(-60%,10%);
     bottom: 20vh;
     width:40%;
   }
   @media (min-width:1024px) {
+    transform: translate(-40%,-30%);
     bottom: 27vh;
     width:35%;
   }
+
 `
 
 const LeftTree = styled.img`
