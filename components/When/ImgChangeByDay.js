@@ -11,6 +11,10 @@ const date2 = dayjs('2019-01-11')
 const date3 = dayjs('2019-01-14')
 const date4 = dayjs('2019-01-17')
 
+const Font = styled(FontFAQs)`
+  font-weight:bold;
+`
+
 const Img = styled.img`
     content:url('../../static/img/when/${(props) => props.src}');
     @media (min-width:320px) {
@@ -104,7 +108,7 @@ const ImgChangeDay = (props) => (
               <Img src={data.src}/>
             </ImgDiv>
             <Font className="col-8 col-sm-7 col-lg-12 col-md-12 col-xl-12 text-center">
-              <FontFAQs><div dangerouslySetInnerHTML={{ __html: data.text }} /></FontFAQs>
+              <Font><div dangerouslySetInnerHTML={{ __html: data.text }} /></Font>
               <FontFAQs><div dangerouslySetInnerHTML={{ __html: data.textday }} /></FontFAQs>
             </Font>
           </div>
