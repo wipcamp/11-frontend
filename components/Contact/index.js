@@ -24,7 +24,7 @@ const PDBox1 = styled(PDBox)`
 `
 const MiddleOfTheRight = styled.div`
   @media (min-width:992px){
-    transform: translate(0, 25%);
+    transform: translate(0, 15%);
   }
 `
 const LogoInfo = [
@@ -63,9 +63,9 @@ export default class index extends Component {
                     <div className="row mr-1 ml-1 mt-2">
                       {
                         LogoInfo.map((data, i) => (
-                          <div className="col-3 col-lg-3" key = {i}>
+                          <Div className="pl-0 pr-0 col-3 col-lg-3" key = {i}>
                             <Logo imgUrl={data.imgUrl} link={data.link} />
-                          </div>
+                          </Div>
                         ))
                       }
                     </div>
