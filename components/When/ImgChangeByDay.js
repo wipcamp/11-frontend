@@ -11,7 +11,7 @@ const date2 = dayjs('2019-01-11')
 const date3 = dayjs('2019-01-14')
 const date4 = dayjs('2019-01-17')
 
-const Font = styled(FontFAQs)`
+const Font1 = styled(FontFAQs)`
   font-weight:bold;
 `
 
@@ -108,7 +108,7 @@ const ImgChangeDay = (props) => (
               <Img src={data.src}/>
             </ImgDiv>
             <Font className="col-8 col-sm-7 col-lg-12 col-md-12 col-xl-12 text-center">
-              <Font><div dangerouslySetInnerHTML={{ __html: data.text }} /></Font>
+              <Font1><div dangerouslySetInnerHTML={{ __html: data.text }} /></Font1>
               <FontFAQs><div dangerouslySetInnerHTML={{ __html: data.textday }} /></FontFAQs>
             </Font>
           </div>
