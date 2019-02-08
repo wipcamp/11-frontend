@@ -7,11 +7,18 @@ import Fbfeed from './Fbfeed'
 import ContactBox from './ContactBox'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
-import Background from './background';
+import Background from './background'
+
+const Bg1 = styled(Bg)`
+  height: 100%;
+`
+
+const Model = styled(Wippo)`
+  z-index: 0;
+`
 
 const PDBox1 = styled(PDBox)`
   @media (min-width:320px){
-    padding-right:20px;
     margin-bottom:10em;
   }
 `
@@ -28,15 +35,15 @@ const LogoInfo = [
 ]
 
 const BoxInfo = [
-  { className: 'p-0 mt-4 mb-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: 'phone-call.png', text: '096-5812358 (พี่ทีเจ)' },
-  { className: 'p-0 mt-4 mt-lg-2 mb-3 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'email.png', text: 'wippo@wipcamp.com' }
+  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: 'phone-call.png', text: '096-5812358 (พี่ทีเจ)' },
+  { className: 'p-0 mt-3 mb-sm-1 mb-lg-4 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'email.png', text: 'wippo@wipcamp.com' }
 ]
 
 export default class index extends Component {
   render () {
     return (
-      <Bg>
-        <Wippo wippo='wippoContact.png' />
+      <Bg1>
+        <Model wippo='wippoContact.png' />
         <Background />
         <div className="container">
           <div className="row justify-content-center">
@@ -49,11 +56,11 @@ export default class index extends Component {
                   <Subtitle>ติดต่อเรา</Subtitle>
                 </div>
                 <div className="row justify-content-center">
-                  <div className="pr-0 col-12 col-sm-12 col-lg-6 mb-3">
+                  <div className="col-12 col-sm-12 col-lg-6 mb-3">
                     <Fbfeed/>
                   </div>
                   <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
-                    <div className="row mr-1 ml-1">
+                    <div className="row mr-1 ml-1 mt-2">
                       {
                         LogoInfo.map((data, i) => (
                           <div className="col-3 col-lg-3" key = {i}>
@@ -62,7 +69,7 @@ export default class index extends Component {
                         ))
                       }
                     </div>
-                    <div className="row">
+                    <div className="row ml-0 mr-0">
                       {
                         BoxInfo.map((data, i) => (
                           <div key={i} className={data.className}>
@@ -77,7 +84,7 @@ export default class index extends Component {
             </div>
           </div>
         </div>
-      </Bg>
+      </Bg1>
     )
   }
 }
