@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Layer1 = styled.img`
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   bottom: 0vh;
   left: 50%;
   transform: translate(-50%,0%);
@@ -28,7 +28,7 @@ const Layer1 = styled.img`
 
 const Layer2 = styled.img`
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   bottom: 5vh;
   left: 50%;
   transform: translate(-50%,0%);
