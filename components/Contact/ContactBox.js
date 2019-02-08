@@ -16,9 +16,6 @@ const Img = styled.img`
 
 const ImgDiv = styled.div`
   display: inline-block;
-  @media (min-width:320px) {
-    margin-left:1em;
-  }
 `
 
 const TextA = styled.a`
@@ -36,9 +33,9 @@ const TextA = styled.a`
 `
 
 const ContactBox = (props) => (
-  <ImgDiv>
+  <ImgDiv className="ml-0 mr-0" >
     <a href={props.href}>
-      <Img className="mr-1" imgUrl={props.imgUrl} />
+      <Img imgUrl={props.imgUrl} />
     </a>
     <ImgDiv>
       <Paragraph>

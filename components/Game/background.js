@@ -123,7 +123,7 @@ const Stairs = styled.img`
     @media (min-width:320px) {
       width:200%;
       height:57%;
-      left: -62vw;
+      left: -56vw;
       bottom: 1vh;
     }
     @media (min-width:768px) {
@@ -132,8 +132,14 @@ const Stairs = styled.img`
       width:70%;
     }
     @media (min-width:1024px) {
-      left:10vw;
+      left:1vw;
+      width:90%;
       bottom:5vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      left:4vw;
+      width:85%;
+      bottom:4vh;
     }
 `
 
@@ -156,15 +162,26 @@ const RockRight = styled.img`
     @media (min-width:1024px) {
       height: 50%;
     }
-    @media (min-height:1000px) {
-      width:40%;
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
       height:auto;
-      bottom: 5vh;
+      width:40%;
+      bottom:0vh;
     }
-    @media (min-height:1300px) {
+
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      height:auto;
+      width:40%;
+      bottom:0vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      height:auto;
+      width:40%;
+      bottom:0vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       width:40%;
       height:auto;
-      bottom: 5vh;
+      bottom:0vh;
     }
 `
 
@@ -185,17 +202,28 @@ const RockLeft = styled.img`
       height: 40%;
     }
     @media (min-width:1024px) {
-      height: 50%;
+      height: 40%;
     }
-    @media (min-height:1000px) {
-      width:40%;
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
       height:auto;
-      bottom: 5vh;
+      width:40%;
+      bottom:0vh;
     }
-    @media (min-height:1300px) {
-      width:40%;
+
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
       height:auto;
-      bottom: 5vh;
+      width:40%;
+      bottom:0vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      height:auto;
+      width:40%;
+      bottom:0vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
+      height:auto;
+      width:35%;
+      bottom:0vh;
     }
 `
 
@@ -207,7 +235,7 @@ const Red =styled.img`
     transform: translate(36.5%,30%);
     @media (min-width:320px) {
       top: 24vh;
-      left: 10vw;
+      left: 16.5vw;
       width:40%;
     }
     @media (min-width:412px) {
@@ -225,7 +253,7 @@ const Red =styled.img`
     }
     @media (min-width:1024px) {
       top:0vh;
-      left:30.5vw;
+      left:33vw;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
       top: 26vh;
@@ -243,8 +271,8 @@ const Dojo = styled.img`
     left:50%;
     transform: translate(30%,50%);
     @media (min-width:320px) {
-      top: 33.5vh;
-      left: 28.75vw;
+      top: 33vh;
+      left: 35.25vw;
       width:20%;
     }
     @media (min-width:412px) {
@@ -265,19 +293,20 @@ const Dojo = styled.img`
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
       top: 15vh;
-      left:40vw;
+      left:42.5vw;
     }
 
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      top: 33vh;
-      left:42vw;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
-      top: 33vh;
-      left:42vw;
+      top: 32vh;
+      left:42.5vw;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
       top:33vh;
+      left:42vw;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
+      top:13vh;
+      left:42.5vw;
     }
     
 `
