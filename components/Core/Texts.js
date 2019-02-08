@@ -76,29 +76,27 @@ export const FontWho = styled.p`
 color : #3A1E12;
 
   @media (min-width:320px) {
-    margin-left : 8px;
+    margin-left: 10px;
     margin-top : 2px;
     font-size: 12px;
   }
   @media (min-width:412px) {
+    margin-left: 12px;
     font-size: 14px;
-    margin-left : 20px;
     margin-top : 10px;
   }
   @media (min-width:576px) {
+    margin-left: 15px;
     font-size: 15px;
-    margin-left : 20px;
     margin-top : 5px;
   }
   @media (min-width:768px) {
     font-size: 15px;
-    margin-left : -25px;
     margin-top : 10px;
   }
   @media (min-width:1024px) {
     font-style: normal;
     font-size: 16px;
-    margin-left : -25px;
     margin-top : 13px;
   }
 `
