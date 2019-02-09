@@ -28,15 +28,15 @@ const MiddleOfTheRight = styled.div`
   }
 `
 const LogoInfo = [
-  { imgUrl: 'ig.png', link: 'https://www.instagram.com/wipcamp/' },
-  { imgUrl: 'Twitter.png', link: 'https://twitter.com/WIPCamp' },
-  { imgUrl: 'youtube.png', link: 'https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA' },
-  { imgUrl: 'lineAdd.png', link: 'http://line.naver.jp/ti/p/Z_Qg6KlFnU#~' }
+  { imgUrl: '../../static/img/social/ig.png', link: 'https://www.instagram.com/wipcamp/' },
+  { imgUrl: '../../static/img/social/Twitter.png', link: 'https://twitter.com/WIPCamp' },
+  { imgUrl: '../../static/img/social/youtube.png', link: 'https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA' },
+  { imgUrl: '../../static/img/social/lineAdd.png', link: 'http://line.naver.jp/ti/p/Z_Qg6KlFnU#~' }
 ]
 
 const BoxInfo = [
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: 'phone-call.png', text: '096-5812358 (พี่ทีเจ)' },
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-4 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: 'email.png', text: 'wippo@wipcamp.com' }
+  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: '../../static/img/social/phone-call.png', text: '096-5812358 (พี่ทีเจ)' },
+  { className: 'p-0 mt-3 mb-sm-1 mb-lg-4 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: '../../static/img/social/email.png', text: 'wippo@wipcamp.com' }
 ]
 
 export default class index extends Component {

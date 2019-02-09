@@ -33,7 +33,7 @@ const Divhover = styled.div`
   }
 `
 const Img = styled.img`
-    content: url('../../static/img/social/${(props) => props.imgUrl}');
+    /* content: url(${(props) => props.imgUrl}); */
     @media (min-width:320px) {
       width:50px;
       height:50px;
@@ -58,7 +58,7 @@ const Img = styled.img`
 
 const Logo = (props) => (
   <Divhover>
-    <a href={props.link} target="_blank"><Img imgUrl={props.imgUrl} width="80px" height="80px" /></a>
+    <a href={props.link} target="_blank"><Img src={props.imgUrl} width="80px" height="80px" /></a>
   </Divhover>
 )
 

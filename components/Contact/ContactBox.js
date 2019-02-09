@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Paragraph, Font } from '../Core/Texts'
 
 const Img = styled.img`
-  content : url('../../static/img/social/${(props) => props.imgUrl}');
+  /* content : url(${(props) => props.imgUrl}); */
   @media (min-width:320px) {
     width:18px;
     height:18px;
@@ -35,7 +35,7 @@ const TextA = styled.a`
 const ContactBox = (props) => (
   <ImgDiv className="ml-0 mr-0" >
     <a href={props.href}>
-      <Img imgUrl={props.imgUrl} />
+      <Img src={props.imgUrl} />
     </a>
     <ImgDiv>
       <Paragraph>
