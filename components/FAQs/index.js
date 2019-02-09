@@ -143,9 +143,9 @@ export default class Question extends Component {
                         {
                           QA.map((data, i) => {
                             return (
-                              <React.Fragment>
+                              <div key={i}>
                                 <FontFAQs>
-                                  <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${data.num}`} key={i}>
+                                  <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
                                     Q : {data.question} ?
                                       <Arrow deg={data.rotate} />
@@ -158,7 +158,7 @@ export default class Question extends Component {
                                   </AnswerText>
                                 </div>
                                 </FontFAQs>
-                              </React.Fragment>
+                              </div>
                             )
                           }
                           )
