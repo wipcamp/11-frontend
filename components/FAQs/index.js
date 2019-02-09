@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import Headline, { Subtitle, FontFAQs } from '../Core/Texts'
-import Model from '../Core/Model'
 import { PDBox } from '../Core/ResponBox'
 import Background from './background'
 import Bg from '../Core/Bg'
@@ -25,8 +24,7 @@ const AnswerText = styled.div`
 `
 
 const Arrow = styled.img`
-  content : url('../../static/img/downarrow.png');
-  /* content : ("\\f078"); */
+  /* content : url('../../static/img/downarrow.png'); */
   float: right;
   width: 3%;
   height: 3%;
@@ -138,17 +136,16 @@ export default class Question extends Component {
                 <div className="col-12">
                   <div className="pb-4">
                     <div className="col-12">
-                      {/* <div id="accordion" className={rotateDeg}> */}
                       <div id="accordion">
                         {
                           QA.map((data, i) => {
                             return (
-                              <div key={i}>
+                              <React.Fragment key={i}>
                                 <FontFAQs>
                                   <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
                                     Q : {data.question} ?
-                                      <Arrow deg={data.rotate} />
+                                      <Arrow src='../../static/img/downarrow.png' deg={data.rotate} />
                                   </div>
                                 </QuestionText>
                                 
@@ -156,9 +153,9 @@ export default class Question extends Component {
                                   <AnswerText className="card-body bg-light px-4">
                                     A : {data.answer}
                                   </AnswerText>
-                                </div>
+                                  </div>
                                 </FontFAQs>
-                              </div>
+                              </React.Fragment>
                             )
                           }
                           )
