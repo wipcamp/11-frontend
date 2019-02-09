@@ -16,7 +16,8 @@ const Font1 = styled(FontFAQs)`
 `
 
 const Img = styled.img`
-    content:url('../../static/img/when/${(props) => props.src}');
+    content:url(${(props) => props.src});
+    /* content:url('../../static/img/when/${(props) => props.src}'); */
     @media (min-width:320px) {
       width:35px;
       height:56px;
@@ -80,22 +81,22 @@ const Font = styled.div`
 
 const BoxInfo = [
   {
-    src: date1.isBefore(datenow) ? 'wippoWhat.png' : '11.png',
+    src: date1.isBefore(datenow) ? '../../static/img/when/wippoWhat.png' : '../../static/img/when/11.png',
     text: 'เปิดรับสมัคร',
     textday: '8 มกราคม 2562'
   },
   {
-    src: date2.isBefore(datenow) ? 'wippoWho.png' : '12.png',
+    src: date2.isBefore(datenow) ? '../../static/img/when/wippoWho.png' : '../../static/img/when/12.png',
     text: 'ประกาศผล',
     textday: '11 มกราคม 2562'
   },
   {
-    src: date3.isBefore(datenow) ? 'wippoWhere.png' : '13.png',
+    src: date3.isBefore(datenow) ? '../../static/img/when/wippoWhere.png' : '../../static/img/when/13.png',
     text: 'ปิดรับสมัคร',
     textday: '14 มกราคม 2562'
   },
   {
-    src: date4.isBefore(datenow) ? 'wippoGame.png' : '14.png',
+    src: date4.isBefore(datenow) ? '../../static/img/when/wippoGame.png' : '../../static/img/when/14.png',
     text: 'เปิดค่าย',
     textday: '17 พฤษภาคม 2562 <br /> ถึง  18 พฤษภาคม 2562'
   }
