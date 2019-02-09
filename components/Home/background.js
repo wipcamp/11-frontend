@@ -93,7 +93,7 @@ const RightBuildy = styled.img`
     width:40%;
   }
   @media (min-width:1024px) {
-    transform: translate(-40%,-30%);
+    transform: translate(-40%,-20%);
     bottom: 27vh;
     width:35%;
   }
