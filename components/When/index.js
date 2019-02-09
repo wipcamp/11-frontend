@@ -43,7 +43,7 @@ export default class componentName extends Component {
     return (
       <Bg>
         <Background />
-        <NModel wippo='wippoWhen.png' />
+        <NModel src='../../static/img/wippo/wippoWhen.png' />
         <Section>
           <div className="container">
             <div className="row justify-content-center">

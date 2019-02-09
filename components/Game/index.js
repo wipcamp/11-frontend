@@ -67,7 +67,7 @@ export default class index extends Component {
     return (
       <Bg>
         <Background />
-        <Wippo wippo='wippoGame.png' />
+        <Wippo src='../../static/img/wippo/wippoGame.png' />
         <div className="container">
           <div className="row">
             <Div className="col-12 d-flex justify-content-center align-items-center text-center" onClick={() => this.handleClickIcon()}>

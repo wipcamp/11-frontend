@@ -29,7 +29,7 @@ export default class index extends Component {
   render () {
     return (
       <Bg>
-        <Wippo wippo='wippoWhat.png' />
+        <Wippo src='../../static/img/wippo/wippoWhat.png' />
         <Background />
         <div className="container">
           <div className="row justify-content-center">

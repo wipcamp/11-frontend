@@ -124,7 +124,7 @@ export default class Question extends Component {
     return (
       <Bg1>
         <Background />
-        <WippoFAQ wippo='wippoFAQs.png' />
+        <WippoFAQ src='../../static/img/wippo/wippoFAQs.png' />
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">

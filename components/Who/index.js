@@ -42,7 +42,7 @@ export default class componentName extends Component {
   render () {
     return (
       <Bg>
-        <Wippo wippo='wippoWho.png' />
+        <Wippo src='../../static/img/wippo/wippoWho.png' />
         <Background />
         <div className="container">
           <div className="row justify-content-center">
