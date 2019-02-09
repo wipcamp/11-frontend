@@ -7,6 +7,7 @@ import Model from '../Core/Model'
 import Background, { SponHeadBox, SponTab } from './background'
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
+import SponsorAxios from './SponsorAxios'
 
 const Moutain = styled.img`
   position: absolute;
@@ -40,8 +41,9 @@ export default class index extends Component {
                 <PDBox>
                   <div className="col-12">
                     <div className="row justify-content-center">
-                      <Subtitle className="mb-4"><b>ผู้สนับสนุน</b></Subtitle>
+                      <Subtitle className="mb-4"><b>ผู้สนับสนุน</b></Subtitle>  
                     </div>
+                    <SponsorAxios />
                   </div>
                 </PDBox>
               </div>

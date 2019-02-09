@@ -49,6 +49,9 @@ const Div = styled.div`
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     top: 35vh;
   }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
+    top: 8vh;
+  }
   @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
     top:30vh;
   }

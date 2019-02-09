@@ -100,6 +100,11 @@ export const TextBoxWho = styled.div`
   }
 `
 export const IconWho = styled.img`
+  position: relative;
+  top: 50%;                        
+  margin:0 0.5em;
+  transform: translate(0, -50%);
+
   @media (min-width:320px) {
     width: 45px;
     height: 45px;
@@ -112,7 +117,6 @@ export const IconWho = styled.img`
   @media (min-width:1024px) {
     width: 70px;
     height: 70px;
-   
-    
+    margin: 0 1em;
   }
  `
