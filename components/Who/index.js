@@ -9,7 +9,6 @@ import Wippo from '../Core/Wippo'
 
 const TextPosition = styled.div`  
   margin-left:1em;
-  transform: translate(0, 10%);
   @media (min-width:414px){
     transform: translate(5%, 10%);
   }
@@ -22,7 +21,6 @@ const TextPosition = styled.div`
     transform: translate(0, 50%);
   }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
-    transform: translate(0, 20%);
     margin-left:0.5em;
     
   }
