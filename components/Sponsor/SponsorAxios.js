@@ -3,7 +3,8 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 const SponsorStyle = styled.img`
-  height:50px;
+  height: 50px;
+  padding: 1em;
 `
 
 export default class SponsorAxios extends Component {
@@ -41,7 +42,7 @@ export default class SponsorAxios extends Component {
   render () {
     const pictures = this.getPicture();
     return (
-      <div className = "row">
+      <div className = "row justify-content-center">
         <SponsorStyle src = {pictures[0]} />
         <SponsorStyle src = {pictures[1]} />
         <SponsorStyle src = {pictures[2]} />
