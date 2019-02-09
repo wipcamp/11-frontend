@@ -45,7 +45,6 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet" />
           <link rel="shortcut icon" href="/static/img/favicon/favicon.ico" type="image/x-icon"/>
           <link rel="apple-touch-icon" sizes="60x60" href="/fv-apple.png"/>
-          <link rel="icon" href="/static/img/favicon.ico" type="/imgae/x-icon"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png"/>
           <link rel="manifest" href="/static/img/favicon/site.webmanifest"/>
