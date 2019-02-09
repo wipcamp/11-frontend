@@ -3,6 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 const SponsorStyle = styled.img`
+  position: relative;
   height: 50px;
   padding: 1em;
 `

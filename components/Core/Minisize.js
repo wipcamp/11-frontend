@@ -8,7 +8,14 @@ const Minicon = styled.div`
   background-color: #F8E9D6;
   padding : 2vw;
   @media(orientation:landscape)
-  and (max-width:800px){
+  and (max-width:850px){
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+  @media(orientation:portrait)
+  and (min-width:768px) and (max-width:1024px){
     display:flex;
     flex-direction: column;
     justify-content:center;

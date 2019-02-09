@@ -80,42 +80,75 @@ export default class Question extends Component {
       },
     ]
   };
+
   handleOnClick = (i) => {
     const stateCopy = Object.assign({}, this.state);
                       stateCopy.QandA = stateCopy.QandA.slice();
                       stateCopy.QandA[i] = Object.assign({}, stateCopy.QandA[i]);
                       this.setState(stateCopy);
-    const AnimationArrow = stateCopy.QandA[i].rotate = this.state.QandA[i].value ? '0deg' : '180deg';
+                      if (this.state.QandA[i].rotate === '180deg') {
+                        stateCopy.QandA[i].rotate = '0deg';
+                      }
+                      else {
+                        stateCopy.QandA[i].rotate = '180deg';
+                      }
+
+    // const FunctionArrow = 
+    //                   stateCopy.QandA[i].value = !this.state.QandA[i].value;
+    //                   if(this.state.QandA[i].value === true){
+    //                     stateCopy.QandA[i].value = !this.state.QandA[i].value;
+    //                   }
+    //                   else{
+    //                     stateCopy.QandA[i].value = !this.state.QandA[i].value;
+    //                   }
+    //                   stateCopy.QandA[i].rotate = this.state.QandA[i].value ? '0deg' : '180deg';
     
-    const Value = stateCopy.QandA[i].value = !this.state.QandA[i].value;
-                  if(this.state.QandA[i].value === true){
-                    stateCopy.QandA[i].value = !this.state.QandA[i].value;
-                  }
-                  else{
-                    stateCopy.QandA[i].value = !this.state.QandA[i].value;
-                  }
-
-    const FunctionArrow = 
-          { Value } 
-          { AnimationArrow }
-
     if(i===0){
-      { FunctionArrow }
+      i=0;
+      { stateCopy }
     }
-    else if(i===1){
-      { FunctionArrow }
+    else if(!(i===0)){
+      stateCopy.QandA[0].rotate = '0deg';
     }
-    else if(i===2){
-      { FunctionArrow }
+
+    if(i===1){
+      i = 1;
+      { stateCopy }
     }
-    else if(i===3){
-      { FunctionArrow }
+    else if(!(i===1)){
+      stateCopy.QandA[1].rotate = '0deg';
     }
-    else if(i===4){
-      { FunctionArrow }
+    
+    if(i===2){
+      i = 2;
+      { stateCopy }
     }
-    else if(i===5){
-      { FunctionArrow }
+    else if(!(i===2)){
+      stateCopy.QandA[2].rotate = '0deg';
+    }
+    
+    if(i===3){
+      i = 3;
+      { stateCopy }
+    }
+    else if(!(i===3)){
+      stateCopy.QandA[3].rotate = '0deg';
+    }
+
+    if(i===4){
+      i = 4;
+      { stateCopy }
+    }
+    else if(!(i===4)){
+      stateCopy.QandA[4].rotate = '0deg';
+    }
+    
+    if(i===5){
+      i = 5;
+      { stateCopy }
+    }
+    else if(!(i===5)){
+      stateCopy.QandA[5].rotate = '0deg';
     }
   }
 

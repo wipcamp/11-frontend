@@ -72,7 +72,7 @@ const RegisButton = (props) =>(
 
 const MSize = styled.div`
   @media(orientation:landscape)
-  and (max-width:800px){
+  and (max-width:850px){
     display:none;
   }
 `
