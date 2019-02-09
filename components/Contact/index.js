@@ -14,7 +14,13 @@ const Bg1 = styled(Bg)`
 `
 
 const Model = styled(Wippo)`
-  z-index: 0;
+  z-index: 20;
+  @media (min-width:320px){
+    z-index: 0;
+  }
+  @media (min-width:768px){
+    z-index: 20;
+  }
 `
 
 const PDBox1 = styled(PDBox)`
