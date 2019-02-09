@@ -40,9 +40,9 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://wip.camp/" />
           <meta property="og:image" content="../static/img/home.png" />
           <meta property="og:site_name" content="WIP Camp #11 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
-          <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet" />
+          <link rel="stylesheet" href="../static/css/bootstrap.css" crossOrigin="anonymous" type="text/css" />
+          <link href="../static/css/font-family-Knewave.css" rel="stylesheet" type="text/css" />
+          <link href="../static/css/font-family-Sarabun.css" rel="stylesheet" type="text/css" />
           <link rel="shortcut icon" href="/static/img/favicon/favicon.ico" type="image/x-icon"/>
           <link rel="apple-touch-icon" sizes="60x60" href="/fv-apple.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png"/>
