@@ -38,6 +38,7 @@ export default class MyDocument extends Document {
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
   ` 
+  
   render () {
     return (
       <html>
@@ -63,16 +64,12 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/static/img/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
           <script src="../static/script/jquery-3.3.1.slim.min.js" type="text/javascript" rel="stylesheet" crossorigin="anonymous" />
           <script src="../static/script/bootstrap.min.js" type="text/javascript" rel="stylesheet" crossorigin="anonymous" />
-          
           <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
-          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
-
-          <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
-          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
         </Head>
         <body className="custom_class">
           <Main />
           <NextScript />
+            <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
         </body>
       </html>
     )
