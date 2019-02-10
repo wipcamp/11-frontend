@@ -79,6 +79,13 @@ const Font = styled.div`
     }
 `
 
+const Div = styled.div`
+  @media (min-width:1024px) {
+    margin-left:2em;
+  }
+  
+`
+
 const BoxInfo = [
   {
     src: dateStartResgis.isBefore(datenow) ? '../../static/img/when/wippoWhat.png' : '../../static/img/when/11.png',
@@ -103,7 +110,7 @@ const BoxInfo = [
 ]
 
 const ImgChangeDay = (props) => (
-  <div className="row justify-content-center">
+  <Div className="row justify-content-center">
     {
       BoxInfo.map((data, i) => (
         <div className=" pt-lg-4 pl-lg-4 col-12 col-sm-12 col-lg-3 col-md-3 col-xl-3" key = {i}>
@@ -119,7 +126,7 @@ const ImgChangeDay = (props) => (
         </div>
       ))
     }
-  </div>
+  </Div>
 )
 
 export default ImgChangeDay
