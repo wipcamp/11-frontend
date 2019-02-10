@@ -77,7 +77,7 @@ class App extends React.Component {
   state = {
     loading: true, //true
     count:0,
-    text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
+    text:["รอก่อนนะ","ลงทะเบียน" ,"ประกาศผล"],
     textcount:0,
     a: ['http://itim.wip.camp','http://itim.wip.camp'],
     acount:0,
