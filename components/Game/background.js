@@ -88,7 +88,7 @@ const SakuraLeft = styled.img`
       z-index: 2;
     }
     @media (min-width:1024px) {
-      margin-bottom:-2em;
+      margin-bottom:-3em;
       bottom: 0vh;
       left: -15vw;
       z-index: 2;
@@ -108,6 +108,7 @@ const SakuraRight = styled.img`
       right: -15vw;
     }
     @media (min-width:1024px) {
+      margin-bottom:-1em;
       z-index: 2;
       bottom: 0vh;
       right: -15vw;
@@ -181,7 +182,7 @@ const RockRight = styled.img`
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       width:40%;
       height:auto;
-      bottom:0vh;
+      bottom:-3.5vh;
     }
 `
 
@@ -223,7 +224,7 @@ const RockLeft = styled.img`
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       height:auto;
       width:35%;
-      bottom:0vh;
+      bottom:-1.5vh;
     }
 `
 

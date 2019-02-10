@@ -44,11 +44,11 @@ export default class SponsorAxios extends Component {
     const pictures = this.getPicture();
     return (
       <div className = "row justify-content-center">
-        <SponsorStyle src = {pictures[0]} />
+        {/* <SponsorStyle src = {pictures[0]} />
         <SponsorStyle src = {pictures[1]} />
         <SponsorStyle src = {pictures[2]} />
         <SponsorStyle src = {pictures[3]} />
-        <SponsorStyle src = {pictures[4]} />
+        <SponsorStyle src = {pictures[4]} /> */}
       </div>
     )
   }

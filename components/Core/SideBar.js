@@ -14,15 +14,17 @@ import Contact from '../Contact'
 import Game from '../Game'
 import Sponsor from '../Sponsor'
 import Button from './Button'
+import { throws } from "assert";
 
 const NavSection = styled.nav`
   position: fixed;
   transition: all .2s;
   right: 2rem;
   margin: 0 !important;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
   z-index:1000;
+  visibility:${(props) => props.show ? "visible" : "hidden"} ;
   
   @media(max-width: 768px) {
    display: none;
@@ -149,10 +151,11 @@ const NavItems = styled(Pager.Item)`
   margin-bottom: 10px;
   position: relative;
 `
-const AnimationNavbar = styled.div`
-  animation-name: ${(props) => props.display ? "fadeInRight" : "fadeOutRight"  };
+const AnimationNavbar = styled(NavSection)`
+  animation-name: ${(props) => props.show ? "fadeInRight" : "fadeOutRight"  };
   animation-duration:.5s;
   animation-fill-mode: forwards;
+  
   @keyframes fadeInRight {
     from {
       opacity: 0;
@@ -215,23 +218,37 @@ export default class SideBar extends React.Component {
    state = {
       current: 'home',
       show: false,
-      display: false,
+      display: "active",
       currentPage:1,
-      _pageScroller : null
+      _pageScroller : null,
+      show : false
   }
 
     goToPage = (eventKey) => {
-        this._pageScroller.goToPage(eventKey);
+      this._pageScroller.goToPage(eventKey);
     };
 
     pageOnChange = (number) => {
-        this.setState({currentPage: number});
+      if(number == 1){
+        this.setState({
+          show: false
+        })
+      }
+      else{
+        this.setState({
+          show: true
+        })
+      }
+      this.setState({currentPage: number});
     };
 
     handleClickText = () => {
       this.setState({
         display: "active"
       })
+      if(this.state.currentPage == 0){
+        this.state.show = false
+      }
     };
 
     setActive = (i) => {
@@ -274,7 +291,8 @@ export default class SideBar extends React.Component {
                 <Contact/>
                 <Game/>
             </Moblie>
-            <NavSection> 
+
+            <AnimationNavbar show={this.state.show} >
               <BG>   
                 <SectionUl>
                 {
@@ -293,7 +311,8 @@ export default class SideBar extends React.Component {
                   </NavItems>
                 </div>
              </BG>
-           </NavSection>
+          </AnimationNavbar>
+          
          </React.Fragment>
     }
 }
