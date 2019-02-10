@@ -75,7 +75,7 @@ const MSize = styled.div`
 
 class App extends React.Component {
   state = {
-    loading: false, //true
+    loading: true, //true
     count:0,
     text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
     textcount:0,

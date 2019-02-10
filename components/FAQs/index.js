@@ -214,7 +214,7 @@ export default class Question extends Component {
                               <React.Fragment key={i}>
                                 <FontFAQs>
                                   <Desktop>
-                                  <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${data.num}`}>
+                                  <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
                                     {data.question} ?
                                       <Arrow src='../../static/img/downarrow.png' deg={data.rotate} />
@@ -222,7 +222,7 @@ export default class Question extends Component {
                                   </QuestionText>
                                   </Desktop>
                                   <Moblie>
-                                  <QuestionText className="card-link bg-secondary" data-toggle="collapse" href={`#collapse${data.num}`}>
+                                  <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
                                     <div dangerouslySetInnerHTML={{ __html: data.questionMobile }} />
                                       <Arrow src='../../static/img/downarrow.png' deg={data.rotate} />
@@ -231,7 +231,7 @@ export default class Question extends Component {
                                   </Moblie>
                                 
                                 <div id={`collapse${data.num}`} className = {`collapse`}  data-parent="#accordion">
-                                  <AnswerText className="card-body bg-light px-4">
+                                  <AnswerText className="card-body px-4">
                                     {data.answer}
                                   </AnswerText>
                                   </div>
