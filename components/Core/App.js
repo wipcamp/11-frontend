@@ -22,12 +22,12 @@ import MiniSize from './Minisize'
 import {Font} from './Texts'
 import SideBar from './SideBar'
 
-// const datenow = dayjs('2019-01-15')
+// const datenow = dayjs('2019-03-11')
 const datenow = dayjs().format()
-const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
-const dateEndRegis = dayjs('2019-01-13')  //After end register one day
-const dateStartAnnounced = dayjs('2019-01-14')  //Before announced one day
-const dateStartCamp = dayjs('2019-02-20') //Before start camp one day
+const dateStartResgis = dayjs('2019-02-10')  //Before start register one day
+const dateEndRegis = dayjs('2019-03-12')  //After end register one day
+const dateStartAnnounced = dayjs('2019-03-28')  //Before announced one day
+const dateStartCamp = dayjs('2019-05-28') //Before start camp one day
 
 const Section = styled(Element)`
   
