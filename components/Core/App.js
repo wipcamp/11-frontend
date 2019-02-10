@@ -22,12 +22,12 @@ import MiniSize from './Minisize'
 import {Font} from './Texts'
 import SideBar from './SideBar'
 
-// const datenow = dayjs('2019-01-15')
+// const datenow = dayjs('2019-03-30')
 const datenow = dayjs().format()
-const dateStartResgis = dayjs('2019-01-07')  //Before start register one day
-const dateEndRegis = dayjs('2019-01-13')  //After end register one day
-const dateStartAnnounced = dayjs('2019-01-14')  //Before announced one day
-const dateStartCamp = dayjs('2019-02-20') //Before start camp one day
+const dateStartResgis = dayjs('2019-02-11')  
+const dateEndRegis = dayjs('2019-03-11')  
+const dateStartAnnounced = dayjs('2019-03-29') 
+const dateStartCamp = dayjs('2019-05-29') 
 
 const Section = styled(Element)`
   
@@ -64,9 +64,11 @@ const ReText = styled.div`
 `
 const RegisButton = (props) =>(
   <RegisVisible visi={props.visi}>
+    <a href={props.a} target="_blank">
     <RegisterButton>
       <ReText>{props.text}</ReText>
     </RegisterButton>
+    </a>
   </RegisVisible>
 )
 
@@ -87,6 +89,8 @@ class App extends React.Component {
     count:0,
     text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
     textcount:0,
+    a: ['http://itim.wip.camp','http://itim.wip.camp'],
+    acount:0,
     visible: ["hidden", "visible"],
     visiblecount:1,
   };
@@ -97,16 +101,18 @@ class App extends React.Component {
 
   componentDidMount = () => {
     setTimeout(() => this.setState({ loading: false }), 1500);
-
+    
     if (dateStartResgis.isBefore(datenow) && dateEndRegis.isAfter(datenow)) {
       this.setState({
         textcount: 1,
-        visiblecount: 1
+        visiblecount: 1,
+        acount : 0
       })
     } else if (dateStartAnnounced.isBefore(datenow) && dateStartCamp.isAfter(datenow)) {
       this.setState({
         textcount: 2,
-        visiblecount: 1
+        visiblecount: 1,
+        acount : 1
       })
     } else {
       this.setState({
@@ -130,7 +136,7 @@ class App extends React.Component {
         <MiniSize />
         <MSize>
           <BGcolor>
-            <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
+            <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} a={this.state.a[this.state.acount]} ></RegisButton>
             <SideBar />
           </BGcolor>
         </MSize>

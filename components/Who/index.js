@@ -33,7 +33,7 @@ const TextPosition = styled.div`
 
 const IconInfo = [
   { icon: '/static/img/icon-who/bed.png', text: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้ตลอดระยะเวลา 5 วัน 4 คืน' },
-  { icon: '/static/img/icon-who/graduate.png', text: 'น้อง ๆ มัธยมศึกษาตอนปลายแผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ' },
+  { icon: '/static/img/icon-who/graduate.png', text: 'น้องมัธยมศึกษาตอนปลาย "ทุกแผนการเรียน" สามารถสมัครค่ายได้' },
   { icon: '/static/img/icon-who/person.png', text: 'น้อง ๆที่ได้รับอนุญาตจากผู้ปกครองโดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง' },
   { icon: '/static/img/icon-who/computer.png', text: 'น้อง ๆ ที่มีความสนใจด้านไอทีหรือต้องการค้นหาตนเองเพื่อศึกษาต่อ' }
 ]
