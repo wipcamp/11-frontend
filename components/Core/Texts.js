@@ -86,7 +86,7 @@ color : #3A1E12;
     margin-top : 10px;
   }
   @media (min-width:576px) {
-    margin-left: 15px;
+    margin-left: 12px;
     font-size: 15px;
     margin-top : 5px;
   }
