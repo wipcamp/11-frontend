@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const Floor = styled.img`
+const Hill = styled.img`
   position: absolute;
   z-index: 0;
   width:100%;
   transform: translate(0%,10%);
   @media (min-width:320px) {
     width:100%;
-    height: 30%;
+    height: 50%;
     bottom: 34vh;
   }
   @media (min-width:768px) {
@@ -29,7 +29,7 @@ const Floor = styled.img`
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
     left:0;
     bottom: 0;
-    height:85%;
+    height:140%;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
     left:0;
@@ -239,7 +239,7 @@ const Red =styled.img`
       width:40%;
     }
     @media (min-width:412px) {
-      top:21vh;
+      top:24vh;
     }
     @media (min-width:576px) {
       top: 10vh;
@@ -275,8 +275,8 @@ const Dojo = styled.img`
       left: 35.25vw;
       width:20%;
     }
-    @media (min-width:412px) {
-      top: 32vh;
+    @media (min-width:410px){
+      top: 33vh;
     }
     @media (min-width:576px) {
       top: 28vh;
@@ -314,7 +314,7 @@ export default class background extends Component {
   render () {
     return (
       <div className="text-align-center">
-        <Floor src='/static/img/background-game/MainGame_floor.png' />
+        <Hill src='/static/img/background-game/MainGame_floor.png' />
         <Stairs src='/static/img/background-game/MainGame_stairs.png' />
         <RockLeft src='/static/img/background-game/MainGame_rockleft.png' />
         <RockRight src='/static/img/background-game/MainGame_rockright.png' />
