@@ -332,8 +332,8 @@ export default class background extends Component {
         <Red src='/static/img/background-game/MainGame_red.png' />
         <Dojo src='/static/img/background-game/MainGame_Dojo.png' />
         <FooterBg className="d-flex justify-content-center align-items-center text-white">
-          <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;
-          <div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 11 I'm Developer
+          Created&nbsp;
+          &nbsp;by 11 I'm Developer
         </FooterBg>
       </div>
     )
