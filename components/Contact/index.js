@@ -19,8 +19,12 @@ const Model = styled(Wippo)`
     z-index: 0;
   }
   @media (min-width:768px){
+    z-index: 0;
+  }
+  @media (min-width:1000px){
     z-index: 20;
   }
+ 
 `
 
 const PDBox1 = styled(PDBox)`
