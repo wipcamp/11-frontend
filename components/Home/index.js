@@ -50,7 +50,7 @@ export default class componentName extends Component {
   render () {
     return (
       <Bg>
-        <Wippo wippo='wippoHome.png' />
+        <Wippo src='../../static/img/wippo/wippoHome.png' />
         <Background />
         <div className ="container">
           <div className="row text-center pt-1">

@@ -9,7 +9,6 @@ import Wippo from '../Core/Wippo'
 
 const TextPosition = styled.div`  
   margin-left:1em;
-  transform: translate(0, 10%);
   @media (min-width:414px){
     transform: translate(5%, 10%);
   }
@@ -22,7 +21,6 @@ const TextPosition = styled.div`
     transform: translate(0, 50%);
   }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
-    transform: translate(0, 20%);
     margin-left:0.5em;
     
   }
@@ -44,7 +42,7 @@ export default class componentName extends Component {
   render () {
     return (
       <Bg>
-        <Wippo wippo='wippoWho.png' />
+        <Wippo src='../../static/img/wippo/wippoWho.png' />
         <Background />
         <div className="container">
           <div className="row justify-content-center">

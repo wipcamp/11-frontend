@@ -27,7 +27,7 @@ export default class index extends Component {
   render () {
     return (
       <Bg>
-        <Wippo wippo='wippoSponsor.png' />
+        <Wippo src='../../static/img/wippo/wippoSponsor.png' />
         <Background />
         <div className="container">
           <div className="row justify-content-center">

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import dayjs from 'dayjs'
 import { Element } from 'react-scroll'
-import ReactPageScroller from "react-page-scroller";
-import {Pager} from "react-bootstrap";
+import ReactPageScroller from "react-page-scroller"
+import {Pager} from "react-bootstrap"
 
 import Home from '../Home'
 import What from '../What'
@@ -13,13 +13,14 @@ import Where from '../Where'
 import When from '../When'
 import FAQs from '../FAQs'
 import Contact from '../Contact'
-import Loading from './Loading';
-import RegisterButton from './Register';
+import Loading from './Loading'
+import RegisterButton from './Register'
 import Game from '../Game'
 import Sponsor from '../Sponsor'
+import MiniSize from './Minisize'
 
 import {Font} from './Texts'
-import SideBar from './SideBar';
+import SideBar from './SideBar'
 
 // const datenow = dayjs('2019-01-15')
 const datenow = dayjs().format()
@@ -69,9 +70,16 @@ const RegisButton = (props) =>(
   </RegisVisible>
 )
 
+const MSize = styled.div`
+  @media(orientation:landscape)
+  and (max-width:850px){
+    display:none;
+  }
+`
+
 class App extends React.Component {
   state = {
-    loading: true, //true
+    loading: false, //true
     count:0,
     text:["รอก่อนนะ","รับสมัคร" ,"ประกาศผล"],
     textcount:0,
@@ -114,10 +122,15 @@ class App extends React.Component {
       }
 
     return (
-      <BGcolor>
-        <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
-        <SideBar />
-      </BGcolor>
+      <div>
+        <MiniSize />
+        <MSize>
+          <BGcolor>
+            <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} ></RegisButton>
+            <SideBar />
+          </BGcolor>
+        </MSize>
+      </div>
     )
   }
 }
