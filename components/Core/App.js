@@ -75,6 +75,10 @@ const MSize = styled.div`
   and (max-width:850px){
     display:none;
   }
+  @media(orientation:portrait)
+  and (min-width:768px) and (max-width:1024px){
+    display:none;
+  }
 `
 
 class App extends React.Component {
