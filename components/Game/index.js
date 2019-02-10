@@ -5,7 +5,17 @@ import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
 import Background from './background'
 
+const Model = styled(Wippo)`
+  @media(min-width:320px) {
+    bottom: 0;
+  }
+  @media (min-width:768px) {
+    bottom: -5vh;
+  }
+`
+
 const Img = styled.img`
+   
    @media(min-width:320px) {
     width:309px;
     height: auto;
@@ -67,7 +77,7 @@ export default class index extends Component {
     return (
       <Bg>
         <Background />
-        <Wippo src='../../static/img/wippo/wippoGame.png' />
+        <Model src='../../static/img/wippo/wippoGame.png' />
         <div className="container">
           <div className="row">
             <Div className="col-12 d-flex justify-content-center align-items-center text-center" onClick={() => this.handleClickIcon()}>
