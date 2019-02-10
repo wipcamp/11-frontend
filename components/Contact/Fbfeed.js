@@ -4,8 +4,8 @@ import { FacebookProvider, Page } from 'react-facebook'
 
 const Size = styled.div`
   @media (min-width:320px) {
-    padding-left:5px;
-    padding-right:5px;
+    padding-left:15px;
+    padding-right:15px;
     width:100%;
   }
   @media (min-width:576px) {

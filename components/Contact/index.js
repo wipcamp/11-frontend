@@ -35,13 +35,13 @@ const MiddleOfTheRight = styled.div`
 `
 const LogoInfo = [
   { imgUrl: '../../static/img/social/ig.png', link: 'https://www.instagram.com/wipcamp/' },
-  { imgUrl: '../../static/img/social/Twitter.png', link: 'https://twitter.com/WIPCamp' },
+  // { imgUrl: '../../static/img/social/Twitter.png', link: 'https://twitter.com/WIPCamp' },
   { imgUrl: '../../static/img/social/youtube.png', link: 'https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA' },
   { imgUrl: '../../static/img/social/lineAdd.png', link: 'http://line.naver.jp/ti/p/Z_Qg6KlFnU#~' }
 ]
 
 const BoxInfo = [
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: '../../static/img/social/phone-call.png', text: '095-5812358 (พี่ทีเจ)' },
+  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: '../../static/img/social/phone-call.png', text: '095-581-2358 (พี่ทีเจ)' },
   { className: 'p-0 mt-3 mb-sm-1 mb-lg-4 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: '../../static/img/social/email.png', text: 'wippo@wipcamp.com' }
 ]
 
@@ -66,7 +66,7 @@ export default class index extends Component {
                     <Fbfeed/>
                   </div>
                   <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
-                    <div className="row mr-1 ml-1 mt-2">
+                    <div className="row mr-auto ml-5 pl-4 mt-2">
                       {
                         LogoInfo.map((data, i) => (
                           <div className="pl-0 pr-0 col-3 col-lg-3" key = {i}>

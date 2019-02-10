@@ -39,23 +39,21 @@ const LeftBuildy = styled.img`
   }
   @media (min-width:412px) {
     transform: translate(-20%,-10%);
-    bottom: 10vh;
-    width:60%;
+      width:60%;
   }
   @media (min-width:576px) {
     left:-20vh;
-    bottom: 20vh;
+    
     width:60%;
   }
   @media (min-width:768px) {
     transform: translate(60%,10%);
-    bottom: 20vh;
     width:40%;
   }
   @media (min-width:1024px) {
     transform: translate(40%,-20%);
-    bottom: 27vh;
-    width:35%;
+    
+    
   }
   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
     transform: translate(10%,10%);
@@ -84,18 +82,15 @@ const RightBuildy = styled.img`
   }
   @media (min-width:576px) {
     right:-20vh;
-    bottom: 20vh;
     width:60%;
   }
   @media (min-width:768px) {
     transform: translate(-60%,10%);
-    bottom: 20vh;
     width:40%;
   }
   @media (min-width:1024px) {
     transform: translate(-40%,-20%);
-    bottom: 27vh;
-    width:35%;
+    
   }
 
 `
@@ -177,6 +172,7 @@ const Mount = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
+    
   }
 `
 const LeftCloudy = styled.img`
