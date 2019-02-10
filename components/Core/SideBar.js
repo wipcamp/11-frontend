@@ -14,6 +14,7 @@ import Contact from '../Contact'
 import Game from '../Game'
 import Sponsor from '../Sponsor'
 import Button from './Button'
+import { throws } from "assert";
 
 const NavSection = styled.nav`
   position: fixed;
@@ -23,6 +24,7 @@ const NavSection = styled.nav`
   top: 50%;
   transform: translateY(-50%);
   z-index:1000;
+  visibility:${(props) => props.show ? "visible" : "hidden"} ;
   
   @media(max-width: 768px) {
    display: none;
@@ -215,23 +217,37 @@ export default class SideBar extends React.Component {
    state = {
       current: 'home',
       show: false,
-      display: false,
+      display: "active",
       currentPage:1,
-      _pageScroller : null
+      _pageScroller : null,
+      show : false
   }
 
     goToPage = (eventKey) => {
-        this._pageScroller.goToPage(eventKey);
+      this._pageScroller.goToPage(eventKey);
     };
 
     pageOnChange = (number) => {
-        this.setState({currentPage: number});
+      if(number == 1){
+        this.setState({
+          show: false
+        })
+      }
+      else{
+        this.setState({
+          show: true
+        })
+      }
+      this.setState({currentPage: number});
     };
 
     handleClickText = () => {
       this.setState({
         display: "active"
       })
+      if(this.state.currentPage == 0){
+        this.state.show = false
+      }
     };
 
     setActive = (i) => {
@@ -274,7 +290,7 @@ export default class SideBar extends React.Component {
                 <Contact/>
                 <Game/>
             </Moblie>
-            <NavSection> 
+            <NavSection show = {this.state.show} > 
               <BG>   
                 <SectionUl>
                 {
