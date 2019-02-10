@@ -220,20 +220,6 @@ export default class SideBar extends React.Component {
       _pageScroller : null
   }
 
-    toggleNavbar (to) {
-      if (to === 'home') {
-        this.setState({ show: false })
-        this.setState({ display: false })
-      }
-      else {
-        this.setState({ show: true })
-        this.setState({ display: true })
-      }
-      this.setState({
-        current: to
-      })
-    }
-
     goToPage = (eventKey) => {
         this._pageScroller.goToPage(eventKey);
     };
@@ -242,25 +228,24 @@ export default class SideBar extends React.Component {
         this.setState({currentPage: number});
     };
 
-    getPagesNumbers = () => {
-        const pageNumbers = [];
-        const sections = [ ,'Home' , 'What' ,'Who' , 'Where' ,'When', 'FAQs', 'Sponsor', 'Contact']
-
-        for (let i = 1; i <= 8; i++) {
-          pageNumbers.push(
-            <NavItems key={i} eventKey={i - 1} onSelect={this.goToPage}>
-              <NavLink>
-                <NavText>{sections[i]}</NavText>
-              </NavLink>
-            </NavItems>
-          )
-        }
-
-        return [...pageNumbers];
+    handleClickText = () => {
+      this.setState({
+        display: "active"
+      })
     };
 
+    setActive = (i) => {
+      if(this.state.currentPage == i){
+        return this.state.display
+      }
+      else{
+        return null
+      }
+    }
+
     render() {
-      const pagesNumbers = this.getPagesNumbers();
+      const sections = [ ,'Home' , 'What' ,'Who' , 'Where' ,'When', 'FAQs', 'Sponsor', 'Contact']
+
       return <React.Fragment>
             <Desktop>
             <ReactPageScroller 
@@ -292,7 +277,15 @@ export default class SideBar extends React.Component {
             <NavSection> 
               <BG>   
                 <SectionUl>
-                  {pagesNumbers}
+                {
+                  sections.map((info, i) => (
+                    <NavItems key={i} eventKey={i-1} onSelect={this.goToPage} onClick={()=>this.handleClickText()}>
+                      <NavLink className = {this.setActive(i)}>
+                        <NavText className = {this.setActive(i)}>{sections[i]}</NavText>
+                      </NavLink>
+                    </NavItems>
+                  ))
+                }
                 </SectionUl>
                 <div className = "text-center">
                   <NavItems key={9} eventKey={8} onSelect={this.goToPage}> 
