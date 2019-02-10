@@ -177,7 +177,40 @@ const AnimationNavbar = styled.div`
     }
   }
 `
-
+const Desktop = styled.div`
+  @media(min-width:320px) {
+    display:none;
+  }
+  @media (min-width:410px) {
+    display:none;
+  }
+  @media (min-width:576px) {
+    display:none;
+  }
+  @media (min-width:768px) {
+    display:block;
+  }
+  @media(min-width:1024px) {
+    display:block;
+  }
+`
+const Moblie = styled.div`
+  @media(min-width:320px) {
+    display:block;
+  }
+  @media (min-width:410px) {
+    display:block;
+  }
+  @media (min-width:576px) {
+    display:block;
+  }
+  @media (min-width:768px) {
+    display:none;
+  }
+  @media(min-width:1024px) {
+    display:none;
+  }
+`
 export default class SideBar extends React.Component {
    state = {
       current: 'home',
@@ -229,9 +262,10 @@ export default class SideBar extends React.Component {
     render() {
       const pagesNumbers = this.getPagesNumbers();
       return <React.Fragment>
+            <Desktop>
             <ReactPageScroller 
-              ref={c => this._pageScroller = c} 
-              pageOnChange={this.pageOnChange}
+            ref={c => this._pageScroller = c} 
+            pageOnChange={this.pageOnChange}
             >
                 <Home/>
                 <What/>
@@ -243,6 +277,18 @@ export default class SideBar extends React.Component {
                 <Contact/>
                 <Game/>
             </ReactPageScroller>
+            </Desktop>
+            <Moblie>
+                <Home/>
+                <What/>
+                <Who/>
+                <Where/>
+                <When/>
+                <FAQs/>
+                <Sponsor/>
+                <Contact/>
+                <Game/>
+            </Moblie>
             <NavSection> 
               <BG>   
                 <SectionUl>
