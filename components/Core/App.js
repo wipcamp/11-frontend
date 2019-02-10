@@ -5,20 +5,10 @@ import { Element } from 'react-scroll'
 import ReactPageScroller from "react-page-scroller"
 import {Pager} from "react-bootstrap"
 
-import Home from '../Home'
-import What from '../What'
-import Navbar from './NavBar'
-import Who from '../Who'
-import Where from '../Where'
-import When from '../When'
-import FAQs from '../FAQs'
-import Contact from '../Contact'
+
 import Loading from './Loading'
 import RegisterButton from './Register'
-import Game from '../Game'
-import Sponsor from '../Sponsor'
 import MiniSize from './Minisize'
-
 import {Font} from './Texts'
 import SideBar from './SideBar'
 
