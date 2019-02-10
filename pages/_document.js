@@ -26,6 +26,18 @@ export default class MyDocument extends Document {
     }
   }
 
+  const googleTagManager = `
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NFZH4C8');
+  `
+
+  const googleNoScript = `
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  ` 
   render () {
     return (
       <html>
@@ -49,19 +61,14 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png"/>
           <link rel="manifest" href="/static/img/favicon/site.webmanifest"/>
           <link rel="mask-icon" href="/static/img/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-          <script dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-NFZH4C8');` }} />
           <script src="../static/script/jquery-3.3.1.slim.min.js" type="text/javascript" rel="stylesheet" crossorigin="anonymous" />
           <script src="../static/script/bootstrap.min.js" type="text/javascript" rel="stylesheet" crossorigin="anonymous" />
+          <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
+          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
         </Head>
         <body className="custom_class">
           <Main />
           <NextScript />
-          <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8" height="0" width="0" style="display:none;visibility:hidden;"></iframe>` }} />
         </body>
       </html>
     )
