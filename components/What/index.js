@@ -83,14 +83,14 @@ export default class index extends Component {
                     </div>
                     <Paragraph>
                       { WhatText.map((info, i) => (
-                        <React.Fragment>
+                        <React.Fragment key = {i}>
                         <Desktop>
-                          <Font key = {i}>
+                          <Font>
                             <div dangerouslySetInnerHTML={{ __html: info.text }} />
                           </Font>
                         </Desktop>
                         <Moblie>
-                          <Font key = {i}>
+                          <Font>
                             <div dangerouslySetInnerHTML={{ __html: info.text1 }} />
                           </Font>
                         </Moblie>
