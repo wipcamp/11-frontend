@@ -21,7 +21,7 @@ const NavSection = styled.nav`
   transition: all .2s;
   right: 2rem;
   margin: 0 !important;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
   z-index:1000;
   visibility:${(props) => props.show ? "visible" : "hidden"} ;
@@ -151,10 +151,11 @@ const NavItems = styled(Pager.Item)`
   margin-bottom: 10px;
   position: relative;
 `
-const AnimationNavbar = styled.div`
-  animation-name: ${(props) => props.display ? "fadeInRight" : "fadeOutRight"  };
+const AnimationNavbar = styled(NavSection)`
+  animation-name: ${(props) => props.show ? "fadeInRight" : "fadeOutRight"  };
   animation-duration:.5s;
   animation-fill-mode: forwards;
+  
   @keyframes fadeInRight {
     from {
       opacity: 0;
@@ -290,7 +291,8 @@ export default class SideBar extends React.Component {
                 <Contact/>
                 <Game/>
             </Moblie>
-            <NavSection show = {this.state.show} > 
+
+            <AnimationNavbar show={this.state.show} >
               <BG>   
                 <SectionUl>
                 {
@@ -309,7 +311,8 @@ export default class SideBar extends React.Component {
                   </NavItems>
                 </div>
              </BG>
-           </NavSection>
+          </AnimationNavbar>
+          
          </React.Fragment>
     }
 }

@@ -41,7 +41,7 @@ const LogoInfo = [
 ]
 
 const BoxInfo = [
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: '../../static/img/social/phone-call.png', text: '096-5812358 (พี่ทีเจ)' },
+  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0965812358', imgUrl: '../../static/img/social/phone-call.png', text: '095-5812358 (พี่ทีเจ)' },
   { className: 'p-0 mt-3 mb-sm-1 mb-lg-4 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: '../../static/img/social/email.png', text: 'wippo@wipcamp.com' }
 ]
 
