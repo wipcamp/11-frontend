@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const SponsorStyle = styled.img`
   position: relative;
   height: 50px;
-  padding: 1em;
+  margin: 1em;
 `
 
 export default class SponsorAxios extends Component {
