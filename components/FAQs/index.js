@@ -188,6 +188,13 @@ export default class Question extends Component {
     else if(!(i===5)){
       stateCopy.QandA[5].rotate = '0deg';
     }
+    if(i===6){
+      i = 6;
+      { stateCopy }
+    }
+    else if(!(i===6)){
+      stateCopy.QandA[6].rotate = '0deg';
+    }
   }
 
   render() {
