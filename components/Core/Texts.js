@@ -102,7 +102,7 @@ color : #3A1E12;
 `
 export const FontFAQs = styled.div`
   @media (min-width:320px){
-    font-size: 10px;
+    font-size: 9px;
   }
   @media (min-width:375px){
     font-size: 12px;
