@@ -86,13 +86,13 @@ const BoxInfo = [
     textday: '11 กุมภาพันธ์ 2562'
   },
   {
-    src: dateEndRegis.isBefore(datenow) ? '../../static/img/when/wippoWho.png' : '../../static/img/when/12.png',
-    text: 'ประกาศผล',
+    src: dateStartAnnounced.isBefore(datenow) ? '../../static/img/when/wippoWhere.png' : '../../static/img/when/13.png',
+    text: 'ปิดรับสมัคร',
     textday: '11 มีนาคม 2562'
   },
   {
-    src: dateStartAnnounced.isBefore(datenow) ? '../../static/img/when/wippoWhere.png' : '../../static/img/when/13.png',
-    text: 'ปิดรับสมัคร',
+    src: dateEndRegis.isBefore(datenow) ? '../../static/img/when/wippoWho.png' : '../../static/img/when/12.png',
+    text: 'ประกาศผล',
     textday: '29 มีนาคม 2562'
   },
   {
