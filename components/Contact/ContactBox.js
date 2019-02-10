@@ -37,7 +37,7 @@ const ContactBox = (props) => (
     <a href={props.href}>
       <Img src={props.imgUrl} />
     </a>
-    <ImgDiv>
+    <ImgDiv className="pl-2">
       <Paragraph>
         <TextA href={props.href}>{props.text}</TextA>
       </Paragraph>
