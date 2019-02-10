@@ -308,8 +308,15 @@ const Dojo = styled.img`
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       top:13vh;
       left:42.5vw;
-    }
-    
+    } 
+`
+const FooterBg = styled.div`
+  position: absolute;
+  z-index: 10;
+  min-height: 3vh;
+  min-width: 100%;
+  background-color: #493A39;
+  bottom: 0vh;
 `
 export default class background extends Component {
   render () {
@@ -324,6 +331,10 @@ export default class background extends Component {
         <SakuraBack src='/static/img/background-game/MainGame_sakuraback.png' />
         <Red src='/static/img/background-game/MainGame_red.png' />
         <Dojo src='/static/img/background-game/MainGame_Dojo.png' />
+        <FooterBg className="d-flex justify-content-center align-items-center text-white">
+          <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;
+          <div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 11 I'm Developer
+        </FooterBg>
       </div>
     )
   }
