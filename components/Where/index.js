@@ -28,6 +28,7 @@ const Map = styled.img`
   }
   @media(min-width:850px){
     content: url('../../static/img/map.png');
+    width:60%;
   }
   z-index:9;
 `
