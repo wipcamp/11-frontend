@@ -9,6 +9,9 @@ import Wippo from '../Core/Wippo'
 
 const TextPosition = styled.div`  
   margin-left:1em;
+  @media (min-width:360px){
+    transform: translate(0%, 20%);
+  }
   @media (min-width:414px){
     transform: translate(5%, 10%);
   }
