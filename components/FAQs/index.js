@@ -32,13 +32,13 @@ const Arrow = styled.img`
     margin-top: -2vh;
     margin-right: -1.5vh;
   }
-  @media(min-width:855px) {
+  @media(min-width:851px) {
     width: 25px;
-    margin-top: -0.5vh;
+    margin-top: -0vh;
   }
   @media(min-width:1024px) {
     width: 25px;
-    margin-top: 0vh;
+    margin-top: 0.5vh;
   }
 `
 
@@ -227,21 +227,21 @@ export default class Question extends Component {
                                   <Desktop>
                                   <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
+                                    
                                     {data.question} ?
                                       <Arrow src='../../static/img/downarrow.png' deg={data.rotate} />
                                   </div>
                                   </QuestionText>
                                   </Desktop>
                                   <Moblie>
-                                  <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${data.num}`}>
+                                  <QuestionText className="card-link" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
                                     <div dangerouslySetInnerHTML={{ __html: data.questionMobile }} />
                                       <Arrow src='../../static/img/downarrow.png' deg={data.rotate} />
                                   </div>
                                   </QuestionText>
                                   </Moblie>
-                                
-                                <div id={`collapse${data.num}`} className = {`collapse`}  data-parent="#accordion">
+                                <div id={`collapse${data.num}`} className={`collapse`} data-parent="#accordion">
                                   <AnswerText className="card-body px-4">
                                     {data.answer}
                                   </AnswerText>
