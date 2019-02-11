@@ -121,16 +121,6 @@ const Div2 = styled.div`
   }
 `
 
-const PDBox1 = styled(PDBox)`
-  text-align: center !important;
-  @media (min-width:320px){
-    margin-bottom:10em;
-  }
-  @media (min-width:992px){
-    padding-left:5em;
-    padding-right:2em;
-  }
-`
 const MiddleOfTheRight = styled.div`
   @media (min-width:576px){
     left:0vw;

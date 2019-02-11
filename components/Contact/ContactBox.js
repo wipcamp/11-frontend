@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Paragraph, Font } from '../Core/Texts'
+import { Paragraph } from '../Core/Texts'
 
 const Img = styled.img`
   /* content : url(${(props) => props.imgUrl}); */

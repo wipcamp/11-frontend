@@ -19,7 +19,6 @@ const Size = styled.div`
     padding-left:20px;
     padding-right:20spx;
     text-align: center !important;
-
   }
 `
 
