@@ -20,7 +20,8 @@
   },
   "scripts": {
     "build": "next build",
-    "dev": "next"
+    "dev": "next,
+    "start": "next start"
     
   },
   "devDependencies": {
