@@ -88,8 +88,8 @@ const LogoInfo = [
 ]
 
 const BoxInfo = [
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0955812358', imgUrl: '../../static/img/social/phone-call.png', text: '095-581-2358 (พี่ทีเจ)' },
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-4 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: '../../static/img/social/email.png', text: 'wippo@wipcamp.com' }
+  { className: 'p-0 mt-3 mb-lg-3 col-12 col-lg-12 ', href: 'tel://0955812358', imgUrl: '../../static/img/social/phone-call.png', text: '095-581-2358 (พี่ทีเจ)' },
+  { className: 'p-0 mt-3 mb-lg-4 col-12 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: '../../static/img/social/email.png', text: 'wippo@wipcamp.com' }
 ]
 
 export default class index extends Component {
@@ -123,7 +123,7 @@ export default class index extends Component {
                       }
                     </Div>
                     <br />
-                    <div className="row ml-0 mr-0">
+                    <div className="row ml-0 mr-0 mb-2">
                       {
                         BoxInfo.map((data, i) => (
                           <div key={i} className={data.className}>

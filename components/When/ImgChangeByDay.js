@@ -56,10 +56,15 @@ const Font = styled.div`
       padding-left:0.25rem;
       padding-right:0.25rem;
     }
-    @media (min-width:420px) {
+    /* @media (min-width:420px) {
       margin-top:2em;
-      padding-left:1.5rem;
-      padding-right:1.5rem;
+      padding-left:2rem;
+      padding-right:2rem;
+    } */
+    @media (min-width:420px) {
+      margin-top:1em;
+      padding-left:2rem;
+      padding-right:2rem;
     }
     @media (min-width:576px) {
       margin-top:2em;
