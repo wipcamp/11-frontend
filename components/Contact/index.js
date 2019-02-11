@@ -84,7 +84,7 @@ const LogoInfo = [
   { imgUrl: '../../static/img/social/ig.png', link: 'https://www.instagram.com/wipcamp/' },
   // { imgUrl: '../../static/img/social/Twitter.png', link: 'https://twitter.com/WIPCamp' },
   { imgUrl: '../../static/img/social/youtube.png', link: 'https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA' },
-  { imgUrl: '../../static/img/social/lineAdd.png', link: 'http://line.naver.jp/ti/p/Z_Qg6KlFnU#~' }
+  { imgUrl: '../../static/img/social/lineAdd.png', link: 'https://line.me/R/ti/p/%40wipcamp' }
 ]
 
 const BoxInfo = [
