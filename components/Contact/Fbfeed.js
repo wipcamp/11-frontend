@@ -15,6 +15,12 @@ const Size = styled.div`
     min-width:300px;
     width:100%;
   }
+  @media (min-width:992px){
+    padding-left:20px;
+    padding-right:20spx;
+    text-align: center !important;
+
+  }
 `
 
 export default class Example extends Component {

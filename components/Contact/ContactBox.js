@@ -19,7 +19,7 @@ const ImgDiv = styled.div`
 `
 
 const TextA = styled.a`
-  font-size: 16px;
+  font-size: ${Paragraph};
   color:black;
   &:hover{
     text-decoration:none;
