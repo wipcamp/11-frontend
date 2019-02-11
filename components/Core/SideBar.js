@@ -46,7 +46,7 @@ const BG = styled.div`
   background-size: cover;
   min-width:95px;
   justify-content: center;
-  padding-top:1.5em;
+  padding:1.5em 0;
 `
 
 const NavLink = styled.div`

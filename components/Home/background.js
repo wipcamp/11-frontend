@@ -104,14 +104,14 @@ const LeftTree = styled.img`
   width:30%;
 
   @media (min-width:320px) {
-    width:50%;
+    width:65%;
   }
   @media (min-width:412px) {
-    width:50%;
+    width:65%;
     left : -10vw;
   }
   @media (min-width:576px) {
-    width:40%;
+    width:55%;
     left : -7vw;
   }
   @media (min-width:768px) {
@@ -119,7 +119,7 @@ const LeftTree = styled.img`
     left : -2vw;
   }
   @media (min-width:1024px) {
-    width:30%;
+    width:40%;
     left: 0vw;
   }
 `
@@ -175,7 +175,7 @@ const Mount = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
-    bottom: -3vh;
+    bottom: 0vh;
     
   }
 `
