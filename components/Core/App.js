@@ -119,11 +119,11 @@ class App extends React.Component {
   render() {
     const { loading } = this.state;
     
-    if (loading) {
-      return (
-        <Loading />
-        )
-      }
+    // if (loading) {
+    //   return (
+    //     <Loading />
+    //     )
+    //   }
 
     return (
       <div>
