@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled , { keyframes } from 'styled-components'
+import { Arrow } from '../Core/SideBar'
+import { headShake } from '../Contact/Logo';
 
 const Layer1 = styled.img`
   position: absolute;
@@ -176,7 +178,6 @@ const Mount = styled.img`
   @media (min-width:1024px) {
     width:100%;
     bottom: 0vh;
-    
   }
 `
 const LeftCloudy = styled.img`
@@ -194,6 +195,83 @@ const RightCloudy = styled.img`
     width:30%;
 `
 
+const bounceIt = keyframes`
+  0%{
+    opacity: 1;
+    transform: translate3d(0, -5px, 0);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translate3d(0, 5px, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, -5px, 0);
+  }
+  `
+export const ArrowLeft = styled.img`
+  position: absolute;
+  z-index: 20;
+  bottom: 2.5vh;
+  left: 30vw;
+  width: 5%;
+  cursor: pointer;
+  content: url('../../static/img/arrow-down.png');
+  animation: ${bounceIt} 5s infinite;
+  @media (min-width:320px){
+    width: 7%;
+  }
+  @media (min-width:412px) {
+    width: 8%;
+  }
+  @media (min-width:576px) {
+    width: 6%;
+  }
+  @media (min-width:768px) {
+    width: 5%;
+  }
+  @media (min-width:1024px) {
+    width: 4%;
+  }
+`
+
+export const ArrowRight = styled.img`
+  position: absolute;
+  z-index: 20;
+  bottom: 2.5vh;
+  right: 30vw;
+  width: 5%;
+  cursor: pointer;
+  content: url('../../static/img/arrow-down.png');
+  animation: ${bounceIt} 5s infinite;
+
+  
+  @media (min-width:320px){
+    width: 7%;
+  }
+  @media (min-width:412px) {
+    width: 8%;
+  }
+  @media (min-width:576px) {
+    width: 6%;
+  }
+  @media (min-width:768px) {
+    width: 5%;
+  }
+  @media (min-width:1024px) {
+    width: 4%;
+  }
+
+`
 export default class background extends Component {
   render () {
     return (
@@ -206,6 +284,8 @@ export default class background extends Component {
         <Mount src = '/static/img/background-home/MainHome_Mountains.png' />
         <RightCloudy src = '/static/img/background-FAQs/Cloud.png' />
         <LeftCloudy src = '/static/img/background-when/MainWhen_RightCloudFull.png' />
+        <ArrowLeft/>
+        <ArrowRight/>
       </div>
     )
   }
