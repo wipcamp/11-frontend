@@ -227,7 +227,7 @@ export default class Question extends Component {
                                   <Desktop>
                                   <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
-                                    Q : {data.question} ?
+                                    {data.question} ?
                                       <Arrow src='../../static/img/downarrow.png' deg={data.rotate} />
                                   </div>
                                   </QuestionText>
@@ -243,7 +243,7 @@ export default class Question extends Component {
                                 
                                 <div id={`collapse${data.num}`} className = {`collapse`}  data-parent="#accordion">
                                   <AnswerText className="card-body px-4">
-                                    A : {data.answer}
+                                    {data.answer}
                                   </AnswerText>
                                   </div>
                                 </FontFAQs>
