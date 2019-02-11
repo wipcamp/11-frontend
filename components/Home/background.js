@@ -175,7 +175,7 @@ const Mount = styled.img`
   }
   @media (min-width:1024px) {
     width:100%;
-    bottom: -3vh;
+    bottom: 0vh;
     
   }
 `
