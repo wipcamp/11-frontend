@@ -46,7 +46,7 @@ const BG = styled.div`
   background-size: cover;
   min-width:95px;
   justify-content: center;
-  padding-top:1.5em;
+  padding:1.5em 0;
 `
 
 const NavLink = styled.div`
@@ -56,6 +56,8 @@ const NavLink = styled.div`
   opacity: 0.6;
   transition: all .2s;
   cursor : pointer;
+  text-align: center;
+  justify-content: center;
 
   &:before {
     content: '';
@@ -71,8 +73,6 @@ const NavLink = styled.div`
     opacity: 1;
     display: flex;
     position: absolute;
-    right: 2.2em;
-    width: 100px;
     justify-content: flex-end;
     font-size: 14px;
     top:10%;
@@ -116,11 +116,10 @@ const NavText = styled.div`
   opacity: 0;
   display: flex;
   position: absolute;
-  right: 2.2em;
-  width: 100px;
   justify-content: flex-end;
   font-size: 14px;
   top:10%;
+  height: 30px;
 
   &:hover{
     opacity: 1;
@@ -142,6 +141,7 @@ const NavText = styled.div`
 `
 const SectionUl = styled(Pager)`
   margin: 0;
+  padding: 0;
 `
 
 const NavItems = styled(Pager.Item)`
@@ -150,6 +150,7 @@ const NavItems = styled(Pager.Item)`
   display: block;
   margin-bottom: 10px;
   position: relative;
+  text-align: center;
 `
 const AnimationNavbar = styled(NavSection)`
   animation-name: ${(props) => props.show ? "fadeInRight" : "fadeOutRight"  };

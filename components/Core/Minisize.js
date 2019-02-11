@@ -21,6 +21,13 @@ const Minicon = styled.div`
     justify-content:center;
     align-items:center;
   }
+  @media(orientation:landscape)
+  and (max-height: 650px){
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
 `
 const Img = styled.img`
   justify-content:center;

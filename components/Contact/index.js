@@ -26,6 +26,49 @@ const Model = styled(Wippo)`
   }
  
 `
+const Div = styled.div`
+  text-align: center !important;
+  width:auto;
+  @media (min-width:320px){
+    position:relative;
+    left : 10vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:576px){
+    left : 10vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:630px){
+    left : 9vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:750px){
+    left : 7vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:850px){
+    left : 9vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:992px){
+    position:relative;
+    left : 5vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+
+  }
+`
 
 const PDBox1 = styled(PDBox)`
   @media (min-width:320px){
@@ -70,7 +113,7 @@ export default class index extends Component {
                     <Fbfeed/>
                   </div>
                   <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
-                    <div className="row mr-auto ml-5 pl-4 mt-2">
+                    <Div className="row mt-2">
                       {
                         LogoInfo.map((data, i) => (
                           <div className="pl-0 pr-0 col-3 col-lg-3" key = {i}>
@@ -78,7 +121,8 @@ export default class index extends Component {
                           </div>
                         ))
                       }
-                    </div>
+                    </Div>
+                    <br />
                     <div className="row ml-0 mr-0">
                       {
                         BoxInfo.map((data, i) => (

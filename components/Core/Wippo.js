@@ -10,13 +10,16 @@ const Wippo = styled.img`
   left: 0;
   right: 0;
 
-  @media (min-width:320px) {
+  @media (min-height:320px) {
     height: 35vh;
   }
-   @media (min-width:576px) {
+  @media (min-height:576px) {
     height: 40vh;
   }
-  @media (min-width:1024px) {
+  @media (min-height:800px) {
+    height: 45vh;
+  }
+  @media (min-height:1024px) {
     height: 50vh;
   }
 `

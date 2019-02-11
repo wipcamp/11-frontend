@@ -6,7 +6,7 @@ const Size = styled.div`
   @media (min-width:320px) {
     padding-left:15px;
     padding-right:15px;
-    width:100%;
+    text-align: center !important;
   }
   @media (min-width:576px) {
     text-align: center !important;

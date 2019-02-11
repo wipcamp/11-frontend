@@ -28,6 +28,10 @@ const headShake = keyframes`
 `
 
 const Divhover = styled.div`
+  /* @media (min-width:1000px) {
+    padding-left:2em;
+    padding-right:auto;
+  } */
   &:hover img {
     animation: ${headShake} 1s;
   }
