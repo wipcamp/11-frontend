@@ -38,7 +38,7 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="WIP Camp #11 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที " />
           <meta property="og:type" content="company" />
           <meta property="og:url" content="https://wip.camp/" />
-          <meta property="og:image" content="../static/img/home.png" />
+          <meta property="og:image" content="../static/img/OG.png" />
           <meta property="og:site_name" content="WIP Camp #11 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที" />
           <link rel="stylesheet" href="../static/css/bootstrap.css" crossOrigin="anonymous" type="text/css" />
           <link href="../static/css/font-family-Knewave.css" rel="stylesheet" type="text/css" />

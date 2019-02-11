@@ -130,7 +130,7 @@ class App extends React.Component {
         <MiniSize />
         <MSize>
           <BGcolor>
-            <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} a={this.state.a[this.state.acount]} ></RegisButton>
+            {/* <RegisButton visi={this.state.visible[this.state.visiblecount]} text={this.state.text[this.state.textcount]} a={this.state.a[this.state.acount]} ></RegisButton> */}
             <SideBar />
           </BGcolor>
         </MSize>
