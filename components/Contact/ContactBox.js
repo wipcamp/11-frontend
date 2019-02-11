@@ -28,7 +28,7 @@ const TextA = styled.a`
 `
 
 const ContactBox = (props) => (
-  <ImgDiv className="ml-0 mr-0" >
+  <ImgDiv className="ml-0 mr-0 pl-lg-5">
     <a href={props.href}>
       <Img src={props.imgUrl} />
     </a>
