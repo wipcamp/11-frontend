@@ -32,6 +32,10 @@ const Arrow = styled.img`
     margin-top: -2vh;
     margin-right: -1.5vh;
   }
+  @media(min-width:863px) {
+    width: 25px;
+    margin-top: -0.5vh;
+  }
   @media(min-width:1024px) {
     width: 25px;
     margin-top: 0vh;
