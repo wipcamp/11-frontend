@@ -30,13 +30,34 @@ const Div = styled.div`
   text-align: center !important;
   width:auto;
   @media (min-width:320px){
-    margin-left:5em;
+    position:relative;
+    left : 10vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:576px){
+    left : 10vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:630px){
+    left : 9vw;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center !important;
+  }
+  @media (min-width:750px){
+    left : 7vw;
+    margin-left:0;
     margin-right:auto;
     text-align: center !important;
   }
   @media (min-width:850px){
-    margin-left:7em;
-    margin-right:a;
+    left : 9vw;
+    margin-left:0;
+    margin-right:auto;
     text-align: center !important;
   }
   @media (min-width:992px){
