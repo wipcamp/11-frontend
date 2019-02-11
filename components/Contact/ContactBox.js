@@ -19,16 +19,11 @@ const ImgDiv = styled.div`
 `
 
 const TextA = styled.a`
+  font-size: 16px;
   color:black;
   &:hover{
     text-decoration:none;
     color:black;
-  }
-  @media (min-width:320px) {
-    font-size: 12px;
-  }
-  @media (min-width:576px) {
-    font-size: 16px;
   }
 `
 
