@@ -53,6 +53,9 @@ const Div = styled.div`
   @media (min-width:768px) {
     top: 20vh;
   }
+  @media(min-width:900px) {
+    top: 15vh;
+  }
   @media(min-width:1024px) {
     top: 10vh;
   }
@@ -60,7 +63,7 @@ const Div = styled.div`
     top: 35vh;
   }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation:landscape)  {
-    top: 8vh;
+    top: 9vh;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
     top:30vh;
