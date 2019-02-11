@@ -1,17 +1,8 @@
 {
-<<<<<<< HEAD
-    "presets": [
-        "next/babel"
-    ],
-    "plugins": [
-        "styled-components"
-    ]
-=======
   "presets": [
       "next/babel"
   ],
   "plugins": [
       "styled-components"
   ]
->>>>>>> ebf46b97f9085990daceacb33dc0ad1e6e6982c0
 }
