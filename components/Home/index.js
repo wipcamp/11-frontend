@@ -10,13 +10,13 @@ const Logo = styled.img`
   width: 100%;
   margin-top: 0vh;
   @media (min-width:300px) {
-    width: 80%;
+    width: 50%;
   }
   @media (min-width:801px) {
     width: 45%;
   }
   @media (min-width:768px) {
-    width: 50%;
+    width: 30%;
   }
   @media (min-width:1024px) {
     width: 25%;
@@ -28,21 +28,21 @@ const LogoWip = styled.img`
   width: 90%;
   margin-top: 0vh;
   @media (min-width:320px) {
-    width: 100%;
-    margin-top: 15vh;
+    width: 80%;
+    margin-top: 7.5vh;
   }
   @media (min-width:768px) {
     width: 75%;
-    margin-top: 10vh;
+    margin-top: 7vh;
   }
   @media (min-width:801px) {
-    width: 50%;
-    margin-top: 10vh;
+    width: 40%;
+    margin-top: 2.5vh;
   }
 
   @media (min-width:1024px) {
    width: 40%;
-   margin-top: 0vh;
+   margin-top: -0.5vh;
   }
 `
 
