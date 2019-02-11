@@ -9,13 +9,13 @@ import Wippo from '../Core/Wippo'
 
 const TextPosition = styled.div`  
   margin-left:1em;
-  @media (min-width:360px){
+  @media (min-width:320px){
     transform: translate(0%, 20%);
   }
   @media (min-width:414px){
     transform: translate(5%, 10%);
   }
-  @media (min-width:576px){
+  @media (min-width:570px){
     transform: translate(5%, 10%);
     margin-left:5px;
   }
@@ -23,14 +23,14 @@ const TextPosition = styled.div`
   @media (min-width:768px){
     transform: translate(0, 50%);
   }
-  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
-    margin-left:0.5em;
-    
+  @media (min-width:1024px){
+    transform: translate(0, 50%);
+    font-size:12px;
   }
-  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
-    transform: translate(0, 10%);
-    margin-left:0em;
-   
+`
+const PDBox1 = styled(PDBox)`
+  @media (min-width:1200px) {
+    padding : 0.5em 10em 2em;
   }
 `
 
@@ -52,7 +52,7 @@ export default class componentName extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <h1><Headline>Who</Headline></h1>
               <div className="row justify-content-center">
-                <PDBox>
+                <PDBox1>
                   <div className="text-center">
                     <Subtitle>ค่ายนี้เหมาะกับใคร ?</Subtitle>
                   </div>
@@ -74,7 +74,7 @@ export default class componentName extends Component {
                       </TextBoxWho>
                     </div>
                   ))}
-                </PDBox>
+                </PDBox1>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Paragraph, Font } from '../Core/Texts'
+import { Paragraph } from '../Core/Texts'
 
 const Img = styled.img`
   /* content : url(${(props) => props.imgUrl}); */
@@ -19,21 +19,16 @@ const ImgDiv = styled.div`
 `
 
 const TextA = styled.a`
+  font-size: ${Paragraph};
   color:black;
   &:hover{
     text-decoration:none;
     color:black;
   }
-  @media (min-width:320px) {
-    font-size: 12px;
-  }
-  @media (min-width:576px) {
-    font-size: 16px;
-  }
 `
 
 const ContactBox = (props) => (
-  <ImgDiv className="ml-0 mr-0" >
+  <ImgDiv className="ml-0 mr-0 pl-lg-5">
     <a href={props.href}>
       <Img src={props.imgUrl} />
     </a>

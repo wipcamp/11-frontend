@@ -66,17 +66,73 @@ const Div = styled.div`
     margin-left:0;
     margin-right:auto;
     text-align: center !important;
-
   }
 `
-
-const PDBox1 = styled(PDBox)`
-  @media (min-width:320px){
-    margin-bottom:10em;
+const Div1 = styled.div`
+  margin-bottom:0.5rem;
+  margin-left:0;
+  margin-right:0;
+  @media (min-width:977px){
+    margin-left:3em;
   }
-`
-const MiddleOfTheRight = styled.div`
   @media (min-width:992px){
+    margin-left:-2em;
+  }
+  @media (min-width:1024px){
+    margin-left:2em;
+  }
+  @media (min-width:1100px){
+    margin-left:2.25em;
+  }
+  @media (min-width:1150px){
+    margin-left:2.3em;
+  }
+  @media (min-width:1200px){
+    margin-left:-1em;
+  }
+  @media (min-width:1300px){
+    margin-left:0em;
+  }
+  @media (min-width:1500px){
+    margin-left:1em;
+  }
+  @media (min-width:1700px){
+    margin-left:2em;
+  }
+  @media (min-width:1800px){
+    margin-left:2.5em;
+  }
+  @media (min-width:1900px){
+    margin-left:3em;
+  }
+  @media (min-width:2000px){
+    margin-left:3.75em;
+  }
+  @media (min-width:2300px){
+    left:4vw;
+  }
+`
+const Div2 = styled.div`
+  @media (min-width:1024px){
+    margin-left:0.75rem;
+  }
+  @media (min-width:1200px){
+    margin-left:0rem;
+  }
+`
+
+const MiddleOfTheRight = styled.div`
+  @media (min-width:576px){
+    left:0vw;
+  }
+  @media (min-width:685px){
+    left:-1vw;
+  }
+  @media (min-width:970px){
+    left:-2.5vw;
+  }
+  @media (min-width:992px){
+    left:-0.5vw;
     transform: translate(0, 15%);
   }
 `
@@ -84,12 +140,12 @@ const LogoInfo = [
   { imgUrl: '../../static/img/social/ig.png', link: 'https://www.instagram.com/wipcamp/' },
   // { imgUrl: '../../static/img/social/Twitter.png', link: 'https://twitter.com/WIPCamp' },
   { imgUrl: '../../static/img/social/youtube.png', link: 'https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA' },
-  { imgUrl: '../../static/img/social/lineAdd.png', link: 'http://line.naver.jp/ti/p/Z_Qg6KlFnU#~' }
+  { imgUrl: '../../static/img/social/lineAdd.png', link: 'https://line.me/R/ti/p/%40wipcamp' }
 ]
 
 const BoxInfo = [
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-3 col-6 col-lg-12 ', href: 'tel://0955812358', imgUrl: '../../static/img/social/phone-call.png', text: '095-581-2358 (พี่ทีเจ)' },
-  { className: 'p-0 mt-3 mb-sm-1 mb-lg-4 col-6 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: '../../static/img/social/email.png', text: 'wippo@wipcamp.com' }
+  { className: 'p-0 mb-lg-3 col-12 col-lg-12 ', href: 'tel://0955812358', imgUrl: '../../static/img/social/phone-call.png', text: '095-581-2358 (พี่ทีเจ)' },
+  { className: 'p-0 mt-3 mb-lg-4 col-12 col-lg-12', href: 'mailto:wippo@wipcamp.com', imgUrl: '../../static/img/social/email.png', text: 'wippo@wipcamp.com' }
 ]
 
 export default class index extends Component {
@@ -100,30 +156,32 @@ export default class index extends Component {
         <Background />
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-              <div className="row justify-content-center">
+            <div className="col-12 col-sm-12 col-md-10 col-lg-10 ">
+              <div className="row justify-content-center text-center">
                 <h1><Headline>Contact</Headline></h1>
               </div>
-              <PDBox1>
-                <div className="text-center">
-                  <Subtitle>ติดต่อเรา</Subtitle>
+              <PDBox>
+                <div className="col-12">
+                  <div className="p-0 text-center">
+                    <Subtitle>ติดต่อเรา</Subtitle>
+                  </div>
                 </div>
                 <div className="row justify-content-center">
                   <div className="col-12 col-sm-12 col-lg-6 mb-3">
                     <Fbfeed/>
                   </div>
                   <MiddleOfTheRight className="col-12 col-sm-12 col-lg-6 text-center">
-                    <Div className="row mt-2">
+                    <Div className="row">
                       {
                         LogoInfo.map((data, i) => (
-                          <div className="pl-0 pr-0 col-3 col-lg-3" key = {i}>
+                          <Div2 className="pl-0 pr-0 col-3 col-lg-3" key = {i}>
                             <Logo imgUrl={data.imgUrl} link={data.link} />
-                          </div>
+                          </Div2>
                         ))
                       }
                     </Div>
                     <br />
-                    <div className="row ml-0 mr-0">
+                    <Div1 className="row">
                       {
                         BoxInfo.map((data, i) => (
                           <div key={i} className={data.className}>
@@ -131,10 +189,10 @@ export default class index extends Component {
                           </div>
                         ))
                       }
-                    </div>
+                    </Div1>
                   </MiddleOfTheRight>
                 </div>
-              </PDBox1>
+              </PDBox>
             </div>
           </div>
         </div>
