@@ -19,10 +19,16 @@ const Map = styled.img`
 
   }
   @media (min-width:320px) {
-    width:60%;
+    content: url('../../static/img/map_hover.png');
+    width:80%;
   }
   @media (min-width:412px) {
-    width:50%;
+    content: url('../../static/img/map_hover.png');
+    width:70%;
+  }
+  @media(min-width:850px){
+    content: url('../../static/img/map.png');
+    width:60%;
   }
   z-index:9;
 `
