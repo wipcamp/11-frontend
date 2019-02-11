@@ -12,6 +12,15 @@ const Model = styled(Wippo)`
   @media (min-width:768px) {
     bottom: -5vh;
   }
+  @media(min-width:800px) {
+    bottom: -2.5vh;
+  }
+  @media(min-width:900px) {
+    bottom: -3vh;
+  }
+  @media(min-width:1024px) {
+    bottom: -3.5vh;
+  }
 `
 
 const Img = styled.img`

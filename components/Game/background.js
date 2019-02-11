@@ -20,6 +20,18 @@ const Hill = styled.img`
     bottom:0;
     left: 0;
     width:100%;
+    height:110%;
+  }
+  @media (min-width:1100px) {
+    bottom:0;
+    left: 0;
+    width:100%;
+    height:150%;
+  }
+  @media (min-width:1500px) {
+    bottom:0;
+    left: 0;
+    height:140%;
   }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     left:0;
@@ -31,11 +43,11 @@ const Hill = styled.img`
     bottom: 0;
     height:140%;
   }
-  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+  /* @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
     left:0;
     bottom: 0;
     height:70%;
-  }
+  } */
 `
 
 const SakuraBack = styled.img`
@@ -265,6 +277,10 @@ const Red =styled.img`
     }
     @media (min-width:1024px) {
       top:0vh;
+      left:33vw;
+    }
+    @media (min-width:1100px) {
+      top:2vh;
       left:33vw;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
