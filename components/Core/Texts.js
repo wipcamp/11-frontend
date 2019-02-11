@@ -99,7 +99,7 @@ color : #3A1E12;
   }
   @media (min-width:1024px) {
     font-style: normal;
-    font-size: 13px;
+    font-size: 14px;
     margin-top : 13px;
   }
 `
