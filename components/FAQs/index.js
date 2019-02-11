@@ -234,7 +234,7 @@ export default class Question extends Component {
                                   </QuestionText>
                                   </Desktop>
                                   <Moblie>
-                                  <QuestionText className="card-link" href={`#collapse${data.num}`}>
+                                  <QuestionText className="card-link" data-toggle="collapse" href={`#collapse${data.num}`}>
                                     <div className="card-header px-4" onClick={() => this.handleOnClick(i)}>
                                     <div dangerouslySetInnerHTML={{ __html: data.questionMobile }} />
                                       <Arrow src='../../static/img/downarrow.png' deg={data.rotate} />
