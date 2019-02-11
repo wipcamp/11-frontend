@@ -28,6 +28,11 @@ const TextPosition = styled.div`
     font-size:12px;
   }
 `
+const PDBox1 = styled(PDBox)`
+  @media (min-width:1200px) {
+    padding : 0.5em 10em 2em;
+  }
+`
 
 const IconInfo = [
   { icon: '/static/img/icon-who/computer.png', text: 'น้อง ๆ ที่มีความสนใจด้านไอที หรือต้องการตามหาเส้นทางเดินของตัวเอง' },
@@ -47,7 +52,7 @@ export default class componentName extends Component {
             <div className="col-12 col-sm-12 col-md-12 col-lg-10">
               <h1><Headline>Who</Headline></h1>
               <div className="row justify-content-center">
-                <PDBox>
+                <PDBox1>
                   <div className="text-center">
                     <Subtitle>ค่ายนี้เหมาะกับใคร ?</Subtitle>
                   </div>
@@ -69,7 +74,7 @@ export default class componentName extends Component {
                       </TextBoxWho>
                     </div>
                   ))}
-                </PDBox>
+                </PDBox1>
               </div>
             </div>
           </div>
