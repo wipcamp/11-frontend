@@ -71,6 +71,10 @@ const MSize = styled.div`
   and (min-width:768px) and (max-width:1024px){
     display:none;
   }
+  @media(orientation:landscape)
+  and (max-height: 700px){
+    display:none;
+  }
 `
 
 class App extends React.Component {

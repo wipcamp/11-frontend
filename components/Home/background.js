@@ -49,11 +49,11 @@ const LeftBuildy = styled.img`
   @media (min-width:768px) {
     transform: translate(60%,10%);
     width:40%;
+    bottom: 25vh;
   }
   @media (min-width:1024px) {
     transform: translate(40%,-20%);
-    
-    
+    bottom: 10vh;
   }
   @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait)  {
     transform: translate(10%,10%);
@@ -87,10 +87,11 @@ const RightBuildy = styled.img`
   @media (min-width:768px) {
     transform: translate(-60%,10%);
     width:40%;
+    bottom: 25vh;
   }
   @media (min-width:1024px) {
     transform: translate(-40%,-20%);
-    
+    bottom: 10vh;
   }
 
 `
@@ -153,13 +154,14 @@ const RightTree = styled.img`
 const Mount = styled.img`
   position: absolute;
   z-index: -1;
-  bottom: 10vh;
+  bottom: 0vh;
   left: 50%;
   transform: translate(-50%,0%);
   width:100%;
 
   @media (min-width:320px) {
     width:150%;
+    bottom:10vh;
   }
   @media (min-width:412px) {
     width:140%;
@@ -169,9 +171,11 @@ const Mount = styled.img`
   }
   @media (min-width:768px) {
     width:120%;
+    bottom: 5vh;
   }
   @media (min-width:1024px) {
     width:100%;
+    bottom: -3vh;
     
   }
 `
