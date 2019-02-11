@@ -27,6 +27,8 @@ const Model = styled(Wippo)`
  
 `
 const Div = styled.div`
+  text-align: center !important;
+  width:auto;
   @media (min-width:320px){
     margin-left:5em;
     margin-right:auto;
@@ -34,13 +36,16 @@ const Div = styled.div`
   }
   @media (min-width:850px){
     margin-left:7em;
-    margin-right:auto;
+    margin-right:a;
     text-align: center !important;
   }
-  @media (min-width:990px){
-    margin-left:5em;
+  @media (min-width:992px){
+    position:relative;
+    left : 5vw;
+    margin-left:0;
     margin-right:auto;
     text-align: center !important;
+
   }
 `
 
@@ -96,6 +101,7 @@ export default class index extends Component {
                         ))
                       }
                     </Div>
+                    <br />
                     <div className="row ml-0 mr-0">
                       {
                         BoxInfo.map((data, i) => (
