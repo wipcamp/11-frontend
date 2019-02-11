@@ -56,18 +56,21 @@ export const Font = styled.div`
 color : #3A1E12;
 
   @media (min-width:320px) {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   @media (min-width:412px) {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   @media (min-width:576px) {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   @media (min-width:768px) {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   @media (min-width:1024px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:1100px) {
     font-size: 1.2em;
   }
 `
