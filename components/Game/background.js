@@ -54,7 +54,7 @@ const SakuraBack = styled.img`
       width:120%;
     }
     @media (min-width:576px) {
-      top:15vh;
+      top:25vh;
       width:120%;
     }
     @media (min-width:768px) {
@@ -62,8 +62,16 @@ const SakuraBack = styled.img`
       left:0;
       top:20vh;
     }
+    @media (min-width:900px) {
+      right:0;
+      left:0;
+      top:15vh;
+    }
     @media (min-width:1024px) {
       top:5vh;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+      top:10vh;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
       top:25vh;
@@ -126,6 +134,9 @@ const Stairs = styled.img`
       height:57%;
       left: -56vw;
       bottom: 1vh;
+    }
+    @media (min-width:576px) {
+      left: -58vw;
     }
     @media (min-width:768px) {
       left:13vw;
@@ -243,8 +254,8 @@ const Red =styled.img`
       top:24vh;
     }
     @media (min-width:576px) {
-      top: 10vh;
-      left:15.5vw;
+      top: 15vh;
+      left:20vw;
       width:35%;
     }
     @media (min-width:768px) {
@@ -254,6 +265,10 @@ const Red =styled.img`
     }
     @media (min-width:1024px) {
       top:0vh;
+      left:33vw;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+      top: 1vh;
       left:33vw;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
@@ -281,7 +296,7 @@ const Dojo = styled.img`
     }
     @media (min-width:576px) {
       top: 28vh;
-      left:30vw;
+      left:35vw;
     }
     @media (min-width:768px) {
       top: 28vh;

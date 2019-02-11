@@ -72,7 +72,7 @@ const MSize = styled.div`
     display:none;
   }
   @media(orientation:landscape)
-  and (max-height: 700px){
+  and (max-height: 650px){
     display:none;
   }
 `
