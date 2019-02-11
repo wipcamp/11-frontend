@@ -87,7 +87,7 @@ export const TextBoxWho = styled.div`
     padding : 1em 1em;
     margin : 0.4 0em ;
   }
-   @media (min-width:576px) {
+   @media (min-width:570px) {
     padding : 1em 2em;
   }
   @media (min-width:768px) {

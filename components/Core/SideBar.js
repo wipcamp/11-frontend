@@ -54,7 +54,7 @@ const NavLink = styled.div`
   color: black;
   margin: 20px 0;
   opacity: 0.6;
-  transition: all .2s;
+  transition: all .1s;
   cursor : pointer;
   text-align: center;
   justify-content: center;
