@@ -85,11 +85,17 @@ const Font = styled.div`
 `
 
 const Div = styled.div`
+  @media (min-width:992px) {
+    margin-left:4em;
+  }
   @media (min-width:1024px) {
-    margin-left:2em;
+    margin-left:2.5em;
+  }
+  @media (min-width:1200px) {
+    margin-left:5em;
   }
   @media (min-width:1500px) {
-    margin-left:4em;
+    margin-left:6em;
   }
   
 `
