@@ -20,13 +20,11 @@ const dateStartAnnounced = dayjs('2019-03-29')
 const dateStartCamp = dayjs('2019-05-29') 
 
 const Section = styled(Element)`
-  
 `
 const BGcolor = styled.div`
-overflow-x:hidden;
-overflow-y:hidden;
-background : #F8E9D6;
-
+  overflow-x:hidden;
+  overflow-y:hidden;
+  background : #F8E9D6;
 `
 
 const RegisVisible = styled.div`
@@ -40,7 +38,6 @@ const ReText = styled.div`
   margin-right: -50%;
   transform: translate(-50%, -50%);
 
-
   @media (min-width:320px) {
     font-size: 0.8em;
   }
@@ -50,7 +47,6 @@ const ReText = styled.div`
   @media (min-width:1024px) {
     font-size: 1em;
   }
-
 `
 const RegisButton = (props) =>(
   <RegisVisible visi={props.visi}>
@@ -118,13 +114,11 @@ class App extends React.Component {
 
   render() {
     const { loading } = this.state;
-    
     // if (loading) {
     //   return (
     //     <Loading />
     //     )
     //   }
-
     return (
       <div>
         <MiniSize />
@@ -140,40 +134,3 @@ class App extends React.Component {
 }
 
 export default App
-
-
-/*
-
-
-<ReactPageScroller>
-          {this.state.count === 0 &&
-            <Section name = "home">
-              <Home />
-            </Section>
-          }
-          <Section name = "what">
-            <What />
-          </Section>
-          <Section name="who">
-            <Who />
-          </Section>
-          <Section name="where" >
-            <Where />
-          </Section>
-          <Section name="when" >
-            <When />
-          </Section>
-          <Section name="faqs" >
-            <FAQs />
-          </Section>
-          <Section name="sponsor">
-            <Sponsor/>
-          </Section>
-          <Section name="contact" >
-            <Contact />
-          </Section>
-          <Section name = "game">
-            <Game />
-          </Section>
-        </ReactPageScroller>
-        */
