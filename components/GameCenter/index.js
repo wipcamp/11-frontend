@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Headline from '../Core/Texts'
 
 const Bg = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   background : #F8E9D6;
   z-index:100;
