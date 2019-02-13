@@ -43,6 +43,7 @@ export default class index extends Component {
           <h1><Headline className = "pt-5">Game Center</Headline></h1>
           <Layer1 src = "../../static/img/game-center/MainGameCenter_BackLand.png" />
           <Layer1 src = "../../static/img/game-center/MainGameCenter_FrontLand.png" />
+          <Layer1 src = "../../static/img/game-center/MainGameCenter_MiddleLand.png" />
           <Layer1 src = "../../static/img/game-center/MainGameCenter_FrontLandWithTree.png" />
         </div>
       </Bg>
