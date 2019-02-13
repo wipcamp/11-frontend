@@ -66,7 +66,8 @@ export default class index extends Component {
           <Layer1 src="../../static/img/game-center/MainGameCenter_BackLand.png" />
           <Layer1 src="../../static/img/game-center/MainGameCenter_FrontLand.png" />
           <Layer1 src="../../static/img/game-center/MainGameCenter_MiddleLand.png" />
-          <Layer1 src="../../static/img/game-center/MainGameCenter_FrontLandWithTree.png" />
+          <Layer1 src="../../static/img/game-center/MainGameCenter_FrontLandWithTree.png"/> 
+          
           <div className="row">
             <div className="col-md-2">
             </div>
