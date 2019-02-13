@@ -12,15 +12,21 @@ const LogoDiv = styled.div`
   z-index : 2;
   
 `
-const Logo = styled.img`
-  width:100%;
-  margin-top:10vh;
-
-`
 const Logo1 = styled.img`
-  width:100%;
+  width:70%;
   
 
+`
+const Logo2 = styled.img`
+  width:70%;
+  
+
+  
+`
+const Logo3 = styled.img`
+  width:70%;
+  
+  
 `
 
 const Layer1 = styled.img`
@@ -60,17 +66,19 @@ export default class index extends Component {
           <Layer1 src="../../static/img/game-center/MainGameCenter_MiddleLand.png" />
           <Layer1 src="../../static/img/game-center/MainGameCenter_FrontLandWithTree.png" />
           <div className="row">
-            <LogoDiv className="col-6 col-md-4">
-              <Logo src="../../static/img/game-center/gameWoodLogo1.png" />
-            </LogoDiv>
-            <LogoDiv className="col-6 col-md-4">
-              <Logo1 src="../../static/img/game-center/gameWoodLogo2.png" />
-            </LogoDiv>
-            <LogoDiv className="col-6 col-md-4">
-              <Logo src="../../static/img/game-center/gameWoodLogo3.png" />
-            </LogoDiv>
+            <div className="col-md-1">
+            </div>
+              <LogoDiv className="col-6 col-md-3">
+                <Logo1 src="../../static/img/game-center/gameWoodLogo1.png" />
+              </LogoDiv>
+              <LogoDiv className="col-6 col-md-4">
+                <Logo2 src="../../static/img/game-center/gameWoodLogo2.png" />
+              </LogoDiv>
+              <LogoDiv className="col-6 col-md-3">
+                <Logo3 src="../../static/img/game-center/gameWoodLogo3.png" />
+              </LogoDiv>
+            </div>
           </div>
-        </div>
 
       </Bg >
     )
