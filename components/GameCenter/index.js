@@ -14,6 +14,7 @@ const LogoDiv = styled.div`
 `
 const Logo1 = styled.img`
   width:70%;
+  margin-top:10vh;
   
 
 `
@@ -25,6 +26,7 @@ const Logo2 = styled.img`
 `
 const Logo3 = styled.img`
   width:70%;
+  margin-top:10vh;
   
   
 `
@@ -56,7 +58,7 @@ const Layer1 = styled.img`
 `
 
 export default class index extends Component {
-  render() {
+  render () {
     return (
       <Bg>
         <div className="text-align-center">
@@ -66,19 +68,19 @@ export default class index extends Component {
           <Layer1 src="../../static/img/game-center/MainGameCenter_MiddleLand.png" />
           <Layer1 src="../../static/img/game-center/MainGameCenter_FrontLandWithTree.png" />
           <div className="row">
-            <div className="col-md-1">
+            <div className="col-md-2">
             </div>
-              <LogoDiv className="col-6 col-md-3">
-                <Logo1 src="../../static/img/game-center/gameWoodLogo1.png" />
-              </LogoDiv>
-              <LogoDiv className="col-6 col-md-4">
-                <Logo2 src="../../static/img/game-center/gameWoodLogo2.png" />
-              </LogoDiv>
-              <LogoDiv className="col-6 col-md-3">
-                <Logo3 src="../../static/img/game-center/gameWoodLogo3.png" />
-              </LogoDiv>
-            </div>
+            <LogoDiv className="col-6 col-md-3">
+              <Logo1 src="../../static/img/game-center/gameWoodLogo1.png" />
+            </LogoDiv>
+            <LogoDiv className="col-6 col-md-3">
+              <Logo2 src="../../static/img/game-center/gameWoodLogo2.png" />
+            </LogoDiv>
+            <LogoDiv className="col-6 col-md-3">
+              <Logo3 src="../../static/img/game-center/gameWoodLogo3.png" />
+            </LogoDiv>
           </div>
+        </div>
 
       </Bg >
     )
