@@ -8,28 +8,6 @@ const Bg = styled.div`
   background : #F8E9D6;
   z-index:100;
 `
-const LogoDiv = styled.div`
-  z-index : 2;
-  
-`
-const Logo1 = styled.img`
-  width:70%;
-  margin-top:10vh;
-  
-
-`
-const Logo2 = styled.img`
-  width:70%;
-  
-
-  
-`
-const Logo3 = styled.img`
-  width:70%;
-  margin-top:10vh;
-  
-  
-`
 
 const Layer1 = styled.img`
   position: absolute;
@@ -57,32 +35,110 @@ const Layer1 = styled.img`
   }
 `
 
+const BgImage = [
+  '../../static/img/game-center/MainGameCenter_BackLand.png',
+  '../../static/img/game-center/MainGameCenter_FrontLand.png',
+  '../../static/img/game-center/MainGameCenter_MiddleLand.png',
+  '../../static/img/game-center/MainGameCenter_FrontLandWithTree.png'
+]
+
+const BackgroundGameCenter = () => (
+  <div>
+    {
+      BgImage.map((data, i) => (
+        <Layer1 src = {data} />
+      ))}
+  </div>
+)
+
+const LogoGame = styled.img`
+  position: relative;
+  width: 70%;
+  z-index: 2;
+
+  @media (min-width:320px) {
+    width:100%;
+  }
+  @media (min-width:412px) {
+    width:90%;
+  }
+  @media (min-width:576px) {
+    width:100%;
+  }
+  @media (min-width:768px) {
+    width:80%;
+  }
+  @media (min-width:1024px) {
+    width:70%;
+  }
+`
+
+const Mini = styled.div`
+  display:none;
+  width:100%;
+  background-color: #F8E9D6;
+  top:10vh;
+  @media(max-width:768px){
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+`
+
+const Center = styled.div`
+  text-align:center;!important
+`
+
+const SmallSize = () => (
+  <Mini>
+    <div className="row">
+      <div className = "col-12">
+        <LogoGame src="../../static/img/game-center/gameWoodLogo2.png" />
+      </div>
+    </div>
+    <div className = "row">
+      <div className = "col-6 mt-2">
+        <LogoGame src="../../static/img/game-center/gameWoodLogo1.png" />
+      </div>
+      <div className = "col-6 mt-2">
+        <LogoGame src="../../static/img/game-center/gameWoodLogo3.png" />
+      </div>
+    </div>
+  </Mini>
+)
+const BigSize = () => (
+  <div className="row">
+    <Center className = "col-4 mt-5">
+      <LogoGame src="../../static/img/game-center/gameWoodLogo1.png" />
+    </Center>
+    <Center className = "col-4">
+      <LogoGame src="../../static/img/game-center/gameWoodLogo2.png" />
+    </Center>
+    <Center className = "col-4 mt-5">
+      <LogoGame src="../../static/img/game-center/gameWoodLogo3.png" />
+    </Center>
+  </div>
+)
+
+const MSize = styled.div`
+  @media(max-width:768px){
+    display:none;
+  }
+`
+
 export default class index extends Component {
   render () {
     return (
       <Bg>
-        <div className="text-align-center">
-          <h1><Headline className="pt-5">Game Center</Headline></h1>
-          <Layer1 src="../../static/img/game-center/MainGameCenter_BackLand.png" />
-          <Layer1 src="../../static/img/game-center/MainGameCenter_FrontLand.png" />
-          <Layer1 src="../../static/img/game-center/MainGameCenter_MiddleLand.png" />
-          <Layer1 src="../../static/img/game-center/MainGameCenter_FrontLandWithTree.png"/> 
-          
-          <div className="row">
-            <div className="col-md-2">
-            </div>
-            <LogoDiv className="col-6 col-md-3">
-              <Logo1 src="../../static/img/game-center/gameWoodLogo1.png" />
-            </LogoDiv>
-            <LogoDiv className="col-6 col-md-3">
-              <Logo2 src="../../static/img/game-center/gameWoodLogo2.png" />
-            </LogoDiv>
-            <LogoDiv className="col-6 col-md-3">
-              <Logo3 src="../../static/img/game-center/gameWoodLogo3.png" />
-            </LogoDiv>
+        <BackgroundGameCenter />
+        <div className = "container">
+          <div className="justify-content-center">
+            <h1><Headline className="pt-5">Game Center</Headline></h1>
+            <SmallSize />
+            <MSize><BigSize /></MSize>
           </div>
         </div>
-
       </Bg >
     )
   }
