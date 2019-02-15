@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline from '../Core/Texts'
+import Logo, { LogoGame1, LogoGame2, LogoGame3 } from '../GameCenter/LogoGame'
 
 const Bg = styled.div`
   height: 100vh;
@@ -51,28 +52,6 @@ const BackgroundGameCenter = () => (
   </div>
 )
 
-const LogoGame = styled.img`
-  position: relative;
-  width: 70%;
-  z-index: 2;
-
-  @media (min-width:320px) {
-    width:100%;
-  }
-  @media (min-width:412px) {
-    width:90%;
-  }
-  @media (min-width:576px) {
-    width:100%;
-  }
-  @media (min-width:768px) {
-    width:80%;
-  }
-  @media (min-width:1024px) {
-    width:70%;
-  }
-`
-
 const Mini = styled.div`
   display:none;
   width:100%;
@@ -94,15 +73,15 @@ const SmallSize = () => (
   <Mini>
     <div className="row">
       <div className = "col-12">
-        <LogoGame src="../../static/img/game-center/gameWoodLogo2.png" />
+        <LogoGame1 src="../../static/img/game-center/logoGame1.png" />
       </div>
     </div>
     <div className = "row">
       <div className = "col-6 mt-2">
-        <LogoGame src="../../static/img/game-center/gameWoodLogo1.png" />
+        <LogoGame2 src="../../static/img/game-center/logoGame2.png" />
       </div>
       <div className = "col-6 mt-2">
-        <LogoGame src="../../static/img/game-center/gameWoodLogo3.png" />
+        <LogoGame3 src="../../static/img/game-center/logoGame3.png" />
       </div>
     </div>
   </Mini>
@@ -110,13 +89,13 @@ const SmallSize = () => (
 const BigSize = () => (
   <div className="row">
     <Center className = "col-4 mt-5">
-      <LogoGame src="../../static/img/game-center/logoGame1.png" />
+      <LogoGame1 src="../../static/img/game-center/logoGame1.png" />
     </Center>
     <Center className = "col-4">
-      <LogoGame src="../../static/img/game-center/logoGame2.png" />
+      <LogoGame2 src="../../static/img/game-center/logoGame2.png" />
     </Center>
     <Center className = "col-4 mt-5">
-      <LogoGame src="../../static/img/game-center/logoGame3.png" />
+      <LogoGame3 src="../../static/img/game-center/logoGame3.png" />
     </Center>
   </div>
 )
