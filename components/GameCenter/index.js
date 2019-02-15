@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline, { Subtitle } from '../Core/Texts'
-import Logo, { LogoGame , LogoGameHover} from '../GameCenter/LogoGame'
+import Logo, { LogoGame, LogoGameHover } from '../GameCenter/LogoGame'
 
 const Bg = styled.div`
   height: 100vh;
@@ -66,14 +66,28 @@ const Mini = styled.div`
 `
 
 const Center = styled.div`
-  text-align:center;!important
+  text-align:center !important;
 `
+const Div = styled.div`
+  text-align:center !important;
+  position:absolute;
+  z-index:5;
+  margin-top:-1.5em;
+  font-size:28px;
+  left:${(props) => props.left};
+  color:#421A00;
+`
+
+const Header = (props) => (
+  <h1><Div left={props.left} >{props.header}</Div></h1>
+)
+
 const SmallSize = () => (
   <Mini>
     <div className="row">
       <div className = "col-12">
         <LogoGame src="../../static/img/game-center/_comingSoon.png" />
-        <h1><Headline>Climb Bamboo</Headline></h1>
+        <Header header="Climb Bamboo"/>
         {/* <LogoGame src="../../static/img/game  center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" display="block"/> */}
 
       </div>
@@ -90,21 +104,23 @@ const SmallSize = () => (
     </div>
   </Mini>
 )
+
 const BigSize = () => (
   <div className="row">
     <Center className = "col-4 mt-5">
       <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
-      <Headline>Climb Bamboo</Headline>
+      <Header header="Climb Bamboo" left="6vw"/>
       {/* <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" /> */}
     </Center>
     <Center className = "col-4">
-
       <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
+      <Header header="Janpu Ninja" left="6.5vw"/>
       {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
     </Center>
     <Center className = "col-4 mt-5">
       {/* <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" imagehover="../../static/img/game-center/" />> */}
       <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
+      <Header header="Janpu Ninja" left="6.5vw"/>
     </Center>
   </div>
 )
