@@ -110,13 +110,13 @@ const SmallSize = () => (
 const BigSize = () => (
   <div className="row">
     <Center className = "col-4 mt-5">
-      <LogoGame src="../../static/img/game-center/gameWoodLogo1.png" />
+      <LogoGame src="../../static/img/game-center/logoGame1.png" />
     </Center>
     <Center className = "col-4">
-      <LogoGame src="../../static/img/game-center/gameWoodLogo2.png" />
+      <LogoGame src="../../static/img/game-center/logoGame2.png" />
     </Center>
     <Center className = "col-4 mt-5">
-      <LogoGame src="../../static/img/game-center/gameWoodLogo3.png" />
+      <LogoGame src="../../static/img/game-center/logoGame3.png" />
     </Center>
   </div>
 )
