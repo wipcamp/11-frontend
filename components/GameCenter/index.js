@@ -81,14 +81,18 @@ const TextClimbbamboo = styled(Div)`
   left:6.5vw;
   @media (min-width:320px) {
     font-size:15px;
-    left:6.5vw;
+    left:10vw;
    
   }
   @media (min-width:375px) {
-    left :5.5vw;
+    left :12vw;
   }
   @media (min-width:412px) {
-    left :6vw;
+    left :11vw;
+  }
+  @media (min-width:500px) {
+    font-size:22px;
+    left:9vw;
   }
   @media (min-width:576px) {
     left:10vw;
@@ -144,20 +148,20 @@ const TextJanpu = styled(Div)`
     left:9vw;
   }
   @media (min-width:750px) {
-    margin-top:-1.25em;
-    left:6vw;
+    left:9vw;
   }
   @media (min-width:810px) {
-    left:5.8vw;
+    font-size:20px;
+    left:7vw;
   }
   @media (min-width:836px) {
-    left:5.6vw;
+    left:7vw;
   }
   @media (min-width:855px) {
-    left:5.4vw;
+    left:6vw;
   }
   @media (min-width:895px) {
-    left:5.2vw;
+    left:6vw;
   }
   @media (min-width:945px) {
     left:5vw;
@@ -167,7 +171,9 @@ const TextJanpu = styled(Div)`
     left:8.5vw;
   }
   @media (min-width:1024px) {
+    font-size:28px;
     margin-top:-1.25em;
+    left:7vw;
   }
   @media (min-width:1200px) {
     margin-top:-1.5em;
@@ -179,8 +185,16 @@ const TextShinobi = styled(Div)`
     font-size:15px;
     left:15vw;
   }
+  @media (min-width:360px) {
+    font-size:15px;
+    left:16vw;
+  }
   @media (min-width:412px) {
     left:16vw;
+  }
+  @media (min-width:500px) {
+    font-size:22px;
+    left:15vw;
   }
   @media (min-width:576px) {
     font-size:24px;
@@ -194,6 +208,7 @@ const TextShinobi = styled(Div)`
     font-size:20px;
     left:10vw;
   }
+  
   @media (min-width:1024px) {
     font-size:28px;
     left:9vw; 
