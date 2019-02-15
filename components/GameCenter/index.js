@@ -73,7 +73,8 @@ const SmallSize = () => (
   <Mini>
     <div className="row">
       <div className = "col-12">
-        <LogoGame1 src="../../static/img/game-center/logoGame1.png" />
+        {/* <LogoGame1 src="../../static/img/game-center/logoGame1.png" /> */}
+        <LogoGame1 src="../../static/img/game-center/logoGame1_comingSoon.png" />
       </div>
     </div>
     <div className = "row">
@@ -81,7 +82,8 @@ const SmallSize = () => (
         <LogoGame2 src="../../static/img/game-center/logoGame2.png" />
       </div>
       <div className = "col-6 mt-2">
-        <LogoGame3 src="../../static/img/game-center/logoGame3.png" />
+        {/* <LogoGame3 src="../../static/img/game-center/logoGame3.png" /> */}
+        <LogoGame1 src="../../static/img/game-center/logoGame3_comingSoon.png" />
       </div>
     </div>
   </Mini>
@@ -89,13 +91,15 @@ const SmallSize = () => (
 const BigSize = () => (
   <div className="row">
     <Center className = "col-4 mt-5">
-      <LogoGame1 src="../../static/img/game-center/logoGame1.png" />
+      {/* <LogoGame1 src="../../static/img/game-center/logoGame1.png" /> */}
+      <LogoGame1 src="../../static/img/game-center/logoGame1_comingSoon.png" />
     </Center>
     <Center className = "col-4">
       <LogoGame2 src="../../static/img/game-center/logoGame2.png" />
     </Center>
     <Center className = "col-4 mt-5">
-      <LogoGame3 src="../../static/img/game-center/logoGame3.png" />
+      {/* <LogoGame3 src="../../static/img/game-center/logoGame3.png" /> */}
+      <LogoGame1 src="../../static/img/game-center/logoGame3_comingSoon.png" />
     </Center>
   </div>
 )
