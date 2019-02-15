@@ -97,6 +97,9 @@ const Div = styled.div`
   @media (min-width:1500px) {
     margin-left:6em;
   }
+  @media (min-width:1500px) {
+    margin-left:6em;
+  }
   
 `
 
