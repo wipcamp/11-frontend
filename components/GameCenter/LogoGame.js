@@ -4,9 +4,9 @@ export const LogoGame1 = styled.img`
   width: 70%;
   z-index: 2;
 
-  &:hover{
+  /* &:hover{
     content: url('../../static/img/game-center/logoGame1_hover.png');
-  }
+  } */
 
   @media (min-width:320px) {
     width:100%;
@@ -52,9 +52,9 @@ export const LogoGame3 = styled.img`
   position: relative;
   width: 70%;
   z-index: 2;
-  &:hover{
+  /* &:hover{
     content: url('../../static/img/game-center/logoGame3_hover.png');
-  }
+  } */
   @media (min-width:320px) {
     width:100%;
   }
