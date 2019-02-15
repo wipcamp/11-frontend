@@ -1,37 +1,13 @@
 import styled from 'styled-components'
-export const LogoGame1 = styled.img`
+export const LogoGameHover = styled.img`
   position: relative;
   width: 70%;
   z-index: 2;
 
-  /* &:hover{
-    content: url('../../static/img/game-center/logoGame1_hover.png');
-  } */
-
-  @media (min-width:320px) {
-    width:100%;
-  }
-  @media (min-width:412px) {
-    width:90%;
-  }
-  @media (min-width:576px) {
-    width:100%;
-  }
-  @media (min-width:768px) {
-    width:80%;
-  }
-  @media (min-width:1024px) {
-    width:70%;
-  }
-`
-
-export const LogoGame2 = styled.img`
-  position: relative;
-  width: 70%;
-  z-index: 2;
   &:hover{
-    content: url('../../static/img/game-center/logoGame2_hover.png');
+    content: url(${(props) => props.imagehover});
   }
+
   @media (min-width:320px) {
     width:100%;
   }
@@ -48,13 +24,11 @@ export const LogoGame2 = styled.img`
     width:70%;
   }
 `
-export const LogoGame3 = styled.img`
+export const LogoGame = styled.img`
   position: relative;
   width: 70%;
   z-index: 2;
-  /* &:hover{
-    content: url('../../static/img/game-center/logoGame3_hover.png');
-  } */
+
   @media (min-width:320px) {
     width:100%;
   }
@@ -70,4 +44,8 @@ export const LogoGame3 = styled.img`
   @media (min-width:1024px) {
     width:70%;
   }
+`
+
+export const Logo = styled.div`
+  background-image: url(${props => props.LogoGame});
 `

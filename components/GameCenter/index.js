@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Headline from '../Core/Texts'
-import Logo, { LogoGame1, LogoGame2, LogoGame3 } from '../GameCenter/LogoGame'
+import Headline, { Subtitle } from '../Core/Texts'
+import Logo, { LogoGame , LogoGameHover} from '../GameCenter/LogoGame'
 
 const Bg = styled.div`
   height: 100vh;
@@ -68,22 +68,24 @@ const Mini = styled.div`
 const Center = styled.div`
   text-align:center;!important
 `
-
 const SmallSize = () => (
   <Mini>
     <div className="row">
       <div className = "col-12">
-        {/* <LogoGame1 src="../../static/img/game-center/logoGame1.png" /> */}
-        <LogoGame1 src="../../static/img/game-center/logoGame1_comingSoon.png" />
+        <LogoGame src="../../static/img/game-center/_comingSoon.png" />
+        <h1><Headline>Climb Bamboo</Headline></h1>
+        {/* <LogoGame src="../../static/img/game  center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" display="block"/> */}
+
       </div>
     </div>
     <div className = "row">
       <div className = "col-6 mt-2">
-        <LogoGame2 src="../../static/img/game-center/logoGame2.png" />
+        {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
+        <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
       </div>
       <div className = "col-6 mt-2">
-        {/* <LogoGame3 src="../../static/img/game-center/logoGame3.png" /> */}
-        <LogoGame1 src="../../static/img/game-center/logoGame3_comingSoon.png" />
+        {/* <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" imagehover="../../static/img/game-center/" />> */}
+        <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
       </div>
     </div>
   </Mini>
@@ -91,15 +93,18 @@ const SmallSize = () => (
 const BigSize = () => (
   <div className="row">
     <Center className = "col-4 mt-5">
-      {/* <LogoGame1 src="../../static/img/game-center/logoGame1.png" /> */}
-      <LogoGame1 src="../../static/img/game-center/logoGame1_comingSoon.png" />
+      <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
+      <Headline>Climb Bamboo</Headline>
+      {/* <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" /> */}
     </Center>
     <Center className = "col-4">
-      <LogoGame2 src="../../static/img/game-center/logoGame2.png" />
+
+      <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
+      {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
     </Center>
     <Center className = "col-4 mt-5">
-      {/* <LogoGame3 src="../../static/img/game-center/logoGame3.png" /> */}
-      <LogoGame1 src="../../static/img/game-center/logoGame3_comingSoon.png" />
+      {/* <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" imagehover="../../static/img/game-center/" />> */}
+      <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
     </Center>
   </div>
 )
