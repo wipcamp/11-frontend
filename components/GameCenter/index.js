@@ -74,20 +74,98 @@ const Div = styled.div`
   z-index:5;
   margin-top:-1.5em;
   font-size:28px;
-  left:${(props) => props.left};
   color:#421A00;
 `
-
-const Header = (props) => (
-  <h1><Div left={props.left} >{props.header}</Div></h1>
-)
+const TextClimbbamboo = styled(Div)`
+  left:6.5vw;
+  @media (min-width:320px) {
+    font-size:25px;
+    left :19vw;
+   
+  }
+  @media (min-width:412px) {
+    left :12vw;
+  }
+  @media (min-width:576px) {
+    left:10vw;
+  }
+  @media (min-width:700px) {
+    font-size:24px;
+    left:8vw;
+  }
+  @media (min-width:770px) {
+    font-size:20px;
+    left:7vw;
+  }
+  @media (min-width:1024px) {
+    font-size:28px;
+    left:7vw;
+    
+  }
+`
+const TextJanpu = styled(Div)`
+  left:7vw;
+  @media (min-width:320px) {
+    font-size:15px;
+    left:10vw;
+   
+  }
+  @media (min-width:412px) {
+    left:11vw;
+   
+  }
+  @media (min-width:576px) {
+    font-size:24px;
+  }
+  @media (min-width:700px) {
+    font-size:24px;
+    left:8vw;
+  }
+  @media (min-width:770px) {
+    font-size:20px;
+    left:8vw;
+  }
+  @media (min-width:1024px) {
+    font-size:28px;
+    left:7vw;
+    
+  }
+`
+const TextShinobi = styled(Div)`
+  left:9vw;
+  @media (min-width:320px) {
+    font-size:15px;
+    left:15vw;
+   
+  }
+  @media (min-width:412px) {
+    left:16vw;
+  }
+  @media (min-width:576px) {
+    font-size:24px;
+    
+  }
+  @media (min-width:700px) {
+    font-size:24px;
+    left:12vw;
+  }
+  @media (min-width:770px) {
+    font-size:20px;
+    left:10vw;
+  }
+  @media (min-width:1024px) {
+    font-size:28px;
+    left:9vw; 
+    
+  }
+`
 
 const SmallSize = () => (
   <Mini>
     <div className="row">
       <div className = "col-12">
-        <LogoGame src="../../static/img/game-center/_comingSoon.png" />
-        <Header header="Climb Bamboo"/>
+        <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
+        <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
         {/* <LogoGame src="../../static/img/game  center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" display="block"/> */}
 
       </div>
@@ -96,10 +174,12 @@ const SmallSize = () => (
       <div className = "col-6 mt-2">
         {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
         <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
+        <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
       </div>
       <div className = "col-6 mt-2">
         {/* <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" imagehover="../../static/img/game-center/" />> */}
         <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
+        <h1><TextShinobi>Shinobi</TextShinobi></h1>
       </div>
     </div>
   </Mini>
@@ -109,18 +189,18 @@ const BigSize = () => (
   <div className="row">
     <Center className = "col-4 mt-5">
       <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
-      <Header header="Climb Bamboo" left="6vw"/>
+      <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
       {/* <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" /> */}
     </Center>
     <Center className = "col-4">
       <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
-      <Header header="Janpu Ninja" left="6.5vw"/>
+      <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
       {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
     </Center>
     <Center className = "col-4 mt-5">
       {/* <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" imagehover="../../static/img/game-center/" />> */}
       <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
-      <Header header="Janpu Ninja" left="6.5vw"/>
+      <h1><TextShinobi>Shinobi</TextShinobi></h1>
     </Center>
   </div>
 )
