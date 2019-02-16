@@ -292,8 +292,10 @@ const SmallSize = () => (
       <div className = "col-12 mb-4">
         {/* <ScoreBox /> */}
         {/* <LogoGame src="../../static/img/game  center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" display="block"/> */}
+        <a href="http://game-janpu.wip.camp" target="_blank">
         <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
         <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
+        </a>
         <ScoreBoxFirstGame />
       </div>
     </div>
@@ -325,8 +327,10 @@ const BigSize = () => (
       {/* <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" /> */}
     </Center>
     <Center className = "col-4">
+     <a href="http://game-janpu.wip.camp" target="_blank">
       <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
       <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
+      </a>
       <ScoreBox />
       {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
     </Center>
