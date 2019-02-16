@@ -89,7 +89,7 @@ export default class index extends Component {
         <div className="container">
           <div className="row">
             <Div className="col-12 d-flex justify-content-center align-items-center text-center" onClick={() => this.handleClickIcon()}>
-              <a href="http://game.wip.camp" target="_blank">
+              <a href="http://wip.camp/game" target="_blank">
               <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
               </a>
             </Div>
