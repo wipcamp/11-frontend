@@ -38,6 +38,14 @@ const Section = styled.div`
   z-index: 20;
 `
 
+const Div = styled.div`
+  @media(min-width: 992px) {
+      margin-left:2em;
+  }
+  @media(min-width: 1200px) {
+      margin-left:1em;
+  }
+`
 export default class componentName extends Component {
   render () {
     return (
@@ -54,9 +62,9 @@ export default class componentName extends Component {
                     <div className="text-center">
                       <Subtitle>ค่ายจัดเมื่อไหร่ ?</Subtitle>
                     </div>
-                    <div className="ml-lg-4 mr-lg-4 col-12 col-lg-10">
+                    <Div className="col-12 col-lg-10">
                       <ImgChangeByDay />
-                    </div>
+                    </Div>
                   </NPDBox>
                 </div>
               </div>
