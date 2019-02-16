@@ -85,7 +85,8 @@ export default class Question extends Component {
         question: 'อยากมาเข้าร่วมค่ายนี้มาก ๆ ต้องทำอย่างไร', 
         questionMobile: 'อยากมาเข้าร่วมค่ายนี้มาก ๆ ต้องทำอย่างไร ?', 
         num : 'One',
-        rotate:'0deg',
+        show : 'show',
+        rotate:'180deg',
         answer: 'ศิษย์น้อง เจ้าจะต้องตอบคำถามให้ครบถ้วน ด้วยความสามารถเต็มที่ทั้งหมดที่มีด้วยตัวเจ้าเอง เพื่อแสดงถึงความตั้งใจ และเจตจำนงของเจ้า จากนั้นกดส่งเพื่อยืนยันคำตอบให้เรียบร้อยเป็นพอ และรอติดตามผลผ่านทางเพจ WIP Camp หรือเว็บไซต์นี้ได้เลย' 
       },
       { 
@@ -241,7 +242,7 @@ export default class Question extends Component {
                                   </div>
                                   </QuestionText>
                                   </Moblie>
-                                <div id={`collapse${data.num}`} className={`collapse`} data-parent="#accordion">
+                                <div id={`collapse${data.num}`} className={`collapse ${data.show}`} data-parent="#accordion">
                                   <AnswerText className="card-body px-4">
                                     {data.answer}
                                   </AnswerText>
