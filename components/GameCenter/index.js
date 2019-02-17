@@ -291,7 +291,6 @@ const SmallSize = () => (
     <div className="row justify-content-center">
       <div className = "col-12 mb-4">
         {/* <ScoreBox /> */}
-        {/* <LogoGame src="../../static/img/game  center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" display="block"/> */}
         <a href="http://game-janpu.wip.camp" target="_blank">
         <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
         <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
@@ -301,17 +300,21 @@ const SmallSize = () => (
     </div>
     <div className = "row">
       <div className = "col-6 mt-2">
+      {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
         <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png"/>
+        {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
         <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
-        {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
+        {/* </a> */}
         <Center>
           <ScoreBox />
         </Center>
       </div>
       <div className = "col-6 mt-2">
-        {/* <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" imagehover="../../static/img/game-center/" />> */}
+      {/* <a href="http://game-1.wip.camp" target="_blank"> */}
+        {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
         <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
         <h1><TextShinobi>Shinobi</TextShinobi></h1>
+        {/* </a> */}
         <ScoreBox />
       </div>
     </div>
@@ -321,10 +324,12 @@ const SmallSize = () => (
 const BigSize = () => (
   <div className="row">
     <Center className = "col-4 mt-5">
+    {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
+    {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
       <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
       <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
+      {/* </a> */}
       <ScoreBox />
-      {/* <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" imagehover="../../static/img/game-center/" /> */}
     </Center>
     <Center className = "col-4">
      <a href="http://game-janpu.wip.camp" target="_blank">
@@ -332,12 +337,13 @@ const BigSize = () => (
       <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
       </a>
       <ScoreBox />
-      {/* <LogoGame src="../../static/img/game-center/logoGame2.png" /> */}
     </Center>
     <Center className = "col-4 mt-5">
-      {/* <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" imagehover="../../static/img/game-center/" />> */}
+    {/* <a href="http://game-1.wip.camp" target="_blank"> */}
+      {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
       <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
       <h1><TextShinobi>Shinobi</TextShinobi></h1>
+      {/* </a> */}
       <ScoreBox />
     </Center>
   </div>
