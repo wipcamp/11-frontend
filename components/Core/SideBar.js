@@ -262,7 +262,7 @@ export default class SideBar extends React.Component {
     }
 
     render() {
-      const sections = [ ,'Home' , 'What' ,'Who' , 'Where' ,'When', 'FAQs', 'Contact','Game']
+      const sections = [ ,'Home' , 'What' ,'Who' , 'Where' ,'When', 'FAQs', 'Contact']
 
       return <React.Fragment>
             <Desktop>
