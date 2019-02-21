@@ -41,7 +41,7 @@ const Link = styled.a`
 const index = () => (
   <Minicon>
     <Img className="img-fluid" src="../static/img/Newmini.png"/>
-    <p className="text-center mt-3">ปรับจอด้วยนะจั๊บ</p>
+    <p className="text-center mt-3">ปรับจอด้วยนะขอรับ</p>
   </Minicon>
 )
 export default index
