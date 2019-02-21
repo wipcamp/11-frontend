@@ -14,13 +14,13 @@ const Minicon = styled.div`
     justify-content:center;
     align-items:center;
   } */
-  @media(orientation:portrait)
+  /* @media(orientation:portrait)
   and (min-width:768px) and (max-width:1024px){
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
-  }
+  } */
   @media(orientation:landscape)
   and (max-height: 550px){
     display:flex;

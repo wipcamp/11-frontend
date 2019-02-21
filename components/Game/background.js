@@ -11,6 +11,12 @@ const Hill = styled.img`
     height: 50%;
     bottom: 34vh;
   }
+  @media (min-width:576px) {
+    bottom:0;
+    left: -10vh;
+    height: 130%;
+    width:150%;
+  }
   @media (min-width:768px) {
     bottom:0;
     left: 0;
@@ -23,6 +29,12 @@ const Hill = styled.img`
     height:110%;
   }
   @media (min-width:1100px) {
+    bottom:0;
+    left: 0;
+    width:100%;
+    height:110%;
+  }
+  @media (min-width:1277px) {
     bottom:0;
     left: 0;
     width:100%;
@@ -160,6 +172,10 @@ const Stairs = styled.img`
       width:90%;
       bottom:5vh;
     }
+    @media (min-width:2560px) {
+      left:1vw;
+      width:90%;
+    }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
       left:4vw;
       width:85%;
@@ -283,6 +299,9 @@ const Red =styled.img`
       top:2vh;
       left:33vw;
     }
+    @media (min-height:1030px) {
+      top:20vh;
+    }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
       top: 1vh;
       left:33vw;
@@ -322,6 +341,9 @@ const Dojo = styled.img`
     @media (min-width:1024px) {
       top: 15vh;
       left:40vw;
+    }
+    @media(min-width:2560px) {
+      top: 17vh;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
       top: 15vh;

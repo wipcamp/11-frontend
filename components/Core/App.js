@@ -63,10 +63,10 @@ const MSize = styled.div`
   and (max-width:850px){
     display:none;
   } */
-  @media(orientation:portrait)
+  /* @media(orientation:portrait)
   and (min-width:768px) and (max-width:1024px){
     display:none;
-  }
+  } */
   @media(orientation:landscape)
   and (max-height: 550px){
     display:none;

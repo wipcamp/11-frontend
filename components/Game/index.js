@@ -68,6 +68,9 @@ const Div = styled.div`
   @media(min-width:1024px) {
     top: 10vh;
   }
+  @media(min-width:2000px) {
+    top: 20vh;
+  }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     top: 35vh;
   }
@@ -80,7 +83,6 @@ const Div = styled.div`
 `
 
 export default class index extends Component {
-  
   render () {
     return (
       <Bg>
@@ -90,7 +92,7 @@ export default class index extends Component {
           <div className="row">
             <Div className="col-12 d-flex justify-content-center align-items-center text-center" onClick={() => this.handleClickIcon()}>
               <a href="http://wip.camp/game" target="_blank">
-              <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
+                <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
               </a>
             </Div>
           </div>
