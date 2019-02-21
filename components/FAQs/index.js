@@ -214,7 +214,7 @@ export default class Question extends Component {
               <div className="row">
                 <div className="text-center col-12 mb-4">
                   <h1><Headline>FAQs</Headline></h1>
-                  <b><Subtitle>คำถามที่พบบ่อย?</Subtitle></b>
+                  <b><Subtitle>คำถามที่พบบ่อย ?</Subtitle></b>
                 </div>
                 <div className="col-12">
                   <div className="pb-4">
