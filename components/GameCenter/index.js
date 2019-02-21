@@ -102,26 +102,38 @@ const TextClimbbamboo = styled(Div)`
     font-size:24px;
     left:8vw;
   }
+  @media (min-width:768px) {
+    left:5vw;
+  }
   @media (min-width:770px) {
     font-size:20px;
     left:7vw;
   }
+  @media (min-width:992px) {
+    left:9vw;
+  }
   @media (min-width:1024px) {
-    font-size:28px;
-    left:7vw;
+    font-size:25px;
+    left:8vw;
     
+  }
+  @media (min-width:1180px) {
+    left:7vw; 
+  }
+  @media (min-width:1200px) {
+    left:7vw;
   }
 `
 const TextJanpu = styled(Div)`
   left:7vw;
   transform:translate(0%,0);
   @media (min-width:320px) {
-    font-size:23px;
-    left:20vw;
-   
+    font-size:25px;
+    left:18vw;
+    margin-top:-2em;
   }
   @media (min-width:360px) {
-    left:19vw;
+    left:18vw;
   }
   @media (min-width:375px) {
     left:16vw;
@@ -133,7 +145,7 @@ const TextJanpu = styled(Div)`
     left:12vw;
   }
   @media (min-width:500px) {
-    left:11vw;
+    left:10vw;
   }
   @media (min-width:550px) {
     left:10vw;
@@ -150,6 +162,13 @@ const TextJanpu = styled(Div)`
   }
   @media (min-width:750px) {
     left:9vw;
+  }
+  @media (min-width:768px) {
+    left:5vw;
+  }
+  @media (min-width:770px) {
+    font-size:20px;
+    left:8vw;
   }
   @media (min-width:810px) {
     font-size:20px;
@@ -168,27 +187,29 @@ const TextJanpu = styled(Div)`
     left:5vw;
   }
   @media (min-width:992px) {
-    margin-top:-1.5em;
-    left:8.5vw;
+    left:9.5vw;
   }
   @media (min-width:1024px) {
-    font-size:28px;
-    margin-top:-1.25em;
-    left:7vw;
+    font-size:25px;
+    margin-top:-1.75em;
+    left:8vw;
+  }
+  @media (min-width:1180px) {
+    left:7vw; 
   }
   @media (min-width:1200px) {
-    margin-top:-1.5em;
+    left:7vw;
   }
 `
 const TextShinobi = styled(Div)`
   left:9vw;
   @media (min-width:320px) {
     font-size:15px;
-    left:15vw;
+    left:17vw;
   }
   @media (min-width:360px) {
     font-size:15px;
-    left:16vw;
+    left:17vw;
   }
   @media (min-width:412px) {
     left:16vw;
@@ -201,17 +222,39 @@ const TextShinobi = styled(Div)`
     font-size:24px;
     
   }
+  @media (min-width:670px) {
+    left:14vw;
+    
+  }
   @media (min-width:700px) {
     font-size:24px;
     left:12vw;
+  }
+  @media (min-width:768px) {
+    left:9vw;
   }
   @media (min-width:770px) {
     font-size:20px;
     left:10vw;
   }
+  @media (min-width:900px) {
+    font-size:20px;
+    left:9vw;
+  }
+  @media (min-width:992px) {
+    left:12vw;
+  }
   
   @media (min-width:1024px) {
-    font-size:28px;
+    font-size:25px;
+    left:11vw; 
+  }
+  @media (min-width:1180px) {
+    font-size:25px;
+    left:10vw; 
+  }
+
+  @media (min-width:1200px) {
     left:9vw; 
   }
 `

@@ -48,7 +48,7 @@ const Hill = styled.img`
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     left:0;
     bottom: 0;
-    height:75%;
+    height:120%;
   }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
     left:0;
@@ -125,6 +125,12 @@ const SakuraLeft = styled.img`
       left: -15vw;
       z-index: 2;
     }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      bottom: 3vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      bottom: 4vh;
+    }    
 `
 const SakuraRight = styled.img`
   position : absolute;
@@ -144,6 +150,13 @@ const SakuraRight = styled.img`
       z-index: 2;
       bottom: 0vh;
       right: -15vw;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      bottom: 2vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      right: -10vw;
+      bottom: 3vh;
     }
 `
 
@@ -211,12 +224,12 @@ const RockRight = styled.img`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       width:40%;
@@ -253,12 +266,12 @@ const RockLeft = styled.img`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       height:auto;
