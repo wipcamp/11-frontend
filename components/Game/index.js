@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import Bg from '../Core/Bg'
 import Wippo from '../Core/Wippo'
@@ -22,9 +22,22 @@ const Model = styled(Wippo)`
     bottom: -3.5vh;
   }
 `
+const pulse = keyframes`
+  from {
+    transform: scale3d(1, 1, 1);
+  }
 
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+  `
 const Img = styled.img`
-   
+  animation: ${pulse} 3s infinite;
+  cursor: pointer;
    @media(min-width:320px) {
     width:309px;
     height: auto;
