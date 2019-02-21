@@ -28,13 +28,13 @@ const TextA = styled.a`
 `
 
 const ContactBox = (props) => (
-  <ImgDiv className="ml-0 mr-0 pl-lg-5">
+  <ImgDiv className="ml-0 mr-0">
     <a href={props.href}>
       <Img src={props.imgUrl} />
     </a>
-    <ImgDiv className="pl-2">
+    <ImgDiv>
       <Paragraph>
-        <TextA href={props.href}>{props.text}</TextA>
+        <TextA href={props.href}>&nbsp;{props.text}</TextA>
       </Paragraph>
     </ImgDiv>
   </ImgDiv>
