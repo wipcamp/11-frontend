@@ -266,7 +266,6 @@ const ScoreBoxFirstGame = styled(ScoreBox)`
   @media (min-width:320px) {
     margin-top:-9px;
     width:85%;
-    height: 35px;
     left:7vw;
   }
   @media (min-width:375px) {
@@ -342,7 +341,7 @@ export default class index extends Component {
               <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
             </a>
             <ScoreBoxFirstGame className = "text-center">
-              <h1><TopScoreText>{this.state.name} {this.state.score} </TopScoreText></h1>
+              <h1><TopScoreText>TopScore <br/> {this.state.name} {this.state.score} </TopScoreText></h1>
             </ScoreBoxFirstGame>
           </div>
         </div>
