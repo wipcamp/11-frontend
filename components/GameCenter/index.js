@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Headline, { Subtitle } from '../Core/Texts'
 import Logo, { LogoGame, LogoGameHover } from '../GameCenter/LogoGame'
+import axios from 'axios'
 
 const Bg = styled.div`
   height: 100vh;
@@ -220,15 +221,14 @@ const ScoreBox = styled.div`
   background-color: #f8e9d6;
   box-shadow: 0px 4px 4px #000000;
   width:100%;
-  height: 100px;
   opacity:0.6;
   z-index:200;
-  margin-top:-9px;
+  margin-top:-5px;
+  padding: 5px 0;
   transform:translate(0,0);
   @media (min-width:320px) {
     margin-top:-8px;
     width:75%;
-    height: 30px;
     left:6vw;
   }
   @media (min-width:375px) {
@@ -266,7 +266,6 @@ const ScoreBoxFirstGame = styled(ScoreBox)`
   @media (min-width:320px) {
     margin-top:-9px;
     width:85%;
-    height: 35px;
     left:7vw;
   }
   @media (min-width:375px) {
@@ -286,77 +285,122 @@ const ScoreBoxFirstGame = styled(ScoreBox)`
   
 `
 
-const SmallSize = () => (
-  <Mini>
-    <div className="row justify-content-center">
-      <div className = "col-12 mb-4">
-        {/* <ScoreBox /> */}
-        <a href="http://game-janpu.wip.camp" target="_blank">
-        <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
-        <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
-        </a>
-        <ScoreBoxFirstGame />
-      </div>
-    </div>
-    <div className = "row">
-      <div className = "col-6 mt-2">
-      {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
-        <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png"/>
-        {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
-        <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
-        {/* </a> */}
-        <Center>
-          <ScoreBox />
-        </Center>
-      </div>
-      <div className = "col-6 mt-2">
-      {/* <a href="http://game-1.wip.camp" target="_blank"> */}
-        {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
-        <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
-        <h1><TextShinobi>Shinobi</TextShinobi></h1>
-        {/* </a> */}
-        <ScoreBox />
-      </div>
-    </div>
-  </Mini>
-)
-
-const BigSize = () => (
-  <div className="row">
-    <Center className = "col-4 mt-5">
-    {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
-    {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
-      <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
-      <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
-      {/* </a> */}
-      <ScoreBox />
-    </Center>
-    <Center className = "col-4">
-     <a href="http://game-janpu.wip.camp" target="_blank">
-      <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
-      <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
-      </a>
-      <ScoreBox />
-    </Center>
-    <Center className = "col-4 mt-5">
-    {/* <a href="http://game-1.wip.camp" target="_blank"> */}
-      {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
-      <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
-      <h1><TextShinobi>Shinobi</TextShinobi></h1>
-      {/* </a> */}
-      <ScoreBox />
-    </Center>
-  </div>
-)
-
 const MSize = styled.div`
   @media(max-width:768px){
     display:none;
   }
 `
 
+const TopScoreText = styled.p`
+  @media (min-width:320px) {
+    font-size:11px;
+  }
+  @media (min-width:360px) {
+    font-size:11px;
+  }
+  @media (min-width:412px) {
+  }
+  @media (min-width:500px) {
+    font-size:18px;
+  }
+  @media (min-width:576px) {
+    font-size:20px;
+  }
+  @media (min-width:700px) {
+    font-size:20px;
+  }
+  @media (min-width:770px) {
+    font-size:16px;
+  }
+  @media (min-width:1024px) {
+    font-size:24px;
+  }
+`
+
 export default class index extends Component {
+  state = {
+    name:"",
+    score:0,
+  }
+  componentDidMount  = async () => {
+    await axios.get('https://game.service.wip.camp/api/janpu')
+      .then((response) => {
+        this.setState({score:response.data.score,name:response.data.player_name})
+      })
+      .catch((error) => {
+      })
+  }
   render () {
+    const SmallSize = () => (
+      <Mini>
+        <div className="row justify-content-center">
+          <div className = "col-12 mb-4">
+            {/* <ScoreBox /> */}
+            <a href="http://game-janpu.wip.camp" target="_blank">
+              <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
+              <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
+            </a>
+            <ScoreBoxFirstGame className = "text-center">
+              <h1><TopScoreText>TopScore <br/> {this.state.name} {this.state.score} </TopScoreText></h1>
+            </ScoreBoxFirstGame>
+          </div>
+        </div>
+        <div className = "row">
+          <div className = "col-6 mt-2">
+            {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
+            <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png"/>
+            {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
+            <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
+            {/* </a> */}
+            <Center>
+              <ScoreBox />
+            </Center>
+          </div>
+          <div className = "col-6 mt-2">
+            {/* <a href="http://game-1.wip.camp" target="_blank"> */}
+            {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
+            <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
+            <h1><TextShinobi>Shinobi</TextShinobi></h1>
+            {/* </a> */}
+            <ScoreBox />
+          </div>
+        </div>
+      </Mini>
+    )
+    
+    const BigSize = () => (
+      <div className="row">
+        <Center className = "col-4 mt-5">
+          {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
+          {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
+          <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
+          <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
+          {/* </a> */}
+          <ScoreBox />
+        </Center>
+        <Center className = "col-4">
+          <a href="http://game-janpu.wip.camp" target="_blank">
+            <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
+            <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
+          </a>
+          <h1>
+            <ScoreBox>
+              <TopScoreText>
+                TopScore <br/>{this.state.name} {this.state.score}
+              </TopScoreText>
+            </ScoreBox>
+          </h1>
+        </Center>
+        <Center className = "col-4 mt-5">
+          {/* <a href="http://game-1.wip.camp" target="_blank"> */}
+          {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
+          <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
+          <h1><TextShinobi>Shinobi</TextShinobi></h1>
+          {/* </a> */}
+          <ScoreBox />
+        </Center>
+      </div>
+    )
     return (
       <Bg>
         <BackgroundGameCenter />
