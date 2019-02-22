@@ -21,6 +21,12 @@ const Model = styled(Wippo)`
   @media(min-width:1024px) {
     bottom: -3.5vh;
   }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+     bottom: -4.5vh;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    bottom: -4vh;
+  }    
 `
 const pulse = keyframes`
   from {
