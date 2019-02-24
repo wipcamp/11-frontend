@@ -109,7 +109,7 @@ export default class index extends Component {
         <Model src='../../static/img/wippo/wippoGame.png' />
         <div className="container">
           <div className="row">
-            <Div className="col-12 d-flex justify-content-center align-items-center text-center" onClick={() => this.handleClickIcon()}>
+            <Div className="col-12 d-flex justify-content-center align-items-center text-center">
               <a href="http://wip.camp/game" target="_blank">
                 <Img alt="Gamecenter" src='../../static/img/gameCenteIcon.png' />
               </a>
