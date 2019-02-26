@@ -114,28 +114,19 @@ const NavLink = styled.div`
 
 const NavText = styled.div`
   opacity: 0;
-  display: flex;
   position: absolute;
-  justify-content: flex-end;
   font-size: 14px;
   top:10%;
   height: 30px;
+  width: 100%;
 
   &:hover{
     opacity: 1;
-    display: flex;
-    position: absolute;
-    justify-content: flex-end;
-    font-size: 14px;
     font-weight:bold;
   }
 
   &.active {
     opacity: 1;
-    display: flex;
-    position: absolute;
-    justify-content: flex-end;
-    font-size: 14px;
     font-weight:bold;
   }
 `

@@ -11,6 +11,12 @@ const Hill = styled.img`
     height: 50%;
     bottom: 34vh;
   }
+  @media (min-width:576px) {
+    bottom:0;
+    left: -10vh;
+    height: 130%;
+    width:150%;
+  }
   @media (min-width:768px) {
     bottom:0;
     left: 0;
@@ -26,6 +32,12 @@ const Hill = styled.img`
     bottom:0;
     left: 0;
     width:100%;
+    height:110%;
+  }
+  @media (min-width:1277px) {
+    bottom:0;
+    left: 0;
+    width:100%;
     height:150%;
   }
   @media (min-width:1500px) {
@@ -36,7 +48,7 @@ const Hill = styled.img`
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     left:0;
     bottom: 0;
-    height:75%;
+    height:120%;
   }
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
     left:0;
@@ -113,6 +125,12 @@ const SakuraLeft = styled.img`
       left: -15vw;
       z-index: 2;
     }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      bottom: 3vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      bottom: 4vh;
+    }    
 `
 const SakuraRight = styled.img`
   position : absolute;
@@ -132,6 +150,13 @@ const SakuraRight = styled.img`
       z-index: 2;
       bottom: 0vh;
       right: -15vw;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      bottom: 2vh;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      right: -10vw;
+      bottom: 3vh;
     }
 `
 
@@ -159,6 +184,10 @@ const Stairs = styled.img`
       left:1vw;
       width:90%;
       bottom:5vh;
+    }
+    @media (min-width:2560px) {
+      left:1vw;
+      width:90%;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
       left:4vw;
@@ -195,12 +224,12 @@ const RockRight = styled.img`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       width:40%;
@@ -237,12 +266,12 @@ const RockLeft = styled.img`
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
       height:auto;
       width:40%;
-      bottom:0vh;
+      bottom:1vh;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
       height:auto;
@@ -282,6 +311,9 @@ const Red =styled.img`
     @media (min-width:1100px) {
       top:2vh;
       left:33vw;
+    }
+    @media (min-height:1030px) {
+      top:20vh;
     }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
       top: 1vh;
@@ -323,6 +355,9 @@ const Dojo = styled.img`
       top: 15vh;
       left:40vw;
     }
+    @media(min-width:2560px) {
+      top: 17vh;
+    }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
       top: 15vh;
       left:42.5vw;
@@ -363,8 +398,7 @@ export default class background extends Component {
         <Red src='/static/img/background-game/MainGame_red.png' />
         <Dojo src='/static/img/background-game/MainGame_Dojo.png' />
         <FooterBg className="d-flex justify-content-center align-items-center text-white">
-          Created&nbsp;
-          &nbsp;by 11 I'm Developer
+          Created&nbsp;by 11 I'm Developer&nbsp;Family
         </FooterBg>
       </div>
     )

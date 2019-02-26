@@ -7,20 +7,6 @@ const Minicon = styled.div`
   height: 100vh;
   background-color: #F8E9D6;
   padding : 2vw;
-  /* @media(orientation:landscape)
-  and (max-width:850px){
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-  } */
-  @media(orientation:portrait)
-  and (min-width:768px) and (max-width:1024px){
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-  }
   @media(orientation:landscape)
   and (max-height: 550px){
     display:flex;
@@ -41,7 +27,7 @@ const Link = styled.a`
 const index = () => (
   <Minicon>
     <Img className="img-fluid" src="../static/img/Newmini.png"/>
-    <p className="text-center mt-3">ปรับจอด้วยนะจั๊บ</p>
+    <p className="text-center mt-3">ปรับจอด้วยนะขอรับ</p>
   </Minicon>
 )
 export default index

@@ -224,7 +224,6 @@ export const ArrowLeft = styled.img`
   bottom: 2.5vh;
   left: 30vw;
   width: 5%;
-  cursor: pointer;
   content: url('../../static/img/arrow-down.png');
   animation: ${bounceIt} 5s infinite;
   @media (min-width:320px){
@@ -250,7 +249,6 @@ export const ArrowRight = styled.img`
   bottom: 2.5vh;
   right: 30vw;
   width: 5%;
-  cursor: pointer;
   content: url('../../static/img/arrow-down.png');
   animation: ${bounceIt} 5s infinite;
 
