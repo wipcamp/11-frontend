@@ -23,6 +23,55 @@ const Moutain = styled.img`
   }
 `
 
+const SponsorStyle = styled.img`
+  position: relative;
+  height: 50px;
+  margin: 1em;
+
+  @media(min-width:320px){
+    height:25px;
+  }
+  @media (min-width:412px) {
+    height:30px;
+  }
+  @media (min-width:576px) {
+    height:35px;
+  }
+  @media (min-width:768px) {
+    height:45px;
+  }
+  @media (min-width:1024px) {
+    height:50px;
+  }
+  @media (min-width:1366px){
+    height:60px;
+  }
+`
+
+const SponsorStyleBangmod = styled.img`
+  position: relative;
+  height: 100px;
+  margin: 1em;
+  @media(min-width:320px){
+    height:60px;
+  }
+  @media (min-width:412px) {
+    height:70px;
+  }
+  @media (min-width:576px) {
+    height:80px;
+  }
+  @media (min-width:768px) {
+    height:85px;
+  }
+  @media (min-width:1024px) {
+    height:100px;
+  }
+  @media (min-width:1366px){
+    height:120px;
+  }
+`
+
 export default class index extends Component {
   render () {
     return (
@@ -41,9 +90,22 @@ export default class index extends Component {
                 <PDBox>
                   <div className="col-12">
                     <div className="row justify-content-center">
-                      <Subtitle className="mb-4"><b>ผู้สนับสนุน</b></Subtitle>  
+                      <Subtitle className="mb-4"><b>ผู้สนับสนุน</b></Subtitle>
                     </div>
-                    <SponsorAxios />
+                    {/* <SponsorAxios /> */}
+                    <div className = "row justify-content-center">
+                      <a href = 'https://bangmod.cloud/'>
+                        <SponsorStyleBangmod src = '../../static/img/sponsors/bangmod.png' alt = 'Bangmod Cloud'/>
+                      </a>
+                    </div>
+                    <div className = "row justify-content-center">
+                      <a href = 'http://bowbakery.co.th/en/'>
+                        <SponsorStyle src = '../../static/img/sponsors/bow.png' alt = 'Bow Bakery House'/>
+                      </a>
+                      <a href = 'https://www.dek-d.com/'>
+                        <SponsorStyle src = '../../static/img/sponsors/dek-d.png' alt = 'Dek-D'/>
+                      </a>
+                    </div>
                   </div>
                 </PDBox>
               </div>
