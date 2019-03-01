@@ -253,7 +253,7 @@ export default class SideBar extends React.Component {
     }
 
     render() {
-      const sections = [ ,'Home' , 'What' ,'Who' , 'Where' ,'When', 'FAQs', 'Contact']
+      const sections = [ ,'Home' , 'What' ,'Who' , 'Where' ,'When', 'FAQs','Sponsor', 'Contact']
 
       return <React.Fragment>
             <Desktop>
@@ -267,7 +267,7 @@ export default class SideBar extends React.Component {
                 <Where/>
                 <When/>
                 <FAQs/>
-                {/* <Sponsor/> */}
+                <Sponsor/>
                 <Contact/>
                 <Game/>
             </ReactPageScroller>
@@ -279,7 +279,7 @@ export default class SideBar extends React.Component {
                 <Where/>
                 <When/>
                 <FAQs/>
-                {/* <Sponsor/> */}
+                <Sponsor/>
                 <Contact/>
                 <Game/>
             </Moblie>
@@ -298,7 +298,7 @@ export default class SideBar extends React.Component {
                 }
                 </SectionUl>
                 <div className = "text-center">
-                  <NavItems key={9} eventKey={7} onSelect={this.goToPage}> 
+                  <NavItems key={9} eventKey={8} onSelect={this.goToPage}> 
                     <Button src = '/static/img/console.png'  className = "text-center pb-2"/>
                   </NavItems>
                 </div> 
