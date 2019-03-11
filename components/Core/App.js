@@ -15,7 +15,7 @@ import SideBar from './SideBar'
 // const datenow = dayjs('2019-03-30')
 const datenow = dayjs().format()
 const dateStartResgis = dayjs('2019-02-11')  
-const dateEndRegis = dayjs('2019-03-11')  
+const dateEndRegis = dayjs('2019-03-19')  
 const dateStartAnnounced = dayjs('2019-03-29') 
 const dateStartCamp = dayjs('2019-05-29') 
 
