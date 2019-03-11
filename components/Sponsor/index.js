@@ -29,13 +29,13 @@ const SponsorStyle = styled.img`
   margin: 1em;
 
   @media(min-width:320px){
-    height:25px;
+    height:40px;
   }
   @media (min-width:412px) {
-    height:30px;
+    height:40px;
   }
   @media (min-width:576px) {
-    height:35px;
+    height:45px;
   }
   @media (min-width:768px) {
     height:45px;
@@ -95,15 +95,19 @@ export default class index extends Component {
                     {/* <SponsorAxios /> */}
                     <div className = "row justify-content-center">
                       <a href = 'https://bangmod.cloud/'>
-                        <SponsorStyleBangmod src = '../../static/img/sponsors/bangmod.png' alt = 'Bangmod Cloud'/>
+                        <SponsorStyle src = '../../static/img/sponsors/bangmod.png' alt = 'Bangmod Cloud'/>
                       </a>
-                    </div>
-                    <div className = "row justify-content-center">
                       <a href = 'http://bowbakery.co.th/en/'>
                         <SponsorStyle src = '../../static/img/sponsors/bow.png' alt = 'Bow Bakery House'/>
                       </a>
                       <a href = 'https://www.dek-d.com/'>
                         <SponsorStyle src = '../../static/img/sponsors/dek-d.png' alt = 'Dek-D'/>
+                      </a>
+                      <a href = 'https://www.lactasoy.com/th/' className = "ml-2 mr-2">
+                        <SponsorStyle src = '../../static/img/sponsors/lactasoy.png' alt = 'Lactasoy'/>
+                      </a>
+                      <a href = 'http://www.yipintsoi.com/' className = "ml-4 mr-4">
+                        <SponsorStyle src = '../../static/img/sponsors/yip.png' alt = 'YIP IN TSOI' />
                       </a>
                     </div>
                   </div>
