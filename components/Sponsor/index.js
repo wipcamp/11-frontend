@@ -95,15 +95,16 @@ export default class index extends Component {
                     {/* <SponsorAxios /> */}
                     <div className = "row justify-content-center">
                       <a href = 'https://bangmod.cloud/'>
-                        <SponsorStyleBangmod src = '../../static/img/sponsors/bangmod.png' alt = 'Bangmod Cloud'/>
+                        <SponsorStyle src = '../../static/img/sponsors/bangmod.png' alt = 'Bangmod Cloud'/>
                       </a>
-                    </div>
-                    <div className = "row justify-content-center">
                       <a href = 'http://bowbakery.co.th/en/'>
                         <SponsorStyle src = '../../static/img/sponsors/bow.png' alt = 'Bow Bakery House'/>
                       </a>
                       <a href = 'https://www.dek-d.com/'>
                         <SponsorStyle src = '../../static/img/sponsors/dek-d.png' alt = 'Dek-D'/>
+                      </a>
+                      <a href = 'https://www.lactasoy.com/th/'>
+                        <SponsorStyle src = '../../static/img/sponsors/lactasoy.png' alt = 'Lactasoy'/>
                       </a>
                     </div>
                   </div>
