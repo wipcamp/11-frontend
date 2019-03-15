@@ -48,30 +48,6 @@ const SponsorStyle = styled.img`
   }
 `
 
-const SponsorStyleBangmod = styled.img`
-  position: relative;
-  height: 100px;
-  margin: 1em;
-  @media(min-width:320px){
-    height:60px;
-  }
-  @media (min-width:412px) {
-    height:70px;
-  }
-  @media (min-width:576px) {
-    height:80px;
-  }
-  @media (min-width:768px) {
-    height:85px;
-  }
-  @media (min-width:1024px) {
-    height:100px;
-  }
-  @media (min-width:1366px){
-    height:120px;
-  }
-`
-
 export default class index extends Component {
   render () {
     return (
@@ -106,8 +82,11 @@ export default class index extends Component {
                       <a href = 'https://www.lactasoy.com/th/' className = "ml-2 mr-2">
                         <SponsorStyle src = '../../static/img/sponsors/lactasoy.png' alt = 'Lactasoy'/>
                       </a>
-                      <a href = 'http://www.yipintsoi.com/' className = "ml-4 mr-4">
+                      <a href = 'http://www.yipintsoi.com/' className = "ml-2 mr-2">
                         <SponsorStyle src = '../../static/img/sponsors/yip.png' alt = 'YIP IN TSOI' />
+                      </a>
+                      <a href = 'https://www.koh-kae.com/th/' className = "ml-2 mr-2">
+                        <SponsorStyle src = '../../static/img/sponsors/kohkae-logo-th.png' alt = 'Koh Kae' />
                       </a>
                     </div>
                   </div>

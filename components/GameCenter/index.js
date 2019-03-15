@@ -83,6 +83,12 @@ const TextClimbbamboo = styled(Div)`
   @media (min-width:320px) {
     font-size:15px;
     left:10vw;
+    margin-top:-2.2em;
+   
+  }
+  @media (min-width:360px) {
+      left:10vw;
+      
    
   }
   @media (min-width:375px) {
@@ -115,12 +121,16 @@ const TextClimbbamboo = styled(Div)`
   @media (min-width:1024px) {
     font-size:25px;
     left:8vw;
+    margin-top:-1.8em;
     
   }
   @media (min-width:1180px) {
     left:7vw; 
   }
   @media (min-width:1200px) {
+    left:9vw;
+  }
+  @media (min-width:1500px) {
     left:7vw;
   }
 `
@@ -198,6 +208,9 @@ const TextJanpu = styled(Div)`
     left:7vw; 
   }
   @media (min-width:1200px) {
+    left:9vw;
+  }
+  @media (min-width:1500px) {
     left:7vw;
   }
 `
@@ -255,7 +268,10 @@ const TextShinobi = styled(Div)`
   }
 
   @media (min-width:1200px) {
-    left:9vw; 
+    left:12vw; 
+  }
+  @media (min-width:1500px) {
+    left:9vw;
   }
 `
 
@@ -364,11 +380,19 @@ export default class index extends Component {
   state = {
     name:"",
     score:0,
+    name_2:"",
+    score_2:0,
   }
   componentDidMount  = async () => {
     await axios.get('https://game.service.wip.camp/api/janpu')
       .then((response) => {
         this.setState({score:response.data.score,name:response.data.player_name})
+      })
+      .catch((error) => {
+      })
+    await axios.get('https://game.service.wip.camp/api/climbing')
+      .then((response) => {
+        this.setState({score_2:response.data.score,name_2:response.data.player_name})
       })
       .catch((error) => {
       })
@@ -384,20 +408,19 @@ export default class index extends Component {
               <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
             </a>
             <ScoreBoxFirstGame className = "text-center">
-              <h1><TopScoreText>TopScore <br/> {this.state.name} {this.state.score} </TopScoreText></h1>
+              <h1><TopScoreText>TopScore<br/> {this.state.name} {this.state.score} </TopScoreText></h1>
             </ScoreBoxFirstGame>
           </div>
         </div>
         <div className = "row">
           <div className = "col-6 mt-2">
-            {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
-            <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png"/>
-            {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
+            <a href="http://game-climbing.wip.camp" target="_blank">
+            <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />
             <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
-            {/* </a> */}
-            <Center>
-              <ScoreBox />
-            </Center>
+            </a>
+              <ScoreBoxFirstGame className ="text-center">
+                <h1><TopScoreText>TopScore <br/> {this.state.name_2} {this.state.score_2} </TopScoreText></h1>
+              </ScoreBoxFirstGame>
           </div>
           <div className = "col-6 mt-2">
             {/* <a href="http://game-1.wip.camp" target="_blank"> */}
@@ -414,17 +437,22 @@ export default class index extends Component {
     const BigSize = () => (
       <div className="row">
         <Center className = "col-4 mt-5">
-          {/* <a href="http://game-climbing.wip.camp" target="_blank"> */}
-          {/* <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />> */}
-          <LogoGame src="../../static/img/game-center/logoGame1_comingSoon.png" />
+          <a href="http://game-climbing.wip.camp" target="_blank">
+          <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />
           <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
-          {/* </a> */}
-          <ScoreBox />
+          </a>
+          <h1>
+            <ScoreBox>
+              <TopScoreText>
+                TopScore <br/>{this.state.name_2} {this.state.score_2}
+              </TopScoreText>
+            </ScoreBox>
+          </h1>
         </Center>
         <Center className = "col-4">
           <a href="http://game-janpu.wip.camp" target="_blank">
             <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
-            <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
+            <h1><TextJanpu> Janpu Ninja</TextJanpu></h1>
           </a>
           <h1>
             <ScoreBox>
