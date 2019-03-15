@@ -83,6 +83,12 @@ const TextClimbbamboo = styled(Div)`
   @media (min-width:320px) {
     font-size:15px;
     left:10vw;
+    margin-top:-2.2em;
+   
+  }
+  @media (min-width:360px) {
+      left:10vw;
+      
    
   }
   @media (min-width:375px) {
@@ -115,12 +121,16 @@ const TextClimbbamboo = styled(Div)`
   @media (min-width:1024px) {
     font-size:25px;
     left:8vw;
+    margin-top:-1.8em;
     
   }
   @media (min-width:1180px) {
     left:7vw; 
   }
   @media (min-width:1200px) {
+    left:9vw;
+  }
+  @media (min-width:1500px) {
     left:7vw;
   }
 `
@@ -198,6 +208,9 @@ const TextJanpu = styled(Div)`
     left:7vw; 
   }
   @media (min-width:1200px) {
+    left:9vw;
+  }
+  @media (min-width:1500px) {
     left:7vw;
   }
 `
@@ -255,7 +268,10 @@ const TextShinobi = styled(Div)`
   }
 
   @media (min-width:1200px) {
-    left:9vw; 
+    left:12vw; 
+  }
+  @media (min-width:1500px) {
+    left:9vw;
   }
 `
 
