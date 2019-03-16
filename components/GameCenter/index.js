@@ -464,11 +464,11 @@ export default class index extends Component {
             <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
             <h1><TextShinobi>Shinobi</TextShinobi></h1>
             {/* </a> */}
-            <div className="col-12">
+            {/* <div className="col-12">
               <MiniScoreBoxGame className="text-center">
                 <h1><TopScoreText>TopScore <br /> {this.state.name_3} {this.state.score_3} </TopScoreText></h1>
               </MiniScoreBoxGame>
-            </div>
+            </div> */}
           </div>
         </div>
       </Mini>
