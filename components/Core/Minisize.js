@@ -7,6 +7,13 @@ const Minicon = styled.div`
   height: 100vh;
   background-color: #F8E9D6;
   padding : 2vw;
+  @media(orientation:portrait)
+  and (max-width: 319px){
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
   @media(orientation:landscape)
   and (max-height: 550px){
     display:flex;
