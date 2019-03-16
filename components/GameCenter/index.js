@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Headline, { Subtitle } from '../Core/Texts'
 import Logo, { LogoGame, LogoGameHover } from '../GameCenter/LogoGame'
 import axios from 'axios'
+import Minisize from '../Core/Minisize'
 
 const Bg = styled.div`
   height: 100vh;
@@ -10,6 +11,7 @@ const Bg = styled.div`
   background : #F8E9D6;
   z-index:100;
   overflow-x:hidden;
+  overflow-y:hidden;
 `
 
 const Layer1 = styled.img`
@@ -67,9 +69,6 @@ const Mini = styled.div`
   }
 `
 
-const Center = styled.div`
-  text-align:center !important;
-`
 const Div = styled.div`
   text-align:center !important;
   position:absolute;
@@ -108,30 +107,47 @@ const TextClimbbamboo = styled(Div)`
     font-size:24px;
     left:8vw;
   }
-  @media (min-width:768px) {
+  @media (min-width:768px) {  
+    padding-top:10px;
     left:5vw;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+    padding-top:0;
+  }
+  @media (min-width:769px) {  
+    padding-top:13px;
   }
   @media (min-width:770px) {
     font-size:20px;
     left:7vw;
   }
   @media (min-width:992px) {
+    padding-top:3px;
     left:9vw;
   }
   @media (min-width:1024px) {
     font-size:25px;
-    left:8vw;
-    margin-top:-1.8em;
-    
+    left:7.5vw;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    padding-top:0;
   }
   @media (min-width:1180px) {
     left:7vw; 
   }
   @media (min-width:1200px) {
-    left:9vw;
+    padding-top:6px;
+    left:7.5vw;
+  }
+  @media (min-width:1440px) {
+    padding-top:4px;
   }
   @media (min-width:1500px) {
     left:7vw;
+  }
+  @media (min-width:2500px) {
+    padding-top:0;
+    left:4.5vw;
   }
 `
 const TextJanpu = styled(Div)`
@@ -174,11 +190,14 @@ const TextJanpu = styled(Div)`
     left:9vw;
   }
   @media (min-width:768px) {
-    left:5vw;
+    padding-top:8px;
+    left:6vw;
   }
-  @media (min-width:770px) {
-    font-size:20px;
-    left:8vw;
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
+    padding-top:0;
+  }
+  @media (min-width:769px) {
+    padding-top:8px;
   }
   @media (min-width:810px) {
     font-size:20px;
@@ -197,12 +216,15 @@ const TextJanpu = styled(Div)`
     left:5vw;
   }
   @media (min-width:992px) {
+    padding-top:3px;
     left:9.5vw;
   }
   @media (min-width:1024px) {
     font-size:25px;
-    margin-top:-1.75em;
     left:8vw;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    padding-top:0;
   }
   @media (min-width:1180px) {
     left:7vw; 
@@ -210,8 +232,16 @@ const TextJanpu = styled(Div)`
   @media (min-width:1200px) {
     left:9vw;
   }
+  @media (min-width:1440px) {
+    left:8vw;
+    padding-top:2px;
+  }
   @media (min-width:1500px) {
     left:7vw;
+  }
+  @media (min-width:2500px) {
+    padding-top:0;
+    left:4.5vw;
   }
 `
 const TextShinobi = styled(Div)`
@@ -270,8 +300,15 @@ const TextShinobi = styled(Div)`
   @media (min-width:1200px) {
     left:12vw; 
   }
+  @media (min-width:1440px) {
+    left:10vw; 
+  }
   @media (min-width:1500px) {
     left:9vw;
+  }
+  @media (min-width:2500px) {
+    padding-top:0;
+    left:5.5vw;
   }
 `
 
@@ -283,63 +320,58 @@ const ScoreBox = styled.div`
   opacity:0.6;
   z-index:200;
   margin-top:-5px;
+  margin-left:3rem;
   padding: 5px 0;
   transform:translate(0,0);
-  @media (min-width:320px) {
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: landscape)  {
     margin-top:-8px;
-    width:75%;
-    left:6vw;
-  }
-  @media (min-width:375px) {
-    width:80%;
-    left:5vw;
-  }
-  @media (min-width:412px) {
-    width:73%;
-    left:4.5vw;
-  }
-  @media (min-width:576px) {
-    width:75%;
-  }
-  @media (min-width:768px) {
-    left:2.5vw;
-    width:70%;
-  }
-  @media (min-width:1024px) {
-    left:6vw;
     width:60%;
   }
-  @media (min-width:1440px) {
-    left:5vw;
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    width:60%;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: landscape)  {
+    margin-left:3.5rem;
     width:62%;
   }
-  @media (min-width:1500px) {
-    left:4.7vw;
+  @media (min-width:769px){
+    width:67%;
+    margin-left:1.5rem;
   }
-  @media (min-width:2560px) {
-    left:3vw;
+  @media (min-width:992px){
+    width:70%;
+    margin-left:2rem;
+  }
+  @media (min-width:1024px){
     width:60%;
+    margin-left:3rem;
   }
-`
-const ScoreBoxFirstGame = styled(ScoreBox)`
+  @media (min-width:1200px){
+    width:62%;
+    margin-left:3.5rem;
+  }
+  @media (min-width:1440px){
+    width:62%;
+    margin-left:3.5rem;
+  }
+  `
+
+const MiniScoreBoxGame = styled(ScoreBox)`
+  left:0;
+  padding-top:10px;
+  margin-left:0.25rem ;
   @media (min-width:320px) {
     margin-top:-9px;
-    width:85%;
-    left:7vw;
+    width:97%;
   }
-  @media (min-width:375px) {
-    left:5.5vw;
-  }
-  @media (min-width:412px) {
-    width:76%;
-    left:5vw;
+  @media (min-width:414px) {
+    width:87%;
   }
   @media (min-width:576px) {
-    width:80%;
+    width:97%;
   }
   @media (min-width:768px) {
-    left:2.5vw;
-    width:68%;
+    width:77%;
   }
   
 `
@@ -352,6 +384,7 @@ const MSize = styled.div`
 
 const TopScoreText = styled.p`
   @media (min-width:320px) {
+    margin-bottom:0;
     font-size:11px;
   }
   @media (min-width:360px) {
@@ -401,34 +434,41 @@ export default class index extends Component {
     const SmallSize = () => (
       <Mini>
         <div className="row justify-content-center">
-          <div className = "col-12 mb-4">
-            {/* <ScoreBox /> */}
+          <div className= "col-12 mb-4 mb-md-5  px-3">
             <a href="http://game-janpu.wip.camp" target="_blank">
               <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
               <h1><TextJanpu> Janpu Ninja </TextJanpu></h1>
             </a>
-            <ScoreBoxFirstGame className = "text-center">
-              <h1><TopScoreText>TopScore<br/> {this.state.name} {this.state.score} </TopScoreText></h1>
-            </ScoreBoxFirstGame>
+            <div className="col-12"> 
+              <MiniScoreBoxGame className="text-center">
+                  <h1><TopScoreText>TopScore <br /> {this.state.name} {this.state.score} </TopScoreText></h1>
+              </MiniScoreBoxGame>
+            </div>
           </div>
         </div>
-        <div className = "row">
-          <div className = "col-6 mt-2">
+        <div className= "row mt-4 mt-sm-5 justify-content-center">
+          <div className = "col-6">
             <a href="http://game-climbing.wip.camp" target="_blank">
-            <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />
-            <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
+              <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />
+              <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
             </a>
-              <ScoreBoxFirstGame className ="text-center">
-                <h1><TopScoreText>TopScore <br/> {this.state.name_2} {this.state.score_2} </TopScoreText></h1>
-              </ScoreBoxFirstGame>
+            <div className="col-12">
+              <MiniScoreBoxGame className="text-center">
+                <h1><TopScoreText>TopScore <br /> {this.state.name_2} {this.state.score_2} </TopScoreText></h1>
+              </MiniScoreBoxGame>
+            </div>
           </div>
-          <div className = "col-6 mt-2">
+          <div className = "col-6">
             {/* <a href="http://game-1.wip.camp" target="_blank"> */}
             {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
             <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
             <h1><TextShinobi>Shinobi</TextShinobi></h1>
             {/* </a> */}
-            <ScoreBox />
+            <div className="col-12">
+              <MiniScoreBoxGame className="text-center">
+                <h1><TopScoreText>TopScore <br /> {this.state.name_3} {this.state.score_3} </TopScoreText></h1>
+              </MiniScoreBoxGame>
+            </div>
           </div>
         </div>
       </Mini>
@@ -436,53 +476,60 @@ export default class index extends Component {
     
     const BigSize = () => (
       <div className="row">
-        <Center className = "col-4 mt-5">
+        <div className = "col-4 mt-5 text-center">
           <a href="http://game-climbing.wip.camp" target="_blank">
           <LogoGameHover src="../../static/img/game-center/logoGame1.png" imagehover="../../static/img/game-center/logoGame1_hover.png" />
           <h1><TextClimbbamboo>Climb Bamboo</TextClimbbamboo></h1>
           </a>
-          <h1>
-            <ScoreBox>
-              <TopScoreText>
+          <ScoreBox>
+            <h1><TopScoreText>
                 TopScore <br/>{this.state.name_2} {this.state.score_2}
-              </TopScoreText>
+            </TopScoreText></h1>
             </ScoreBox>
-          </h1>
-        </Center>
-        <Center className = "col-4">
+        </div>
+        <div className = "col-4 text-center">
           <a href="http://game-janpu.wip.camp" target="_blank">
             <LogoGameHover src="../../static/img/game-center/logoGame2.png" imagehover="../../static/img/game-center/logoGame2_hover.png" />
             <h1><TextJanpu> Janpu Ninja</TextJanpu></h1>
           </a>
-          <h1>
             <ScoreBox>
-              <TopScoreText>
-                TopScore <br/>{this.state.name} {this.state.score}
-              </TopScoreText>
+              <h1>
+                  <TopScoreText>
+                    TopScore <br/>{this.state.name} {this.state.score}
+                  </TopScoreText>
+              </h1>
             </ScoreBox>
-          </h1>
-        </Center>
-        <Center className = "col-4 mt-5">
+        </div>
+        <div className = "col-4 mt-5 text-center">
           {/* <a href="http://game-1.wip.camp" target="_blank"> */}
           {/* <LogoGameHover src="../../static/img/game-center/logoGame3.png" imagehover="../../static/img/game-center/logoGame3_hover.png" />> */}
           <LogoGame src="../../static/img/game-center/logoGame3_comingSoon.png" />
           <h1><TextShinobi>Shinobi</TextShinobi></h1>
           {/* </a> */}
-          <ScoreBox />
-        </Center>
+            {/* <ScoreBox>
+              <h1>
+                  <TopScoreText>
+                    TopScore <br/>{this.state.name_3} {this.state.score_3}
+                  </TopScoreText>
+              </h1>
+            </ScoreBox> */}
+        </div>
       </div>
     )
     return (
-      <Bg>
-        <BackgroundGameCenter />
-        <div className = "container">
-          <div className="justify-content-center">
-            <h1><Headline className="pt-5">Game Center</Headline></h1>
-            <SmallSize />
-            <MSize><BigSize /></MSize>
+      <React.Fragment>
+        <Minisize />
+        <Bg>
+          <BackgroundGameCenter />
+          <div className = "container">
+            <div className="justify-content-center">
+              <h1><Headline className="pt-4">Game Center</Headline></h1>
+              <SmallSize />
+              <MSize><BigSize /></MSize>
+            </div>
           </div>
-        </div>
-      </Bg >
+        </Bg >
+      </React.Fragment>
     )
   }
 }
