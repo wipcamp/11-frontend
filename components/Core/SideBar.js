@@ -15,6 +15,7 @@ import Game from '../Game'
 import Sponsor from '../Sponsor'
 import Button from './Button'
 import { throws } from "assert";
+import Announced from '../Announced'
 
 const NavSection = styled.nav`
   position: fixed;
@@ -261,6 +262,7 @@ export default class SideBar extends React.Component {
             ref={c => this._pageScroller = c} 
             pageOnChange={this.pageOnChange}
             >
+            <Announced/>
                 <Home/>
                 <What/>
                 <Who/>
@@ -270,6 +272,7 @@ export default class SideBar extends React.Component {
                 <Sponsor/>
                 <Contact/>
                 <Game/>
+                
             </ReactPageScroller>
             </Desktop>
             <Moblie>
