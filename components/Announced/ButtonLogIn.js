@@ -5,14 +5,17 @@ const After = styled.img`
 filter: blur(3px);
 `
 const Button = styled.img`
-content: url('../static/img/announce/FbLogin.png');
+position: absolute;
+z-index:10;
+bottom: 50vh;
+width: 30%;
 `
 
 export default class componentName extends Component {
   render () {
     return (
-      <div>
-          <Button/>
+        <div className="row justify-content-center">
+          <Button alt="Facebook Login" src='../static/img/announce/Button_Facebook.png'/>
       </div>
    )
   }
