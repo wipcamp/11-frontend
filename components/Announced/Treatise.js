@@ -4,17 +4,20 @@ import styled, { keyframes } from 'styled-components'
 const Base = styled.img`
 position: absolute;
 z-index: 4;
-bottom: 12.5vh;
+bottom: 5vh;
+width:30%;
 `
 const Shadow = styled.img`
 position: absolute;
 z-index: 3;
 bottom: 0vh;
+width:26.3%;
 `
 const Linen = styled.img`
 position: absolute;
 z-index: 5;
-bottom: 42.8vh;
+bottom: 27vh;
+width:35%;
 `
 const swing = keyframes`
   0%, 20%, 40%, 60%, 80%, 100% {
@@ -28,8 +31,10 @@ const swing = keyframes`
 const Scripture = styled.img`
 position: absolute;
 z-index: 6;
-bottom: 54vh;
+bottom: 38vh;
+width:20%;
 animation: ${swing} 0.5s infinite;
+
 `
  
 export default class componentName extends Component {
@@ -38,7 +43,7 @@ export default class componentName extends Component {
 
       <div className="row justify-content-center">
         <Base src='../../static/img/announce/_Scripture base.png' />
-        <Shadow src='../../static/img/announce/_Scripture base shadow.png' />
+        <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
         <Linen src='../../static/img/announce/linen.png' />
         <Scripture src='../../static/img/announce/_Scripture.png' />
       </div>
