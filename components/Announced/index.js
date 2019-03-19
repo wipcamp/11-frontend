@@ -5,15 +5,14 @@ import Background from '../Announced/background'
 import Treatise from '../Announced/Treatise'
 import Button from '../Announced/ButtonLogIn'
 
-
 export default class componentName extends Component {
   render () {
     return (
-      <div>
+      <React.Fragment>
         <Button/>
         <Background />
         <Treatise/>
-      </div>
-   )
+      </React.Fragment>
+    )
   }
 }
