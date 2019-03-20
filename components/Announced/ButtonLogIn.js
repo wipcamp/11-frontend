@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import FacebookLogin from 'react-facebook-login';
-
-const After = styled.img`
-filter: blur(3px);
-`
 const Button = styled.img`
 position: absolute;
-z-index:20;
+z-index:10;
 bottom: 50vh;
 width: 30%;
 `
@@ -19,16 +15,16 @@ export default class componentName extends Component {
   render () {
     return (
         <div className="row justify-content-center">
-        <FacebookLogin
+        {/* <FacebookLogin
           scope="email"
           autoLoad={true}
           fields="name,email,picture,id"
-          appId="1088597931155576"
+          appId="293604811359850"
           callback={responseFacebook}
-          render={renderProps => (
-          <Button onClick={renderProps.onClick} alt="Facebook Login" src='../static/img/announce/Button_Facebook.png'/>
-          )}
-          />
+          render={renderProps => ( */}
+          <Button alt="Facebook Login" src='../static/img/announce/Button_Facebook.png'/>
+          {/* // )}
+          // /> */}
       </div>
    )
   }

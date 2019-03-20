@@ -12,7 +12,12 @@ position: relative;
   overflow-x:hidden;
   overflow-y:hidden;
 `
-
+const Blur =styled.div`
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  filter: blur(3px);
+`
 export default class componentName extends Component {
   render () {
     return (
