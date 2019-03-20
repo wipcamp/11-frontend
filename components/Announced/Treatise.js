@@ -42,10 +42,8 @@ position: absolute;
 z-index: 6;
 bottom: 38vh;
 width:20%;
-/* animation: ${swing} 0.1s infinite; */
 animation: ${props => props.discription};
 animation-fill-mode: forwards;
-/* animation-play-state: paused; */
 
 @keyframes spin{
   0%{
@@ -100,31 +98,19 @@ animation-fill-mode: forwards;
   }
   70% {
       transform: translate(0, -300%) rotate(1080deg);
-      content : url('/static/img/announce/_Scripture.png');
       opacity : 1;
   }
   75% {
-      content : url('/static/img/announce/_Scripture.png');
       transform: translate(0, -400%) rotate(1440deg);
+      opacity : 0;
   }
   80% {
       transform: translate(0, -500%) rotate(1800deg);
       opacity : 0;
-      bottom:52vh;
       
   }
-  85%{
-    content : url('/static/img/announce/_ScriptureFull.png');
-    opacity:0;
-    transform: ${props => props.transform};
-    bottom:30vh;
-  }
-  90%{
-    content : url('/static/img/announce/_ScriptureFull.png');
-  }
   100%{
-    content : url('/static/img/announce/_ScriptureFull.png');
-    content: ('ยินดีด้วย');
+    content : url('../../static/img/announce/_ScriptureFull.png');
     transform: ${props => props.transform};
     bottom:30vh;
     opacity:1;
@@ -155,9 +141,6 @@ const Pic = (props) => (
 export default class Treatise extends Component {
   componentWillMount = () => {
     this.timeouts = null;
-    // this.setState({
-    //   widthdevice: window.innerWidth
-    // });
   };
 
   componentDidMount = () => {
