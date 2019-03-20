@@ -31,7 +31,7 @@ const swing = keyframes`
   }
 `
 
-const Scripture = styled.img`
+const Scripture = styled.div`
 position: absolute;
 z-index: 6;
 bottom: 38vh;
@@ -41,16 +41,20 @@ animation-fill-mode: forwards;
 
 @keyframes spin{
   
-  0%, 10%, 20%, 30%, 40%, 50% {
+  0%{
     content : url('../../static/img/announce/_Scripture.png');
-      width:auto;
-      height:auto;
+    width:auto;
+    height:auto;
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  10%, 20%, 30%, 40%, 50% {
     transform: rotate3d(0, 0, 1, 5deg);
   }
   5%, 15%, 25%, 35%, 45%, 55% {
     transform: rotate3d(0, 0, 1, -5deg);
   }
   60% {
+      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -100%) rotate(360deg);
       opacity : 1;
       bottom:54vh;
@@ -75,12 +79,16 @@ animation-fill-mode: forwards;
       
   }
   100%{
-    content : url('../../static/img/announce/_ScriptureFull.png');
+    background-image: url('../../static/img/announce/_ScriptureFull.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
     transform: ${props => props.transform};
     opacity:1;
     bottom:30vh;
     width:${props => props.width || '50%'};
     height:${props => props.height || '50%'};
+    border:none;
   }
 }
 @keyframes swing{
@@ -91,8 +99,20 @@ animation-fill-mode: forwards;
     transform:  translate(0px,0px)  rotate(-5deg) ;
   }
 }
-
 `
+
+const Span = styled.div`
+  position:relative;
+  top:15vh;
+  text-align:center !important;
+   @media (min-width:320px) {
+    tranform:rotate(90deg);
+  }
+  @media (min-width:768px){
+    tranform:rotate(0deg);
+  }
+`
+
 const Pic = (props) => (
   <Scripture 
     id="animation" 
@@ -100,8 +120,9 @@ const Pic = (props) => (
     transform = {props.transform}
     width = {props.width}
     height = {props.height}
-    // src='../../static/img/announce/_Scripture.png'  
-    />
+    >
+    <Span>{props.text}</Span>
+    </Scripture>
 )
 
 export default class Treatise extends Component {
@@ -161,6 +182,11 @@ export default class Treatise extends Component {
       '50%', //desktop
       '30%' //mobile
     ],
+    text : [
+      'เสียใจด้วยน้องติดแล้ว',
+      'ดีใจด้วยน้องไม่ติด'
+    ],
+    textcount : 0,
     count: 1,
     trancount: 0,
     widthdevice : 0
@@ -193,6 +219,7 @@ export default class Treatise extends Component {
           transform = {this.state.transform[this.state.trancount]}
           width={this.state.width[this.state.trancount]}
           height={this.state.height[this.state.trancount]}
+          text = {this.state.text[this.state.textcount]}
         />
       </div>
 </React.Fragment>
