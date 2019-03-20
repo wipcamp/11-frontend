@@ -29,12 +29,6 @@ const swing = keyframes`
   100% {
     transform:  translate(0px,0px)  rotate(-5deg) ;
   }
-  /* 0%, 20%, 40%, 60%, 80%, 100% {
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: rotate3d(0, 0, 1, -5deg);
-  } */
 `
 
 const Scripture = styled.img`
@@ -46,49 +40,20 @@ animation: ${props => props.discription};
 animation-fill-mode: forwards;
 
 @keyframes spin{
-  0%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-    width:auto;
-    height:auto;
-  }
-  5%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  10%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  15%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  20%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  25%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  30%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  35%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  40%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  45%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  50%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
   
-  55% {
-      transform: translate(0, 0) rotate(0deg);
-      opacity : 1;
+  0%, 10%, 20%, 30%, 40%, 50% {
+    content : url('../../static/img/announce/_Scripture.png');
+      width:auto;
+      height:auto;
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  5%, 15%, 25%, 35%, 45%, 55% {
+    transform: rotate3d(0, 0, 1, -5deg);
   }
   60% {
       transform: translate(0, -100%) rotate(360deg);
       opacity : 1;
+      bottom:54vh;
   }
   65% {
       transform: translate(0, -200%) rotate(720deg);
@@ -112,8 +77,8 @@ animation-fill-mode: forwards;
   100%{
     content : url('../../static/img/announce/_ScriptureFull.png');
     transform: ${props => props.transform};
-    bottom:30vh;
     opacity:1;
+    bottom:30vh;
     width:${props => props.width || '50%'};
     height:${props => props.height || '50%'};
   }
@@ -135,7 +100,8 @@ const Pic = (props) => (
     transform = {props.transform}
     width = {props.width}
     height = {props.height}
-    src='../../static/img/announce/_Scripture.png'  />
+    // src='../../static/img/announce/_Scripture.png'  
+    />
 )
 
 export default class Treatise extends Component {
