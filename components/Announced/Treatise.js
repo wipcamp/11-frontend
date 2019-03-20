@@ -82,27 +82,27 @@ const Pic = (props) => (
 )
  
 export default class componentName extends Component {
-  componentWillMount = () => {
-    this.timeouts = null;
-  };
+  // componentWillMount = () => {
+  //   this.timeouts = null;
+  // };
 
-  componentDidMount = () => {
-    this.performAndDisapper();
-    // this.performAndDisapper1();
-  };
+  // componentDidMount = () => {
+  //   this.performAndDisapper();
+  //   // this.performAndDisapper1();
+  // };
 
-  componentWillUnmount = () => {
-    clearTimeout(this.timeouts)
-  };
+  // componentWillUnmount = () => {
+  //   clearTimeout(this.timeouts)
+  // };
 
-  performAndDisapper = () => {
-    console.log(this.state.count);
-    const element = document.getElementById('animation');
-    element.addEventListener('animationend', () =>{
-      this.state.count= 2;
-      element.;
-    });
-  }
+  // performAndDisapper = () => {
+  //   console.log(this.state.count);
+  //   const element = document.getElementById('animation');
+  //   element.addEventListener('animationend', () =>{
+  //     this.state.count= 2;
+  //     element.;
+  //   });
+  // }
   state = {
     discription: [
         'swing 0.3s infinite', 
