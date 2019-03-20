@@ -15,7 +15,7 @@ position: relative;
 const Blur =styled.div`
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
   filter: blur(3px);
 `
 export default class componentName extends Component {
@@ -25,8 +25,10 @@ export default class componentName extends Component {
         <Minisize />
         <Div>
           <Button/>
+          <Blur>
           <Background />
           <Treatise/>
+          </Blur>
         </Div>
       </React.Fragment>
     )
