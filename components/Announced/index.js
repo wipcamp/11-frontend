@@ -3,6 +3,12 @@ import styled from 'styled-components'
 import Bg from '../Core/Bg'
 import Background from '../Announced/background'
 import Treatise from '../Announced/Treatise'
+// import Button from '../Announced/ButtonLogIn'
+
+const Div = styled.div`
+  overflow-x:hidden;
+  overflow-y:hidden;
+`
 import Button from '../Announced/ButtonLogIn'
 const Blur =styled.div`
   width: 100%;
@@ -13,13 +19,13 @@ const Blur =styled.div`
 export default class componentName extends Component {
   render () {
     return (
-      <React.Fragment>
-        <Button/>
+      <Div>
+        {/* <Button/> */}
         <Blur>
         <Background />
         <Treatise/>
         </Blur>
-      </React.Fragment>
+      </Div>
     )
   }
 }

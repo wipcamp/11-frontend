@@ -262,7 +262,6 @@ export default class SideBar extends React.Component {
             ref={c => this._pageScroller = c} 
             pageOnChange={this.pageOnChange}
             >
-            <Announced/>
                 <Home/>
                 <What/>
                 <Who/>

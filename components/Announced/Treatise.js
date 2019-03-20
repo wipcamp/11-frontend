@@ -78,13 +78,38 @@ animation: ${props => props.discription};
 
 `
 const Pic = (props) => (
-  <Scripture discription={props.discription} src='../../static/img/announce/_Scripture.png' />
+    <Scripture id="animation"  discription={props.discription} src='../../static/img/announce/_Scripture.png' />
 )
  
 export default class componentName extends Component {
+  // componentWillMount = () => {
+  //   this.timeouts = null;
+  // };
+
+  // componentDidMount = () => {
+  //   this.performAndDisapper();
+  //   // this.performAndDisapper1();
+  // };
+
+  // componentWillUnmount = () => {
+  //   clearTimeout(this.timeouts)
+  // };
+
+  // performAndDisapper = () => {
+  //   console.log(this.state.count);
+  //   const element = document.getElementById('animation');
+  //   element.addEventListener('animationend', () =>{
+  //     this.state.count= 2;
+  //     element.;
+  //   });
+  // }
   state = {
-    discription: ['swing 0.3s infinite', 'swing 0.1s 20', 'spin 2s 1 linear'],
-    count:0,
+    discription: [
+        'swing 0.3s infinite', 
+        'swing 0.1s 20', 
+        'spin 2s 1 linear'
+    ],
+    count:1,
 
   }
   handleClick = () =>{
