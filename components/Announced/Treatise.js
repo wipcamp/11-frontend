@@ -29,68 +29,35 @@ const swing = keyframes`
   100% {
     transform:  translate(0px,0px)  rotate(-5deg) ;
   }
-  /* 0%, 20%, 40%, 60%, 80%, 100% {
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: rotate3d(0, 0, 1, -5deg);
-  } */
 `
 
-const Scripture = styled.img`
+const Scripture = styled.div`
 position: absolute;
 z-index: 6;
 bottom: 38vh;
 width:20%;
-/* animation: ${swing} 0.1s infinite; */
 animation: ${props => props.discription};
 animation-fill-mode: forwards;
-/* animation-play-state: paused; */
 
 @keyframes spin{
+  
   0%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
+    content : url('../../static/img/announce/_Scripture.png');
     width:auto;
     height:auto;
+    transform: rotate3d(0, 0, 1, 5deg);
   }
-  5%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
+  10%, 20%, 30%, 40%, 50% {
+    transform: rotate3d(0, 0, 1, 5deg);
   }
-  10%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  15%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  20%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  25%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  30%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  35%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  40%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  45%{
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-  50%{
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  
-  55% {
-      transform: translate(0, 0) rotate(0deg);
-      opacity : 1;
+  5%, 15%, 25%, 35%, 45%, 55% {
+    transform: rotate3d(0, 0, 1, -5deg);
   }
   60% {
+      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -100%) rotate(360deg);
       opacity : 1;
+      bottom:54vh;
   }
   65% {
       transform: translate(0, -200%) rotate(720deg);
@@ -100,36 +67,28 @@ animation-fill-mode: forwards;
   }
   70% {
       transform: translate(0, -300%) rotate(1080deg);
-      content : url('/static/img/announce/_Scripture.png');
       opacity : 1;
   }
   75% {
-      content : url('/static/img/announce/_Scripture.png');
       transform: translate(0, -400%) rotate(1440deg);
+      opacity : 0;
   }
   80% {
       transform: translate(0, -500%) rotate(1800deg);
       opacity : 0;
-      bottom:52vh;
       
   }
-  85%{
-    content : url('/static/img/announce/_ScriptureFull.png');
-    opacity:0;
-    transform: ${props => props.transform};
-    bottom:30vh;
-  }
-  90%{
-    content : url('/static/img/announce/_ScriptureFull.png');
-  }
   100%{
-    content : url('/static/img/announce/_ScriptureFull.png');
-    content: ('ยินดีด้วย');
+    background-image: url('../../static/img/announce/_ScriptureFull.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
     transform: ${props => props.transform};
-    bottom:30vh;
     opacity:1;
+    bottom:30vh;
     width:${props => props.width || '50%'};
     height:${props => props.height || '50%'};
+    border:none;
   }
 }
 @keyframes swing{
@@ -140,8 +99,20 @@ animation-fill-mode: forwards;
     transform:  translate(0px,0px)  rotate(-5deg) ;
   }
 }
-
 `
+
+const Span = styled.div`
+  position:relative;
+  top:15vh;
+  text-align:center !important;
+   @media (min-width:320px) {
+    tranform:rotate(90deg);
+  }
+  @media (min-width:768px){
+    tranform:rotate(0deg);
+  }
+`
+
 const Pic = (props) => (
   <Scripture 
     id="animation" 
@@ -149,15 +120,14 @@ const Pic = (props) => (
     transform = {props.transform}
     width = {props.width}
     height = {props.height}
-    src='../../static/img/announce/_Scripture.png'  />
+    >
+    <Span>{props.text}</Span>
+    </Scripture>
 )
 
 export default class Treatise extends Component {
   componentWillMount = () => {
     this.timeouts = null;
-    // this.setState({
-    //   widthdevice: window.innerWidth
-    // });
   };
 
   componentDidMount = () => {
@@ -212,6 +182,11 @@ export default class Treatise extends Component {
       '50%', //desktop
       '30%' //mobile
     ],
+    text : [
+      'เสียใจด้วยน้องติดแล้ว',
+      'ดีใจด้วยน้องไม่ติด'
+    ],
+    textcount : 0,
     count: 1,
     trancount: 0,
     widthdevice : 0
@@ -244,6 +219,7 @@ export default class Treatise extends Component {
           transform = {this.state.transform[this.state.trancount]}
           width={this.state.width[this.state.trancount]}
           height={this.state.height[this.state.trancount]}
+          text = {this.state.text[this.state.textcount]}
         />
       </div>
 </React.Fragment>
