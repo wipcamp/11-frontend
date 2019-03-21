@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Bg from '../Core/Bg'
 
 const Layer1 = styled.img`
   
@@ -125,6 +126,10 @@ position: absolute;
     left:50%;
     bottom:5vh;
     
+  } @media (min-width: 320px) { 
+    left:50%;
+    bottom:5vh;
+    
   }
 
   @media (min-width: 576px) { 
@@ -149,25 +154,75 @@ position: absolute;
 const LeftSakura1 = styled.img`
 position: absolute;
   z-index: 2;
-  bottom: 52vh;
+  bottom: 0vh;
   transform: translate(40%,0%);
-  width:30%;
+  width:100%;
+
+  @media (min-width: 320px) { 
+    width:50%;
+    bottom:55vh;
+    left:2vh;
+    
+   
+    
+  }
+  @media (min-width: 1024px) { 
+    bottom:55vh;
+    width:30%;
+    left:-2vh;
+   
+    
+  }
+
 
 `
 const LeftSakura2 = styled.img`
 position: absolute;
   z-index: 2;
-  bottom: 30vh;
+  bottom: 0vh;
   transform: translate(50%,0%);
-  width:20%;
+  width:100%;
+
+  @media (min-width: 320px) { 
+    width:30%;
+    bottom:35vh;
+    left:5vh;
+    
+   
+    
+  }
+  @media (min-width: 1024px) { 
+    bottom:30vh;
+    width:18%;
+    left:7vh;
+   
+    
+  
+  }
 
 `
 const RightSakura = styled.img`
 position: absolute;
   z-index: 2;
-  bottom: 35vh;
-  transform: translate(340%,0%);
-  width:20%;
+  bottom: 0vh;
+  transform: translate(50%,0%);
+  width:100%;
+
+  @media (min-width: 320px) { 
+    width:35%;
+    bottom:55vh;
+    left:14vh;
+    
+   
+    
+  }
+  @media (min-width: 1024px) { 
+    bottom:38vh;
+    width:20%;
+    left:120vh;
+   
+    
+  }
 
   
 
@@ -209,10 +264,9 @@ position: absolute;
   @media (min-width: 1024px) { 
     width:25%; 
     bottom:-8vh;
+  }
 
 `
-
-
 export default class componentName extends Component {
   render () {
     return (
@@ -220,7 +274,6 @@ export default class componentName extends Component {
         <Layer1 src='/static/img/announce/door.png' />
         <Layer2 src='/static/img/announce/door.png' />
         <Top src='/static/img/announce/Top.png' />
-        
         <Floor src='/static/img/announce/floor.png' />
         <WoodFloor src='/static/img/announce/wood-floor.png' />
         <LeftSakura1 src='/static/img/announce/left-sakura1.png' />
@@ -229,8 +282,7 @@ export default class componentName extends Component {
         <LeftDoorShadow src='/static/img/announce/left--doorshadow.png' />
         <RightDoorShadow src='/static/img/announce/right-doorshadow.png' />
 
-     </div>
+      </div>
     )
   }
 }
-  

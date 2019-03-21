@@ -4,23 +4,56 @@ import styled, { keyframes } from 'styled-components'
 const Base = styled.img`
 position: absolute;
 z-index: 4;
-bottom: 5vh;
-width:30%;
+bottom: 0vh;
+width:100%;
+
+@media (min-width: 320px) { 
+    bottom:3vh;
+    width:70%;
+  }
+  @media (min-width: 1024px) { 
+    bottom:5vh;
+    width:30%
+  }
+
 `
+
 const Shadow = styled.img`
 position: absolute;
 z-index: 3;
 bottom: 0vh;
-width:26.3%;
+width:100%;
+
+@media (min-width: 320px) { 
+    bottom:0vh;
+    width:61%;
+  }
+
+@media (min-width: 1024px) { 
+    bottom:0vh;
+    width:26.3%;
+
+    
+  }
 `
 const Linen = styled.img`
 position: absolute;
 z-index: 5;
-bottom: 27vh;
-width:35%;
+bottom: 0vh;
+width:100%;
+
+@media (min-width: 320px) { 
+    bottom:19vh;
+    width:70%;
+  }
+
+@media (min-width: 1024px) { 
+    bottom:27vh;
+    width:35%;
+  }
+
+
 `
-
-
 
 const swing = keyframes`
   0% {
@@ -182,11 +215,11 @@ export default class Treatise extends Component {
       'เสียใจด้วยน้องติดแล้ว',
       'ดีใจด้วยน้องไม่ติด'
     ],
-    textcount : 0,
+    textcount: 0,
     count: 1,
-
   }
-  handleClick = () => {
+
+  handleClick = () => { //check login
     if (i == true) {
       this.setState({
         count: 1
@@ -198,22 +231,22 @@ export default class Treatise extends Component {
       })
     }
   }
+
   render() {
     return (
-<React.Fragment>
-
-      <div className="row justify-content-center" id="background">
-        <Base src='../../static/img/announce/_Scripture base.png' />
-        <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
-        <Linen src='../../static/img/announce/linen.png' />
-      </div>
-      <div className="row justify-content-center">
-        <Pic 
-          discription={this.state.discription[this.state.count]}
-          text = {this.state.text[this.state.textcount]}
-        />
-      </div>
-</React.Fragment>
+      <React.Fragment>
+        <div className="row justify-content-center" id="background">
+          <Base src='../../static/img/announce/_Scripture base.png' />
+          <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
+          <Linen src='../../static/img/announce/linen.png' />
+        </div>
+        <div className="row justify-content-center">
+          <Pic 
+            discription={this.state.discription[this.state.count]}
+            text = {this.state.text[this.state.textcount]}
+          />
+        </div>
+      </React.Fragment>
     )
   }
 }
