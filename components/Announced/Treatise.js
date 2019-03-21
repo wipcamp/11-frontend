@@ -42,15 +42,17 @@ animation-fill-mode: forwards;
 @keyframes spin{
   
   0%{
-    content : url('../../static/img/announce/_Scripture.png');
+  content : url('../../static/img/announce/_Scripture.png');
     width:auto;
     height:auto;
     transform: rotate3d(0, 0, 1, 5deg);
   }
   10%, 20%, 30%, 40%, 50% {
+  content : url('../../static/img/announce/_Scripture.png');
     transform: rotate3d(0, 0, 1, 5deg);
   }
   5%, 15%, 25%, 35%, 45%, 55% {
+  content : url('../../static/img/announce/_Scripture.png');
     transform: rotate3d(0, 0, 1, -5deg);
   }
   60% {
@@ -60,29 +62,34 @@ animation-fill-mode: forwards;
       bottom:54vh;
   }
   65% {
+      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -200%) rotate(720deg);
       opacity : 1;
       width:auto;
       height:auto;
   }
   70% {
+      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -300%) rotate(1080deg);
       opacity : 1;
   }
   75% {
+      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -400%) rotate(1440deg);
       opacity : 0;
   }
   80% {
+      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -500%) rotate(1800deg);
       opacity : 0;
       
   }
   100%{
-    background-image: url('../../static/img/announce/_ScriptureFull.png');
+      content : url('../../static/img/announce/_Scripture.png');
+    /* background-image: url('../../static/img/announce/_ScriptureFull.png');
     background-position:center;
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:contain; */
     transform: ${props => props.transform};
     opacity:1;
     bottom:30vh;
