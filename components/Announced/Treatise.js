@@ -4,27 +4,83 @@ import styled, { keyframes } from 'styled-components'
 const Base = styled.img`
 position: absolute;
 z-index: 4;
-bottom: 5vh;
-width:30%;
+bottom: 0vh;
+width:100%;
+
+@media (min-width: 320px) { 
+    bottom:3vh;
+    width:70%;
+    
+  }
+  @media (min-width: 1024px) { 
+    bottom:5vh;
+    width:30%
+    
+  }
+
 `
+
 const Shadow = styled.img`
 position: absolute;
 z-index: 3;
 bottom: 0vh;
-width:26.3%;
+width:100%;
+
+@media (min-width: 320px) { 
+    bottom:0vh;
+    width:61%;
+    
+
+    
+  }
+
+
+
+@media (min-width: 1024px) { 
+    bottom:0vh;
+    width:26.3%;
+
+    
+  }
 `
 const Linen = styled.img`
 position: absolute;
 z-index: 5;
-bottom: 27vh;
-width:35%;
+bottom: 0vh;
+width:100%;
+
+@media (min-width: 320px) { 
+    bottom:19vh;
+    width:70%;
+
+    
+  }
+
+@media (min-width: 1024px) { 
+    bottom:27vh;
+    width:35%;
+
+    
+  }
+
+
 `
+
+
 
 const Scripture = styled.div`
 position: absolute;
 z-index: 6;
-bottom: 38vh;
-width:20%;
+bottom: 0vh;
+width:100%;
+
+@media (min-width: 1024px) { 
+    bottom:38vh;
+    width:20%;
+
+    
+  }
+
 animation: ${props => props.discription};
 animation-fill-mode: forwards;
 
@@ -110,15 +166,15 @@ const Span = styled.div`
 `
 
 const Pic = (props) => (
-  <Scripture 
-    id="animation" 
-    discription={props.discription} 
-    transform = {props.transform}
-    width = {props.width}
-    height = {props.height}
-    >
+  <Scripture
+    id="animation"
+    discription={props.discription}
+    transform={props.transform}
+    width={props.width}
+    height={props.height}
+  >
     <Span>{props.text}</Span>
-    </Scripture>
+  </Scripture>
 )
 
 export default class Treatise extends Component {
@@ -134,7 +190,7 @@ export default class Treatise extends Component {
 
   resize() {
     // this.setState({ hideNav: <= 760 });
-    if (window.innerWidth  <= 768) {
+    if (window.innerWidth <= 768) {
       this.setState({
         trancount: 1
       })
@@ -153,7 +209,7 @@ export default class Treatise extends Component {
   performAndDisapper = () => {
     const element = document.getElementById('animation');
     const element1 = document.getElementById('background');
-    element.addEventListener('animationend', () =>{
+    element.addEventListener('animationend', () => {
       element1.style =
         'visibility: \'hidden\'; opacity: 0; transition: visibility 0s 0s, opacity 0s linear;';
       this.timeouts = setTimeout(() => {
@@ -166,26 +222,26 @@ export default class Treatise extends Component {
       'swing 0.3s infinite',
       'spin 3s linear'
     ],
-    transform : [
+    transform: [
       'translate(0, 0) rotate(0deg)', //desktop
       'translate(0, 0) rotate(90deg)' //mobile
     ],
-    width : [
+    width: [
       '50%',//desktop
       '100%' //mobile
     ],
-    height : [
+    height: [
       '50%', //desktop
       '30%' //mobile
     ],
-    text : [
+    text: [
       'เสียใจด้วยน้องติดแล้ว',
       'ดีใจด้วยน้องไม่ติด'
     ],
-    textcount : 0,
+    textcount: 0,
     count: 1,
     trancount: 0,
-    widthdevice : 0
+    widthdevice: 0
 
   }
   handleClick = () => {
@@ -202,23 +258,23 @@ export default class Treatise extends Component {
   }
   render() {
     return (
-<React.Fragment>
+      <React.Fragment>
 
-      <div className="row justify-content-center" id="background">
-        <Base src='../../static/img/announce/_Scripture base.png' />
-        <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
-        <Linen src='../../static/img/announce/linen.png' />
-      </div>
-      <div className="row justify-content-center">
-        <Pic 
-          discription={this.state.discription[this.state.count]}
-          transform = {this.state.transform[this.state.trancount]}
-          width={this.state.width[this.state.trancount]}
-          height={this.state.height[this.state.trancount]}
-          text = {this.state.text[this.state.textcount]}
-        />
-      </div>
-</React.Fragment>
+        <div className="row justify-content-center" id="background">
+          <Base src='../../static/img/announce/_Scripture base.png' />
+          <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
+          <Linen src='../../static/img/announce/linen.png' />
+        </div>
+        <div className="row justify-content-center">
+          <Pic
+            discription={this.state.discription[this.state.count]}
+            transform={this.state.transform[this.state.trancount]}
+            width={this.state.width[this.state.trancount]}
+            height={this.state.height[this.state.trancount]}
+            text={this.state.text[this.state.textcount]}
+          />
+        </div>
+      </React.Fragment>
     )
   }
 }
