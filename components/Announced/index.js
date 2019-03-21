@@ -16,19 +16,30 @@ const Blur =styled.div`
   width: 100%;
   height: 100%;
   opacity: 0.8;
-  filter: blur(3px);
+  filter: blur(${props => props.filter}px);
+
 `
 export default class componentName extends Component {
+  state={
+    display: "block",
+    filter: 3,
+
+  }
+  handleState=()=>{this.setState({
+    display: 'none', 
+    filter: 0,
+    
+  }
+
+  )}
   render () {
     return (
       <React.Fragment>
         <Minisize />
         <Div>
-          <Button/>
-          <Blur>
+          <Button display={this.state.display} handleState={this.handleState}/><Blur filter={this.state.filter}>
           <Background />
-          <Treatise/>
-          </Blur>
+          <Treatise/></Blur>
         </Div>
       </React.Fragment>
     )
