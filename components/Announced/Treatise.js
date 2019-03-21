@@ -66,13 +66,7 @@ width:100%;
 
 `
 
-<<<<<<< HEAD
-
-
-const Scripture = styled.div`
-=======
 const DesktopScripture = styled.div`
->>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 position: absolute;
 z-index: 6;
 bottom: 0vh;
@@ -254,18 +248,6 @@ const Span = styled.div`
   }
 `
 
-<<<<<<< HEAD
-const Pic = (props) => (
-  <Scripture
-    id="animation"
-    discription={props.discription}
-    transform={props.transform}
-    width={props.width}
-    height={props.height}
-  >
-    <Span>{props.text}</Span>
-  </Scripture>
-=======
 const Animation = (props) => (
   <React.Fragment>
   <DesktopScripture 
@@ -281,7 +263,6 @@ const Animation = (props) => (
     <Span>{props.text}</Span>
     </MobileScripture>
     </React.Fragment>
->>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 )
 
 export default class Treatise extends Component {
@@ -295,21 +276,6 @@ export default class Treatise extends Component {
     // this.resize();
   };
 
-<<<<<<< HEAD
-  resize() {
-    // this.setState({ hideNav: <= 760 });
-    if (window.innerWidth <= 768) {
-      this.setState({
-        trancount: 1
-      })
-    }
-    if (window.innerWidth > 768) {
-      this.setState({
-        trancount: 0
-      })
-    }
-  }
-=======
   // resize() {
   //   // this.setState({ hideNav: <= 760 });
   //   if (window.innerWidth  <= 768) {
@@ -323,7 +289,6 @@ export default class Treatise extends Component {
   //     })
   //   }
   // }
->>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 
   componentWillUnmount = () => {
     clearTimeout(this.timeouts)
@@ -345,35 +310,14 @@ export default class Treatise extends Component {
       'swing 0.3s infinite',
       'spin 3s linear'
     ],
-<<<<<<< HEAD
-    transform: [
-      'translate(0, 0) rotate(0deg)', //desktop
-      'translate(0, 0) rotate(90deg)' //mobile
-    ],
-    width: [
-      '50%',//desktop
-      '100%' //mobile
-    ],
-    height: [
-      '50%', //desktop
-      '30%' //mobile
-    ],
-    text: [
-=======
     text : [
->>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
       'เสียใจด้วยน้องติดแล้ว',
       'ดีใจด้วยน้องไม่ติด'
     ],
     textcount: 0,
     count: 1,
-<<<<<<< HEAD
-    trancount: 0,
-    widthdevice: 0
-=======
     // trancount: 0,
     // widthdevice : 0
->>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 
   }
   handleClick = () => {
@@ -390,25 +334,6 @@ export default class Treatise extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
-      <React.Fragment>
-
-        <div className="row justify-content-center" id="background">
-          <Base src='../../static/img/announce/_Scripture base.png' />
-          <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
-          <Linen src='../../static/img/announce/linen.png' />
-        </div>
-        <div className="row justify-content-center">
-          <Pic
-            discription={this.state.discription[this.state.count]}
-            transform={this.state.transform[this.state.trancount]}
-            width={this.state.width[this.state.trancount]}
-            height={this.state.height[this.state.trancount]}
-            text={this.state.text[this.state.textcount]}
-          />
-        </div>
-      </React.Fragment>
-=======
 <React.Fragment>
 
       <div className="row justify-content-center" id="background">
@@ -423,7 +348,6 @@ export default class Treatise extends Component {
         />
       </div>
 </React.Fragment>
->>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
     )
   }
 }
