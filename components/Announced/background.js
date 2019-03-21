@@ -209,9 +209,16 @@ position: absolute;
   width:100%;
 
   @media (min-width: 320px) { 
-    width:35%;
-    bottom:55vh;
-    left:14vh;
+    width:30%;
+    bottom:58vh;
+    left:17vh;
+    
+   
+    
+  }
+   @media (min-width: 375px) { 
+    bottom:60vh;
+    left:15vh;
     
    
     
@@ -238,9 +245,20 @@ position: absolute;
   @media (min-width: 320px) { 
     bottom:2vh;
     width:50%; 
-   
-    
+       
   }
+  @media (min-width: 375px) { 
+    bottom:4.5vh;
+    
+       
+  }
+  @media (min-width: 411px) { 
+    bottom:3.5vh;
+    
+       
+  }
+
+
   @media (min-width: 1024px) { 
     width:25%; 
     bottom:-8vh;
@@ -260,6 +278,16 @@ position: absolute;
     width:50%; 
    
     
+  }
+  @media (min-width: 375px) { 
+    bottom:4.5vh;
+    
+       
+  }
+  @media (min-width: 411px) { 
+    bottom:3.5vh;
+    
+       
   }
   @media (min-width: 1024px) { 
     width:25%; 
