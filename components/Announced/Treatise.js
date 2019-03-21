@@ -75,7 +75,10 @@ animation-fill-mode: forwards;
   }
   100%{
       /* content : url('../../static/img/announce/_Scripture.png'); */
-    
+    background-image: url('../../static/img/announce/_ScriptureFull.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
     transform: ${props => props.transform};
     opacity:1;
     bottom:30vh;
@@ -97,14 +100,7 @@ animation-fill-mode: forwards;
 const Span = styled.div`
   position:relative;
   top:15vh;
-  width:inherit;
-  height:inherit;
-  z-index:5;
   text-align:center !important;
-  background-image: url('../../static/img/announce/_ScriptureFull.png');
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:contain;
    @media (min-width:320px) {
     tranform:rotate(90deg);
   }
