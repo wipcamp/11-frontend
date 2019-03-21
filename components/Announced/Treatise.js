@@ -66,9 +66,13 @@ width:100%;
 
 `
 
+<<<<<<< HEAD
 
 
 const Scripture = styled.div`
+=======
+const DesktopScripture = styled.div`
+>>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 position: absolute;
 z-index: 6;
 bottom: 0vh;
@@ -83,7 +87,12 @@ width:100%;
 
 animation: ${props => props.discription};
 animation-fill-mode: forwards;
-
+@media (min-width:320px) {
+  display: none;
+}
+@media (min-width:769px) {
+  display: block;
+}
 @keyframes spin{
   
   0%{
@@ -135,11 +144,91 @@ animation-fill-mode: forwards;
     background-position:center;
     background-repeat:no-repeat;
     background-size:contain;
-    transform: ${props => props.transform};
+    transform: translate(0, 0) rotate(0deg);
     opacity:1;
     bottom:30vh;
-    width:${props => props.width || '50%'};
-    height:${props => props.height || '50%'};
+    width: 50%;
+    height: 50%;
+  }
+}
+@keyframes swing{
+  0% {
+    transform:  translate(0px,0px)  rotate(5deg) ;
+  }
+  100% {
+    transform:  translate(0px,0px)  rotate(-5deg) ;
+  }
+}
+`
+const MobileScripture = styled.div`
+position: absolute;
+z-index: 6;
+bottom: 38vh;
+width:20%;
+animation: ${props => props.discription};
+animation-fill-mode: forwards;
+@media (min-width:320px) {
+  display: block;
+}
+@media (min-width:769px) {
+  display: none;
+}
+@keyframes spin{
+  
+  0%{
+  content : url('../../static/img/announce/_Scripture.png');
+    width:auto;
+    height:auto;
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  10%, 20%, 30%, 40%, 50% {
+  content : url('../../static/img/announce/_Scripture.png');
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  5%, 15%, 25%, 35%, 45%, 55% {
+  content : url('../../static/img/announce/_Scripture.png');
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  60% {
+      content : url('../../static/img/announce/_Scripture.png');
+      transform: translate(0, -100%) rotate(360deg);
+      opacity : 1;
+      bottom:54vh;
+  }
+  65% {
+      content : url('../../static/img/announce/_Scripture.png');
+      transform: translate(0, -200%) rotate(720deg);
+      opacity : 1;
+      width:auto;
+      height:auto;
+  }
+  70% {
+      content : url('../../static/img/announce/_Scripture.png');
+      transform: translate(0, -300%) rotate(1080deg);
+      opacity : 1;
+  }
+  75% {
+      content : url('../../static/img/announce/_Scripture.png');
+      transform: translate(0, -400%) rotate(1440deg);
+      opacity : 0;
+  }
+  80% {
+      content : url('../../static/img/announce/_Scripture.png');
+      transform: translate(0, -500%) rotate(1800deg);
+      opacity : 0;
+      
+  }
+  100%{
+      /* content : url('../../static/img/announce/_Scripture.png'); */
+    background-image: url('../../static/img/announce/_ScriptureFull.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    transform:translate(0, 0) rotate(90deg);
+    opacity:1;
+    bottom:30vh;
+    width:100%;
+    height:30%;
     border:none;
   }
 }
@@ -165,6 +254,7 @@ const Span = styled.div`
   }
 `
 
+<<<<<<< HEAD
 const Pic = (props) => (
   <Scripture
     id="animation"
@@ -175,6 +265,23 @@ const Pic = (props) => (
   >
     <Span>{props.text}</Span>
   </Scripture>
+=======
+const Animation = (props) => (
+  <React.Fragment>
+  <DesktopScripture 
+    id="animation" 
+    discription={props.discription} 
+    >
+    <Span>{props.text}</Span>
+    </DesktopScripture>
+  <MobileScripture 
+    id="animation" 
+    discription={props.discription} 
+    >
+    <Span>{props.text}</Span>
+    </MobileScripture>
+    </React.Fragment>
+>>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 )
 
 export default class Treatise extends Component {
@@ -184,10 +291,11 @@ export default class Treatise extends Component {
 
   componentDidMount = () => {
     this.performAndDisapper();
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
+    // window.addEventListener("resize", this.resize.bind(this));
+    // this.resize();
   };
 
+<<<<<<< HEAD
   resize() {
     // this.setState({ hideNav: <= 760 });
     if (window.innerWidth <= 768) {
@@ -201,6 +309,21 @@ export default class Treatise extends Component {
       })
     }
   }
+=======
+  // resize() {
+  //   // this.setState({ hideNav: <= 760 });
+  //   if (window.innerWidth  <= 768) {
+  //     this.setState({
+  //       trancount: 1
+  //     })
+  //   }
+  //   if (window.innerWidth > 768) {
+  //     this.setState({
+  //       trancount: 0
+  //     })
+  //   }
+  // }
+>>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 
   componentWillUnmount = () => {
     clearTimeout(this.timeouts)
@@ -222,6 +345,7 @@ export default class Treatise extends Component {
       'swing 0.3s infinite',
       'spin 3s linear'
     ],
+<<<<<<< HEAD
     transform: [
       'translate(0, 0) rotate(0deg)', //desktop
       'translate(0, 0) rotate(90deg)' //mobile
@@ -235,13 +359,21 @@ export default class Treatise extends Component {
       '30%' //mobile
     ],
     text: [
+=======
+    text : [
+>>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
       'เสียใจด้วยน้องติดแล้ว',
       'ดีใจด้วยน้องไม่ติด'
     ],
     textcount: 0,
     count: 1,
+<<<<<<< HEAD
     trancount: 0,
     widthdevice: 0
+=======
+    // trancount: 0,
+    // widthdevice : 0
+>>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
 
   }
   handleClick = () => {
@@ -258,6 +390,7 @@ export default class Treatise extends Component {
   }
   render() {
     return (
+<<<<<<< HEAD
       <React.Fragment>
 
         <div className="row justify-content-center" id="background">
@@ -275,6 +408,22 @@ export default class Treatise extends Component {
           />
         </div>
       </React.Fragment>
+=======
+<React.Fragment>
+
+      <div className="row justify-content-center" id="background">
+        <Base src='../../static/img/announce/_Scripture base.png' />
+        <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
+        <Linen src='../../static/img/announce/linen.png' />
+      </div>
+      <div className="row justify-content-center">
+        <Animation 
+          discription={this.state.discription[this.state.count]}
+          text = {this.state.text[this.state.textcount]}
+        />
+      </div>
+</React.Fragment>
+>>>>>>> 3f6e779f08908c032099bd7b34b6510df73ccc2b
     )
   }
 }
