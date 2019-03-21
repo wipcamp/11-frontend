@@ -20,6 +20,17 @@ bottom: 27vh;
 width:35%;
 `
 
+
+
+const swing = keyframes`
+  0% {
+    transform:  translate(0px,0px)  rotate(5deg) ;
+  }
+  100% {
+    transform:  translate(0px,0px)  rotate(-5deg) ;
+  }
+`
+
 const DesktopScripture = styled.div`
 position: absolute;
 z-index: 6;
@@ -27,149 +38,73 @@ bottom: 38vh;
 width:20%;
 animation: ${props => props.discription};
 animation-fill-mode: forwards;
-@media (min-width:320px) {
-  display: none;
+@media (min-width : 320px) {
+  display:none;
 }
-@media (min-width:769px) {
-  display: block;
+@media (min-width : 768px){
+  display:block;
 }
+@media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+  display:none;
+ }
+@media only screen and (width: 768px) and (height: 1024px) and (orientation: landscape)  {
+  display:none;
+ }
+ @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+   display:none;
+ }
+ @media only screen and (width: 1024px) and (height: 1370px) and (orientation: landscape)  {
+   display:none;
+ }
 @keyframes spin{
   
   0%{
-  content : url('../../static/img/announce/_Scripture.png');
+    content : url('/static/img/announce/_Scripture.png');
     width:auto;
     height:auto;
     transform: rotate3d(0, 0, 1, 5deg);
   }
   10%, 20%, 30%, 40%, 50% {
-  content : url('../../static/img/announce/_Scripture.png');
     transform: rotate3d(0, 0, 1, 5deg);
   }
   5%, 15%, 25%, 35%, 45%, 55% {
-  content : url('../../static/img/announce/_Scripture.png');
     transform: rotate3d(0, 0, 1, -5deg);
   }
   60% {
-      content : url('../../static/img/announce/_Scripture.png');
+      content : url('/static/img/announce/_Scripture.png');
       transform: translate(0, -100%) rotate(360deg);
       opacity : 1;
       bottom:54vh;
   }
   65% {
-      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -200%) rotate(720deg);
       opacity : 1;
       width:auto;
       height:auto;
   }
   70% {
-      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -300%) rotate(1080deg);
       opacity : 1;
   }
   75% {
-      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -400%) rotate(1440deg);
       opacity : 0;
   }
   80% {
-      content : url('../../static/img/announce/_Scripture.png');
       transform: translate(0, -500%) rotate(1800deg);
       opacity : 0;
       
   }
   100%{
-      /* content : url('../../static/img/announce/_Scripture.png'); */
-    background-image: url('../../static/img/announce/_ScriptureFull.png');
+    background-image: url('/static/img/announce/_ScriptureFull.png');
     background-position:center;
     background-repeat:no-repeat;
     background-size:contain;
-    transform: translate(0, 0) rotate(0deg);
+    transform:translate(0, 0) rotate(0deg);
     opacity:1;
     bottom:30vh;
-    width: 50%;
-    height: 50%;
-  }
-}
-@keyframes swing{
-  0% {
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  100% {
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-}
-`
-const MobileScripture = styled.div`
-position: absolute;
-z-index: 6;
-bottom: 38vh;
-width:20%;
-animation: ${props => props.discription};
-animation-fill-mode: forwards;
-@media (min-width:320px) {
-  display: block;
-}
-@media (min-width:769px) {
-  display: none;
-}
-@keyframes spin{
-  
-  0%{
-  content : url('../../static/img/announce/_Scripture.png');
-    width:auto;
-    height:auto;
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-  10%, 20%, 30%, 40%, 50% {
-  content : url('../../static/img/announce/_Scripture.png');
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-  5%, 15%, 25%, 35%, 45%, 55% {
-  content : url('../../static/img/announce/_Scripture.png');
-    transform: rotate3d(0, 0, 1, -5deg);
-  }
-  60% {
-      content : url('../../static/img/announce/_Scripture.png');
-      transform: translate(0, -100%) rotate(360deg);
-      opacity : 1;
-      bottom:54vh;
-  }
-  65% {
-      content : url('../../static/img/announce/_Scripture.png');
-      transform: translate(0, -200%) rotate(720deg);
-      opacity : 1;
-      width:auto;
-      height:auto;
-  }
-  70% {
-      content : url('../../static/img/announce/_Scripture.png');
-      transform: translate(0, -300%) rotate(1080deg);
-      opacity : 1;
-  }
-  75% {
-      content : url('../../static/img/announce/_Scripture.png');
-      transform: translate(0, -400%) rotate(1440deg);
-      opacity : 0;
-  }
-  80% {
-      content : url('../../static/img/announce/_Scripture.png');
-      transform: translate(0, -500%) rotate(1800deg);
-      opacity : 0;
-      
-  }
-  100%{
-      /* content : url('../../static/img/announce/_Scripture.png'); */
-    background-image: url('../../static/img/announce/_ScriptureFull.png');
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:contain;
-    transform:translate(0, 0) rotate(90deg);
-    opacity:1;
-    bottom:30vh;
-    width:100%;
-    height:30%;
-    border:none;
+    width:50%;
+    height:50%;
   }
 }
 @keyframes swing{
@@ -182,75 +117,62 @@ animation-fill-mode: forwards;
 }
 `
 
-const Span = styled.div`
+const MobileScripture = styled.div`
+    position:absolute;
+    bottom: 40vh;
+    z-index:6;
+    @media (min-width : 320px) {
+      display:block;
+    }
+    @media (min-width : 768px){
+      display:none;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      display:block;
+     }
+    @media only screen and (width: 768px) and (height: 1024px) and (orientation: landscape)  {
+      display:block;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      display:block;
+    }
+    @media only screen and (width: 1024px) and (height: 1370px) and (orientation: landscape)  {
+      display:block;
+    }
+`
+
+const DesktopText = styled.div`
   position:relative;
   top:15vh;
   text-align:center !important;
-   @media (min-width:320px) {
-    tranform:rotate(90deg);
-  }
-  @media (min-width:768px){
-    tranform:rotate(0deg);
-  }
+`
+const MobileText = styled.div`
+  position:relative;  
+  z-index: 6;
+`
+const Img = styled.img`
+  position:absolute;
+  bottom: -8vh;
+  left:-11vw;
+  z-index: 5 ;
+  width: 150%;
+  height:auto;
 `
 
-const Animation = (props) => (
+const Pic = (props) => (
   <React.Fragment>
-  <DesktopScripture 
-    id="animation" 
-    discription={props.discription} 
-    >
-    <Span>{props.text}</Span>
+    <DesktopScripture discription={props.discription}>
+      <DesktopText>{props.text}</DesktopText>
     </DesktopScripture>
-  <MobileScripture 
-    id="animation" 
-    discription={props.discription} 
-    >
-    <Span>{props.text}</Span>
+    <MobileScripture>
+      <Img src="/static/img/announce/_ScriptureFull.png" />
+      <MobileText>{props.text}</MobileText>
     </MobileScripture>
-    </React.Fragment>
+  </React.Fragment>
 )
 
 export default class Treatise extends Component {
-  componentWillMount = () => {
-    this.timeouts = null;
-  };
 
-  componentDidMount = () => {
-    this.performAndDisapper();
-    // window.addEventListener("resize", this.resize.bind(this));
-    // this.resize();
-  };
-
-  // resize() {
-  //   // this.setState({ hideNav: <= 760 });
-  //   if (window.innerWidth  <= 768) {
-  //     this.setState({
-  //       trancount: 1
-  //     })
-  //   }
-  //   if (window.innerWidth > 768) {
-  //     this.setState({
-  //       trancount: 0
-  //     })
-  //   }
-  // }
-
-  componentWillUnmount = () => {
-    clearTimeout(this.timeouts)
-  };
-
-  performAndDisapper = () => {
-    const element = document.getElementById('animation');
-    const element1 = document.getElementById('background');
-    element.addEventListener('animationend', () =>{
-      element1.style =
-        'visibility: \'hidden\'; opacity: 0; transition: visibility 0s 0s, opacity 0s linear;';
-      this.timeouts = setTimeout(() => {
-        element1.remove();
-      }, 0);
-    });
-  }
   state = {
     discription: [
       'swing 0.3s infinite',
@@ -262,8 +184,6 @@ export default class Treatise extends Component {
     ],
     textcount : 0,
     count: 1,
-    // trancount: 0,
-    // widthdevice : 0
 
   }
   handleClick = () => {
@@ -288,7 +208,7 @@ export default class Treatise extends Component {
         <Linen src='../../static/img/announce/linen.png' />
       </div>
       <div className="row justify-content-center">
-        <Animation 
+        <Pic 
           discription={this.state.discription[this.state.count]}
           text = {this.state.text[this.state.textcount]}
         />
