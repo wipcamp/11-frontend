@@ -62,150 +62,158 @@ width:100%;
 
 `
 
-const swing = keyframes`
-  0% {
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  100% {
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-`
-
 const DesktopScripture = styled.div`
-position: absolute;
-z-index: 6;
-bottom: 38vh;
-width:20%;
-animation: ${props => props.discription};
-animation-fill-mode: forwards;
-@media (min-width : 320px) {
-  display:none;
-}
-@media (min-width : 769px){
-  display:block;
-    }
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      display:none;
-     }
-    @media only screen and (min-width: 1024px) and (max-height: 768px) {
-      display:none;
-     }
-    @media only screen and (min-width: 1030px) and (max-height: 768px) {
-      display:block;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-      display:none;
-    }
-    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-      display:none;
-    }
-    @media only screen and (min-width: 1370px) and (max-height: 1024px) {
-      display:block;
-    }
-@keyframes spin{
+  position: absolute;
+  z-index: 6;
+  bottom: 38vh;
+  width:20%;
+  animation: ${props => props.discription};
+  animation-fill-mode: forwards;
+  @media (min-width : 320px) {
+    display:none;
+  }
+  @media (min-width : 769px){
+    display:block;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    display:none;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 768px) {
+    display:none;
+  }
+  @media only screen and (min-width: 1030px) and (max-height: 768px) {
+    display:block;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    display:none;
+  }
+  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+    display:none;
+  }
+  @media only screen and (min-width: 1370px) and (max-height: 1024px) {
+    display:block;
+  }
+  @keyframes spin{
   
-  0%{
-    content : url('/static/img/announce/_Scripture.png');
-    width:auto;
-    height:auto;
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-  10%, 20%, 30%, 40%, 50% {
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-  5%, 15%, 25%, 35%, 45%, 55% {
-    transform: rotate3d(0, 0, 1, -5deg);
-  }
-  60% {
+    0%{
       content : url('/static/img/announce/_Scripture.png');
-      transform: translate(0, -100%) rotate(360deg);
-      opacity : 1;
-      bottom:54vh;
-  }
-  65% {
-      transform: translate(0, -200%) rotate(720deg);
-      opacity : 1;
       width:auto;
       height:auto;
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+    10%, 20%, 30%, 40%, 50% {
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+    5%, 15%, 25%, 35%, 45%, 55% {
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+    60% {
+        content : url('/static/img/announce/_Scripture.png');
+        transform: translate(0, -100%) rotate(360deg);
+        opacity : 1;
+        bottom:54vh;
+    }
+    65% {
+        transform: translate(0, -200%) rotate(720deg);
+        opacity : 1;
+        width:auto;
+        height:auto;
+    }
+    70% {
+        transform: translate(0, -300%) rotate(1080deg);
+        opacity : 1;
+    }
+    75% {
+        transform: translate(0, -400%) rotate(1440deg);
+        opacity : 0;
+    }
+    80% {
+        transform: translate(0, -500%) rotate(1800deg);
+        opacity : 0;
+
+    }
+    100%{
+      background-image: url('/static/img/announce/_ScriptureFull.png');
+      background-position:center;
+      background-repeat:no-repeat;
+      background-size:contain;
+      transform:translate(0, 0) rotate(0deg);
+      opacity:1;
+      bottom:30vh;
+      width:50%;
+      height:50%;
+    }
   }
-  70% {
-      transform: translate(0, -300%) rotate(1080deg);
-      opacity : 1;
+  @keyframes swing{
+    0% {
+      transform:  translate(0px,0px)  rotate(5deg) ;
+    }
+    100% {
+      transform:  translate(0px,0px)  rotate(-5deg) ;
+    }
   }
-  75% {
-      transform: translate(0, -400%) rotate(1440deg);
-      opacity : 0;
-  }
-  80% {
-      transform: translate(0, -500%) rotate(1800deg);
-      opacity : 0;
-      
-  }
-  100%{
-    background-image: url('/static/img/announce/_ScriptureFull.png');
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:contain;
-    transform:translate(0, 0) rotate(0deg);
-    opacity:1;
-    bottom:30vh;
-    width:50%;
-    height:50%;
-  }
-}
-@keyframes swing{
-  0% {
-    transform:  translate(0px,0px)  rotate(5deg) ;
-  }
-  100% {
-    transform:  translate(0px,0px)  rotate(-5deg) ;
-  }
-}
 `
 
 const MobileScripture = styled.div`
-    position:absolute;
-    z-index:6;
-    visibility:${props => props.display} ;
-    display : block;
-    @media (min-width : 320px) {
-      display:block;
-    }
-    @media (min-width : 768px){
-      display:none;
-    }
-    @media (min-width : 768px){
-      display:none;
-    }
-    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      display:block !important;
-     }
-     @media only screen and (min-width: 1024px) and (max-height: 768px) {
-      display:block !important;
-    }
-    @media only screen and (min-width: 1030px) and (max-height: 768px) {
-      display:none !important;
-    }
-    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-      display:block !important;
-    }
-    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-      display:block !important;
-    }
-    @media only screen and (min-width: 1370px) and (max-height: 1024px) {
-      display:none !important;
-    }
+  position:absolute;
+  z-index:6;
+  visibility:${props => props.display} ;
+  display : block;
+  @media (min-width : 320px) {
+    display:block;
+  }
+  @media (min-width : 768px){
+    display:none;
+  }
+  @media (min-width : 768px){
+    display:none;
+  }
+  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    display:block !important;
+   }
+   @media only screen and (min-width: 1024px) and (max-height: 768px) {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1030px) and (max-height: 768px) {
+    display:none !important;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1370px) and (max-height: 1024px) {
+    display:none !important;
+  }
 `
 
 const DesktopText = styled.div`
+  padding-top:4em;
+  padding-left:15em;
+  padding-right:15em;
   position:relative;
   top:15vh;
   text-align:center !important;
 `
+
 const MobileText = styled.span`
-  padding-top:5em;
   position:absolute;
   z-index: 6;
+  @media (min-width : 320px) {
+    padding-top:4em;
+    padding-left:1.5em;
+    padding-right:1.5em;
+    font-size:0.8em;
+    width: 200px;
+  }
+  @media (min-width : 768px) {
+    padding-top:9em;
+    padding-left:1.5em;
+    padding-right:1.5em;
+    font-size:1em;
+    width: 300px;
+  }
 `
 const Img = styled.img`
   position:absolute;
@@ -227,26 +235,33 @@ const Box =styled.div`
     left: 7vw;
     top: 50vh;
   }
-  @media (min-width:320px) {
+  @media (min-width:375px) {
     left: 5vw;
-    top: 50vh;
+    top: 20vh;
   }
   @media (min-width:320px) {
     top: 25vh;
   }
 `
+const Desktop = (props) => (
+  <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
+    <DesktopText>{props.text}</DesktopText> {/** change text */}
+  </DesktopScripture>
+) 
 
-const Pic = (props) => (
-  <React.Fragment>
-    <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
-      <DesktopText>{props.text}</DesktopText> {/** change text */}
-    </DesktopScripture>
-    <MobileScripture display={props.display}>{/* props send none and block and show or don't show  */}
-      <Box className="row justify-content-center">
+const Mobile = (props) => (
+  <MobileScripture display={props.display}>{/* props send none and block and show or don't show  */}
+    <Box className="row justify-content-center">
       <Img src="/static/img/announce/_ScriptureFull.png" />
       <MobileText>{props.text}</MobileText>{/* change text */}
-      </Box>
-    </MobileScripture>
+    </Box>
+  </MobileScripture>
+)
+
+const Animation = (props) => (
+  <React.Fragment>
+    <Desktop discription={props.discription} text={props.text} />
+    <Mobile display={props.display} text={props.text} />
   </React.Fragment>
 )
 
@@ -258,8 +273,8 @@ export default class Treatise extends Component {
       'spin 3s linear' // desktop after login mobile don't have animation 
     ],
     text : [
-      'เสียใจด้วยน้องติดแล้ว',
-      'ดีใจด้วยน้องไม่ติด'
+      'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11',
+      'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
     ],
     display : [
       'hidden', //moblie before login
@@ -291,7 +306,7 @@ export default class Treatise extends Component {
           <Linen src='../../static/img/announce/linen.png' />
         </div>
         <div className="row justify-content-center">
-          <Pic 
+          <Animation 
             discription={this.state.discription[this.state.count]}
             text = {this.state.text[this.state.textcount]}
             display = {this.state.display[this.state.count]}
