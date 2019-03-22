@@ -81,21 +81,27 @@ animation-fill-mode: forwards;
 @media (min-width : 320px) {
   display:none;
 }
-@media (min-width : 768px){
+@media (min-width : 769px){
   display:block;
-}
-@media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-  display:none;
- }
-@media only screen and (width: 768px) and (height: 1024px) and (orientation: landscape)  {
-  display:none;
- }
- @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-   display:none;
- }
- @media only screen and (width: 1024px) and (height: 1370px) and (orientation: landscape)  {
-   display:none;
- }
+    }
+    @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+      display:none;
+     }
+    @media only screen and (min-width: 1024px) and (max-height: 768px) {
+      display:none;
+     }
+    @media only screen and (min-width: 1030px) and (max-height: 768px) {
+      display:block;
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+      display:none;
+    }
+    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+      display:none;
+    }
+    @media only screen and (min-width: 1370px) and (max-height: 1024px) {
+      display:block;
+    }
 @keyframes spin{
   
   0%{
@@ -159,25 +165,35 @@ animation-fill-mode: forwards;
 
 const MobileScripture = styled.div`
     position:absolute;
-    bottom: 40vh;
     z-index:6;
+    visibility:${props => props.display} ;
+    display : block;
     @media (min-width : 320px) {
       display:block;
     }
     @media (min-width : 768px){
       display:none;
     }
+    @media (min-width : 768px){
+      display:none;
+    }
     @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-      display:block;
+      display:block !important;
      }
-    @media only screen and (width: 768px) and (height: 1024px) and (orientation: landscape)  {
-      display:block;
+     @media only screen and (min-width: 1024px) and (max-height: 768px) {
+      display:block !important;
+    }
+    @media only screen and (min-width: 1030px) and (max-height: 768px) {
+      display:none !important;
     }
     @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-      display:block;
+      display:block !important;
     }
-    @media only screen and (width: 1024px) and (height: 1370px) and (orientation: landscape)  {
-      display:block;
+    @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+      display:block !important;
+    }
+    @media only screen and (min-width: 1370px) and (max-height: 1024px) {
+      display:none !important;
     }
 `
 
@@ -186,27 +202,50 @@ const DesktopText = styled.div`
   top:15vh;
   text-align:center !important;
 `
-const MobileText = styled.div`
-  position:relative;  
+const MobileText = styled.span`
+  padding-top:5em;
+  position:absolute;
   z-index: 6;
 `
 const Img = styled.img`
   position:absolute;
-  bottom: -8vh;
-  left:-11vw;
   z-index: 5 ;
-  width: 150%;
-  height:auto;
+  @media (min-width:320px) {
+    width: 250px;
+  }
+  @media (min-width:320px) {
+    width: 300px;
+  }
+  @media (min-width:768px) {
+    width: auto;
+  }
+`
+
+const Box =styled.div`
+  position:absolute;
+  @media (min-width:320px) {
+    left: 7vw;
+    top: 50vh;
+  }
+  @media (min-width:320px) {
+    left: 5vw;
+    top: 50vh;
+  }
+  @media (min-width:320px) {
+    top: 25vh;
+  }
 `
 
 const Pic = (props) => (
   <React.Fragment>
-    <DesktopScripture discription={props.discription}>
-      <DesktopText>{props.text}</DesktopText>
+    <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
+      <DesktopText>{props.text}</DesktopText> {/** change text */}
     </DesktopScripture>
-    <MobileScripture>
+    <MobileScripture display={props.display}>{/* props send none and block and show or don't show  */}
+      <Box className="row justify-content-center">
       <Img src="/static/img/announce/_ScriptureFull.png" />
-      <MobileText>{props.text}</MobileText>
+      <MobileText>{props.text}</MobileText>{/* change text */}
+      </Box>
     </MobileScripture>
   </React.Fragment>
 )
@@ -215,26 +254,30 @@ export default class Treatise extends Component {
 
   state = {
     discription: [
-      'swing 0.3s infinite',
-      'spin 3s linear'
+      'swing 0.3s infinite', //destop before login
+      'spin 3s linear' // desktop after login mobile don't have animation 
     ],
     text : [
       'เสียใจด้วยน้องติดแล้ว',
       'ดีใจด้วยน้องไม่ติด'
     ],
-    textcount: 0,
-    count: 1,
+    display : [
+      'hidden', //moblie before login
+      'visible' //moblie after login
+    ],
+    textcount: 0, //location in array to change text
+    count: 1, //location in array both of mobile and desktop
   }
 
   handleClick = () => { //check login
-    if (i == true) {
+    if (i == true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
       this.setState({
         count: 1
       })
     }
     else if (i == false) {
-      this.setState({
-        count: 0
+      this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
+        count: 0 
       })
     }
   }
@@ -251,6 +294,7 @@ export default class Treatise extends Component {
           <Pic 
             discription={this.state.discription[this.state.count]}
             text = {this.state.text[this.state.textcount]}
+            display = {this.state.display[this.state.count]}
           />
         </div>
       </React.Fragment>
