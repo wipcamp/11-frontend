@@ -55,26 +55,6 @@ width:100%;
 
 `
 
-<<<<<<< HEAD
-
-
-const Scripture = styled.div`
-position: absolute;
-z-index: 6;
-bottom: 0vh;
-width:100%;
-
-@media (min-width: 1024px) { 
-    bottom:38vh;
-    width:20%;
-
-    
-  }
-
-animation: ${props => props.discription};
-animation-fill-mode: forwards;
-
-=======
 const swing = keyframes`
   0% {
     transform:  translate(0px,0px)  rotate(5deg) ;
@@ -109,7 +89,6 @@ animation-fill-mode: forwards;
  @media only screen and (width: 1024px) and (height: 1370px) and (orientation: landscape)  {
    display:none;
  }
->>>>>>> 25af9d479e8becd4970fc40a3560ab46799eea30
 @keyframes spin{
   
   0%{
@@ -154,20 +133,11 @@ animation-fill-mode: forwards;
     background-position:center;
     background-repeat:no-repeat;
     background-size:contain;
-<<<<<<< HEAD
-    transform: ${props => props.transform};
-    opacity:1;
-    bottom:30vh;
-    width:${props => props.width || '50%'};
-    height:${props => props.height || '50%'};
-    border:none;
-=======
     transform:translate(0, 0) rotate(0deg);
     opacity:1;
     bottom:30vh;
     width:50%;
     height:50%;
->>>>>>> 25af9d479e8becd4970fc40a3560ab46799eea30
   }
 }
 @keyframes swing{
@@ -223,59 +193,6 @@ const Img = styled.img`
 `
 
 const Pic = (props) => (
-<<<<<<< HEAD
-  <Scripture
-    id="animation"
-    discription={props.discription}
-    transform={props.transform}
-    width={props.width}
-    height={props.height}
-  >
-    <Span>{props.text}</Span>
-  </Scripture>
-)
-
-export default class Treatise extends Component {
-  componentWillMount = () => {
-    this.timeouts = null;
-  };
-
-  componentDidMount = () => {
-    this.performAndDisapper();
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
-  };
-
-  resize() {
-    // this.setState({ hideNav: <= 760 });
-    if (window.innerWidth <= 768) {
-      this.setState({
-        trancount: 1
-      })
-    }
-    if (window.innerWidth > 768) {
-      this.setState({
-        trancount: 0
-      })
-    }
-  }
-
-  componentWillUnmount = () => {
-    clearTimeout(this.timeouts)
-  };
-
-  performAndDisapper = () => {
-    const element = document.getElementById('animation');
-    const element1 = document.getElementById('background');
-    element.addEventListener('animationend', () => {
-      element1.style =
-        'visibility: \'hidden\'; opacity: 0; transition: visibility 0s 0s, opacity 0s linear;';
-      this.timeouts = setTimeout(() => {
-        element1.remove();
-      }, 0);
-    });
-  }
-=======
   <React.Fragment>
     <DesktopScripture discription={props.discription}>
       <DesktopText>{props.text}</DesktopText>
@@ -289,40 +206,17 @@ export default class Treatise extends Component {
 
 export default class Treatise extends Component {
 
->>>>>>> 25af9d479e8becd4970fc40a3560ab46799eea30
   state = {
     discription: [
       'swing 0.3s infinite',
       'spin 3s linear'
     ],
-<<<<<<< HEAD
-    transform: [
-      'translate(0, 0) rotate(0deg)', //desktop
-      'translate(0, 0) rotate(90deg)' //mobile
-    ],
-    width: [
-      '50%',//desktop
-      '100%' //mobile
-    ],
-    height: [
-      '50%', //desktop
-      '30%' //mobile
-    ],
-    text: [
-=======
     text : [
->>>>>>> 25af9d479e8becd4970fc40a3560ab46799eea30
       'เสียใจด้วยน้องติดแล้ว',
       'ดีใจด้วยน้องไม่ติด'
     ],
     textcount: 0,
     count: 1,
-<<<<<<< HEAD
-    trancount: 0,
-    widthdevice: 0
-
-=======
->>>>>>> 25af9d479e8becd4970fc40a3560ab46799eea30
   }
 
   handleClick = () => { //check login
