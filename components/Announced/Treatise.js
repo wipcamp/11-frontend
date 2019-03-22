@@ -232,15 +232,15 @@ const Img = styled.img`
 const Box =styled.div`
   position:absolute;
   @media (min-width:320px) {
-    left: 7vw;
-    top: 50vh;
+    left: 2vw;
+    right:2vw;
+    top:40vh;
   }
-  @media (min-width:375px) {
-    left: 5vw;
-    top: 20vh;
+  @media only screen and (min-width: 1024px) and (max-height: 768px) {
+    top:20vh;
   }
-  @media (min-width:320px) {
-    top: 25vh;
+  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+    top:30vh;
   }
 `
 const Desktop = (props) => (
