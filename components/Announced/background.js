@@ -61,6 +61,7 @@ const Layer2 = styled.img`
     left:95%;
     
   }
+  
 `
 
 const Top = styled.img`
@@ -166,13 +167,19 @@ position: absolute;
    
     
   }
-  @media (min-width: 1024px) { 
+  @media (min-width: 1024px){
+    bottom: 50vh;
+    width:80%;
+    left:-15vh;
+  }
+  @media (min-width: 1025px) { 
     bottom:55vh;
     width:30%;
     left:-2vh;
    
     
   }
+  
 
 
 `
@@ -191,7 +198,12 @@ position: absolute;
    
     
   }
-  @media (min-width: 1024px) { 
+  @media (min-width: 1024px){
+    bottom: 30vh;
+    width:50%;
+    left:-10vh;
+  }
+  @media (min-width: 1025px) { 
     bottom:30vh;
     width:18%;
     left:7vh;
@@ -212,86 +224,33 @@ position: absolute;
     width:30%;
     bottom:58vh;
     left:17vh;
-    
-   
-    
+        
   }
    @media (min-width: 375px) { 
     bottom:60vh;
     left:15vh;
-    
+       
+      }
+
+      @media (min-width: 412px) { 
+    bottom:55vh;
+    left:20vh;
+       
+      }
+
+  @media (min-width: 1024px) { 
+    bottom:50vh;
+    width:40%;
+    left:22vh;
    
     
   }
-  @media (min-width: 1024px) { 
+  @media (min-width: 1025px) { 
     bottom:38vh;
     width:20%;
     left:120vh;
    
     
-  }
-
-  
-
-`
-
-const LeftDoorShadow = styled.img`
-position: absolute;
-  z-index: 2;
-  bottom: 0vh;
-  transform: translate(-50%,0%);
-  width:100%;
-
-  @media (min-width: 320px) { 
-    bottom:2vh;
-    width:50%; 
-       
-  }
-  @media (min-width: 375px) { 
-    bottom:4.5vh;
-    
-       
-  }
-  @media (min-width: 411px) { 
-    bottom:3.5vh;
-    
-       
-  }
-
-
-  @media (min-width: 1024px) { 
-    width:25%; 
-    bottom:-8vh;
-  }
-
-`
-const RightDoorShadow = styled.img`
-position: absolute;
-  z-index: 2;
-  bottom: 0vh;
-  transform: translate(-50%,0%);
-  width:100%;
-  left:100%;
-
-  @media (min-width: 320px) { 
-    bottom:2vh;
-    width:50%; 
-   
-    
-  }
-  @media (min-width: 375px) { 
-    bottom:4.5vh;
-    
-       
-  }
-  @media (min-width: 411px) { 
-    bottom:3.5vh;
-    
-       
-  }
-  @media (min-width: 1024px) { 
-    width:25%; 
-    bottom:-8vh;
   }
 
 `
@@ -307,8 +266,7 @@ export default class componentName extends Component {
         <LeftSakura1 src='/static/img/announce/left-sakura1.png' />
         <LeftSakura2 src='/static/img/announce/left-sakura2.png' />
         <RightSakura src='/static/img/announce/right-sakura.png' />
-        <LeftDoorShadow src='/static/img/announce/left--doorshadow.png' />
-        <RightDoorShadow src='/static/img/announce/right-doorshadow.png' />
+        
 
       </div>
     )

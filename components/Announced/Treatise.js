@@ -11,7 +11,7 @@ width:100%;
     bottom:3vh;
     width:70%;
   }
-  @media (min-width: 1024px) { 
+  @media (min-width: 1025px) { 
     bottom:5vh;
     width:30%
   }
@@ -29,7 +29,7 @@ width:100%;
     width:61%;
   }
 
-@media (min-width: 1024px) { 
+@media (min-width: 1025px) { 
     bottom:0vh;
     width:26.3%;
 
@@ -47,7 +47,14 @@ width:100%;
     width:70%;
   }
 
-@media (min-width: 1024px) { 
+
+
+  @media (min-width: 768px) { 
+    bottom:25vh;
+    width:70%;
+  }
+
+@media (min-width: 1025px) { 
     bottom:27vh;
     width:35%;
   }
