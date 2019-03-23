@@ -75,6 +75,7 @@ const DesktopScripture = styled.div`
   @media (min-width : 769px){
     display:block;
   }
+  /* iPad 9.7" */
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     display:none;
   }
@@ -84,6 +85,17 @@ const DesktopScripture = styled.div`
   @media only screen and (min-width: 1030px) and (max-height: 768px) {
     display:block;
   }
+  /* iPad Pro 2017 10.5" */
+  @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+    display:none;
+  }
+  @media only screen and (min-width: 1110px) and (max-height: 835px) {
+    display:none;
+  }
+  @media only screen and (min-width: 1115px) and (max-height: 835px) {
+    display:block;
+  }
+  /* iPad Pro 2017 12.9" */
   @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
     display:none;
   }
@@ -92,6 +104,35 @@ const DesktopScripture = styled.div`
   }
   @media only screen and (min-width: 1370px) and (max-height: 1024px) {
     display:block;
+  }
+  /* iPad Pro 2018 11" */
+  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+    display:none;
+  }
+  @media only screen and (min-width: 1194px) and (max-height: 835px) {
+    display:none;
+  }
+  @media only screen and (min-width: 1196px) and (max-height: 835px) {
+    display:block;
+  }
+  /* iPad Pro 2018 12.9" */
+  @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait) {
+    display:none;
+  }
+  @media only screen and (min-width: 1466px) and (max-height: 1024px) {
+    display:none;
+  }
+  @media only screen and (min-width: 1470px) and (max-height: 1024px) {
+    display:block;
+  }
+  /* ipad Mini Portrait */
+  @media only screen and (width:768px) and (resolution: 163dpi) {
+    display:none;
+  }
+
+  /* ipad Mini Landscape */
+  @media only screen and (width:1024px) and (resolution: 163dpi) {
+    display:none;
   }
   @keyframes spin{
   
@@ -168,6 +209,7 @@ const MobileScripture = styled.div`
   @media (min-width : 768px){
     display:none;
   }
+  /* iPad 9.7" */
   @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
     display:block !important;
    }
@@ -180,11 +222,54 @@ const MobileScripture = styled.div`
   @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
     display:block !important;
   }
+  /* iPad Pro 2017 10.5" */
+  @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1110px) and (max-height: 835px) {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1115px) and (max-height: 835px) {
+    display:none !important;
+  }
+  /* iPad Pro 2017 12.9" */
+  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
+    display:block !important;
+  }
   @media only screen and (min-width: 1366px) and (max-height: 1024px) {
     display:block !important;
   }
   @media only screen and (min-width: 1370px) and (max-height: 1024px) {
     display:none !important;
+  }
+  /* iPad Pro 2018 11" */
+  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1194px) and (max-height: 835px) {
+    display:block !important;
+  }
+   @media only screen and (min-width: 1196px) and (max-height: 835px) {
+    display:none !important;
+  }
+  /* iPad Pro 2018 12.9" */
+  @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait) {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1466px) and (max-height: 1024px) {
+    display:block !important;
+  }
+  @media only screen and (min-width: 1470px) and (max-height: 1024px) {
+    display:none !important;
+  }
+   /* ipad Mini Portrait */
+  @media only screen and (width:768px) and (resolution: 163dpi) {
+    display:block !important;
+  }
+
+  /* ipad Mini Landscape */
+  @media only screen and (width:1024px) and (resolution: 163dpi) {
+    display:block !important;
   }
 `
 
@@ -195,6 +280,22 @@ const DesktopText = styled.div`
   position:relative;
   top:15vh;
   text-align:center !important;
+  @media (min-width : 1050px) {
+    left:16vw;
+    padding-top:3em;
+    padding-left:1em;
+    padding-right:1em;
+    width: 200px;
+  }
+  @media (min-width : 1171px) {
+    left:12vw;
+    padding-top:3em;
+    font-size:1.2em;
+    width: 400px;
+  }
+  @media (min-width : 1500px) {
+    left:12vw;
+  }
 `
 
 const MobileText = styled.span`
@@ -214,6 +315,7 @@ const MobileText = styled.span`
     font-size:1em;
     width: 300px;
   }
+   
 `
 const Img = styled.img`
   position:absolute;
@@ -241,6 +343,12 @@ const Box =styled.div`
   }
   @media only screen and (min-width: 1366px) and (max-height: 1024px) {
     top:30vh;
+  }
+  @media only screen and (min-width: 1110px) and (max-height: 835px) {
+    top:20vh;
+  }
+   @media only screen and (min-width: 1194px) and (max-height: 835px) {
+    top:20vh;
   }
 `
 const Desktop = (props) => (
