@@ -413,9 +413,9 @@ const Animation = (props) => (
 export default class Treatise extends Component {
 
   componentWillReceiveProps(nextProps){
-    if(this.props.click != nextProps.click){
+    // if(this.props.click != nextProps.click){
       this.handleState(nextProps.click);
-    }
+    // }
   }
   componentDidMount(props){
     const click = this.props.click;
@@ -445,13 +445,13 @@ export default class Treatise extends Component {
 
   handleState = (click) => { //check login
     if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
-      // console.log(click);
+      console.log(click);
       this.setState({
         count: 1
       })
     }
     else if (click === false) {
-      // console.log(click);
+      console.log(click);
       this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
         count: 0
       })
