@@ -15,6 +15,15 @@ width:100%;
     bottom:5vh;
     width:30%
   }
+  @media (min-width: 1366px) { 
+    bottom:6vh;
+    width:35%
+  }
+  @media (min-width: 1367px) { 
+    bottom:5vh;
+    width:30%
+  }
+
 
 `
 
@@ -32,8 +41,18 @@ width:100%;
 @media (min-width: 1025px) { 
     bottom:0vh;
     width:26.3%;
+   
+  }
 
-    
+  @media (min-width: 1366px) { 
+    bottom:2vh;
+    width:31%;
+   
+  }
+  @media (min-width: 1367px) { 
+    bottom:0vh;
+    width:26.3%;
+   
   }
 `
 const Linen = styled.img`
