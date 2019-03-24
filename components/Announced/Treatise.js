@@ -460,7 +460,7 @@ export default class Treatise extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div className="row justify-content-center" id="background">
           <Base src='../../static/img/announce/_Scripture base.png' />
           <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
@@ -474,7 +474,7 @@ export default class Treatise extends Component {
             text = {this.state.text[this.state.textcount]}
           />
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }
