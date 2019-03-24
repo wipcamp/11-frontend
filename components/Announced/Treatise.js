@@ -413,9 +413,9 @@ const Animation = (props) => (
 export default class Treatise extends Component {
 
   componentWillReceiveProps(nextProps){
-    // if(this.props.click != nextProps.click){
+    if(this.props.click != nextProps.click){
       this.handleState(nextProps.click);
-    // }
+    }
   }
   componentDidMount(props){
     const click = this.props.click;

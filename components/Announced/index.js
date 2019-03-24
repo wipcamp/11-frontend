@@ -23,11 +23,12 @@ export default class componentName extends Component {
   state={
     display: "block",
     filter: 3,
-
+    click:false
   }
   handleState=()=>{this.setState({
     display: 'none', 
     filter: 0,
+    click:true
     
   }
 
@@ -37,9 +38,11 @@ export default class componentName extends Component {
       <React.Fragment>
         <Minisize />
         <Div>
-          <Button display={this.state.display} handleState={this.handleState}/><Blur filter={this.state.filter}>
+          <Button display={this.state.display} handleState={this.handleState}/>
+          <Blur filter={this.state.filter}>
           <Background />
-          <Treatise/></Blur>
+          <Treatise click={this.state.click}/>
+          </Blur>
         </Div>
       </React.Fragment>
     )
