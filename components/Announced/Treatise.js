@@ -68,7 +68,7 @@ const DesktopScripture = styled.div`
   bottom: 38vh;
   width:20%;
   animation: ${props => props.discription};
-  animation-fill-mode: forwards;
+  /* animation-fill-mode: forwards; */
   @media (min-width : 320px) {
     display:none;
   }
@@ -112,7 +112,7 @@ const DesktopScripture = styled.div`
   @media only screen and (min-width: 1194px) and (max-height: 835px) {
     display:none;
   }
-  @media only screen and (min-width: 1196px) and (max-height: 835px) {
+  @media only screen and (min-width: 1197px) and (max-height: 835px) {
     display:block;
   }
   /* iPad Pro 2018 12.9" */
@@ -187,10 +187,16 @@ const DesktopScripture = styled.div`
   }
   @keyframes swing{
     0% {
-      transform:  translate(0px,0px)  rotate(5deg) ;
+      content : url('/static/img/announce/_Scripture.png');
+      transform: rotate3d(0, 0, 1, 5deg);
     }
-    100% {
-      transform:  translate(0px,0px)  rotate(-5deg) ;
+    50%{
+      content : url('/static/img/announce/_Scripture.png');
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+    100%{
+      content : url('/static/img/announce/_Scripture.png');
+      transform: rotate3d(0, 0, 1, 5deg);
     }
   }
 `
@@ -198,7 +204,6 @@ const DesktopScripture = styled.div`
 const MobileScripture = styled.div`
   position:absolute;
   z-index:6;
-  visibility:${props => props.display} ;
   display : block;
   @media (min-width : 320px) {
     display:block;
@@ -249,7 +254,7 @@ const MobileScripture = styled.div`
   @media only screen and (min-width: 1194px) and (max-height: 835px) {
     display:block !important;
   }
-   @media only screen and (min-width: 1196px) and (max-height: 835px) {
+   @media only screen and (min-width: 1197px) and (max-height: 835px) {
     display:none !important;
   }
   /* iPad Pro 2018 12.9" */
@@ -301,6 +306,7 @@ const DesktopText = styled.div`
 const MobileText = styled.span`
   position:absolute;
   z-index: 6;
+  visibility:${props => props.display} ;
   @media (min-width : 320px) {
     padding-top:4em;
     padding-left:1.5em;
@@ -320,14 +326,44 @@ const MobileText = styled.span`
 const Img = styled.img`
   position:absolute;
   z-index: 5 ;
+  visibility:${props => props.display || 'hiiden' } ;
   @media (min-width:320px) {
     width: 250px;
   }
-  @media (min-width:320px) {
+  @media (min-width:414px) {
     width: 300px;
   }
   @media (min-width:768px) {
     width: auto;
+  }
+`
+
+const Img2 = styled.img`
+  position:absolute;
+  z-index: 5 ;
+  visibility: ${props => props.before || 'visible'};
+  @media (min-width:320px) {
+    bottom: -36vh;
+    width: 150px;
+  }
+  @media (min-width:375px) {
+    width: 170px;
+  }
+  @media (min-width:768px) {
+    bottom: -28vh;
+    width: auto;
+  }
+  @media only screen and (min-width: 1024px) and (max-height: 1367px) and (orientation: portrait) {
+    bottom: -27vh;
+    width: 400px;
+  }
+  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
+    bottom: -36vh;
+    width: 300px;
+  }
+  @media only screen and (min-width: 1194px) and (max-height: 835px) {
+    bottom: -45vh;
+    width: 270px;
   }
 `
 
@@ -358,10 +394,11 @@ const Desktop = (props) => (
 ) 
 
 const Mobile = (props) => (
-  <MobileScripture display={props.display}>{/* props send none and block and show or don't show  */}
+  <MobileScripture >{/* props send none and block and show or don't show  */}
     <Box className="row justify-content-center">
-      <Img src="/static/img/announce/_ScriptureFull.png" />
-      <MobileText>{props.text}</MobileText>{/* change text */}
+      <Img2 before={props.before} src="/static/img/announce/_Scripture.png" />
+      <Img display={props.display} src="/static/img/announce/_ScriptureFull.png" />
+      <MobileText display={props.display}>{props.text}</MobileText>
     </Box>
   </MobileScripture>
 )
@@ -369,18 +406,28 @@ const Mobile = (props) => (
 const Animation = (props) => (
   <React.Fragment>
     <Desktop discription={props.discription} text={props.text} />
-    <Mobile display={props.display} text={props.text} />
+    <Mobile display={props.display} text={props.text} before={props.before} />
   </React.Fragment>
 )
 
 export default class Treatise extends Component {
 
+  componentWillReceiveProps(nextProps){
+    if(this.props.click != nextProps.click){
+      this.handleState(nextProps.click);
+    }
+  }
+  componentDidMount(props){
+    const click = this.props.click;
+    this.handleState(click);
+  }
   state = {
     discription: [
-      'swing 0.3s infinite', //destop before login
-      'spin 3s linear' // desktop after login mobile don't have animation 
+      'swing 1s linear infinite', //destop before login
+      'spin 3s linear forwards' // desktop after login mobile don't have animation 
     ],
     text : [
+      '',
       'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11',
       'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
     ],
@@ -388,26 +435,32 @@ export default class Treatise extends Component {
       'hidden', //moblie before login
       'visible' //moblie after login
     ],
+    before:[
+      'visible', //moblie before login
+      'hidden' //moblie after login
+    ],
     textcount: 0, //location in array to change text
-    count: 1, //location in array both of mobile and desktop
+    count: 0, //location in array both of mobile and desktop
   }
 
-  handleClick = () => { //check login
-    if (i == true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
+  handleState = (click) => { //check login
+    if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
+      // console.log(click);
       this.setState({
         count: 1
       })
     }
-    else if (i == false) {
+    else if (click === false) {
+      // console.log(click);
       this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
-        count: 0 
+        count: 0
       })
     }
   }
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <div className="row justify-content-center" id="background">
           <Base src='../../static/img/announce/_Scripture base.png' />
           <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
@@ -416,11 +469,12 @@ export default class Treatise extends Component {
         <div className="row justify-content-center">
           <Animation 
             discription={this.state.discription[this.state.count]}
-            text = {this.state.text[this.state.textcount]}
             display = {this.state.display[this.state.count]}
+            before={this.state.before[this.state.count]}
+            text = {this.state.text[this.state.textcount]}
           />
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }
