@@ -17,8 +17,8 @@ const Blur =styled.div`
 `
 export default class componentName extends Component {
   responseFacebook = (response) => {
-    console.log(response);
-    console.log(this.props.display)
+    // console.log(response);
+    // console.log(this.props.display)
     this.props.handleState()
     
   }
