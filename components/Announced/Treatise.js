@@ -135,7 +135,7 @@ const DesktopScripture = styled.div`
     display:block;
   }
   /* iPad Pro 2018 12.9" */
-  @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait) {
+  @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
     display:none;
   }
   @media only screen and (min-width: 1466px) and (max-height: 1024px) {
@@ -277,7 +277,7 @@ const MobileScripture = styled.div`
     display:none !important;
   }
   /* iPad Pro 2018 12.9" */
-  @media only screen and (min-width: 1024px) and (max-height: 1467px) and (orientation: portrait) {
+  @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
     display:block !important;
   }
   @media only screen and (min-width: 1466px) and (max-height: 1024px) {
@@ -327,17 +327,21 @@ const MobileText = styled.span`
   z-index: 6;
   visibility:${props => props.display} ;
   @media (min-width : 320px) {
-    padding-top:4em;
+    padding-top:3.4em;
+    padding-bottom:3.4em;
     padding-left:1.5em;
     padding-right:1.5em;
     font-size:0.8em;
     width: 200px;
   }
+  @media (min-width : 414px) {
+    padding-top:3.9em;
+  }
   @media (min-width : 768px) {
-    padding-top:9em;
-    padding-left:1.5em;
-    padding-right:1.5em;
-    font-size:1em;
+    padding-top:3.5em;
+    padding-left:1em;
+    padding-right:1em;
+    font-size:1.5em;
     width: 300px;
   }
    
@@ -347,7 +351,7 @@ const Img = styled.img`
   z-index: 5 ;
   visibility:${props => props.display || 'hiiden' } ;
   @media (min-width:320px) {
-    width: 250px;
+    width: 280px;
   }
   @media (min-width:414px) {
     width: 300px;
@@ -435,10 +439,15 @@ export default class Treatise extends Component {
     if(this.props.click != nextProps.click){
       this.handleState(nextProps.click);
     }
+    if(this.props.text != nextProps.text){
+      this.handleState2(nextProps.text)
+    }
   }
   componentDidMount(props){
     const click = this.props.click;
+    const text = this.props.text;
     this.handleState(click);
+    this.handleState2(text)
   }
   state = {
     discription: [
@@ -447,8 +456,8 @@ export default class Treatise extends Component {
     ],
     text : [
       '',
+      'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ',
       'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11',
-      'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
     ],
     display : [
       'hidden', //moblie before login
@@ -473,6 +482,18 @@ export default class Treatise extends Component {
       console.log(click);
       this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
         count: 0
+      })
+    }
+  }
+  handleState2 = (text) =>{
+    if(text == true){
+      this.setState({ // ถ้าติด
+        textcount : 1
+      })
+    }
+    else if(text == true){
+      this.setState({ // ถ้าไม่ติด
+        textcount : 2
       })
     }
   }
