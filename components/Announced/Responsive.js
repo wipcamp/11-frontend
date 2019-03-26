@@ -69,7 +69,6 @@ export const DesktopResponsive = styled.div`
 `
 
 export const MobileResponsive = styled.div`
-
   @media (min-width : 320px) {
     display:block;
   }
@@ -168,7 +167,25 @@ export const ImgBefore = styled.img`
   }
 `
 export const MobileScripture = styled.div`
- 
+  position:absolute;
+  z-index:6;
+  display : block;
+  @media (min-width: 320px) { 
+    bottom:3vh;
+    width:70%;
+  }
+  @media (min-width: 1025px) { 
+    bottom:5vh;
+    width:30%
+  }
+  @media (min-width: 1366px) { 
+    bottom:6vh;
+    width:35%
+  }
+  @media (min-width: 1367px) { 
+    bottom:5vh;
+    width:30%
+  }
 `
 
 export const Shadow = styled.img`
