@@ -194,23 +194,21 @@ export default class Treatise extends Component {
 
   handleState = (click, text) => { //check login
     if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
-      console.log(click);
       this.setState({
         count: 1
       })
     }
     else if (click === false) {
-      console.log(click);
       this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
         count: 0
       })
     }
-    if(text == true){
+    if(text === 1 ){
       this.setState({ // ถ้าติด
         text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
       })
     }
-    else if(text == false){
+    else if(text === 0){
       this.setState({ // ถ้าไม่ติด
         text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
       })
