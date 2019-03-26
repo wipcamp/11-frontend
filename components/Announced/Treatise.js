@@ -1,160 +1,23 @@
 import React, { Component } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled  from 'styled-components'
+import { 
+  DesktopResponsive, 
+  MobileScripture,
+  MobileResponsive, 
+  ImgBefore, 
+  Base, 
+  Shadow,
+  Linen,
+  Box,
+  MobileTextResponsive } from './Responsive'
 
-const Base = styled.img`
-position: absolute;
-z-index: 4;
-bottom: 0vh;
-width:100%;
-
-@media (min-width: 320px) { 
-    bottom:3vh;
-    width:70%;
-  }
-  @media (min-width: 1025px) { 
-    bottom:5vh;
-    width:30%
-  }
-  @media (min-width: 1366px) { 
-    bottom:6vh;
-    width:35%
-  }
-  @media (min-width: 1367px) { 
-    bottom:5vh;
-    width:30%
-  }
-
-
-`
-
-const Shadow = styled.img`
-position: absolute;
-z-index: 3;
-bottom: 0vh;
-width:100%;
-
-@media (min-width: 320px) { 
-    bottom:0vh;
-    width:61%;
-  }
-
-@media (min-width: 1025px) { 
-    bottom:0vh;
-    width:26.3%;
-   
-  }
-
-  @media (min-width: 1366px) { 
-    bottom:2vh;
-    width:31%;
-   
-  }
-  @media (min-width: 1367px) { 
-    bottom:0vh;
-    width:26.3%;
-   
-  }
-`
-const Linen = styled.img`
-position: absolute;
-z-index: 5;
-bottom: 0vh;
-width:100%;
-
-@media (min-width: 320px) { 
-    bottom:19vh;
-    width:70%;
-  }
-
-
-
-  @media (min-width: 768px) { 
-    bottom:25vh;
-    width:70%;
-  }
-
-@media (min-width: 1025px) { 
-    bottom:27vh;
-    width:35%;
-  }
-
-
-`
-
-const DesktopScripture = styled.div`
+const DesktopScripture = styled(DesktopResponsive)`
   position: absolute;
   z-index: 6;
   bottom: 38vh;
   width:20%;
   animation: ${props => props.discription};
-  /* animation-fill-mode: forwards; */
-  @media (min-width : 320px) {
-    display:none;
-  }
-  @media (min-width : 769px){
-    display:block;
-  }
-  /* iPad 9.7" */
-  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-    display:none;
-  }
-  @media only screen and (min-width: 1024px) and (max-height: 768px) {
-    display:none;
-  }
-  @media only screen and (min-width: 1030px) and (max-height: 768px) {
-    display:block;
-  }
-  /* iPad Pro 2017 10.5" */
-  @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-    display:none;
-  }
-  @media only screen and (min-width: 1110px) and (max-height: 835px) {
-    display:none;
-  }
-  @media only screen and (min-width: 1115px) and (max-height: 835px) {
-    display:block;
-  }
-  /* iPad Pro 2017 12.9" */
-  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-    display:none;
-  }
-  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-    display:none;
-  }
-  @media only screen and (min-width: 1370px) and (max-height: 1024px) {
-    display:block;
-  }
-  /* iPad Pro 2018 11" */
-  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-    display:none;
-  }
-  @media only screen and (min-width: 1194px) and (max-height: 835px) {
-    display:none;
-  }
-  @media only screen and (min-width: 1197px) and (max-height: 835px) {
-    display:block;
-  }
-  /* iPad Pro 2018 12.9" */
-  @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-    display:none;
-  }
-  @media only screen and (min-width: 1466px) and (max-height: 1024px) {
-    display:none;
-  }
-  @media only screen and (min-width: 1470px) and (max-height: 1024px) {
-    display:block;
-  }
-  /* ipad Mini Portrait */
-  @media only screen and (width:768px) and (resolution: 163dpi) {
-    display:none;
-  }
-
-  /* ipad Mini Landscape */
-  @media only screen and (width:1024px) and (resolution: 163dpi) {
-    display:none;
-  }
   @keyframes spin{
-  
     0%{
       content : url('/static/img/announce/_Scripture.png');
       width:auto;
@@ -220,83 +83,6 @@ const DesktopScripture = styled.div`
   }
 `
 
-const MobileScripture = styled.div`
-  position:absolute;
-  z-index:6;
-  display : block;
-  @media (min-width : 320px) {
-    display:block;
-  }
-  @media (min-width : 768px){
-    display:none;
-  }
-  @media (min-width : 768px){
-    display:none;
-  }
-  /* iPad 9.7" */
-  @media only screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
-    display:block !important;
-   }
-   @media only screen and (min-width: 1024px) and (max-height: 768px) {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1030px) and (max-height: 768px) {
-    display:none !important;
-  }
-  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-    display:block !important;
-  }
-  /* iPad Pro 2017 10.5" */
-  @media only screen and (min-width: 834px) and (max-height: 1112px) and (orientation: portrait)  {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1110px) and (max-height: 835px) {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1115px) and (max-height: 835px) {
-    display:none !important;
-  }
-  /* iPad Pro 2017 12.9" */
-  @media only screen and (min-width: 1024px) and (max-height: 1370px) and (orientation: portrait)  {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1370px) and (max-height: 1024px) {
-    display:none !important;
-  }
-  /* iPad Pro 2018 11" */
-  @media only screen and (min-width: 834px) and (max-height: 1196px) and (orientation: portrait) {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1194px) and (max-height: 835px) {
-    display:block !important;
-  }
-   @media only screen and (min-width: 1197px) and (max-height: 835px) {
-    display:none !important;
-  }
-  /* iPad Pro 2018 12.9" */
-  @media only screen and (min-width: 1024px) and (max-height: 1468px) and (orientation: portrait) {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1466px) and (max-height: 1024px) {
-    display:block !important;
-  }
-  @media only screen and (min-width: 1470px) and (max-height: 1024px) {
-    display:none !important;
-  }
-   /* ipad Mini Portrait */
-  @media only screen and (width:768px) and (resolution: 163dpi) {
-    display:block !important;
-  }
-
-  /* ipad Mini Landscape */
-  @media only screen and (width:1024px) and (resolution: 163dpi) {
-    display:block !important;
-  }
-`
-
 const DesktopText = styled.div`
   padding-top:4em;
   padding-left:15em;
@@ -322,31 +108,13 @@ const DesktopText = styled.div`
   }
 `
 
-const MobileText = styled.span`
+const MobileText = styled(MobileTextResponsive)`
   position:absolute;
   z-index: 6;
   visibility:${props => props.display} ;
-  @media (min-width : 320px) {
-    padding-top:3.4em;
-    padding-bottom:3.4em;
-    padding-left:1.5em;
-    padding-right:1.5em;
-    font-size:0.8em;
-    width: 200px;
-  }
-  @media (min-width : 414px) {
-    padding-top:3.9em;
-  }
-  @media (min-width : 768px) {
-    padding-top:3.5em;
-    padding-left:1em;
-    padding-right:1em;
-    font-size:1.5em;
-    width: 300px;
-  }
-   
 `
-const Img = styled.img`
+
+const ImgAfterEntrance = styled.img`
   position:absolute;
   z-index: 5 ;
   visibility:${props => props.display || 'hiiden' } ;
@@ -361,66 +129,23 @@ const Img = styled.img`
   }
 `
 
-const Img2 = styled.img`
+const ImgBeforeEntrance = styled(ImgBefore)`
   position:absolute;
   z-index: 5 ;
   visibility: ${props => props.before || 'visible'};
-  @media (min-width:320px) {
-    bottom: -36vh;
-    width: 150px;
-  }
-  @media (min-width:375px) {
-    width: 170px;
-  }
-  @media (min-width:768px) {
-    bottom: -28vh;
-    width: auto;
-  }
-  @media only screen and (min-width: 1024px) and (max-height: 1367px) and (orientation: portrait) {
-    bottom: -27vh;
-    width: 400px;
-  }
-  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-    bottom: -36vh;
-    width: 300px;
-  }
-  @media only screen and (min-width: 1194px) and (max-height: 835px) {
-    bottom: -45vh;
-    width: 270px;
-  }
 `
 
-const Box =styled.div`
-  position:absolute;
-  @media (min-width:320px) {
-    left: 2vw;
-    right:2vw;
-    top:40vh;
-  }
-  @media only screen and (min-width: 1024px) and (max-height: 768px) {
-    top:20vh;
-  }
-  @media only screen and (min-width: 1366px) and (max-height: 1024px) {
-    top:30vh;
-  }
-  @media only screen and (min-width: 1110px) and (max-height: 835px) {
-    top:20vh;
-  }
-   @media only screen and (min-width: 1194px) and (max-height: 835px) {
-    top:20vh;
-  }
-`
 const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
-    <DesktopText>{props.text}</DesktopText> {/** change text */}
+    <DesktopText>{props.text}</DesktopText> {/* change text */}
   </DesktopScripture>
 ) 
 
 const Mobile = (props) => (
-  <MobileScripture >{/* props send none and block and show or don't show  */}
+  <MobileScripture>{/* props send none and block and show or don't show  */}
     <Box className="row justify-content-center">
-      <Img2 before={props.before} src="/static/img/announce/_Scripture.png" />
-      <Img display={props.display} src="/static/img/announce/_ScriptureFull.png" />
+      <ImgBeforeEntrance before={props.before} src="/static/img/announce/_Scripture.png" />
+      <ImgAfterEntrance display={props.display} src="/static/img/announce/_ScriptureFull.png" />
       <MobileText display={props.display}>{props.text}</MobileText>
     </Box>
   </MobileScripture>
@@ -440,25 +165,21 @@ export default class Treatise extends Component {
       this.handleState(nextProps.click);
     }
     if(this.props.text != nextProps.text){
-      this.handleState2(nextProps.text)
+      this.handleState1(nextProps.text)
     }
   }
   componentDidMount(props){
     const click = this.props.click;
     const text = this.props.text;
-    this.handleState(click);
-    this.handleState2(text)
+    this.handleState(click, text);
   }
+
   state = {
     discription: [
       'swing 1s linear infinite', //destop before login
       'spin 3s linear forwards' // desktop after login mobile don't have animation 
     ],
-    text : [
-      '',
-      'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ',
-      'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11',
-    ],
+    text : '',
     display : [
       'hidden', //moblie before login
       'visible' //moblie after login
@@ -471,7 +192,7 @@ export default class Treatise extends Component {
     count: 0, //location in array both of mobile and desktop
   }
 
-  handleState = (click) => { //check login
+  handleState = (click, text) => { //check login
     if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
       console.log(click);
       this.setState({
@@ -484,16 +205,14 @@ export default class Treatise extends Component {
         count: 0
       })
     }
-  }
-  handleState2 = (text) =>{
     if(text == true){
       this.setState({ // ถ้าติด
-        textcount : 1
+        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
       })
     }
-    else if(text == true){
+    else if(text == false){
       this.setState({ // ถ้าไม่ติด
-        textcount : 2
+        text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
       })
     }
   }
@@ -511,7 +230,7 @@ export default class Treatise extends Component {
             discription={this.state.discription[this.state.count]}
             display = {this.state.display[this.state.count]}
             before={this.state.before[this.state.count]}
-            text = {this.state.text[this.state.textcount]}
+            text = {this.state.text}
           />
         </div>
       </React.Fragment>
