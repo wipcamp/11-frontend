@@ -24,14 +24,14 @@ export default class componentName extends Component {
     display: "block",
     filter: 3,
     click:false,
-    text:true
+    text:0
   }
   handleState= () => {
     this.setState({
     display: 'none', 
     filter: 0,
     click:true,
-    text:true
+    text:1
   })}
   render () {
     return (
