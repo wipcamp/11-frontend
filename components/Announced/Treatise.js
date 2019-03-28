@@ -10,13 +10,11 @@ import {
   Linen,
   Box,
   MobileText } from './Responsive'
-
 const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
     <DesktopText>{props.text}</DesktopText> {/* change text */}
   </DesktopScripture>
 ) 
-
 const Mobile = (props) => (
   <MobileScripture>{/* props send none and block and show or don't show  */}
     <Box className="row justify-content-center">
@@ -26,16 +24,13 @@ const Mobile = (props) => (
     </Box>
   </MobileScripture>
 )
-
 const Animation = (props) => (
   <React.Fragment>
     <Desktop discription={props.discription} text={props.text} />
     <Mobile display={props.display} text={props.text} before={props.before} />
   </React.Fragment>
 )
-
 export default class Treatise extends Component {
-
   componentWillReceiveProps(nextProps){
     if(this.props.click != nextProps.click){
       this.handleState(nextProps.click);
@@ -44,9 +39,10 @@ export default class Treatise extends Component {
       this.handleState(nextProps.text)
     }
   }
+  
   componentDidMount(props){
     const click = this.props.click;
-    const text = this.props.text;
+    let text = this.props.text;
     this.handleState(click, text);
   }
 
@@ -79,20 +75,9 @@ export default class Treatise extends Component {
         count: 0
       })
     }
-    if(text === 1 ){
-      this.setState({ // ถ้าติด
-        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
-      })
-    }
-    else if(text === 0){
-      this.setState({ // ถ้าไม่ติด
-        text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
-      })
-    }
   }
-
   render() {
-    return (
+    return(
       <React.Fragment>
         <div className="row justify-content-center" id="background">
           <Base src='../../static/img/announce/_Scripture base.png' />
@@ -104,7 +89,7 @@ export default class Treatise extends Component {
             discription={this.state.discription[this.state.count]}
             display = {this.state.display[this.state.count]}
             before={this.state.before[this.state.count]}
-            text = {this.state.text}
+            text = {this.props.text}
           />
         </div>
       </React.Fragment>

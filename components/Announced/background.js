@@ -266,7 +266,7 @@ export default class componentName extends Component {
         <LeftSakura1 src='/static/img/announce/left-sakura1.png' />
         <LeftSakura2 src='/static/img/announce/left-sakura2.png' />
         <RightSakura src='/static/img/announce/right-sakura.png' />
-        
+
 
       </div>
     )
