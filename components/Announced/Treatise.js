@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled  from 'styled-components'
 import { 
   DesktopResponsive, 
-  MobileScripture,
   MobileResponsive, 
   ImgBefore, 
   Base, 
@@ -128,6 +127,27 @@ const ImgAfterEntrance = styled.img`
     width: auto;
   }
 `
+const MobileScripture = styled.div`
+  /* position:absolute;
+  z-index:6;
+  display : block;
+  @media (min-width: 320px) { 
+    bottom:3vh;
+    width:70%;
+  }
+  @media (min-width: 1025px) { 
+    bottom:5vh;
+    width:30%
+  }
+  @media (min-width: 1366px) { 
+    bottom:6vh;
+    width:35%
+  }
+  @media (min-width: 1367px) { 
+    bottom:5vh;
+    width:30%
+  } */
+`
 
 const ImgBeforeEntrance = styled(ImgBefore)`
   position:absolute;
@@ -165,7 +185,7 @@ export default class Treatise extends Component {
       this.handleState(nextProps.click);
     }
     if(this.props.text != nextProps.text){
-      this.handleState1(nextProps.text)
+      this.handleState(nextProps.text)
     }
   }
   componentDidMount(props){
@@ -194,23 +214,21 @@ export default class Treatise extends Component {
 
   handleState = (click, text) => { //check login
     if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
-      console.log(click);
       this.setState({
         count: 1
       })
     }
     else if (click === false) {
-      console.log(click);
       this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
         count: 0
       })
     }
-    if(text == true){
+    if(text === 1 ){
       this.setState({ // ถ้าติด
         text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
       })
     }
-    else if(text == false){
+    else if(text === 0){
       this.setState({ // ถ้าไม่ติด
         text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
       })
