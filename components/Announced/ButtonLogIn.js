@@ -10,8 +10,10 @@ border-radius: 5px;
 display: ${props => props.display};
 `
 export default class componentName extends Component {
-  responseFacebook = async (response) => {
-    this.props.handleState()
+responseFacebook = async (response) => {    
+  // console.log(response);
+    // console.log(this.props.display)
+this.props.handleState()
     const res = await axios.get('https://registrant.service.freezer.in.th/api/testloginjaa')
     console.log(res.data.status)
   }

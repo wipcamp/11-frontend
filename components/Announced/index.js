@@ -20,26 +20,29 @@ const Blur =styled.div`
 
 `
 export default class componentName extends Component {
-  state={
+  state = {
     display: "block",
     filter: 3,
-
+    click:false,
+    text:true
   }
-  handleState=()=>{this.setState({
+  handleState= () => {
+    this.setState({
     display: 'none', 
     filter: 0,
-    
-  }
-
-  )}
+    click:true,
+    text:true
+  })}
   render () {
     return (
       <React.Fragment>
         <Minisize />
         <Div>
-          <Button display={this.state.display} handleState={this.handleState}/><Blur filter={this.state.filter}>
+          <Button display={this.state.display} handleState={this.handleState}/>
+          <Blur filter={this.state.filter}>
           <Background />
-          <Treatise/></Blur>
+          <Treatise click={this.state.click} text={this.state.text}/>
+          </Blur>
         </Div>
       </React.Fragment>
     )
