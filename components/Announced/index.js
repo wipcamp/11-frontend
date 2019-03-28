@@ -24,14 +24,23 @@ export default class componentName extends Component {
     display: "block",
     filter: 3,
     click:false,
-    text:0
+    text: ''
   }
-  handleState= () => {
+  handleState= async (res) => {
+    if(await parseInt(res) === 2 ){
+      this.setState({ // ถ้าติด
+        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
+      })
+    }
+    else {
+      this.setState({ // ถ้าไม่ติด
+        text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
+      })
+    }
     this.setState({
     display: 'none', 
     filter: 0,
-    click:true,
-    text:1
+    click:true
   })}
   render () {
     return (
