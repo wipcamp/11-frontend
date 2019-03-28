@@ -10,6 +10,7 @@ import {
   Linen,
   Box,
   MobileText } from './Responsive'
+import { visible } from 'ansi-colors';
 
 const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
@@ -35,48 +36,39 @@ const Animation = (props) => (
 )
 
 export default class Treatise extends Component {
-
-  componentWillReceiveProps(nextProps){
-    if(this.props.click != nextProps.click){
-      this.handleState(nextProps.click);
-    }
-    if(this.props.text != nextProps.text){
-      this.handleState(nextProps.text)
-    }
+  
+  componentDidMount(){
+    // const click = this.props.click;
+    // const text = this.props.text;
+    // if (this.props.click != nextProps.click) {
+    //   this.handleState(nextProps.click);
+    // }
+    // if (this.props.text != nextProps.text) {
+    //   this.handleState(nextProps.text)
+    // }
+    this.handleState(this.props.click, this.props.text);
   }
-  componentDidMount(props){
-    const click = this.props.click;
-    const text = this.props.text;
-    this.handleState(click, text);
-  }
-
+//1101 * 760
   state = {
-    discription: [
-      'swing 1s linear infinite', //destop before login
-      'spin 3s linear forwards' // desktop after login mobile don't have animation 
-    ],
+    discription: '',
     text : '',
-    display : [
-      'hidden', //moblie before login
-      'visible' //moblie after login
-    ],
-    before:[
-      'visible', //moblie before login
-      'hidden' //moblie after login
-    ],
-    textcount: 0, //location in array to change text
-    count: 0, //location in array both of mobile and desktop
+    before: '',
+    display : '',
   }
 
   handleState = (click, text) => { //check login
     if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
       this.setState({
-        count: 1
+        before: 'hidden',
+        display: 'visible',
+        discription: 'spin 3s linear forwards'
       })
     }
     else if (click === false) {
       this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
-        count: 0
+        before: 'visible',
+        display: 'hidden',
+        discription:'swing 1s linear infinite'
       })
     }
     if(text === 1 ){
@@ -101,9 +93,9 @@ export default class Treatise extends Component {
         </div>
         <div className="row justify-content-center">
           <Animation 
-            discription={this.state.discription[this.state.count]}
-            display = {this.state.display[this.state.count]}
-            before={this.state.before[this.state.count]}
+            discription={this.state.discription}
+            display = {this.state.display}
+            before={this.state.before}
             text = {this.state.text}
           />
         </div>
