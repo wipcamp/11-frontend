@@ -10,7 +10,6 @@ import {
   Linen,
   Box,
   MobileText } from './Responsive'
-import { visible } from 'ansi-colors';
 
 const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
@@ -38,22 +37,16 @@ const Animation = (props) => (
 export default class Treatise extends Component {
   
   componentDidMount(){
-    // const click = this.props.click;
-    // const text = this.props.text;
-    // if (this.props.click != nextProps.click) {
-    //   this.handleState(nextProps.click);
-    // }
-    // if (this.props.text != nextProps.text) {
-    //   this.handleState(nextProps.text)
-    // }
+    console.log(this.props.click, this.props.text);
     this.handleState(this.props.click, this.props.text);
   }
+  
 //1101 * 760
   state = {
-    discription: '',
+    discription: 'swing 1s linear infinite',
+    display: 'hidden',
+    before: 'visible',
     text : '',
-    before: '',
-    display : '',
   }
 
   handleState = (click, text) => { //check login
@@ -71,12 +64,12 @@ export default class Treatise extends Component {
         discription:'swing 1s linear infinite'
       })
     }
-    if(text === 1 ){
+    if(text === true ){
       this.setState({ // ถ้าติด
         text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
       })
     }
-    else if(text === 0){
+    else if(text === false){
       this.setState({ // ถ้าไม่ติด
         text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
       })

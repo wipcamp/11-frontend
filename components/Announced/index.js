@@ -23,16 +23,25 @@ export default class componentName extends Component {
   state = {
     display: "block",
     filter: 3,
-    click:false,
+    click: false,
     text:0
   }
+  componentDidMount(){
+    console.log(this.state);
+  }
   handleState= () => {
+    console.log(this.state);
     this.setState({
-    display: 'none', 
-    filter: 0,
-    click:true,
-    text:1
-  })}
+      display: 'none', 
+      filter: 1,
+      click: !this.state.click,
+      text: 1
+    })}
+    
+    whenClick = () => {
+    this.setState({
+    })
+  }
   render () {
     return (
       <React.Fragment>
@@ -41,7 +50,7 @@ export default class componentName extends Component {
           <Button display={this.state.display} handleState={this.handleState}/>
           <Blur filter={this.state.filter}>
           <Background />
-          <Treatise click={this.state.click} text={this.state.text}/>
+          <Treatise click={this.state.click} text={this.state.text} />
           </Blur>
         </Div>
       </React.Fragment>
