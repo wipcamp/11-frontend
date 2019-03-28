@@ -7,8 +7,8 @@ import Button from '../Announced/ButtonLogIn'
 import Minisize from '../Core/Minisize'
 
 const Div = styled.div`
-height:100vh;
-position: relative;
+  height:100vh;
+  position: relative;
   overflow-x:hidden;
   overflow-y:hidden;
 `
@@ -17,7 +17,6 @@ const Blur =styled.div`
   height: 100%;
   opacity: 0.8;
   filter: blur(${props => props.filter}px);
-
 `
 export default class componentName extends Component {
   state = {
