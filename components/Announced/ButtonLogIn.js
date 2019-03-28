@@ -22,7 +22,7 @@ this.props.handleState()
         <div className="row justify-content-center">
         <Button display={this.props.display}>
       <FacebookLogin
-        appId="583811982121484"
+        appId="293604811359850"
         autoLoad={false}
         callback={this.responseFacebook}/>
       </Button>
