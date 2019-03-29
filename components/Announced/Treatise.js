@@ -16,7 +16,6 @@ const Desktop = (props) => (
     <DesktopText>{props.text}</DesktopText> {/* change text */}
   </DesktopScripture>
 ) 
-
 const Mobile = (props) => (
   <MobileScripture>{/* props send none and block and show or don't show  */}
     <Box className="row justify-content-center">
@@ -26,30 +25,44 @@ const Mobile = (props) => (
     </Box>
   </MobileScripture>
 )
-
 const Animation = (props) => (
   <React.Fragment>
     <Desktop discription={props.discription} text={props.text} />
     <Mobile display={props.display} text={props.text} before={props.before} />
   </React.Fragment>
 )
-
 export default class Treatise extends Component {
   
   componentDidMount(){
-    console.log(this.props.click, this.props.text);
-    this.handleState(this.props.click, this.props.text);
+    let text = this.props.text;
+    // this.interval = setInterval(() => {
+    //   if (this.props.click != false) {
+    //     this.setState({
+    //       click: true,
+    //     })
+    //     clearInterval(this.interval);
+    //     this.handleState(this.state.click);
+    //   } else if (this.props.click == false) {
+    //     this.setState({
+    //       click: false
+    //     })
+    //   }
+    // }, 2000);
+    // this.handleState(this.props.click);
+    
+    // console.log(this.props.click);
   }
-  
-//1101 * 760
+
   state = {
     discription: 'swing 1s linear infinite',
     display: 'hidden',
     before: 'visible',
-    text : '',
+    click : false,
   }
 
-  handleState = (click, text) => { //check login
+  handleState = (click) => { //check login
+    
+    // console.log(this.props.click);
     if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
       this.setState({
         before: 'hidden',
@@ -63,22 +76,12 @@ export default class Treatise extends Component {
         display: 'hidden',
         discription:'swing 1s linear infinite'
       })
-    }
-    if(text === true ){
-      this.setState({ // ถ้าติด
-        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
-      })
-    }
-    else if(text === false){
-      this.setState({ // ถ้าไม่ติด
-        text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
-      })
+
     }
   }
-
   render() {
-    return (
-      <React.Fragment>
+    return(
+      <div >
         <div className="row justify-content-center" id="background">
           <Base src='../../static/img/announce/_Scripture base.png' />
           <Shadow src='../../static/img/announce/Scripturebaseshadow.png' />
@@ -89,10 +92,10 @@ export default class Treatise extends Component {
             discription={this.state.discription}
             display = {this.state.display}
             before={this.state.before}
-            text = {this.state.text}
+            text = {this.props.text}
           />
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

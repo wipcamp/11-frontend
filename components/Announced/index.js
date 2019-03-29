@@ -7,8 +7,8 @@ import Button from '../Announced/ButtonLogIn'
 import Minisize from '../Core/Minisize'
 
 const Div = styled.div`
-height:100vh;
-position: relative;
+  height:100vh;
+  position: relative;
   overflow-x:hidden;
   overflow-y:hidden;
 `
@@ -17,37 +17,39 @@ const Blur =styled.div`
   height: 100%;
   opacity: 0.8;
   filter: blur(${props => props.filter}px);
-
 `
 export default class componentName extends Component {
   state = {
     display: "block",
     filter: 3,
-    click: false,
-    text:0
+    click:false,
+    text: ''
   }
-  componentDidMount(){
-    console.log(this.state);
-  }
-  handleState= () => {
-    console.log(this.state);
+  handleState= async (res) => {
     this.setState({
-      display: 'none', 
-      filter: 1,
-      click: !this.state.click,
-      text: 1
-    })}
-    
-    whenClick = () => {
-    this.setState({
+      display: 'none',
+      filter: 0,
+      click: true,
     })
-  }
+    if(await parseInt(res) === 2 ){
+      // console.log(this.state.click);
+      this.setState({ // ถ้าติด
+        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
+      })
+    }
+    else {
+      // console.log(this.state.click);
+      this.setState({ // ถ้าไม่ติด
+        text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
+      })
+    }
+}
   render () {
     return (
       <React.Fragment>
         <Minisize />
         <Div>
-          <Button display={this.state.display} handleState={this.handleState}/>
+          <Button display={this.state.display} handleState={this.handleState()}/>
           <Blur filter={this.state.filter}>
           <Background />
           <Treatise click={this.state.click} text={this.state.text} />

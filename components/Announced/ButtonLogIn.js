@@ -11,11 +11,12 @@ display: ${props => props.display};
 `
 export default class componentName extends Component {
 responseFacebook = async (response) => {    
-  // console.log(response);
-    // console.log(this.props.display)
-this.props.handleState()
-    const res = await axios.get('https://registrant.service.freezer.in.th/api/testloginjaa')
-    console.log(res.data.status)
+    const res = await axios.post('https://auth.service.wip.camp/api/auth/login',{
+      'provider_name': 'facebook',
+      'provider_id': response.userID,
+      'accessToken': response.accessToken,
+    })
+    this.props.handleState(await res.data.role)
   }
   render () {
     return (

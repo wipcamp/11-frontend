@@ -58,6 +58,8 @@ export const DesktopScripture = styled.div`
   }
   @keyframes swing{
     0% {
+      width:auto;
+      height:auto;
       content : url('/static/img/announce/_Scripture.png');
       transform: rotate3d(0, 0, 1, 5deg);
     }
@@ -66,6 +68,8 @@ export const DesktopScripture = styled.div`
       transform: rotate3d(0, 0, 1, -5deg);
     }
     100%{
+      width:auto;
+      height:auto;
       content : url('/static/img/announce/_Scripture.png');
       transform: rotate3d(0, 0, 1, 5deg);
     }
@@ -162,6 +166,10 @@ export const DesktopText = styled.div`
   }
   @media (min-width : 1500px) {
     left:12vw;
+  }
+  @media (min-width : 2560px) {
+    font-size:2.1em;
+    left:17.5vw;
   }
 `
 
