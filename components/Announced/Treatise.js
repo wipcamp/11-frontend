@@ -16,7 +16,7 @@ import {
 const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> 
     <DesktopText>
-    {props.text} <br />
+    {props.text} <br /><br />
     <Button visible={props.visible}><Link href="http://itim.wip.camp">ยืนยันสิทธิ์</Link></Button>
     </DesktopText>
   </DesktopScripture>

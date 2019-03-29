@@ -24,7 +24,7 @@ export default class componentName extends Component {
     filter: 3,
     click: false,
     text: '',
-    status: ''
+    status: 'hidden'
   }
 
   handleState = async (res) => {
@@ -37,7 +37,7 @@ export default class componentName extends Component {
     else {
       this.setState({
         text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ',
-        visible: 'visible'
+        visible: 'hidden'
       })
     }
     this.setState({

@@ -143,7 +143,7 @@ export const DesktopText = styled.div`
   padding-right:15em;
   position:relative;
   text-align:center !important;
-  @media (min-width : 1050px) {
+  @media (min-width : 1024px) {
     left:16vw;
     padding-top:3em;
     padding-left:1em;
@@ -158,16 +158,19 @@ export const DesktopText = styled.div`
   }
   @media (min-width : 1196px) {
     padding-top:5em;
-    padding-right:10em;
+    padding-right:12em;
     font-size:1.2em;
-    width: 400px;
+    width: 500px;
   }
   @media (min-width : 1482px) {
-    padding-right:7em;
+    padding-right:12em;
+    padding-left:auto;
+    width: 500px;
   }
-  @media (min-width : 2560px) {
+  @media (min-width : 2500px) {
     padding-top:3em;
-    padding-right:0;
+    padding-right:3.5em;
+    padding-left:auto;
     font-size:2.1em;
     left:17.5vw;
   }
@@ -402,6 +405,7 @@ export const Button = styled.button`
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-duration: 0.3s;
   transition-property: box-shadow, transform;
+  visibility : ${(props) => props.visible || 'hidden'};
   /* text-align:center !important; */
   @media screen and (min-width:320px) {
     width:100px;
