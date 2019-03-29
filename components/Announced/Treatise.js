@@ -9,11 +9,16 @@ import {
   Shadow,
   Linen,
   Box,
-  MobileText } from './Responsive'
+  MobileText,
+  Button,
+  Link } from './Responsive'
 
 const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> 
-    <DesktopText>{props.text}</DesktopText>
+    <DesktopText>
+    {props.text} <br />
+    <Button visible={props.visible}><Link href="http://itim.wip.camp">ยืนยันสิทธิ์</Link></Button>
+    </DesktopText>
   </DesktopScripture>
 ) 
 const Mobile = (props) => (
@@ -21,14 +26,17 @@ const Mobile = (props) => (
     <Box className="row justify-content-center">
       <ImgBeforeEntrance before={props.before} src="/static/img/announce/_Scripture.png" />
       <ImgAfterEntrance display={props.display} src="/static/img/announce/_ScriptureFull.png" />
-      <MobileText display={props.display}>{props.text}</MobileText>
+      <MobileText className="text-center" display={props.display}>
+        {props.text} <br />
+        <Button visible={props.visible}><Link href="http://itim.wip.camp">ยืนยันสิทธิ์</Link></Button>
+      </MobileText>
     </Box>
   </MobileScripture>
 )
 const Animation = (props) => (
   <React.Fragment>
-    <Desktop discription={props.discription} text={props.text} />
-    <Mobile display={props.display} text={props.text} before={props.before} />
+    <Desktop discription={props.discription} text={props.text} visible={props.visible}/>
+    <Mobile display={props.display} text={props.text} before={props.before} visible={props.visible}/>
   </React.Fragment>
 )
 export default class Treatise extends Component {
@@ -54,7 +62,7 @@ export default class Treatise extends Component {
         discription:'swing 1s linear infinite'
       })
     }
-    
+
   }
   render() {
     return(
@@ -71,6 +79,7 @@ export default class Treatise extends Component {
             before={this.state.before}
             text = {this.props.text}
             onChange={this.props.click === true ? this.handleState(this.props.click) : ''}
+            visible={this.props.visible}
           />
         </div>
       </div>

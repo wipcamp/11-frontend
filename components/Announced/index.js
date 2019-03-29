@@ -23,18 +23,21 @@ export default class componentName extends Component {
     display: "block",
     filter: 3,
     click: false,
-    text: ''
+    text: '',
+    status: ''
   }
 
   handleState = async (res) => {
     if (await parseInt(res) === 2) {
       this.setState({ 
-        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
+        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11',
+        visible: 'visible'
       })
     }
     else {
       this.setState({
-        text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
+        text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ',
+        visible: 'visible'
       })
     }
     this.setState({
@@ -58,7 +61,7 @@ export default class componentName extends Component {
           <Button display={this.state.display} handleState={this.handleState} />
           <Blur filter={this.state.filter}>
             <Background />
-            <Treatise click={this.state.click} handleClick={this.handleClick} text={this.state.text} />
+            <Treatise click={this.state.click} handleClick={this.handleClick} text={this.state.text} visible={this.state.visible} />
           </Blur>
         </Div>
       </React.Fragment>

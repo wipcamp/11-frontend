@@ -142,7 +142,6 @@ export const DesktopText = styled.div`
   padding-left:15em;
   padding-right:15em;
   position:relative;
-  top:15vh;
   text-align:center !important;
   @media (min-width : 1050px) {
     left:16vw;
@@ -152,15 +151,23 @@ export const DesktopText = styled.div`
     width: 200px;
   }
   @media (min-width : 1171px) {
-    left:12vw;
-    padding-top:3em;
+    padding-top:8em;
+    padding-right:10em;
     font-size:1.2em;
     width: 400px;
   }
-  @media (min-width : 1500px) {
-    left:12vw;
+  @media (min-width : 1196px) {
+    padding-top:5em;
+    padding-right:10em;
+    font-size:1.2em;
+    width: 400px;
+  }
+  @media (min-width : 1482px) {
+    padding-right:7em;
   }
   @media (min-width : 2560px) {
+    padding-top:3em;
+    padding-right:0;
     font-size:2.1em;
     left:17.5vw;
   }
@@ -255,7 +262,7 @@ export const MobileText = styled.span`
   z-index: 6;
   visibility:${props => props.display} ;
     @media (min-width : 320px) {
-    padding-top:3.4em;
+    padding-top:2em;
     padding-bottom:3.4em;
     padding-left:1.5em;
     padding-right:1.5em;
@@ -263,10 +270,10 @@ export const MobileText = styled.span`
     width: 200px;
   }
   @media (min-width : 414px) {
-    padding-top:3.9em;
+    padding-top:2.5em;
   }
   @media (min-width : 768px) {
-    padding-top:3.5em;
+    padding-top:2.5em;
     padding-left:1em;
     padding-right:1em;
     font-size:1.5em;
@@ -381,5 +388,65 @@ export const Base = styled.img`
   @media (min-width: 1367px) { 
     bottom:5vh;
     width:30%
+  }
+`
+export const Button = styled.button`
+  transition-property: color;
+  background-color:#cc0044;
+  border:none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+  /* text-align:center !important; */
+  @media screen and (min-width:320px) {
+    width:100px;
+    height:20px;
+  }
+  @media screen and (min-width:768px) {
+    width:200px;
+    height:50px;
+  }
+  
+  &:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #b30000;
+  border-radius: 100%;
+  transform: scale(2);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  }
+  
+  &:hover{
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    color: white;
+  }
+
+  &:hover:before{
+    transform: scale(0);
+  }
+`
+
+export const Link = styled.a`
+  color:white;
+  &:hover{
+    color:white;
+    text-decoration:none;
+  }
+  &:visited{
+    color:white;
+    text-decoration:none;
   }
 `
