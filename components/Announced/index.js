@@ -12,7 +12,7 @@ const Div = styled.div`
   overflow-x:hidden;
   overflow-y:hidden;
 `
-const Blur =styled.div`
+const Blur = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -22,37 +22,43 @@ export default class componentName extends Component {
   state = {
     display: "block",
     filter: 3,
-    click:false,
+    click: false,
     text: ''
   }
-  handleState= async (res) => {
-    this.setState({
-      display: 'none',
-      filter: 0,
-      click: true,
-    })
-    if(await parseInt(res) === 2 ){
-      // console.log(this.state.click);
-      this.setState({ // ถ้าติด
+
+  handleState = async (res) => {
+    if (await parseInt(res) === 2) {
+      this.setState({ 
         text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11'
       })
     }
     else {
-      // console.log(this.state.click);
-      this.setState({ // ถ้าไม่ติด
+      this.setState({
         text: 'ขอแสดงความเสียใจน้องไม่ผ่านการคัดเลือกเข้าค่าย WIP Camp #11 ครับ ไว้กลับมาสมัครใหม่อีกครั้งในปีหน้านะครับ'
       })
     }
-}
-  render () {
+    this.setState({
+      display: 'none',
+      filter: 0,
+      click: true
+    })
+  }
+
+  handleClick = () => {
+    this.setState({
+      click: false
+    })
+  }
+
+  render() {
     return (
       <React.Fragment>
         <Minisize />
         <Div>
-          <Button display={this.state.display} handleState={this.handleState()}/>
+          <Button display={this.state.display} handleState={this.handleState} />
           <Blur filter={this.state.filter}>
-          <Background />
-          <Treatise click={this.state.click} text={this.state.text} />
+            <Background />
+            <Treatise click={this.state.click} handleClick={this.handleClick} text={this.state.text} />
           </Blur>
         </Div>
       </React.Fragment>

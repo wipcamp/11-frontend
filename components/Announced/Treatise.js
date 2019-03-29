@@ -12,12 +12,12 @@ import {
   MobileText } from './Responsive'
 
 const Desktop = (props) => (
-  <DesktopScripture discription={props.discription}> {/* porps send change animation or don't */}
-    <DesktopText>{props.text}</DesktopText> {/* change text */}
+  <DesktopScripture discription={props.discription}> 
+    <DesktopText>{props.text}</DesktopText>
   </DesktopScripture>
 ) 
 const Mobile = (props) => (
-  <MobileScripture>{/* props send none and block and show or don't show  */}
+  <MobileScripture>
     <Box className="row justify-content-center">
       <ImgBeforeEntrance before={props.before} src="/static/img/announce/_Scripture.png" />
       <ImgAfterEntrance display={props.display} src="/static/img/announce/_ScriptureFull.png" />
@@ -32,52 +32,29 @@ const Animation = (props) => (
   </React.Fragment>
 )
 export default class Treatise extends Component {
-  
-  componentDidMount(){
-    let text = this.props.text;
-    // this.interval = setInterval(() => {
-    //   if (this.props.click != false) {
-    //     this.setState({
-    //       click: true,
-    //     })
-    //     clearInterval(this.interval);
-    //     this.handleState(this.state.click);
-    //   } else if (this.props.click == false) {
-    //     this.setState({
-    //       click: false
-    //     })
-    //   }
-    // }, 2000);
-    // this.handleState(this.props.click);
-    
-    // console.log(this.props.click);
-  }
 
   state = {
     discription: 'swing 1s linear infinite',
     display: 'hidden',
-    before: 'visible',
-    click : false,
+    before: 'visible'
   }
 
-  handleState = (click) => { //check login
-    
-    // console.log(this.props.click);
-    if (click === true) { //if login success change count to one and change animation on desktop or show on mobile(iPad)
+  handleState = (click) => { 
+    if(click){
       this.setState({
         before: 'hidden',
         display: 'visible',
         discription: 'spin 3s linear forwards'
       })
-    }
-    else if (click === false) {
-      this.setState({ //if login fail don't play animation on desktop or don't show on mobile(iPad)
+      this.props.handleClick()
+    } else {
+      this.setState({
         before: 'visible',
         display: 'hidden',
         discription:'swing 1s linear infinite'
       })
-
     }
+    
   }
   render() {
     return(
@@ -93,6 +70,7 @@ export default class Treatise extends Component {
             display = {this.state.display}
             before={this.state.before}
             text = {this.props.text}
+            onChange={this.props.click === true ? this.handleState(this.props.click) : ''}
           />
         </div>
       </div>
