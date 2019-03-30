@@ -30,7 +30,7 @@ export default class componentName extends Component {
   handleState = async (res) => {
     if (await parseInt(res) == 2) {
       this.setState({ 
-        text: 'ขอแสดงความยินดีกับน้องไอติมที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11 ระบบจะเปิดให้ยืนยันสิทธิ์ภายในวันที่ 1 เมษา 2562',
+        text: 'ขอแสดงความยินดีกับน้องที่ผ่านรอบคัดเลือกเข้าค่าย WIP Camp #11 ระบบจะเปิดให้ยืนยันสิทธิ์ภายในวันที่ 1 เมษา 2562',
         visible: 'visible'
       })
     }
