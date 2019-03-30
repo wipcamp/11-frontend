@@ -394,8 +394,9 @@ export const Base = styled.img`
   }
 `
 export const Button = styled.button`
+  cursor: no-drop;
   transition-property: color;
-  background-color:#cc0044;
+  background-color:rgba(204, 0, 68,.7);
   border:none;
   display: inline-block;
   position: relative;
