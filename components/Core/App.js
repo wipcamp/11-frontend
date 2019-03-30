@@ -71,7 +71,7 @@ class App extends React.Component {
     count:0,
     text:["รอก่อนนะ","ลงทะเบียน" ,"ประกาศผล"],
     textcount:0,
-    a: ['http://itim.wip.camp','http://itim.wip.camp'],
+    a: ['http://itim.wip.camp','./announced'],
     acount:0,
     visible: ["hidden", "visible"],
     visiblecount:1,
