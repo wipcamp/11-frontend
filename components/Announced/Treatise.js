@@ -30,7 +30,7 @@ const Mobile = (props) => (
       <ImgAfterEntrance display={props.display} src="/static/img/announce/_ScriptureFull.png" />
       <MobileText className="text-center" display={props.display}>
         {props.text} <br />
-       <Button visible={props.visible}><Link href="http://itim.wip.camp">ยืนยันสิทธิ์</Link></Button>
+      <Link href="http://itim.wip.camp"> <Button visible={props.visible}>ยืนยันสิทธิ์</Button></Link>
       </MobileText>
     </Box>
   </MobileScripture>
