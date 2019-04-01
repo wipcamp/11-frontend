@@ -17,7 +17,9 @@ const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> 
     <DesktopText>
     {props.text} <br /><br />
-   <Link href="http://itim.wip.camp"><Button visible={props.visible}>ยืนยันสิทธิ์</Button></Link>
+    //<Link href="http://itim.wip.camp">
+        <Button visible={props.visible}>ยืนยันสิทธิ์</Button>
+    //</Link>
     </DesktopText>
   </DesktopScripture>
 ) 
