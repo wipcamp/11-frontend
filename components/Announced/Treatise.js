@@ -17,7 +17,7 @@ const Desktop = (props) => (
   <DesktopScripture discription={props.discription}> 
     <DesktopText>
     {props.text} <br /><br />
-        <Button visible={props.visible}>ยืนยันสิทธิ์</Button>
+       <Link href="https://itim.wip.camp"> <Button visible={props.visible}>ยืนยันสิทธิ์</Button> </Link>
     </DesktopText>
   </DesktopScripture>
 ) 
@@ -28,7 +28,7 @@ const Mobile = (props) => (
       <ImgAfterEntrance display={props.display} src="/static/img/announce/_ScriptureFull.png" />
       <MobileText className="text-center" display={props.display}>
         {props.text} <br />
-     <Button visible={props.visible}>ยืนยันสิทธิ์</Button>
+   <Link href="https://itim.wip.camp">  <Button visible={props.visible}>ยืนยันสิทธิ์</Button> </Link>
       </MobileText>
     </Box>
   </MobileScripture>
