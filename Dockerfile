@@ -1,7 +1,7 @@
 FROM node:8.14-alpine
-WORKDIR .
+WORKDIR /app
 COPY package.json .
-COPY package-lock.json .
+COPY yarn.lock .
 RUN yarn install
 
 COPY components ./components
@@ -11,7 +11,7 @@ COPY static ./static
 COPY .babelrc .
 COPY .eslintrc .
 COPY yarn-error.log .
-COPY yarn.lock .
+COPY package-lock.json .
 
 RUN yarn build
 EXPOSE 3000
