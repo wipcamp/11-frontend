@@ -88,6 +88,9 @@ export default class index extends Component {
                       <a href = 'https://www.koh-kae.com/th/' className = "ml-2 mr-2">
                         <SponsorStyle src = '../../static/img/sponsors/kohkae-logo-th.png' alt = 'Koh Kae' />
                       </a>
+                      <a href = 'http://www.stream.co.th/' className = "ml-2 mr-2">
+                        <SponsorStyle src = '../../static/img/sponsors/stream-it-logo.png' alt = 'Koh Kae' />
+                      </a>
                     </div>
                   </div>
                 </PDBox>
