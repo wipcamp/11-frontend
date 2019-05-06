@@ -47,6 +47,21 @@ const SponsorStyle = styled.img`
     height:60px;
   }
 `
+const SponBox = styled.div`
+background: rgba(248, 233, 214, 0.73);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (min-width:320px) {
+    padding : 0em 0em 0.5em;
+    margin : 0.5em 0.5em ;
+  }
+   @media (min-width:576px) {
+    padding : 1em 2em;
+  }
+  @media (min-width:1024px) {
+    padding : 0.5em 5em 2em;
+  }
+`
 
 export default class index extends Component {
   render () {
@@ -63,10 +78,10 @@ export default class index extends Component {
                 </SponHeadBox>
               </SponTab>
               <div className="row justify-content-center">
-                <PDBox>
+                <SponBox>
                   <div className="col-12">
                     <div className="row justify-content-center">
-                      <Subtitle className="mb-4"><b>ผู้สนับสนุน</b></Subtitle>
+                      <Subtitle className="mb-2"><b>ผู้สนับสนุน</b></Subtitle>
                     </div>
                     {/* <SponsorAxios /> */}
                     <div className = "row justify-content-center">
@@ -79,21 +94,36 @@ export default class index extends Component {
                       <a href = 'https://www.dek-d.com/'>
                         <SponsorStyle src = '../../static/img/sponsors/dek-d.png' alt = 'Dek-D'/>
                       </a>
-                      <a href = 'https://www.lactasoy.com/th/' className = "ml-2 mr-2">
+                      <a href = 'https://www.lactasoy.com/th/' className = "ml-1 mr-1">
                         <SponsorStyle src = '../../static/img/sponsors/lactasoy.png' alt = 'Lactasoy'/>
                       </a>
-                      <a href = 'http://www.yipintsoi.com/' className = "ml-2 mr-2">
+                      <a href = 'http://www.yipintsoi.com/' >
                         <SponsorStyle src = '../../static/img/sponsors/yip.png' alt = 'YIP IN TSOI' />
                       </a>
-                      <a href = 'https://www.koh-kae.com/th/' className = "ml-2 mr-2">
+                      <a href = 'https://www.koh-kae.com/th/' >
                         <SponsorStyle src = '../../static/img/sponsors/kohkae-logo-th.png' alt = 'Koh Kae' />
                       </a>
-                      <a href = 'http://www.stream.co.th/' className = "ml-2 mr-2">
+                      <a href = 'http://www.stream.co.th/' >
                         <SponsorStyle src = '../../static/img/sponsors/stream-it-logo.png' alt = 'Koh Kae' />
+                      </a>
+                      <a href = '' >
+                        <SponsorStyle src = '../../static/img/sponsors/eisa.png' alt = 'EISA' />
+                      </a>
+                      <a href = 'https://www.lnwshop.com/' >
+                        <SponsorStyle src = '../../static/img/sponsors/lnw@2x.png' alt = 'lnw' />
+                      </a>
+                      <a href = 'https://www.pathosting.co.th/' >
+                        <SponsorStyle src = '../../static/img/sponsors/pat.png' alt = 'P&T Hosting' />
+                      </a>
+                      <a href = 'http://www.premier-marketing.co.th/' >
+                        <SponsorStyle src = '../../static/img/sponsors/pmg-logo-p.png' alt = 'Premier Marketing' />
+                      </a>
+                      <a href = 'http://www.thaibev.com/' >
+                        <SponsorStyle src = '../../static/img/sponsors/thaibev.png' alt = 'Thai Beverage' />
                       </a>
                     </div>
                   </div>
-                </PDBox>
+                </SponBox>
               </div>
             </div>
           </div>
