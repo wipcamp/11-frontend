@@ -25,26 +25,26 @@ const Moutain = styled.img`
 
 const SponsorStyle = styled.img`
   position: relative;
-  height: 50px;
+  height: 40px;
   margin: 1em;
 
   @media(min-width:320px){
-    height:40px;
+    height:30px;
   }
   @media (min-width:412px) {
-    height:40px;
+    height:35px;
   }
   @media (min-width:576px) {
-    height:45px;
+    height:40px;
   }
   @media (min-width:768px) {
-    height:45px;
+    height:40px;
   }
   @media (min-width:1024px) {
-    height:50px;
+    height:45px;
   }
   @media (min-width:1366px){
-    height:60px;
+    height:55px;
   }
 `
 const SponBox = styled.div`
@@ -81,18 +81,27 @@ export default class index extends Component {
                 <SponBox>
                   <div className="col-12">
                     <div className="row justify-content-center">
-                      <Subtitle className="mb-2"><b>ผู้สนับสนุน</b></Subtitle>
+                      <Subtitle className="mb-1"><b>ผู้สนับสนุน</b></Subtitle>
                     </div>
                     {/* <SponsorAxios /> */}
                     <div className = "row justify-content-center">
                       <a href = 'https://bangmod.cloud/'>
                         <SponsorStyle src = '../../static/img/sponsors/bangmod.png' alt = 'Bangmod Cloud'/>
                       </a>
-                      <a href = 'http://bowbakery.co.th/en/'>
-                        <SponsorStyle src = '../../static/img/sponsors/bow.png' alt = 'Bow Bakery House'/>
-                      </a>
                       <a href = 'https://www.dek-d.com/'>
                         <SponsorStyle src = '../../static/img/sponsors/dek-d.png' alt = 'Dek-D'/>
+                      </a>
+                      <a href = 'http://www.stream.co.th/' >
+                        <SponsorStyle src = '../../static/img/sponsors/stream-it-logo.png' alt = 'Koh Kae' />
+                      </a>
+                      <a href = 'https://www.lnwshop.com/' >
+                        <SponsorStyle src = '../../static/img/sponsors/lnw@2x.png' alt = 'lnw' />
+                      </a>
+                      <a href = 'https://www.pathosting.co.th/' >
+                        <SponsorStyle src = '../../static/img/sponsors/pat.png' alt = 'P&T Hosting' />
+                      </a>
+                      <a href = 'http://bowbakery.co.th/en/'>
+                        <SponsorStyle src = '../../static/img/sponsors/bow.png' alt = 'Bow Bakery House'/>
                       </a>
                       <a href = 'https://www.lactasoy.com/th/' className = "ml-1 mr-1">
                         <SponsorStyle src = '../../static/img/sponsors/lactasoy.png' alt = 'Lactasoy'/>
@@ -103,23 +112,14 @@ export default class index extends Component {
                       <a href = 'https://www.koh-kae.com/th/' >
                         <SponsorStyle src = '../../static/img/sponsors/kohkae-logo-th.png' alt = 'Koh Kae' />
                       </a>
-                      <a href = 'http://www.stream.co.th/' >
-                        <SponsorStyle src = '../../static/img/sponsors/stream-it-logo.png' alt = 'Koh Kae' />
+                      <a href = 'http://www.thaibev.com/' >
+                        <SponsorStyle src = '../../static/img/sponsors/thaibev2.png' alt = 'Thai Beverage' />
                       </a>
                       <a href = '' >
                         <SponsorStyle src = '../../static/img/sponsors/eisa.png' alt = 'EISA' />
                       </a>
-                      <a href = 'https://www.lnwshop.com/' >
-                        <SponsorStyle src = '../../static/img/sponsors/lnw@2x.png' alt = 'lnw' />
-                      </a>
-                      <a href = 'https://www.pathosting.co.th/' >
-                        <SponsorStyle src = '../../static/img/sponsors/pat.png' alt = 'P&T Hosting' />
-                      </a>
                       <a href = 'http://www.premier-marketing.co.th/' >
                         <SponsorStyle src = '../../static/img/sponsors/pmg-logo-p.png' alt = 'Premier Marketing' />
-                      </a>
-                      <a href = 'http://www.thaibev.com/' >
-                        <SponsorStyle src = '../../static/img/sponsors/thaibev.png' alt = 'Thai Beverage' />
                       </a>
                     </div>
                   </div>
