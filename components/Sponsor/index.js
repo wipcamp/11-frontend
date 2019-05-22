@@ -27,30 +27,33 @@ const SponsorStyle = styled.img`
   position: relative;
   height: 40px;
   margin: 1em;
-
   @media(min-width:320px){
     height:30px;
+    margin: 0.7em;
+  }
+  @media(min-width:321px){
+    height:38px;
+    margin: 0.7em;
   }
   @media (min-width:412px) {
-    height:35px;
+    height:42px;
   }
   @media (min-width:576px) {
     height:40px;
   }
   @media (min-width:768px) {
-    height:40px;
-  }
-  @media (min-width:1024px) {
     height:45px;
   }
+  @media (min-width:1024px) {
+    height:50px;
+  }
   @media (min-width:1366px){
-    height:55px;
+    height:50px;
   }
 `
 const SponBox = styled.div`
-background: rgba(248, 233, 214, 0.73);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+  background: rgba(248, 233, 214, 0.73);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   @media (min-width:320px) {
     padding : 0em 0em 0.5em;
     margin : 0.5em 0.5em ;
@@ -99,6 +102,9 @@ export default class index extends Component {
                       </a>
                       <a href = 'https://www.pathosting.co.th/' >
                         <SponsorStyle src = '../../static/img/sponsors/pat.png' alt = 'P&T Hosting' />
+                      </a>
+                      <a href = 'https://moxga.com/'>
+                        <SponsorStyle src = '../../static/img/sponsors/MOXGA.png' alt = "MOXGA : Dream is Possible" />
                       </a>
                       <a href = 'http://bowbakery.co.th/en/'>
                         <SponsorStyle src = '../../static/img/sponsors/bow.png' alt = 'Bow Bakery House'/>
