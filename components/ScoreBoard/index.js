@@ -3,11 +3,11 @@ import service from './serviec'
 import styled from 'styled-components'
 
 const Body = styled.div`
-  font-family: Tahoma;
+  font-family: "Times New Roman", Times, serif;
 `
 
 const Name = styled.h1`
-  font-family: Tahoma;
+  font-family: "Times New Roman", Times, serif;
 `
 
 class score extends Component {
