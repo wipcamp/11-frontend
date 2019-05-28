@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import service from './serviec'
-import { min } from 'moment';
+import styled from 'styled-components'
+
+const Body = styled.div`
+  font-family: Tahoma ;
+`
+
 class score extends Component {
   state = {
     team: [
@@ -42,7 +47,7 @@ class score extends Component {
   render() {
 
     return (
-      <div className="container justify-content-center">
+      <Body className="container justify-content-center">
         {
           this.handleScore()
         }
@@ -58,7 +63,7 @@ class score extends Component {
             </div>
           )
         })}
-      </div>
+      </Body>
     )
   }
 }
