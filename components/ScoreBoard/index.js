@@ -14,7 +14,7 @@ const Name = styled.h2`
   font-family: 'Times New Roman', Times, serif;
 `
 const Box = styled.div`
-  background: rgba(0,0,0,.65);
+  background: ${props => props.color};
   color: #fff;
   border: 2px solid transparent;
   border-radius: 1em;
@@ -34,8 +34,35 @@ class score extends Component {
       { id: 9, name: 'ซากุระ', score: 0 },
       { id: 10, name: 'มัจฉะ', score: 0 }
     ],
-    tmp: []
+    tmp: [],
+    color: ''
   }
+
+  handleColor = num => {
+    switch (num) {
+      case 1:
+        return '#000'
+      case 2:
+        return '#FFA500'
+      case 3:
+        return '#FF0000'
+      case 4:
+        return '#87CEEB'
+      case 5:
+        return '#008000'
+      case 6:
+        return '#A52A2A'
+      case 7:
+        return '#CCCC00'
+      case 8:
+        return '#800080'
+      case 9:
+        return '#E5ACB6'
+      case 10:
+        return '#004C00'
+    }
+  }
+  setColor = () => {}
 
   handleScore = () => {
     console.log('test')
@@ -64,7 +91,11 @@ class score extends Component {
           {this.handleScore()}
           {this.state.tmp.map((data, i) => {
             return (
-              <Box key={i} className="row mb-3 p-1">
+              <Box
+                key={i}
+                className="row mb-3 p-1"
+                color={this.handleColor(data.flavor_id)}
+              >
                 <div className="col-10">
                   <Name>รส{data.name}</Name>
                 </div>
