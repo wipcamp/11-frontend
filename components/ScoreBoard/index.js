@@ -10,7 +10,7 @@ const Body = styled.div`
   overflow: hidden;
 `
 
-const Name = styled.h1`
+const Name = styled.h2`
   font-family: 'Times New Roman', Times, serif;
 `
 const Box = styled.div`
@@ -60,11 +60,11 @@ class score extends Component {
   render() {
     return (
       <Body>
-        <div className="container justify-content-cente p-5">
+        <div className="container justify-content-center p-5">
           {this.handleScore()}
           {this.state.tmp.map((data, i) => {
             return (
-              <Box key={i} className="row mb-3">
+              <Box key={i} className="row mb-3 p-1">
                 <div className="col-10">
                   <Name>รส{data.name}</Name>
                 </div>
