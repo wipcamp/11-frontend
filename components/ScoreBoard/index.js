@@ -3,7 +3,11 @@ import service from './serviec'
 import styled from 'styled-components'
 
 const Body = styled.div`
-  font-family: Tahoma ;
+  font-family: Tahoma;
+`
+
+const Name = styled.h1`
+  font-family: Tahoma;
 `
 
 class score extends Component {
@@ -55,10 +59,10 @@ class score extends Component {
           return (
             <div key={i} className="row my-3">
               <div className="col-10">
-                <h1>รส{data.name}</h1>
+                <Name>รส{data.name}</Name>
               </div>
               <div className="col-2">
-                <h1>{data.total_score}</h1>
+                <Name>{data.total_score}</Name>
               </div>
             </div>
           )
