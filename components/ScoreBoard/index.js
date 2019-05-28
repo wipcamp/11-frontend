@@ -9,6 +9,9 @@ const Body = styled.div`
   width: 100vw;
   overflow: hidden;
 `
+const Head = styled.h1`
+  font-family: 'Times New Roman', Times, serif;
+`
 
 const Name = styled.h2`
   font-family: 'Times New Roman', Times, serif;
@@ -89,11 +92,12 @@ class score extends Component {
       <Body>
         <div className="container justify-content-center p-5">
           {this.handleScore()}
+          <Head className="text-center">WIP Camp #11 Score Board</Head>
           {this.state.tmp.map((data, i) => {
             return (
               <Box
                 key={i}
-                className="row mb-3 p-1"
+                className="row my-4 p-2"
                 color={this.handleColor(data.flavor_id)}
               >
                 <div className="col-10">
