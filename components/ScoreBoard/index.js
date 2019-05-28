@@ -94,11 +94,14 @@ class score extends Component {
       })
     })
   }
+
   componentDidMount() {
     setTimeout(() => {
       window.location.reload()
     }, 180000)
     this.getScore()
+    let audio = new Audio('static/sound/Ways.mp3')
+    audio.play()
   }
   render() {
     return (
