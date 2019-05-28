@@ -50,7 +50,7 @@ class score extends Component {
           return (
             <div key={i} className="row my-3">
               <div className="col-10">
-                <h1>รส{data.flavor_id}</h1>
+                <h1>รส{data.name}</h1>
               </div>
               <div className="col-2">
                 <h1>{data.total_score}</h1>

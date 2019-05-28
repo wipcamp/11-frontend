@@ -47,7 +47,7 @@ const api = {
 
 const service = {
     getScore : async ()=>{
-      return await api.get('https://camper.service.freezer.in.th/api/test/score')
+      return await api.get('http://127.0.0.1:8002/api/test/score')
     }
 }
 export default service;
