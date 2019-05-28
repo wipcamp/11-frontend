@@ -1,6 +1,28 @@
 import React, { Component } from 'react'
 import service from './serviec'
-import { min } from 'moment';
+import styled from 'styled-components'
+
+const Body = styled.div`
+  font-family: 'Times New Roman', Times, serif;
+  background: #f8e9d6;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+`
+const Head = styled.h1`
+  font-family: 'Times New Roman', Times, serif;
+`
+
+const Name = styled.h2`
+  font-family: 'Times New Roman', Times, serif;
+`
+const Box = styled.div`
+  background: ${props => props.color};
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 1em;
+`
+
 class score extends Component {
   state = {
     team: [
@@ -15,8 +37,35 @@ class score extends Component {
       { id: 9, name: 'ซากุระ', score: 0 },
       { id: 10, name: 'มัจฉะ', score: 0 }
     ],
-    tmp: []
+    tmp: [],
+    color: ''
   }
+
+  handleColor = num => {
+    switch (num) {
+      case 1:
+        return '#000'
+      case 2:
+        return '#FFA500'
+      case 3:
+        return '#FF0000'
+      case 4:
+        return '#87CEEB'
+      case 5:
+        return '#008000'
+      case 6:
+        return '#A52A2A'
+      case 7:
+        return '#CCCC00'
+      case 8:
+        return '#800080'
+      case 9:
+        return '#E5ACB6'
+      case 10:
+        return '#004C00'
+    }
+  }
+  setColor = () => {}
 
   handleScore = () => {
     console.log('test')
@@ -35,30 +84,33 @@ class score extends Component {
   componentDidMount() {
     setTimeout(() => {
       window.location.reload()
-    }, 180000);
+    }, 180000)
     this.getScore()
-    
   }
   render() {
-
     return (
-      <div className="container justify-content-center">
-        {
-          this.handleScore()
-        }
-        {this.state.tmp.map((data, i) => {
-          return (
-            <div key={i} className="row my-3">
-              <div className="col-10">
-                <h1>รส{data.name}</h1>
-              </div>
-              <div className="col-2">
-                <h1>{data.total_score}</h1>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+      <Body>
+        <div className="container justify-content-center p-5">
+          {this.handleScore()}
+          <Head className="text-center">WIP Camp #11 Score Board</Head>
+          {this.state.tmp.map((data, i) => {
+            return (
+              <Box
+                key={i}
+                className="row my-4 p-2"
+                color={this.handleColor(data.flavor_id)}
+              >
+                <div className="col-10">
+                  <Name>รส{data.name}</Name>
+                </div>
+                <div className="col-2">
+                  <Name>{data.total_score}</Name>
+                </div>
+              </Box>
+            )
+          })}
+        </div>
+      </Body>
     )
   }
 }
