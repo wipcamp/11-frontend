@@ -3,11 +3,21 @@ import service from './serviec'
 import styled from 'styled-components'
 
 const Body = styled.div`
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
+  background: #f8e9d6;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 `
 
 const Name = styled.h1`
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
+`
+const Box = styled.div`
+  background: rgba(0,0,0,.65);
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 1em;
 `
 
 class score extends Component {
@@ -44,29 +54,27 @@ class score extends Component {
   componentDidMount() {
     setTimeout(() => {
       window.location.reload()
-    }, 180000);
+    }, 180000)
     this.getScore()
-    
   }
   render() {
-
     return (
-      <Body className="container justify-content-center">
-        {
-          this.handleScore()
-        }
-        {this.state.tmp.map((data, i) => {
-          return (
-            <div key={i} className="row my-3">
-              <div className="col-10">
-                <Name>รส{data.name}</Name>
-              </div>
-              <div className="col-2">
-                <Name>{data.total_score}</Name>
-              </div>
-            </div>
-          )
-        })}
+      <Body>
+        <div className="container justify-content-cente p-5">
+          {this.handleScore()}
+          {this.state.tmp.map((data, i) => {
+            return (
+              <Box key={i} className="row mb-3">
+                <div className="col-10">
+                  <Name>รส{data.name}</Name>
+                </div>
+                <div className="col-2">
+                  <Name>{data.total_score}</Name>
+                </div>
+              </Box>
+            )
+          })}
+        </div>
       </Body>
     )
   }
