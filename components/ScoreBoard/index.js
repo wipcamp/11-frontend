@@ -5,9 +5,13 @@ import styled from 'styled-components'
 const Body = styled.div`
   font-family: 'Times New Roman', Times, serif;
   background: #f8e9d6;
+  background-image: url('static/img/MaskGroup.png');
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
 `
 const Head = styled.h1`
   font-family: 'Times New Roman', Times, serif;
@@ -101,7 +105,9 @@ class score extends Component {
       <Body>
         <div className="container justify-content-center p-5">
           {this.handleScore()}
+
           <Head className="text-center">WIP Camp #11 Score Board</Head>
+
           {this.state.tmp.map((data, i) => {
             return (
               <Box
