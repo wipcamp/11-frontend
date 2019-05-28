@@ -18,7 +18,7 @@ const Name = styled.h2`
 `
 const Box = styled.div`
   background: ${props => props.color};
-  color: #fff;
+  color: ${props => props.font};
   border: 2px solid transparent;
   border-radius: 1em;
 `
@@ -44,28 +44,37 @@ class score extends Component {
   handleColor = num => {
     switch (num) {
       case 1:
-        return '#000'
+        return '#707070'
       case 2:
-        return '#FFA500'
+        return '#fa8d65'
       case 3:
-        return '#FF0000'
+        return '#aa2335'
       case 4:
-        return '#87CEEB'
+        return '#c2e7f2'
       case 5:
-        return '#008000'
+        return '#eaeda9'
       case 6:
-        return '#A52A2A'
+        return '#d3a688'
       case 7:
-        return '#CCCC00'
+        return '#fbc342'
       case 8:
-        return '#800080'
+        return '#efd3e5'
       case 9:
-        return '#E5ACB6'
+        return '#f5989f'
       case 10:
-        return '#004C00'
+        return '#86884a'
     }
   }
-  setColor = () => {}
+  handleFont = num => {
+    switch (num) {
+      case 1:
+      case 3:
+      case 10:
+        return '#fff'
+      default:
+        return '#000'
+    }
+  }
 
   handleScore = () => {
     console.log('test')
@@ -99,6 +108,7 @@ class score extends Component {
                 key={i}
                 className="row my-4 p-2"
                 color={this.handleColor(data.flavor_id)}
+                font={this.handleFont(data.flavor_id)}
               >
                 <div className="col-10">
                   <Name>รส{data.name}</Name>
