@@ -30,16 +30,16 @@ const Box = styled.div`
 class score extends Component {
   state = {
     team: [
-      { id: 1, name: 'ซาบะ', score: 0 },
-      { id: 2, name: 'แซลม่อน', score: 0 },
-      { id: 3, name: 'ไดฟูกุ', score: 0 },
-      { id: 4, name: 'โมจิ', score: 0 },
-      { id: 5, name: 'วาซาบิ', score: 0 },
-      { id: 6, name: 'โชยุ', score: 0 },
-      { id: 7, name: 'พุดดิ้ง', score: 0 },
-      { id: 8, name: 'มันม่วง', score: 0 },
-      { id: 9, name: 'ซากุระ', score: 0 },
-      { id: 10, name: 'มัจฉะ', score: 0 }
+      { id: 1, name: 'รสซาบะ', score: 0 },
+      { id: 2, name: 'รสแซลม่อน', score: 0 },
+      { id: 3, name: 'รสไดฟูกุ', score: 0 },
+      { id: 4, name: 'รสโมจิ', score: 0 },
+      { id: 5, name: 'รสวาซาบิ', score: 0 },
+      { id: 6, name: 'รสโชยุ', score: 0 },
+      { id: 7, name: 'รสพุดดิ้ง', score: 0 },
+      { id: 8, name: 'รสมันม่วง', score: 0 },
+      { id: 9, name: 'รสซากุระ', score: 0 },
+      { id: 10, name: 'รสมัจฉะ', score: 0 }
     ],
     tmp: [],
     color: ''
@@ -120,6 +120,7 @@ class score extends Component {
                 font={this.handleFont(data.flavor_id)}
               >
                 <div className="col-10">
+                  {console.log(data.name)}
                   <Name>รส{data.name}</Name>
                 </div>
                 <div className="col-2">
