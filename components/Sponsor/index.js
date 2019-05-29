@@ -130,6 +130,9 @@ export default class index extends Component {
                       <a href = 'http://www.useful-food.com/' >
                         <SponsorStyle src = '../../static/img/sponsors/useful.png' alt = 'อาหารยอดคุณ' />
                       </a>
+                      <a href = 'http://www.sermsukplc.com/en'>
+                        <SponsorStyle src = '../../static/img/sponsors/sermsuk.png' alt = 'เสริมสุข เติมสุขทุกโอกาส' />
+                      </a>
                     </div>
                   </div>
                 </SponBox>
