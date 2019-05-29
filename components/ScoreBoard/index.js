@@ -120,7 +120,7 @@ class score extends Component {
                 font={this.handleFont(data.flavor_id)}
               >
                 <div className="col-10">
-                  <Name>รส{data.name}</Name>
+                  <Name>{data.name}</Name>
                 </div>
                 <div className="col-2">
                   <Name>{data.total_score}</Name>
