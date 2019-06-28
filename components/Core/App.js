@@ -69,7 +69,7 @@ class App extends React.Component {
   state = {
     loading: true, //true
     count:0,
-    text:["รอก่อนนะ","ลงทะเบียน" ,"ประกาศผล"],
+    text:["รอก่อนนะ","ลงทะเบียน" ,"รับเกียรติบัตร"],
     textcount:0,
     a: ['http://itim.wip.camp','./announced'],
     acount:0,
@@ -98,8 +98,8 @@ class App extends React.Component {
       })
     } else {
       this.setState({
-        textcount: 0,
-        visiblecount: 0
+        textcount: 2,
+        visiblecount: 1
       })
     }
   }
